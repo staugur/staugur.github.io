@@ -1,8 +1,8 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
-# heroImage: /hero.png
+heroText: Hiroshi.tao の 网络日志
+tagline: Men Always Fight Alone and Always Challenge Themselves.
+heroImage: null
 # heroImageStyle: {
 #   maxWidth: '600px',
 #   width: '100%',
@@ -12,7 +12,7 @@ tagline: A simple and beautiful vuepress blog theme.
 #   borderRadius: '1rem',
 # }
 bgImageStyle: {
-  height: '450px'
+  height: '350px'
 }
 isShowTitleInHome: false
 actionText: Guide

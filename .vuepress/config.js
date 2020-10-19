@@ -51,28 +51,61 @@ module.exports = {
                 icon: 'reco-date'
             },
             {
-                text: '站点',
+                text: '关于我',
                 icon: 'reco-message',
                 items: [
                     {
-                        text: '主站',
-                        link: 'https://www.saintic.com',
-                        icon: 'reco-home'
+                        text: '关于/联系我',
+                        link: '/about',
+                        icon: 'reco-blog'
                     },
                     {
-                        text: '文档',
-                        link: 'https://docs.saintic.com',
-                        icon: 'reco-document'
+                        text: '站点',
+                        items: [
+                            {
+                                text: '主站',
+                                link: 'https://www.saintic.com',
+                                icon: 'reco-home'
+                            },
+                            {
+                                text: '文档',
+                                link: 'https://docs.saintic.com',
+                                icon: 'reco-document'
+                            },
+                            {
+                                text: 'Gitee',
+                                link: 'https://gitee.com/staugur',
+                                icon: 'reco-mayun'
+                            },
+                            {
+                                text: 'GitHub',
+                                link: 'https://github.com/staugur',
+                                icon: 'reco-github'
+                            }
+                        ]
                     },
                     {
-                        text: 'GitHub',
-                        link: 'https://github.com/staugur',
-                        icon: 'reco-github'
-                    },
-                    {
-                        text: 'Gitee',
-                        link: 'https://gitee.com/staugur',
-                        icon: 'reco-mayun'
+                        text: '个人开源推荐',
+                        items: [
+                            {
+                                text: 'Flask-PluginKit',
+                                link:
+                                    'https://github.com/staugur/Flask-PluginKit'
+                            },
+                            {
+                                text: 'picbed',
+                                link: 'https://github.com/staugur/picbed'
+                            },
+                            {
+                                text: 'rtfd',
+                                link: 'https://github.com/staugur/rtfd'
+                            },
+                            {
+                                text: 'grab_huaban_board',
+                                link:
+                                    'https://github.com/staugur/grab_huaban_board'
+                            }
+                        ]
                     }
                 ]
             }
@@ -108,6 +141,7 @@ module.exports = {
                 link: 'http://xuedingmiao.com/'
             }
         ],
+        subSidebar: 'auto',
         search: true,
         searchMaxSuggestions: 10,
         lastUpdated: '最后更新',
@@ -117,7 +151,8 @@ module.exports = {
         record: '京ICP备14058611号',
         recordLink: 'http://www.beian.miit.gov.cn/',
         // 项目开始时间，只填写年份
-        startYear: '2017'
+        startYear: '2017',
+        repo: 'staugur/blog'
     },
     markdown: {
         lineNumbers: true
