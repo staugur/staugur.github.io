@@ -56,7 +56,7 @@ module.exports = {
                 items: [
                     {
                         text: '关于/联系我',
-                        link: '/about',
+                        link: '/post/about',
                         icon: 'reco-blog'
                     },
                     {
@@ -144,7 +144,6 @@ module.exports = {
         subSidebar: 'auto',
         search: true,
         searchMaxSuggestions: 10,
-        lastUpdated: '最后更新',
         author: 'Hiroshi.tao',
         authorAvatar: '/avatar.png',
         // 备案
