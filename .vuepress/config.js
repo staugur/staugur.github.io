@@ -1,7 +1,7 @@
 module.exports = {
     title: '陶先森de博客',
     description: '记录点滴，开源项目源码，分享经验与技术。',
-    dest: 'docs',
+    dest: 'dist',
     head: [
         [
             'link',
@@ -107,6 +107,21 @@ module.exports = {
                             }
                         ]
                     }
+                    /*
+                    {
+                        text: 'Feed',
+                        items: [
+                            {
+                                text: 'RSS',
+                                link: '/rss.xml'
+                            },
+                            {
+                                text: 'Atom',
+                                linl: '/feed.atom'
+                            }
+                        ]
+                    }
+                    */
                 ]
             }
         ],
@@ -155,5 +170,10 @@ module.exports = {
     },
     markdown: {
         lineNumbers: true
+    },
+    plugins: {
+        feed: {
+            canonical_base: 'http://127.0.0.1:8084'
+        }
     }
 }
