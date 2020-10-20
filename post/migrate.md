@@ -22,4 +22,6 @@ sticky: 1
 
 - 关闭了google adsense和站点地图
 
-- 暂时未使用评论功能
+- 评论功能改为[Utterances](https://utteranc.es)
+
+<Utterances/>
