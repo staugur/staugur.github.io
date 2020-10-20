@@ -1,7 +1,7 @@
 module.exports = {
     title: '陶先森de博客',
     description: '记录点滴，开源项目源码，分享经验与技术。',
-    dest: 'public',
+    dest: 'docs',
     head: [
         [
             'link',
