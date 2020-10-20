@@ -1,4 +1,4 @@
-const url = 'http://127.0.0.1:8084'
+const url = 'https://blog.saintic.com'
 const title = '陶先森de博客'
 const description = '记录点滴，开源项目源码，分享经验与技术'
 
@@ -87,24 +87,6 @@ const nav = [
         ]
     }
 ]
-
-let feedNav = {
-    text: 'Feed',
-    items: [
-        {
-            text: 'RSS',
-            link: url + '/rss.xml'
-        },
-        {
-            text: 'Atom',
-            linl: url + '/feed.atom'
-        }
-    ]
-}
-
-if (process.env.DEPLOY === 'online') {
-    nav.push(feedNav)
-}
 
 module.exports = {
     title,
