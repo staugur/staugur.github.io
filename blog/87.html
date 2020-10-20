@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>百度站长平台主动推送(实时)链接接口示例 | 陶先森de博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" href="https://blog.saintic.com/rss.xml" title="陶先森de博客 RSS Feed">
+    <link rel="alternate" type="application/atom+xml" href="https://blog.saintic.com/feed.atom" title="陶先森de博客 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://blog.saintic.com/feed.json" title="陶先森de博客 JSON Feed">
+    <meta name="description" content="记录点滴，开源项目源码，分享经验与技术">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="keywords" content="SaintIC,staugur,Linux,DevOps,python">
+    <link rel="preload" href="/assets/css/0.styles.a555611f.css" as="style"><link rel="preload" href="/assets/js/app.5f7aec11.js" as="script"><link rel="preload" href="/assets/js/3.5b403d0a.js" as="script"><link rel="preload" href="/assets/js/1.503657ce.js" as="script"><link rel="preload" href="/assets/js/76.bcbd528d.js" as="script"><link rel="prefetch" href="/assets/js/10.d29f9f57.js"><link rel="prefetch" href="/assets/js/11.9b8d1394.js"><link rel="prefetch" href="/assets/js/12.5ece8609.js"><link rel="prefetch" href="/assets/js/13.3e5ba270.js"><link rel="prefetch" href="/assets/js/14.59264975.js"><link rel="prefetch" href="/assets/js/15.f3fad6c7.js"><link rel="prefetch" href="/assets/js/16.20a58b08.js"><link rel="prefetch" href="/assets/js/17.9f547a59.js"><link rel="prefetch" href="/assets/js/18.4499acfc.js"><link rel="prefetch" href="/assets/js/19.2c7abd6a.js"><link rel="prefetch" href="/assets/js/20.e6d568ce.js"><link rel="prefetch" href="/assets/js/21.257e0bec.js"><link rel="prefetch" href="/assets/js/22.8b94b210.js"><link rel="prefetch" href="/assets/js/23.2473473f.js"><link rel="prefetch" href="/assets/js/24.1ee17beb.js"><link rel="prefetch" href="/assets/js/25.3a331059.js"><link rel="prefetch" href="/assets/js/26.00a36633.js"><link rel="prefetch" href="/assets/js/27.e46e9d8d.js"><link rel="prefetch" href="/assets/js/28.1dbabe0b.js"><link rel="prefetch" href="/assets/js/29.17329def.js"><link rel="prefetch" href="/assets/js/30.194c353e.js"><link rel="prefetch" href="/assets/js/31.d8c5d2b0.js"><link rel="prefetch" href="/assets/js/32.6156bc98.js"><link rel="prefetch" href="/assets/js/33.2272bdef.js"><link rel="prefetch" href="/assets/js/34.9fdc8ba1.js"><link rel="prefetch" href="/assets/js/35.13c8ecc6.js"><link rel="prefetch" href="/assets/js/36.d91220e9.js"><link rel="prefetch" href="/assets/js/37.06c6d074.js"><link rel="prefetch" href="/assets/js/38.009c07ad.js"><link rel="prefetch" href="/assets/js/39.c1262999.js"><link rel="prefetch" href="/assets/js/4.cd70b4e5.js"><link rel="prefetch" href="/assets/js/40.98daceaf.js"><link rel="prefetch" href="/assets/js/41.b41a1f19.js"><link rel="prefetch" href="/assets/js/42.cf4de41a.js"><link rel="prefetch" href="/assets/js/43.9cc738f6.js"><link rel="prefetch" href="/assets/js/44.c06a5936.js"><link rel="prefetch" href="/assets/js/45.68c956fc.js"><link rel="prefetch" href="/assets/js/46.58b524bd.js"><link rel="prefetch" href="/assets/js/47.acefc4df.js"><link rel="prefetch" href="/assets/js/48.ec5d5d56.js"><link rel="prefetch" href="/assets/js/49.95779e45.js"><link rel="prefetch" href="/assets/js/5.6b128eac.js"><link rel="prefetch" href="/assets/js/50.10d14a19.js"><link rel="prefetch" href="/assets/js/51.215d8454.js"><link rel="prefetch" href="/assets/js/52.d279376b.js"><link rel="prefetch" href="/assets/js/53.73d470ec.js"><link rel="prefetch" href="/assets/js/54.0057e623.js"><link rel="prefetch" href="/assets/js/55.1d162910.js"><link rel="prefetch" href="/assets/js/56.69daa4a8.js"><link rel="prefetch" href="/assets/js/57.2d433b12.js"><link rel="prefetch" href="/assets/js/58.25d06215.js"><link rel="prefetch" href="/assets/js/59.9bb78fa5.js"><link rel="prefetch" href="/assets/js/6.9e83e188.js"><link rel="prefetch" href="/assets/js/60.b1e283ff.js"><link rel="prefetch" href="/assets/js/61.a97b8042.js"><link rel="prefetch" href="/assets/js/62.0fcbacb1.js"><link rel="prefetch" href="/assets/js/63.ca60405f.js"><link rel="prefetch" href="/assets/js/64.62fe60c6.js"><link rel="prefetch" href="/assets/js/65.5097dd67.js"><link rel="prefetch" href="/assets/js/66.9c70b2d2.js"><link rel="prefetch" href="/assets/js/67.e84176ae.js"><link rel="prefetch" href="/assets/js/68.f764550d.js"><link rel="prefetch" href="/assets/js/69.eb7df06b.js"><link rel="prefetch" href="/assets/js/7.5030f148.js"><link rel="prefetch" href="/assets/js/70.c8ed9b55.js"><link rel="prefetch" href="/assets/js/71.c6a43353.js"><link rel="prefetch" href="/assets/js/72.b805b75f.js"><link rel="prefetch" href="/assets/js/73.a16daa35.js"><link rel="prefetch" href="/assets/js/74.77e56e6c.js"><link rel="prefetch" href="/assets/js/75.8b06157c.js"><link rel="prefetch" href="/assets/js/77.d0ab50d2.js"><link rel="prefetch" href="/assets/js/78.d970a62c.js"><link rel="prefetch" href="/assets/js/79.6265c55a.js"><link rel="prefetch" href="/assets/js/8.89cf5251.js"><link rel="prefetch" href="/assets/js/80.81e5b3ec.js"><link rel="prefetch" href="/assets/js/81.8a4917d0.js"><link rel="prefetch" href="/assets/js/82.b3682bd3.js"><link rel="prefetch" href="/assets/js/83.982967b2.js"><link rel="prefetch" href="/assets/js/84.59f14049.js"><link rel="prefetch" href="/assets/js/85.19fae1f3.js"><link rel="prefetch" href="/assets/js/9.86f3655d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a555611f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>陶先森de博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hiroshi.tao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陶先森de博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/应用服务/" class="nav-link"><i class="iconfont undefined"></i>
+  应用服务
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开发/" class="nav-link"><i class="iconfont undefined"></i>
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开源项目/" class="nav-link"><i class="iconfont undefined"></i>
+  开源项目
+</a></li><li class="dropdown-item"><!----> <a href="/categories/操作系统/" class="nav-link"><i class="iconfont undefined"></i>
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/categories/运维/" class="nav-link"><i class="iconfont undefined"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      关于我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/post/about.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  关于/联系我
+</a></li><li class="dropdown-item"><h4>站点</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-home"></i>
+  主站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://docs.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>
+  文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://gitee.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>个人开源推荐</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/staugur/Flask-PluginKit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Flask-PluginKit
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/picbed" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  picbed
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/rtfd" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  rtfd
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Hiroshi.tao
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>74</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>22</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/应用服务/" class="nav-link"><i class="iconfont undefined"></i>
+  应用服务
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开发/" class="nav-link"><i class="iconfont undefined"></i>
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开源项目/" class="nav-link"><i class="iconfont undefined"></i>
+  开源项目
+</a></li><li class="dropdown-item"><!----> <a href="/categories/操作系统/" class="nav-link"><i class="iconfont undefined"></i>
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/categories/运维/" class="nav-link"><i class="iconfont undefined"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      关于我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/post/about.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  关于/联系我
+</a></li><li class="dropdown-item"><h4>站点</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-home"></i>
+  主站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://docs.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>
+  文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://gitee.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>个人开源推荐</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/staugur/Flask-PluginKit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Flask-PluginKit
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/picbed" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  picbed
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/rtfd" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  rtfd
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>百度站长平台主动推送(实时)链接接口示例</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hiroshi.tao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div data-v-2d5f533b><main class="page" style="padding-right:0;"><div class="page-title" style="display:none;"><h1 class="title">百度站长平台主动推送(实时)链接接口示例</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>Hiroshi.tao</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2016-10-27</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>站长</span><span class="tag-item" data-v-3b7f5bdf>shell</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>我们有了自己的网站后，基本上都想办法向搜索引擎推送自己的URL。</p> <p>1、Google Search Console是谷歌的搜索管理系统，添加自己的站点后google bot会主动爬你的站。</p> <p>2、Baiduspider一般不会主动爬，不过你可以用百度站长平台(<a href="http://zhanzhang.baidu.com/linksubmit/index" target="_blank" rel="noopener noreferrer">http://zhanzhang.baidu.com/linksubmit/index<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>)提供的主动推送(实时)接口自动提交URLs。</p> <p>在这里，我们用curl访问接口的方式推送一个包含所有URL列表的文件，不过需要注意的是，你推送的URL应该与百度站长平台上验证的站点一致。</p> <p>以本站为例，我在百度站长平台上添加了www.saintic.com，到网页抓取-链接提交下，看到自动提交下有个主动推送(实时)，其中有你站点和token信息，看到curl推送示例，主要就是它。</p> <p>以下是我的简单推送脚本，因为百度有推送数量限制，所以放到crontab中每三个小时运行一次。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#!/bin/bash
+#要求有mailx包，开启了邮件服务
+ci_dir=/tmp/baidu_ci
+ci_urls=${ci_dir}/urls.txt
+ci_r=${ci_dir}/ci_result.txt
+[ -d $ci_dir ] || mkdir -p $ci_dir
+[ -f $ci_urls ] &amp;&amp; rm -f $ci_urls
+check() {
+   code=$(curl -I -s $url |head -1|awk -F &quot;HTTP/1.1 &quot; '{print $2}'|awk '{print $1}')
+   if [ &quot;$code&quot; = &quot;200&quot; ];then
+     echo $url &gt;&gt; $ci_urls
+   fi
+}
+echo &quot;https://blog.saintic.com/&quot; &gt; $ci_urls
+static_urls=(
+    &quot;https://blog.saintic.com/about/&quot;
+)
+
+for url in ${static_urls[@]}
+do
+   check
+done 
+
+for i in {1..20}
+do
+   url=https://blog.saintic.com/blog/${i}.html
+   check
+done
+
+curl -s -H 'Content-Type:text/plain' --data-binary @$ci_urls &quot;http://data.zz.baidu.com/urls?site=此处改为你的站点&amp;token=此处是你的token&amp;type=original&quot; &gt; $ci_r
+#此处的curl就是你在百度站长平台看到的curl推送示例，其中@urls.txt改为@$ci_urls即可。
+
+push_nums=$(jq .success ${ci_r})
+fail_code=$(jq .error ${ci_r})
+fail_msg=$(jq .message ${ci_r})
+
+if [ $push_nums = &quot;0&quot; ];then
+    echo &quot;$(date +%Y-%m-%d,%H:%M:%S),推送异常，推送结果成功但条数为0！！！&quot; | mailx -r &quot;Baidu_ci@saintic.com&quot; -s &quot;百度实时推送:FAIL&quot; staugur@vip.qq.com
+    exit 1
+fi
+
+if [ &quot;$push_nums&quot; != &quot;null&quot; ];then
+    mailx -r &quot;Baidu_ci@saintic.com&quot; -s &quot;百度实时推送:SUCCESS&quot; -c &quot;staugur@saintic.com&quot; staugur@vip.qq.com &lt;&lt;EOF
+$(date +%Y-%m-%d,%H:%M:%S),成功推送${push_nums}条记录。
+推送列表:
+$(cat ${ci_urls})
+EOF
+else
+    echo &quot;$(date +%Y-%m-%d,%H:%M:%S),推送错误,错误代码:${fail_code},原因是:${fail_msg}.&quot; | mailx -r &quot;Baidu_ci@saintic.com&quot; -s &quot;百度实时推送:FAIL&quot; staugur@vip.qq.com
+fi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.5f7aec11.js" defer></script><script src="/assets/js/3.5b403d0a.js" defer></script><script src="/assets/js/1.503657ce.js" defer></script><script src="/assets/js/76.bcbd528d.js" defer></script>
+  </body>
+</html>

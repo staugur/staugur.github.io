@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>陶先森de博客</title>
+        <link>https://blog.saintic.com</link>
+        <description>记录点滴，开源项目源码，分享经验与技术</description>
+        <lastBuildDate>Tue, 20 Oct 2020 08:31:16 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <atom:link href="https://blog.saintic.com/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[vsftpd服务与虚拟用户创建脚本]]></title>
+            <link>https://blog.saintic.com/blog/102.html</link>
+            <guid>https://blog.saintic.com/blog/102.html</guid>
+            <pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RTBAsia真人概率值查询接口]]></title>
+            <link>https://blog.saintic.com/blog/103.html</link>
+            <guid>https://blog.saintic.com/blog/103.html</guid>
+            <pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[multiprocessing.dummy多线程模块]]></title>
+            <link>https://blog.saintic.com/blog/105.html</link>
+            <guid>https://blog.saintic.com/blog/105.html</guid>
+            <pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[multiprocessing.dummy replicates the API of multiprocessing but is no more than a wrapper around the threading module.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[github push [remote rejected] (permission denied)]]></title>
+            <link>https://blog.saintic.com/blog/118.html</link>
+            <guid>https://blog.saintic.com/blog/118.html</guid>
+            <pubDate>Wed, 09 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 341 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/LXSakura/Interest.blog.git
+ ! [remote rejected] master -> master (permission denied)
+error: failed to push some refs to 'https://github.com/LXSakura/Interest.blog.git'
+`]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Docker程序之JAVA时区和日志乱码问题]]></title>
+            <link>https://blog.saintic.com/blog/122.html</link>
+            <guid>https://blog.saintic.com/blog/122.html</guid>
+            <pubDate>Tue, 15 Nov 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Python自定义进程名]]></title>
+            <link>https://blog.saintic.com/blog/132.html</link>
+            <guid>https://blog.saintic.com/blog/132.html</guid>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
+            <enclosure url="http://static.saintic.com/interest.blog/blog/19239552948954297.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Zookeeper]]></title>
+            <link>https://blog.saintic.com/blog/133.html</link>
+            <guid>https://blog.saintic.com/blog/133.html</guid>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Zookeeper 分布式服务框架是 Apache Hadoop 的一个子项目，它主要是用来解决分布式应用中经常遇到的一些数据管理问题，如：统一命名服务、状态同步服务、集群管理、分布式应用配置项的管理等。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[程序文档之Passport]]></title>
+            <link>https://blog.saintic.com/blog/134.html</link>
+            <guid>https://blog.saintic.com/blog/134.html</guid>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
+            <enclosure url="https://static.saintic.com/EauDouce/blog/201808091029114480.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[介绍一款HTML富文本编辑器——wangEditor]]></title>
+            <link>https://blog.saintic.com/blog/136.html</link>
+            <guid>https://blog.saintic.com/blog/136.html</guid>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[标题：*]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Flask使用点滴之cookie]]></title>
+            <link>https://blog.saintic.com/blog/137.html</link>
+            <guid>https://blog.saintic.com/blog/137.html</guid>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
+            <enclosure url="http://static.saintic.com/interest.blog/blog/45593656869462684.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[介绍一款Markdown富文本编辑器——Editor.md]]></title>
+            <link>https://blog.saintic.com/blog/138.html</link>
+            <guid>https://blog.saintic.com/blog/138.html</guid>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[标题：*]]></description>
+        </item>
+        <item>
+            <title><![CDATA[记录一次在docker里启动sshd服务的故障]]></title>
+            <link>https://blog.saintic.com/blog/203.html</link>
+            <guid>https://blog.saintic.com/blog/203.html</guid>
+            <pubDate>Wed, 30 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[有过硬的需求，必须要在一个docker实例中启动sshd服务，centos7的image。]]></description>
+            <enclosure url="http://static.saintic.com/interest.blog/blog/7374988656067656.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Python抓取花瓣网画板图片]]></title>
+            <link>https://blog.saintic.com/blog/204.html</link>
+            <guid>https://blog.saintic.com/blog/204.html</guid>
+            <pubDate>Wed, 30 Nov 2016 00:00:00 GMT</pubDate>
+            <enclosure url="http://static.saintic.com/interest.blog/blog/9238424764200377.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[使用cookie登录的Flask演示系统]]></title>
+            <link>https://blog.saintic.com/blog/207.html</link>
+            <guid>https://blog.saintic.com/blog/207.html</guid>
+            <pubDate>Tue, 06 Dec 2016 00:00:00 GMT</pubDate>
+            <enclosure url="http://static.saintic.com/interest.blog/blog/9781998272413359.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[alpine使用pip安装uwsgi时发生的错误记录]]></title>
+            <link>https://blog.saintic.com/blog/209.html</link>
+            <guid>https://blog.saintic.com/blog/209.html</guid>
+            <pubDate>Thu, 08 Dec 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[百度站长平台主动推送(实时)接口Python示例]]></title>
+            <link>https://blog.saintic.com/blog/210.html</link>
+            <guid>https://blog.saintic.com/blog/210.html</guid>
+            <pubDate>Tue, 13 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前已经写过一篇文章，百度站长平台主动推送\(实时\)链接接口示例，讲述了用命令行curl的方式主动向百度推送我们的相关网址。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[程序文档之SwarmOps]]></title>
+            <link>https://blog.saintic.com/blog/215.html</link>
+            <guid>https://blog.saintic.com/blog/215.html</guid>
+            <pubDate>Mon, 02 Jan 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[开源项目之SwarmOps]]></title>
+            <link>https://blog.saintic.com/blog/217.html</link>
+            <guid>https://blog.saintic.com/blog/217.html</guid>
+            <pubDate>Wed, 11 Jan 2017 00:00:00 GMT</pubDate>
+            <enclosure url="https://static.saintic.com/interest.blog/blog/swarm.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[python生成指纹格式、MAC地址形式的字符串]]></title>
+            <link>https://blog.saintic.com/blog/219.html</link>
+            <guid>https://blog.saintic.com/blog/219.html</guid>
+            <pubDate>Tue, 21 Feb 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[先上代码：]]></description>
+        </item>
+        <item>
+            <title><![CDATA[mysql修改与查看字符集]]></title>
+            <link>https://blog.saintic.com/blog/226.html</link>
+            <guid>https://blog.saintic.com/blog/226.html</guid>
+            <pubDate>Wed, 26 Apr 2017 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

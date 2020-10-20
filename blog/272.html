@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PHP7的使用记录 | 陶先森de博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" href="https://blog.saintic.com/rss.xml" title="陶先森de博客 RSS Feed">
+    <link rel="alternate" type="application/atom+xml" href="https://blog.saintic.com/feed.atom" title="陶先森de博客 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://blog.saintic.com/feed.json" title="陶先森de博客 JSON Feed">
+    <meta name="description" content="记录点滴，开源项目源码，分享经验与技术">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="keywords" content="SaintIC,staugur,Linux,DevOps,python">
+    <link rel="preload" href="/assets/css/0.styles.a555611f.css" as="style"><link rel="preload" href="/assets/js/app.5f7aec11.js" as="script"><link rel="preload" href="/assets/js/3.5b403d0a.js" as="script"><link rel="preload" href="/assets/js/1.503657ce.js" as="script"><link rel="preload" href="/assets/js/64.62fe60c6.js" as="script"><link rel="prefetch" href="/assets/js/10.d29f9f57.js"><link rel="prefetch" href="/assets/js/11.9b8d1394.js"><link rel="prefetch" href="/assets/js/12.5ece8609.js"><link rel="prefetch" href="/assets/js/13.3e5ba270.js"><link rel="prefetch" href="/assets/js/14.59264975.js"><link rel="prefetch" href="/assets/js/15.f3fad6c7.js"><link rel="prefetch" href="/assets/js/16.20a58b08.js"><link rel="prefetch" href="/assets/js/17.9f547a59.js"><link rel="prefetch" href="/assets/js/18.4499acfc.js"><link rel="prefetch" href="/assets/js/19.2c7abd6a.js"><link rel="prefetch" href="/assets/js/20.e6d568ce.js"><link rel="prefetch" href="/assets/js/21.257e0bec.js"><link rel="prefetch" href="/assets/js/22.8b94b210.js"><link rel="prefetch" href="/assets/js/23.2473473f.js"><link rel="prefetch" href="/assets/js/24.1ee17beb.js"><link rel="prefetch" href="/assets/js/25.3a331059.js"><link rel="prefetch" href="/assets/js/26.00a36633.js"><link rel="prefetch" href="/assets/js/27.e46e9d8d.js"><link rel="prefetch" href="/assets/js/28.1dbabe0b.js"><link rel="prefetch" href="/assets/js/29.17329def.js"><link rel="prefetch" href="/assets/js/30.194c353e.js"><link rel="prefetch" href="/assets/js/31.d8c5d2b0.js"><link rel="prefetch" href="/assets/js/32.6156bc98.js"><link rel="prefetch" href="/assets/js/33.2272bdef.js"><link rel="prefetch" href="/assets/js/34.9fdc8ba1.js"><link rel="prefetch" href="/assets/js/35.13c8ecc6.js"><link rel="prefetch" href="/assets/js/36.d91220e9.js"><link rel="prefetch" href="/assets/js/37.06c6d074.js"><link rel="prefetch" href="/assets/js/38.009c07ad.js"><link rel="prefetch" href="/assets/js/39.c1262999.js"><link rel="prefetch" href="/assets/js/4.cd70b4e5.js"><link rel="prefetch" href="/assets/js/40.98daceaf.js"><link rel="prefetch" href="/assets/js/41.b41a1f19.js"><link rel="prefetch" href="/assets/js/42.cf4de41a.js"><link rel="prefetch" href="/assets/js/43.9cc738f6.js"><link rel="prefetch" href="/assets/js/44.c06a5936.js"><link rel="prefetch" href="/assets/js/45.68c956fc.js"><link rel="prefetch" href="/assets/js/46.58b524bd.js"><link rel="prefetch" href="/assets/js/47.acefc4df.js"><link rel="prefetch" href="/assets/js/48.ec5d5d56.js"><link rel="prefetch" href="/assets/js/49.95779e45.js"><link rel="prefetch" href="/assets/js/5.6b128eac.js"><link rel="prefetch" href="/assets/js/50.10d14a19.js"><link rel="prefetch" href="/assets/js/51.215d8454.js"><link rel="prefetch" href="/assets/js/52.d279376b.js"><link rel="prefetch" href="/assets/js/53.73d470ec.js"><link rel="prefetch" href="/assets/js/54.0057e623.js"><link rel="prefetch" href="/assets/js/55.1d162910.js"><link rel="prefetch" href="/assets/js/56.69daa4a8.js"><link rel="prefetch" href="/assets/js/57.2d433b12.js"><link rel="prefetch" href="/assets/js/58.25d06215.js"><link rel="prefetch" href="/assets/js/59.9bb78fa5.js"><link rel="prefetch" href="/assets/js/6.9e83e188.js"><link rel="prefetch" href="/assets/js/60.b1e283ff.js"><link rel="prefetch" href="/assets/js/61.a97b8042.js"><link rel="prefetch" href="/assets/js/62.0fcbacb1.js"><link rel="prefetch" href="/assets/js/63.ca60405f.js"><link rel="prefetch" href="/assets/js/65.5097dd67.js"><link rel="prefetch" href="/assets/js/66.9c70b2d2.js"><link rel="prefetch" href="/assets/js/67.e84176ae.js"><link rel="prefetch" href="/assets/js/68.f764550d.js"><link rel="prefetch" href="/assets/js/69.eb7df06b.js"><link rel="prefetch" href="/assets/js/7.5030f148.js"><link rel="prefetch" href="/assets/js/70.c8ed9b55.js"><link rel="prefetch" href="/assets/js/71.c6a43353.js"><link rel="prefetch" href="/assets/js/72.b805b75f.js"><link rel="prefetch" href="/assets/js/73.a16daa35.js"><link rel="prefetch" href="/assets/js/74.77e56e6c.js"><link rel="prefetch" href="/assets/js/75.8b06157c.js"><link rel="prefetch" href="/assets/js/76.bcbd528d.js"><link rel="prefetch" href="/assets/js/77.d0ab50d2.js"><link rel="prefetch" href="/assets/js/78.d970a62c.js"><link rel="prefetch" href="/assets/js/79.6265c55a.js"><link rel="prefetch" href="/assets/js/8.89cf5251.js"><link rel="prefetch" href="/assets/js/80.81e5b3ec.js"><link rel="prefetch" href="/assets/js/81.8a4917d0.js"><link rel="prefetch" href="/assets/js/82.b3682bd3.js"><link rel="prefetch" href="/assets/js/83.982967b2.js"><link rel="prefetch" href="/assets/js/84.59f14049.js"><link rel="prefetch" href="/assets/js/85.19fae1f3.js"><link rel="prefetch" href="/assets/js/9.86f3655d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a555611f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>陶先森de博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hiroshi.tao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陶先森de博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/应用服务/" class="nav-link"><i class="iconfont undefined"></i>
+  应用服务
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开发/" class="nav-link"><i class="iconfont undefined"></i>
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开源项目/" class="nav-link"><i class="iconfont undefined"></i>
+  开源项目
+</a></li><li class="dropdown-item"><!----> <a href="/categories/操作系统/" class="nav-link"><i class="iconfont undefined"></i>
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/categories/运维/" class="nav-link"><i class="iconfont undefined"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      关于我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/post/about.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  关于/联系我
+</a></li><li class="dropdown-item"><h4>站点</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-home"></i>
+  主站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://docs.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>
+  文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://gitee.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>个人开源推荐</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/staugur/Flask-PluginKit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Flask-PluginKit
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/picbed" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  picbed
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/rtfd" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  rtfd
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Hiroshi.tao
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>74</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>22</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/应用服务/" class="nav-link"><i class="iconfont undefined"></i>
+  应用服务
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开发/" class="nav-link"><i class="iconfont undefined"></i>
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开源项目/" class="nav-link"><i class="iconfont undefined"></i>
+  开源项目
+</a></li><li class="dropdown-item"><!----> <a href="/categories/操作系统/" class="nav-link"><i class="iconfont undefined"></i>
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/categories/运维/" class="nav-link"><i class="iconfont undefined"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      关于我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/post/about.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  关于/联系我
+</a></li><li class="dropdown-item"><h4>站点</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-home"></i>
+  主站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://docs.saintic.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>
+  文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://gitee.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>个人开源推荐</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/staugur/Flask-PluginKit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Flask-PluginKit
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/picbed" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  picbed
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/staugur/rtfd" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  rtfd
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>PHP7的使用记录</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hiroshi.tao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">PHP7的使用记录</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>Hiroshi.tao</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2019-06-20</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>php</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="php7"><a href="#php7" class="header-anchor">#</a> PHP7</h2> <p>2015年正式发版php7.0，随后每年都有发布新版，截止本文时，php7.4已经出了，不过官网上稳定版还是7.3。</p> <p>PHP7是趋势，不过我之前只是简单了解php语法，这次为了接入tdi，再捡起来索性放弃5.x，而且php7.1都快超过安全支持期了，7.2、7.3才比较靠谱。</p> <h2 id="tdi-php"><a href="#tdi-php" class="header-anchor">#</a> Tdi-php</h2> <p>这个<a href="https://github.com/staugur/tdi-php" target="_blank" rel="noopener noreferrer">小应用<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>是用来下载大量图片的，基于php7，开发版本php7.2，但是并没有用其新特性，所以支持7.0+，另外测试过的操作系统也只有CentOS、Ubuntu。</p> <p>本文即记录开发这个小应用时的一些工具，本人菜鸟，文中有误万请指点！</p> <h4 id="_1-系统负载、磁盘、内存等"><a href="#_1-系统负载、磁盘、内存等" class="header-anchor">#</a> 1. 系统负载、磁盘、内存等</h4> <p>这些函数是从几个探针程序中剥离，并添加一些其他的，不过数据来源于系统运行时产生的/proc文件，Windows并不适用。</p> <p><strong>1.1 获取系统内存使用率</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//返回内存使用率百分比，类型float
+function memRate()
+{
+    $res = array();
+    // MEMORY
+    if (false === ($str = @file('/proc/meminfo'))) {
+        return false;
+    }
+    $str = implode('', $str);
+    preg_match_all('/MemTotal\s{0,}\:+\s{0,}([\d\.]+).+?MemFree\s{0,}\:+\s{0,}([\d\.]+).+?Cached\s{0,}\:+\s{0,}([\d\.]+).+?SwapTotal\s{0,}\:+\s{0,}([\d\.]+).+?SwapFree\s{0,}\:+\s{0,}([\d\.]+)/s', $str, $buf);
+    preg_match_all('/Buffers\s{0,}\:+\s{0,}([\d\.]+)/s', $str, $buffers);
+    $res['memTotal'] = round($buf[1][0]*1024, 2);
+    $res['memFree'] = round($buf[2][0]*1024, 2);
+    $res['memBuffers'] = round($buffers[1][0]*1024, 2);
+    $res['memCached'] = round($buf[3][0]*1024, 2);
+    $res['memUsed'] = $res['memTotal']-$res['memFree'];
+    $res['memPercent'] = (floatval($res['memTotal'])!=0)?round($res['memUsed']/$res['memTotal']*100, 2):0;
+    return $res['memPercent'];
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p><strong>1.2 获取系统负载</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//返回五分钟负载，类型float
+function loadStat()
+{
+    // LOAD AVG
+    if (false === ($str = @file('/proc/loadavg'))) {
+        return false;
+    }
+    $load = explode(' ', implode('', $str));
+    return floatval($load[1]);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>1.3 获取目录所在磁盘的使用率</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//返回path目录所在磁盘的使用率百分比，类型int；传参ret不为percent时，返回目录所在磁盘的数据，类型array
+function diskRate(string $path=null, string $ret='percent')
+{
+    //硬盘
+    $checkPath = $path ? $path : __DIR__;
+    $dt = round(@disk_total_space($checkPath), 3); //总
+    $df = round(@disk_free_space($checkPath), 3); //可用
+    $du = $dt-$df; //已用
+    $hdPercent = (floatval($dt)!=0)?round($du/$dt*100, 2):0;
+    return $ret === 'percent' ? $hdPercent : array('total'=&gt;$dt, 'available'=&gt;$df, 'used'=&gt;$du, 'percent'=&gt;$hdPercent);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="_2-统计目录中所有文件总字节-不包括子目录"><a href="#_2-统计目录中所有文件总字节-不包括子目录" class="header-anchor">#</a> 2. 统计目录中所有文件总字节(不包括子目录)</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>//用来统计一个目录的大小，返回字节，exclude允许排除统计某些后缀，比如$exclude = ['zip','txt']
+function getDirSize(string $dir, array $exclude=array())
+{
+    $sizeResult = 0;
+    $handle = opendir($dir);
+    while (false!==($FolderOrFile = readdir($handle))) {
+        if ($FolderOrFile != &quot;.&quot; &amp;&amp; $FolderOrFile != &quot;..&quot;) {
+            $f = &quot;$dir/$FolderOrFile&quot;;
+            if (is_file($f) &amp;&amp; !in_array(pathinfo($f, PATHINFO_EXTENSION), $exclude)) {
+                $sizeResult += filesize($f);
+            }
+        }
+    }
+    closedir($handle);
+    return $sizeResult;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h4 id="_3-彻底删除目录-文件和子目录-等同rm-rf"><a href="#_3-彻底删除目录-文件和子目录-等同rm-rf" class="header-anchor">#</a> 3. 彻底删除目录(文件和子目录，等同rm -rf)</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>function delDir(string $directory)
+{
+    if (file_exists($directory)) {//判断目录是否存在，如果不存在rmdir()函数会出错
+        if ($dir_handle=@opendir($directory)) {//打开目录返回目录资源，并判断是否成功
+            while ($filename=readdir($dir_handle)) {//遍历目录，读出目录中的文件或文件夹
+                if ($filename!='.' &amp;&amp; $filename!='..') {//一定要排除两个特殊的目录
+                    $subFile=$directory.&quot;/&quot;.$filename;//将目录下的文件与当前目录相连
+                    if (is_dir($subFile)) {//如果是目录条件则成了
+                        delDir($subFile);//递归调用自己删除子目录
+                    }
+                    if (is_file($subFile)) {//如果是文件条件则成立
+                        unlink($subFile);//直接删除这个文件
+                    }
+                }
+            }
+            closedir($dir_handle);//关闭目录资源
+            rmdir($directory);//删除空目录
+        }
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h4 id="_4-zip压缩目录"><a href="#_4-zip压缩目录" class="header-anchor">#</a> 4. Zip压缩目录</h4> <p>注释里有参考，整理并改进了一下，其效果是：压缩某个目录所有文件，但不包含子目录，也可以排除压缩某些后缀的文件。</p> <p>不过注意：要压缩的文件（压缩时文件名放入待删除数组to_be_unlinked ）在完成压缩后会删除，如果不想删除，参考下面代码第50行（<code>foreach ($to_be_unlinked as $v)</code>）的注释提示。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/*
+    // 生成zip压缩文件的函数，参考：https://blog.csdn.net/zhao_teng/article/details/84941828
+    @param $dir             string 需要压缩的文件夹名
+    @param $filename     string 压缩后的zip文件名  包括zip后缀
+    @param $exclude      array   不需要压缩的文件后缀，后缀不包含点
+    @return 成功时返回压缩文件的绝对路径，否则返回false
+*/
+class MakeZip
+{
+    public function zip(string $dir, string $filename, array $exclude=array())
+    {
+        if (!is_dir($dir)) {
+            die('can not exists dir '.$dir);
+        }
+
+        //判断是否为zip后缀
+        if (pathinfo($filename, PATHINFO_EXTENSION) != 'zip') {
+            die('only Support zip files');
+        }
+
+        $dir = str_replace('\\', '/', $dir);
+        $filename = str_replace('\\', '/', $filename);
+        $filename = iconv('utf-8', 'gb2312', $filename);
+        if (is_file($filename)) {
+            die('the zip file '.$filename.' has exists !');
+        }
+
+        //目录中的所有文件
+        $files = array();
+        $this-&gt;getfiles($dir, $files);
+        $files = $this-&gt;array_iconv($files);
+        if (empty($files)) {
+            die(' the dir is empty');
+        }
+
+        //执行压缩
+        $zip = new ZipArchive();
+        $res = $zip-&gt;open($filename, ZipArchive::CREATE);
+        if ($res === true) {
+            foreach ($files as $v) {
+                // 设定在压缩包内文件名
+                $_in_zip_filename = str_replace($dir.'/', '', $v);
+                // 依据文件后缀判断是否排除(即不压缩)
+                if (is_file($v) &amp;&amp; !in_array(pathinfo($_in_zip_filename, PATHINFO_EXTENSION), $exclude)) {
+                    $zip-&gt;addFile($v, $_in_zip_filename);
+                    $to_be_unlinked[] = $v;
+                }
+            }
+            $zip-&gt;close();
+            //由于zip需要close后才执行压缩操作，所以只能在这里删除压缩的文件，如果不想删除，请注释下面三行
+            foreach ($to_be_unlinked as $v) {
+                unlink($v);
+            }
+            return realpath($filename);
+        } else {
+            return false;
+        }
+    }
+
+    //定义图片字符集
+    protected function array_iconv($data, $in_charset='GBK', $out_charset='UTF-8')
+    {
+        if (!is_array($data)) {
+            $output = iconv($in_charset, $out_charset, $data);
+        } elseif (count($data) === count($data, 1)) {//判断是否是二维数组
+            foreach ($data as $key =&gt; $value) {
+                $output[$key] = iconv($in_charset, $out_charset, $value);
+            }
+        } else {
+            eval_r('$output = ' . iconv($in_charset, $out_charset, var_export($data, true)) . ';');
+        }
+        return $output;
+    }
+
+    //获取目录中文件赋值给$files
+    private function getfiles($dir, &amp;$files=array())
+    {
+        if (!is_dir($dir)) {
+            return false;
+        }
+        if (substr($dir, -1)=='/') {
+            $dir = substr($dir, 0, strlen($dir)-1);
+        }
+        $_files = scandir($dir);
+        foreach ($_files as $v) {
+            if ($v != '.' &amp;&amp; $v!='..') {
+                if (is_file($dir.'/'.$v)) {
+                    $files[] = $dir.'/'.$v;
+                }
+            }
+        }
+        return $files;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br></div></div><p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?php
+require_once 'tool.php';
+//压缩test_dir目录，生成test.zip压缩文件，但压缩时不会压缩目录中.zip结尾的文件。
+$zip = new MakeZip;
+$zipfilepath = $zip-&gt;zip('test_dir', 'test.zip', ['zip']);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="_5-简单地日志记录"><a href="#_5-简单地日志记录" class="header-anchor">#</a> 5. 简单地日志记录</h4> <p>由于是个小应用，但是也有些信息需要记录，所以直接使用file_put_contents写入到文件中，利用debug_backtrace获取写日志的文件和行号。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/*
+    * 日志类
+    * 当文件超过指定大小则备份日志文件并重新生成新的日志文件
+    * 使用时，直接调用三个静态方法，info、error、debug
+*/
+class Log
+{
+    //日志文件名，放到了logs目录了
+    private static $filename = __DIR__.'/logs/sys.log';
+    //最大文件大小10M
+    private static $maxsize = 10240000;
+
+    //写入日志
+    protected function _log($msg, $level='INFO')
+    {
+        if (!is_dir(__DIR__.'/logs')) {
+            mkdir(__DIR__.'/logs');
+        }
+        $filename = self::$filename;
+        // 来源文件与行号，回溯2条
+        $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, $limit=2);
+        $file = $trace[1]['file'];
+        $line = $trace[1]['line'];
+        // 格式化消息
+        if (is_array($msg)) {
+            $msg = json_encode($msg);
+        }
+        $content = sprintf(&quot;[ %s ] %s %s:%s %s\n&quot;, $level, date('Y-m-d H:i:s', time()), str_replace(__DIR__.'/', '', $file), $line, $msg);
+
+        //如果日志文件超过了指定大小则备份日志文件
+        if (file_exists($filename) &amp;&amp; (abs(filesize($filename)) &gt; self::$maxsize)) {
+            $newfilename = dirname($filename).'/'.time().'-'.basename($filename);
+            rename($filename, $newfilename);
+        }
+
+        //往日志文件内容后面追加日志内容
+        file_put_contents($filename, $content, FILE_APPEND);
+    }
+
+    public static function debug($msg)
+    {
+        $log = new self();
+        $log-&gt;_log($msg, 'DEBUG');
+    }
+
+    public static function info($msg)
+    {
+        $log = new self();
+        $log-&gt;_log($msg, 'INFO');
+    }
+
+    public static function error($msg)
+    {
+        $log = new self();
+        $log-&gt;_log($msg, 'ERROR');
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br></div></div><p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># cat test.php
+&lt;?php
+require_once 'tool.php';
+Log::info('info');
+Log::error('error');
+Log::debug('debug');
+
+# cat logs/sys.log
+[ INFO ] 2019-06-19 17:50:30 test.php:5 info
+[ ERROR ] 2019-06-19 17:50:31 test.php:6 error
+[ DEBUG ] 2019-06-19 17:50:31 test.php:7 debug
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="_6-curl的封装"><a href="#_6-curl的封装" class="header-anchor">#</a> 6. curl的封装</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>/*
+    //使用curl扩展发起http请求，支持https，可以发起get、post请求
+    @param $url  string: 请求地址
+    @param $data array:  如果存在，则为post请求
+    @param $timeout int: 超时秒数
+    @param $parse_json boolean: 是否将响应进行json解码
+    @return array
+*/
+function request(string $url, array $data=null, int $timeout=10, bool $parse_json=true)
+{
+    $useragent = 'Tdi-PHP/v1';
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HEADER, 1); //设置返回响应头
+    curl_setopt($curl, CURLOPT_USERAGENT, $useragent);
+    curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    if (!empty($data)) {
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+    }
+    $output = curl_exec($curl);
+    if (curl_getinfo($curl, CURLINFO_HTTP_CODE) === 200) {
+        list($header, $body) = explode(&quot;\r\n\r\n&quot;, $output, 2);
+    }
+    curl_close($curl);
+    return $parse_json ? json_decode($body, true) : $body;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h4 id="_7-php-resque的使用"><a href="#_7-php-resque的使用" class="header-anchor">#</a> 7. php-resque的使用</h4> <p>前面有说，本文就是在写一个小应用时的使用记录，觉得有用的几个函数、类分享出来，而这个应用在下载大量图片时，采用了后台队列的方式，将下载功能独立一个类，并采用php-resque这个轻量级队列程序将下载放到队列中，另行处理。</p> <p>php-resque是resque（ruby）的php实现，原作者仓库是<a href="https://github.com/chrisboulton/php-resque" target="_blank" rel="noopener noreferrer">https://github.com/chrisboulton/php-resque<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, 但是我用composer安装这个仓库代码时无法运行，少了些东西；原仓库已经几年没更新了，作者将项目交给了resque社区维护，仓库地址是：<a href="https://github.com/resque/php-resque" target="_blank" rel="noopener noreferrer">https://github.com/resque/php-resque<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>以下步骤会运行一个简单的示例，但不是官方给的demo，可以参考示例集成到你的项目中。</p> <p>此示例假设，项目目录是demo，redis密码abc，端口默认6379，使用0库，其DSN-style连接串是redis://:<a href="mailto:abc@127.0.0">abc@127.0.0</a>.1</p> <p>7.1 安装</p> <p>使用命令：<code>composer require resque/php-resque</code></p> <p>解释说明：composer是php的包管理命令，如果没有安装，参考<a href="https://getcomposer.org/download/" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，也可以用操作系统的包管理器安装，比如Ubuntu用<code>apt-get install composer</code>，RHEL/CentOS系用<code>yum install composer</code></p> <p>7.2 创建文件</p> <p>上面安装了resque/php-resque后，会在当前demo目录下生成composer.json、composer.lock文件和vender目录：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># tree -L 3
+.
+├── composer.json
+├── composer.lock
+└── vendor
+    ├── autoload.php
+    ├── bin
+    │   └── resque -&gt; ../resque/php-resque/bin/resque
+    ├── colinmollenhour
+    │   └── credis
+    ├── composer
+    │   ├── autoload_classmap.php
+    │   ├── autoload_namespaces.php
+    │   ├── autoload_psr4.php
+    │   ├── autoload_real.php
+    │   ├── autoload_static.php
+    │   ├── ClassLoader.php
+    │   ├── installed.json
+    │   └── LICENSE
+    ├── psr
+    │   └── log
+    └── resque
+        └── php-resque
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>关于composer生成的这些文件，可以只保留<code>composer.json</code>，也可以全都要，更多了解请自行Google，现在了解下php-resque。</p> <p><strong>在Resque中，一个后台任务被抽象为由三种角色共同完成：</strong></p> <ul><li><p>Job | 任务 ： 一个Job就是一个需要在后台完成的任务，比如发邮件、下载图片，就可以抽象为一个Job。在Resque中一个Job就是一个Class。</p></li> <li><p>Queue | 队列 ： 在Resque中，队列则是由Redis实现的。Resque还提供了一个简单的队列管理器，可以实现将Job插入/取出队列等功能。</p></li> <li><p>Worker | 执行者 ： 负责从队列中取出Job并执行，可以以守护进程的方式运行在后台。</p></li></ul> <p><strong>其流程如下：</strong></p> <ol><li><p>将一个后台任务编写为一个独立的Class，这个Class就是一个Job。</p></li> <li><p>在需要使用后台程序的地方，系统将Job Class的名称以及所需参数放入队列。</p></li> <li><p>以命令行方式开启一个Worker，并通过参数指定Worker所需要处理的队列。</p></li> <li><p>Worker作为守护进程运行，并且定时检查队列。</p></li> <li><p>当队列中有Job时，Worker取出Job并运行，即实例化Job Class并执行Class中的方法。</p></li></ol> <p>php-resque是resque的php实现，所以角色和流程是一致的，不过php-resque没有web的队列管理器等。</p> <p><strong>7.2.1 编写任务类文件：job.php</strong></p> <p>任务类要实现<code>perform</code>方法，参考<a href="https://github.com/resque/php-resque#defining-jobs" title="文档" target="_blank" rel="noopener noreferrer">文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，这个方法所需参数可以用<code>$this-&gt;args['参数']</code>获取。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?php
+
+class TestJob
+{
+    public function perform()
+    {
+        $name = $this-&gt;args['name'];
+        echo 'Hello '.$name;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>7.2.2 编写调用任务代码：index.php</strong></p> <p>上面job.php中的TestJob类，在项目中不会直接调用，项目代码中需要主动往队列Queue中扔任务，参考<a href="https://github.com/resque/php-resque#queueing-jobs" target="_blank" rel="noopener noreferrer">文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>以下模拟项目代码index.php：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?php
+
+// 执行成功，将任务放到队列中
+require_once './vendor/autoload.php';
+// 设置resque的redis连接信息
+Resque::setBackend('redis://:abc@127.0.0.1');
+$args = array(
+    'name'=&gt; 'saintic.com'
+);
+// 入列
+Resque::enqueue('default', 'TestJob', $args);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>注意入列这行：default是队列名，可以设置为其他名称；TestJob是上面job.php任务类的类名；$args就是任务类<code>perform</code>方法所需参数。</p> <p><strong>7.2.3 启动Worker进程等待处理任务</strong></p> <p>使用php-resque单独启动worker处理进程在后台处理任务，参考<a href="https://github.com/resque/php-resque#workers" target="_blank" rel="noopener noreferrer">文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，启动进程一条命令可以实现：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque 
+[notice] Starting worker your_hostname:499:default
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>解释下，启动resque队列处理进程主要是靠vender/bin/resque，它运行时接收几个环境变量，参照上面的命令，环境变量有：</p> <ol><li><p>QUEUE - 必需，队列名，resque进程会处理哪些队列</p></li> <li><p>APP_INCLUDE - 也是必需，引入任务类文件</p></li> <li><p>REDIS_BACKEND - redis连接信息，可以使用DSN-style，默认localhost:6379</p></li></ol> <p>这命令会在前台启动，新开终端可以看到resque进程。</p> <p><strong>7.2.4 测试执行任务</strong></p> <p>现在在新终端以cli方法执行index.php，会向default队列扔一个TestJob任务，然后worker检测到任务后会执行，worker那个终端会输出<code>&quot;Hello saintic.com&quot;</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque 
+[notice] Starting worker taochengwei:499:default
+[notice] Starting work on (Job{default} | ID: 71ef15f4246b450abe9fd6436758e73f | TestJob | [{&quot;name&quot;:&quot;saintic.com&quot;}])
+Hello saintic.com
+[notice] (Job{default} | ID: 71ef15f4246b450abe9fd6436758e73f | TestJob | [{&quot;name&quot;:&quot;saintic.com&quot;}])
+has finished
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>PS：以上输出内容我手动换行了。</p> <p>当前demo目录文件结构如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># tree -L 1
+.
+├── composer.json
+├── composer.lock
+├── index.php
+├── job.php
+└── vendor
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>以上php-resque示例中，php版本7.2，操作系统Ubuntu 18.04.1 LTS</p> <p>附录：一个启动、停止php-resque worker进程的脚本，<a href="https://github.com/staugur/tdi-php/blob/master/src/online_rq.sh" target="_blank" rel="noopener noreferrer">github这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，这个脚本中任务类文件写死是qf.php，供参考，自行修改哦。</p> <p>注意：停止进程最好使用signals，参考<a href="https://github.com/resque/php-resque#signals" target="_blank" rel="noopener noreferrer">文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，上面脚本用的是QUIT信号。</p> <h4 id="end"><a href="#end" class="header-anchor">#</a> END</h4></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.5f7aec11.js" defer></script><script src="/assets/js/3.5b403d0a.js" defer></script><script src="/assets/js/1.503657ce.js" defer></script><script src="/assets/js/64.62fe60c6.js" defer></script>
+  </body>
+</html>

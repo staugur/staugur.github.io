@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.saintic.com</id>
+    <title>陶先森de博客</title>
+    <updated>2020-10-20T08:31:16.123Z</updated>
+    <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+    <link rel="alternate" href="https://blog.saintic.com"/>
+    <link rel="self" href="https://blog.saintic.com/feed.atom"/>
+    <subtitle>记录点滴，开源项目源码，分享经验与技术</subtitle>
+    <entry>
+        <title type="html"><![CDATA[vsftpd服务与虚拟用户创建脚本]]></title>
+        <id>https://blog.saintic.com/blog/102.html</id>
+        <link href="https://blog.saintic.com/blog/102.html">
+        </link>
+        <updated>2016-11-01T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RTBAsia真人概率值查询接口]]></title>
+        <id>https://blog.saintic.com/blog/103.html</id>
+        <link href="https://blog.saintic.com/blog/103.html">
+        </link>
+        <updated>2016-11-01T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[multiprocessing.dummy多线程模块]]></title>
+        <id>https://blog.saintic.com/blog/105.html</id>
+        <link href="https://blog.saintic.com/blog/105.html">
+        </link>
+        <updated>2016-11-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[multiprocessing.dummy replicates the API of multiprocessing but is no more than a wrapper around the threading module.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[github push [remote rejected] (permission denied)]]></title>
+        <id>https://blog.saintic.com/blog/118.html</id>
+        <link href="https://blog.saintic.com/blog/118.html">
+        </link>
+        <updated>2016-11-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 341 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/LXSakura/Interest.blog.git
+ ! [remote rejected] master -> master (permission denied)
+error: failed to push some refs to 'https://github.com/LXSakura/Interest.blog.git'
+`]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker程序之JAVA时区和日志乱码问题]]></title>
+        <id>https://blog.saintic.com/blog/122.html</id>
+        <link href="https://blog.saintic.com/blog/122.html">
+        </link>
+        <updated>2016-11-15T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python自定义进程名]]></title>
+        <id>https://blog.saintic.com/blog/132.html</id>
+        <link href="https://blog.saintic.com/blog/132.html">
+        </link>
+        <updated>2016-11-23T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zookeeper]]></title>
+        <id>https://blog.saintic.com/blog/133.html</id>
+        <link href="https://blog.saintic.com/blog/133.html">
+        </link>
+        <updated>2016-11-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Zookeeper 分布式服务框架是 Apache Hadoop 的一个子项目，它主要是用来解决分布式应用中经常遇到的一些数据管理问题，如：统一命名服务、状态同步服务、集群管理、分布式应用配置项的管理等。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[程序文档之Passport]]></title>
+        <id>https://blog.saintic.com/blog/134.html</id>
+        <link href="https://blog.saintic.com/blog/134.html">
+        </link>
+        <updated>2016-11-23T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[介绍一款HTML富文本编辑器——wangEditor]]></title>
+        <id>https://blog.saintic.com/blog/136.html</id>
+        <link href="https://blog.saintic.com/blog/136.html">
+        </link>
+        <updated>2016-11-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[标题：*]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flask使用点滴之cookie]]></title>
+        <id>https://blog.saintic.com/blog/137.html</id>
+        <link href="https://blog.saintic.com/blog/137.html">
+        </link>
+        <updated>2016-11-23T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[介绍一款Markdown富文本编辑器——Editor.md]]></title>
+        <id>https://blog.saintic.com/blog/138.html</id>
+        <link href="https://blog.saintic.com/blog/138.html">
+        </link>
+        <updated>2016-11-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[标题：*]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记录一次在docker里启动sshd服务的故障]]></title>
+        <id>https://blog.saintic.com/blog/203.html</id>
+        <link href="https://blog.saintic.com/blog/203.html">
+        </link>
+        <updated>2016-11-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[有过硬的需求，必须要在一个docker实例中启动sshd服务，centos7的image。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python抓取花瓣网画板图片]]></title>
+        <id>https://blog.saintic.com/blog/204.html</id>
+        <link href="https://blog.saintic.com/blog/204.html">
+        </link>
+        <updated>2016-11-30T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用cookie登录的Flask演示系统]]></title>
+        <id>https://blog.saintic.com/blog/207.html</id>
+        <link href="https://blog.saintic.com/blog/207.html">
+        </link>
+        <updated>2016-12-06T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[alpine使用pip安装uwsgi时发生的错误记录]]></title>
+        <id>https://blog.saintic.com/blog/209.html</id>
+        <link href="https://blog.saintic.com/blog/209.html">
+        </link>
+        <updated>2016-12-08T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[百度站长平台主动推送(实时)接口Python示例]]></title>
+        <id>https://blog.saintic.com/blog/210.html</id>
+        <link href="https://blog.saintic.com/blog/210.html">
+        </link>
+        <updated>2016-12-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[之前已经写过一篇文章，百度站长平台主动推送\(实时\)链接接口示例，讲述了用命令行curl的方式主动向百度推送我们的相关网址。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[程序文档之SwarmOps]]></title>
+        <id>https://blog.saintic.com/blog/215.html</id>
+        <link href="https://blog.saintic.com/blog/215.html">
+        </link>
+        <updated>2017-01-02T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开源项目之SwarmOps]]></title>
+        <id>https://blog.saintic.com/blog/217.html</id>
+        <link href="https://blog.saintic.com/blog/217.html">
+        </link>
+        <updated>2017-01-11T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python生成指纹格式、MAC地址形式的字符串]]></title>
+        <id>https://blog.saintic.com/blog/219.html</id>
+        <link href="https://blog.saintic.com/blog/219.html">
+        </link>
+        <updated>2017-02-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[先上代码：]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mysql修改与查看字符集]]></title>
+        <id>https://blog.saintic.com/blog/226.html</id>
+        <link href="https://blog.saintic.com/blog/226.html">
+        </link>
+        <updated>2017-04-26T00:00:00.000Z</updated>
+    </entry>
+</feed>
