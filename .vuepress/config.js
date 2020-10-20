@@ -1,6 +1,114 @@
+const url = 'http://127.0.0.1:8084'
+const title = '陶先森de博客'
+const description = '记录点滴，开源项目源码，分享经验与技术'
+
+const friendLink = [
+    {
+        title: "WangMao's Blog",
+        link: 'https://blog.wangmao.me/'
+    },
+    {
+        title: 'OOIII',
+        desc: 'Change or Die',
+        link: 'https://ooiii.com/'
+    },
+    {
+        title: '木法传',
+        link: 'https://www.mofazhuan.com/'
+    },
+    {
+        title: '薛定喵君',
+        link: 'http://xuedingmiao.com/'
+    }
+]
+
+const nav = [
+    {
+        text: '首页',
+        link: '/',
+        icon: 'reco-home'
+    },
+    {
+        text: '时间轴',
+        link: '/timeline/',
+        icon: 'reco-date'
+    },
+    {
+        text: '关于我',
+        icon: 'reco-message',
+        items: [
+            {
+                text: '关于/联系我',
+                link: '/post/about',
+                icon: 'reco-blog'
+            },
+            {
+                text: '站点',
+                items: [
+                    {
+                        text: '主站',
+                        link: 'https://www.saintic.com',
+                        icon: 'reco-home'
+                    },
+                    {
+                        text: '文档',
+                        link: 'https://docs.saintic.com',
+                        icon: 'reco-document'
+                    },
+                    {
+                        text: 'Gitee',
+                        link: 'https://gitee.com/staugur',
+                        icon: 'reco-mayun'
+                    },
+                    {
+                        text: 'GitHub',
+                        link: 'https://github.com/staugur',
+                        icon: 'reco-github'
+                    }
+                ]
+            },
+            {
+                text: '个人开源推荐',
+                items: [
+                    {
+                        text: 'Flask-PluginKit',
+                        link: 'https://github.com/staugur/Flask-PluginKit'
+                    },
+                    {
+                        text: 'picbed',
+                        link: 'https://github.com/staugur/picbed'
+                    },
+                    {
+                        text: 'rtfd',
+                        link: 'https://github.com/staugur/rtfd'
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+let feedNav = {
+    text: 'Feed',
+    items: [
+        {
+            text: 'RSS',
+            link: url + '/rss.xml'
+        },
+        {
+            text: 'Atom',
+            linl: url + '/feed.atom'
+        }
+    ]
+}
+
+if (process.env.DEPLOY === 'online') {
+    nav.push(feedNav)
+}
+
 module.exports = {
-    title: '陶先森de博客',
-    description: '记录点滴，开源项目源码，分享经验与技术。',
+    title,
+    description,
     dest: 'dist',
     head: [
         [
@@ -39,92 +147,8 @@ module.exports = {
     },
     theme: 'reco',
     themeConfig: {
-        nav: [
-            {
-                text: '首页',
-                link: '/',
-                icon: 'reco-home'
-            },
-            {
-                text: '时间轴',
-                link: '/timeline/',
-                icon: 'reco-date'
-            },
-            {
-                text: '关于我',
-                icon: 'reco-message',
-                items: [
-                    {
-                        text: '关于/联系我',
-                        link: '/post/about',
-                        icon: 'reco-blog'
-                    },
-                    {
-                        text: '站点',
-                        items: [
-                            {
-                                text: '主站',
-                                link: 'https://www.saintic.com',
-                                icon: 'reco-home'
-                            },
-                            {
-                                text: '文档',
-                                link: 'https://docs.saintic.com',
-                                icon: 'reco-document'
-                            },
-                            {
-                                text: 'Gitee',
-                                link: 'https://gitee.com/staugur',
-                                icon: 'reco-mayun'
-                            },
-                            {
-                                text: 'GitHub',
-                                link: 'https://github.com/staugur',
-                                icon: 'reco-github'
-                            }
-                        ]
-                    },
-                    {
-                        text: '个人开源推荐',
-                        items: [
-                            {
-                                text: 'Flask-PluginKit',
-                                link:
-                                    'https://github.com/staugur/Flask-PluginKit'
-                            },
-                            {
-                                text: 'picbed',
-                                link: 'https://github.com/staugur/picbed'
-                            },
-                            {
-                                text: 'rtfd',
-                                link: 'https://github.com/staugur/rtfd'
-                            },
-                            {
-                                text: 'grab_huaban_board',
-                                link:
-                                    'https://github.com/staugur/grab_huaban_board'
-                            }
-                        ]
-                    }
-                    /*
-                    {
-                        text: 'Feed',
-                        items: [
-                            {
-                                text: 'RSS',
-                                link: '/rss.xml'
-                            },
-                            {
-                                text: 'Atom',
-                                linl: '/feed.atom'
-                            }
-                        ]
-                    }
-                    */
-                ]
-            }
-        ],
+        nav,
+        friendLink,
         type: 'blog',
         codeTheme: 'tomorrow',
         blogConfig: {
@@ -137,25 +161,6 @@ module.exports = {
                 text: '标签'
             }
         },
-        friendLink: [
-            {
-                title: "WangMao's Blog",
-                link: 'https://blog.wangmao.me/'
-            },
-            {
-                title: 'OOIII',
-                desc: 'Change or Die',
-                link: 'https://ooiii.com/'
-            },
-            {
-                title: '木法传',
-                link: 'https://www.mofazhuan.com/'
-            },
-            {
-                title: '薛定喵君',
-                link: 'http://xuedingmiao.com/'
-            }
-        ],
         subSidebar: 'auto',
         search: true,
         searchMaxSuggestions: 10,
@@ -165,15 +170,22 @@ module.exports = {
         record: '京ICP备14058611号',
         recordLink: 'http://www.beian.miit.gov.cn/',
         // 项目开始时间，只填写年份
-        startYear: '2017',
-        repo: 'staugur/blog'
+        startYear: '2017'
     },
     markdown: {
         lineNumbers: true
     },
     plugins: {
         feed: {
-            canonical_base: 'http://127.0.0.1:8084'
+            title,
+            description,
+            favicon: url + '/favicon.ico',
+            canonical_base: url,
+            author: {
+                name: 'Hiroshi.tao',
+                email: 'staugur@saintic.com',
+                link: 'https://www.saintic.com'
+            }
         }
     }
 }

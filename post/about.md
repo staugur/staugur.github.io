@@ -1,8 +1,6 @@
 ---
 title: 关于/联系我
 date: 2016-11-05
-sitemap:
-  exclude: false
 ---
 
 **我是干什么的？**
