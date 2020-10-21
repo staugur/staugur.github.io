@@ -5,19 +5,23 @@ const description = '记录点滴，开源项目分享，撰写经验与技术'
 const friendLink = [
     {
         title: "WangMao's Blog",
+        logo: '/flogo.jpg',
         link: 'https://blog.wangmao.me/'
     },
     {
         title: 'OOIII',
         desc: 'Change or Die',
+        logo: '/flogo.jpg',
         link: 'https://ooiii.com/'
     },
     {
         title: '木法传',
+        logo: '/flogo.jpg',
         link: 'https://www.mofazhuan.com/'
     },
     {
         title: '薛定喵君',
+        logo: '/flogo.jpg',
         link: 'http://xuedingmiao.com/'
     }
 ]
@@ -147,7 +151,8 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         author: 'Hiroshi.tao',
-        authorAvatar: 'https://static.saintic.com/cdn/images/avatar.png',
+        authorAvatar:
+            'https://static.saintic.com/cdn/images/avatar.png!/fw/100',
         // 备案
         record: '京ICP备14058611号',
         recordLink: 'http://www.beian.miit.gov.cn/',
