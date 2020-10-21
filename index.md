@@ -11,7 +11,7 @@ heroImage: null
 #   background: '#fff',
 #   borderRadius: '1rem',
 # }
-bgImage: /bg.jpg
+bgImage: https://static.saintic.com/cdn/images/bg-350.jpg
 bgImageStyle: {
   height: '350px'
 }

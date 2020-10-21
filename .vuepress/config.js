@@ -147,7 +147,7 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         author: 'Hiroshi.tao',
-        authorAvatar: '/avatar.png',
+        authorAvatar: 'https://static.saintic.com/cdn/images/avatar.png',
         // 备案
         record: '京ICP备14058611号',
         recordLink: 'http://www.beian.miit.gov.cn/',
