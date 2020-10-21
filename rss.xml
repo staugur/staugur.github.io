@@ -4,7 +4,7 @@
         <title>陶先森de博客</title>
         <link>https://blog.saintic.com</link>
         <description>记录点滴，开源项目分享，撰写经验与技术</description>
-        <lastBuildDate>Wed, 21 Oct 2020 06:41:10 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 21 Oct 2020 10:05:49 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://blog.saintic.com/feed.atom" rel="self" type="application/rss+xml"/>
