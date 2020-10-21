@@ -174,7 +174,8 @@ module.exports = {
                 link: 'https://www.saintic.com'
             }
         }
-    },
+    }
+    /* switch to upyun
     configureWebpack: () => {
         let cdn = 'https://cdn.jsdelivr.net/gh/staugur/blog@gh-pages/'
         if (process.env.NODE_ENV === 'production') {
@@ -185,4 +186,5 @@ module.exports = {
             }
         }
     }
+    */
 }

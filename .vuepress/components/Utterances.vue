@@ -12,7 +12,7 @@ export default {
             utterances.async = true
             utterances.setAttribute('issue-term', 'pathname')
             utterances.setAttribute('theme', 'github-light')
-            utterances.setAttribute('repo', 'staugur/blog')
+            utterances.setAttribute('repo', 'staugur/staugur.github.io')
             utterances.crossorigin = 'anonymous'
             utterances.src = 'https://utteranc.es/client.js'
             window.document.getElementById('comment').appendChild(utterances)
