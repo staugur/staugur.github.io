@@ -1,6 +1,6 @@
 const url = 'https://blog.saintic.com'
 const title = '陶先森de博客'
-const description = '记录点滴，开源项目源码，分享经验与技术'
+const description = '记录点滴，开源项目分享，撰写经验与技术'
 
 const friendLink = [
     {
@@ -167,6 +167,16 @@ module.exports = {
                 name: 'Hiroshi.tao',
                 email: 'staugur@saintic.com',
                 link: 'https://www.saintic.com'
+            }
+        }
+    },
+    configureWebpack: () => {
+        let cdn = 'https://cdn.jsdelivr.net/gh/staugur/blog@gh-pages/'
+        if (process.env.NODE_ENV === 'production') {
+            return {
+                output: {
+                    publicPath: cdn
+                }
             }
         }
     }

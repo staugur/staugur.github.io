@@ -11,10 +11,9 @@ heroImage: null
 #   background: '#fff',
 #   borderRadius: '1rem',
 # }
-bgImage: bg.jpg
+bgImage: /bg.jpg
 bgImageStyle: {
   height: '350px'
 }
 isShowTitleInHome: false
 ---
-

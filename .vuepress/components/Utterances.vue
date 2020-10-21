@@ -7,7 +7,6 @@ export default {
     name: 'Utterances',
     methods: {
         initValine() {
-            // 匿名函数，防止污染全局变量
             let utterances = window.document.createElement('script')
             utterances.type = 'text/javascript'
             utterances.async = true
@@ -20,7 +19,6 @@ export default {
         }
     },
     mounted() {
-        // 每次挂载时候，进行初始化
         this.initValine()
     }
 }
