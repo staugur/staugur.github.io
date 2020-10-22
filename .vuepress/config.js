@@ -38,6 +38,11 @@ const nav = [
         icon: 'reco-date'
     },
     {
+        text: '订阅',
+        link: url + '/rss.xml',
+        icon: 'reco-rss'
+    },
+    {
         text: '关于我',
         icon: 'reco-message',
         items: [
@@ -124,12 +129,6 @@ module.exports = {
                 name: 'keywords',
                 content: 'SaintIC,staugur,Linux,DevOps,python'
             }
-        ],
-        [
-            'script',
-            {
-                src: '/vue.min.js'
-            }
         ]
     ],
     locales: {
@@ -163,35 +162,15 @@ module.exports = {
         record: '京ICP备14058611号',
         recordLink: 'http://www.beian.miit.gov.cn/',
         // 项目开始时间，只填写年份
-        startYear: '2017',
-        valineConfig: {
-            showComment: false
-        },
-        vssueConfig: {
-            showComment: false
-        }
+        startYear: '2017'
     },
     markdown: {
         lineNumbers: true
     },
     plugins: {
-        feed: {
-            title,
-            description,
-            favicon: url + '/favicon.ico',
-            canonical_base: url,
-            author: {
-                name: 'Hiroshi.tao',
-                email: 'staugur@saintic.com',
-                link: 'https://www.saintic.com'
-            }
-        }
-    },
-    configureWebpack: () => {
-        return {
-            externals: {
-                vue: 'Vue'
-            }
+        '@vuepress-reco/rss': {
+            site_url: url,
+            count: 10
         }
     }
 }
