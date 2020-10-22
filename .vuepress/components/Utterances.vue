@@ -23,3 +23,25 @@ export default {
     }
 }
 </script>
+
+<style>
+.utterances {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 760px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.utterances-frame {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1px;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>

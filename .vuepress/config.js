@@ -124,6 +124,12 @@ module.exports = {
                 name: 'keywords',
                 content: 'SaintIC,staugur,Linux,DevOps,python'
             }
+        ],
+        [
+            'script',
+            {
+                src: '/vue.min.js'
+            }
         ]
     ],
     locales: {
@@ -157,7 +163,13 @@ module.exports = {
         record: '京ICP备14058611号',
         recordLink: 'http://www.beian.miit.gov.cn/',
         // 项目开始时间，只填写年份
-        startYear: '2017'
+        startYear: '2017',
+        valineConfig: {
+            showComment: false
+        },
+        vssueConfig: {
+            showComment: false
+        }
     },
     markdown: {
         lineNumbers: true
@@ -174,17 +186,12 @@ module.exports = {
                 link: 'https://www.saintic.com'
             }
         }
-    }
-    /* switch to upyun
+    },
     configureWebpack: () => {
-        let cdn = 'https://cdn.jsdelivr.net/gh/staugur/blog@gh-pages/'
-        if (process.env.NODE_ENV === 'production') {
-            return {
-                output: {
-                    publicPath: cdn
-                }
+        return {
+            externals: {
+                vue: 'Vue'
             }
         }
     }
-    */
 }
