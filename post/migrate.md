@@ -15,8 +15,6 @@ sticky: 1
 - 订阅链接更新如下：
 
   - [RSS](https://blog.saintic.com/rss.xml)
-  - [Atom](https://blog.saintic.com/feed.atom) 
-  - [JSON](https://blog.saintic.com/feed.json)
 
 - 删除了部分文章，其他文章链接保持不变。
 
