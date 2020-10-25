@@ -1,6 +1,6 @@
 const url = 'https://blog.saintic.com'
 const title = '陶先森de博客'
-const description = '记录点滴，开源项目分享，撰写经验与技术'
+const description = '记录技术点滴，开源项目与文档，分享经验与技术'
 
 const friendLink = [
     {
