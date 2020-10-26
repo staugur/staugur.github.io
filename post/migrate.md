@@ -20,6 +20,12 @@ sticky: 1
 
 - 关闭了google adsense和站点地图
 
-- 评论功能改为[Utterances](https://utteranc.es)，效果见下。
+- 评论功能改为[Utterances](https://utteranc.es)
+
+博客地址：
+
+> 最近又剁手了一个域名：[tcw.im](https://tcw.im)，用作个人博客主页、邮箱，绑定的GitHub Pages，未备案，作为国外访问。
+
+国内仍然使用`blog.saintic.com`，且使用了又拍云CDN缓存`tcw.im`内容，这样在国内速度也能秒开。
 
 <Utterances/>
