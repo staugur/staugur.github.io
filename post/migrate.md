@@ -28,4 +28,3 @@ sticky: 1
 
 国内仍然使用`blog.saintic.com`，且使用了又拍云CDN缓存`tcw.im`内容，这样在国内速度也能秒开。
 
-<Utterances/>

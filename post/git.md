@@ -13,7 +13,7 @@ publish: false
 $ cat ~/.gitconfig
 [user]
     name = Hiroshi.tao
-    email = staugur@saintic.com
+    email = me@tcw.im
 [color]
     ui = true
 [alias]

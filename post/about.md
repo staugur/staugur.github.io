@@ -13,13 +13,13 @@ SA，DevOpser
 
 **本站历程：**
 
--->最初的PHP(wordpress、emlog等)
-
--->GitHub Page
-
--->Python Flask(saintic/Team->staugur/Interest.blog->staugur/EauDouce)
-
--->GitHub Pages/Vuepress
+> -->最初的PHP(wordpress、emlog等)
+>
+> -->GitHub Pages/Jekyll
+>
+> -->Python Flask(saintic/Team->staugur/Interest.blog->staugur/EauDouce)
+>
+> -->GitHub Pages/Vuepress
 
 **如何联系我？**
 
@@ -28,13 +28,11 @@ SA，DevOpser
 
 **Public：**
 
-我的Pypi公共库是-->> https://pypi.org/user/saintic/
+我的Pypi公共库是-->> [pypi/saintic](https://pypi.org/user/saintic/)
 
-我的GitHub组织代码仓库是-->> https://github.com/saintic
+我的GitHub私人代码仓库是-->> [github/staugur](https://github.com/staugur)
 
-我的GitHub私人代码仓库是-->> https://github.com/staugur
-
-我的Docker仓库是staugur-->> https://hub.docker.com/u/staugur
+我的Docker仓库是staugur-->> [docker/staugur](https://hub.docker.com/u/staugur)
 
 另外如果你想用Money砸死我，可以支付宝扫描下面的二维码试试：
 
