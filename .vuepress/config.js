@@ -129,7 +129,8 @@ module.exports = {
                 name: 'keywords',
                 content: 'SaintIC,staugur,Linux,DevOps,python'
             }
-        ]
+        ],
+        ['script', { type: 'text/javascript', src: '/autopush.js' }]
     ],
     locales: {
         '/': {
@@ -167,10 +168,21 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
-    plugins: {
-        '@vuepress-reco/rss': {
-            site_url: url,
-            count: 10
-        }
-    }
+    plugins: [
+        [
+            '@vuepress-reco/rss',
+            {
+                site_url: url,
+                count: 10
+            }
+        ],
+        [
+            '@saintic/utterances',
+            {
+                issueTerm: 'pathname',
+                theme: 'github-light',
+                repo: 'staugur/staugur.github.io'
+            }
+        ]
+    ]
 }
