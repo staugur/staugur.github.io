@@ -38,4 +38,6 @@ SA，DevOpser
 
 <img style="max-width: 100%; width: 227px;" src="https://static.saintic.com/cdn/images/donation-alipay.jpg">
 
+微信也是可以的：
+
 <img style="max-width: 100%; width: 227px;" src="https://static.saintic.com/cdn/images/donation-wechat.png">
