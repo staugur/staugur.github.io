@@ -6,10 +6,12 @@
     "license": "MIT",
     "scripts": {
         "dev": "vuepress dev . --host 127.0.0.1",
-        "build": "vuepress build ."
+        "build": "vuepress build .",
+        "post:add": "git add . && git ci -m 'add post' && git push",
+        "post:update": "git add . && git ci -m 'update post' && git push"
     },
     "dependencies": {
-        "@saintic/vuepress-plugin-utterances": "^0.1.2",
+        "@saintic/vuepress-plugin-utterances": "^0.2.0",
         "@vuepress-reco/vuepress-plugin-rss": "^1.0.2",
         "vue-class-component": "^7.2.3",
         "vuepress": "1.5.4",
