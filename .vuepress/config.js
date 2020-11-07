@@ -130,7 +130,7 @@ module.exports = {
                 content: 'SaintIC,staugur,Linux,DevOps,python'
             }
         ],
-        ['script', { type: 'text/javascript', src: '/autopush.js' }]
+        ['script', { type: 'text/javascript', src: '/baidu.js' }]
     ],
     locales: {
         '/': {
