@@ -26,12 +26,11 @@ export default {
             this.addJS(
                 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
                 () => {
-                    var load_google_ad = function () {
+                    var callback = function () {
+                        setTimeout(function () {
                             ;(adsbygoogle = window.adsbygoogle || []).push({})
-                        },
-                        callback = function () {
-                            setTimeout('load_google_ad()', 3000)
-                        }
+                        }, 3000)
+                    }
 
                     if (
                         document.readyState === 'complete' ||
