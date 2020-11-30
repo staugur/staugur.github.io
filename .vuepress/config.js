@@ -130,12 +130,12 @@ module.exports = {
                 content: 'SaintIC,staugur,Linux,DevOps,python'
             }
         ],
-        ['script', { type: 'text/javascript', src: '/baidu.js' }],
+        ['script', { type: 'text/javascript', src: '/my.js' }],
         [
             'link',
             {
                 rel: 'alternate',
-                type: 'application/xml',
+                type: 'application/rss+xml',
                 title: title,
                 href: url + '/rss.xml'
             }
