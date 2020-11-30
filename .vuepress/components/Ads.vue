@@ -1,5 +1,14 @@
 <template>
-    <div id="google-adsense"></div>
+    <div id="google-adsense">
+        <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-5102708766475618"
+            data-ad-slot="9244112237"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+        ></ins>
+    </div>
 </template>
 
 <script>
@@ -13,17 +22,27 @@ export default {
             document.getElementsByTagName('head')[0].appendChild(script)
             script.onload = typeof cb === 'function' ? cb : function () {}
         },
-        loadAd() {
-            window.document
-                .getElementById('google-adsense')
-                .html(
-                    "<ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-{{ ad_client }}' data-ad-slot='{{ ad_slot }}' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>"
-                )
-        },
         initAds() {
             this.addJS(
                 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-                this.loadAd
+                () => {
+                    var load_google_ad = function () {
+                            ;(adsbygoogle = window.adsbygoogle || []).push({})
+                        },
+                        callback = function () {
+                            setTimeout('load_google_ad()', 3000)
+                        }
+
+                    if (
+                        document.readyState === 'complete' ||
+                        (document.readyState !== 'loading' &&
+                            !document.documentElement.doScroll)
+                    ) {
+                        callback()
+                    } else {
+                        document.addEventListener('DOMContentLoaded', callback)
+                    }
+                }
             )
         }
     },
