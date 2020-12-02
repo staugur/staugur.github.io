@@ -2,6 +2,7 @@
 title: Git
 date: 2020-10-21
 publish: false
+ad: false
 ---
 
 ## 关于git的使用实践

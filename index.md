@@ -15,4 +15,5 @@ bgImageStyle: {
   height: '350px'
 }
 isShowTitleInHome: false
+ad: false
 ---

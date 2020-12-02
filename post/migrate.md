@@ -4,6 +4,7 @@ date: 2020-10-20
 categories:
   - 随笔
 sticky: 1
+ad: false
 ---
 
 我的博客之前是自己基于Flask写的程序，先后托管于某云A、某云T，近日由于\*\*\*原因被ban一次，停了大半天，加之早有迁移为静态站的念头，故趁此机会全站部署到GitHub Pages！
@@ -28,4 +29,3 @@ sticky: 1
 
 国内仍然使用`blog.saintic.com`，且使用了又拍云CDN缓存`tcw.im`内容，这样在国内速度也能秒开。
 
-<Ads />

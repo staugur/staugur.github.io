@@ -865,6 +865,15 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@github-docs/frontmatter@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.npm.taobao.org/@github-docs/frontmatter/download/@github-docs/frontmatter-1.3.1.tgz#9b5e1c07d19a41bd06d25a49adb2f1da60b99b33"
+  integrity sha1-m14cB9GaQb0G0lpJrbLx2mC5mzM=
+  dependencies:
+    gray-matter "^4.0.2"
+    lodash "^4.17.15"
+    revalidator "^0.3.1"
+
 "@leancloud/adapter-types@^3.0.0":
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/@leancloud/adapter-types/download/@leancloud/adapter-types-3.0.0.tgz#71c5e8e37065bea4914650848b55a6262d658577"
@@ -4116,7 +4125,7 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha1-Ila94U02MpWMRl68ltxGfKB6Kfs=
 
-gray-matter@^4.0.1:
+gray-matter@^4.0.1, gray-matter@^4.0.2:
   version "4.0.2"
   resolved "https://registry.npm.taobao.org/gray-matter/download/gray-matter-4.0.2.tgz#9aa379e3acaf421193fce7d2a28cebd4518ac454"
   integrity sha1-mqN546yvQhGT/OfSoozr1FGKxFQ=
@@ -6973,6 +6982,11 @@ retry@^0.12.0:
   version "0.12.0"
   resolved "https://registry.npm.taobao.org/retry/download/retry-0.12.0.tgz#1b42a6266a21f07421d1b0b54b7dc167b01c013b"
   integrity sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=
+
+revalidator@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npm.taobao.org/revalidator/download/revalidator-0.3.1.tgz#ff2cc4cf7cc7c6385ac710178276e6dbcd03762f"
+  integrity sha1-/yzEz3zHxjhaxxAXgnbm280Ddi8=
 
 rgb-regex@^1.0.1:
   version "1.0.1"

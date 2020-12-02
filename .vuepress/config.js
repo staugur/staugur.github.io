@@ -179,6 +179,14 @@ module.exports = {
         lineNumbers: true
     },
     evergreen: true,
+    chainWebpack: config => {
+        config.module
+            .rule('md')
+            .test(/\.md$/)
+            .use(path.resolve(__dirname, './ad'))
+            .loader(path.resolve(__dirname, './ad'))
+            .end()
+    },
     plugins: [
         [
             '@vuepress-reco/rss',
