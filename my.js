@@ -12,7 +12,7 @@
     //baidu statictis
     var _hmt = _hmt || []
     var hm = document.createElement('script')
-    hm.src = 'https://hm.baidu.com/hm.js?88f6d909dd0d8f80bb9748f43ade3ac7'
+    hm.src = 'https://hm.baidu.com/hm.js?ccc146f638178f462dc741559602236c'
     var s = document.getElementsByTagName('script')[0]
     s.parentNode.insertBefore(hm, s)
 })()
