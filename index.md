@@ -16,4 +16,5 @@ bgImageStyle: {
 }
 isShowTitleInHome: false
 ad: false
+showComment: false
 ---

@@ -183,8 +183,8 @@ module.exports = {
         config.module
             .rule('md')
             .test(/\.md$/)
-            .use(path.resolve(__dirname, './ad'))
-            .loader(path.resolve(__dirname, './ad'))
+            .use(path.resolve(__dirname, './load'))
+            .loader(path.resolve(__dirname, './load'))
             .end()
     },
     plugins: [
@@ -194,7 +194,8 @@ module.exports = {
                 site_url: url,
                 count: 10
             }
-        ],
+        ]
+        /*
         [
             '@saintic/utterances',
             {
@@ -203,5 +204,6 @@ module.exports = {
                 repo: 'staugur/staugur.github.io'
             }
         ]
+        */
     ]
 }
