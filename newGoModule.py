@@ -29,7 +29,7 @@ if __name__ == "__main__":
         pkg = argv[2]
     except IndexError:
         pkg = name
-    pub = join(dirname(abspath(__file__)), ".vuepress", "public", name)
+    pub = join(dirname(abspath(__file__)), "static", name)
     print(tpl.format(name=name, pkg=pkg))
     try:
         raw_input() if PY2 else input()

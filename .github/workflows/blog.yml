@@ -1,0 +1,28 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - master
+      - hugo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+      with:
+          submodules: true
+          fetch-depth: 1
+    - name: Build site
+      uses: jakejarvis/hugo-build-action@master
+      with:
+        args: --minify
+    # 部署到 GitHub Pages
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: ./dist
