@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - hugo
 
 jobs:
   build:
@@ -19,7 +18,6 @@ jobs:
       uses: jakejarvis/hugo-build-action@master
       with:
         args: --minify
-    # 部署到 GitHub Pages
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
