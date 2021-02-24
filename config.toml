@@ -43,6 +43,11 @@ preserveTaxonomyNames = true
         url = "/link.html"
         weight = 5
 
+    [[menu.main]]
+        name = "Search"
+        url = "https://www.baidu.com/s?wd=site:blog.saintic.com"
+        weight = 6
+
 [params]
     since = 2017
     author = "Hiroshi.tao"                          # Author's name
