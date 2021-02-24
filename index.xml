@@ -21,7 +21,7 @@
 &lt;p>地址：&lt;a href="https://open.saintic.com/openapi">openapi&lt;/a>&lt;/p>
 &lt;p>几个对外开放的 API 接口，如 bing 今日美图，百度、bing收录查询等&lt;/p>
 &lt;br>
-&lt;center> ·End· &lt;/center></description></item><item><title>Posts</title><link>https://blog.saintic.com/post.html</link><pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate><guid>https://blog.saintic.com/post.html</guid><description/></item><item><title>About me</title><link>https://blog.saintic.com/about.html</link><pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate><guid>https://blog.saintic.com/about.html</guid><description>&lt;style>
+&lt;center> ·End· &lt;/center></description></item><item><title>Posts</title><link>https://blog.saintic.com/post.html</link><pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate><guid>https://blog.saintic.com/post.html</guid><description/></item><item><title>About</title><link>https://blog.saintic.com/about.html</link><pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate><guid>https://blog.saintic.com/about.html</guid><description>&lt;style>
 @import url('https://fonts.googleapis.com/css?family=Katibeh&amp;display=swap');
 .about-info {
 display: flex;
