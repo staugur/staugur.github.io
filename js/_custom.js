@@ -62,45 +62,4 @@
     var s = document.getElementsByTagName('script')[0]
     s.parentNode.insertBefore(hm, s)
 
-    //my notice
-    function showNotice() {
-        function setNotice(response) {
-            try {
-                let res = JSON.parse(response)
-                if (res.code === 0 && res.data.length > 0) {
-                    let nh = res.data
-                        .map(d => {
-                            return '- ' + d.content
-                        })
-                        .join('<br>')
-                    let pre =
-                        '<h4><i class="iconfont reco-tongzhi"></i> 公告</h4>'
-                    document.getElementById('notice').innerHTML = pre + nh
-                }
-            } catch {
-                console.error('invalid json response')
-            }
-        }
-        ajax({
-            url: 'https://open.saintic.com/CrawlHuaban/notice',
-            type: 'GET',
-            data: { catalog: 4 },
-            dataType: 'json',
-            success: function(res) {
-                let me = document.querySelector(
-                    '#app .info-wrapper .personal-info-wrapper'
-                )
-                if (!me) return
-                let div = document.createElement('div')
-                div.id = 'notice'
-                me.appendChild(div)
-                setNotice(res)
-            }
-        })
-    }
-    document.addEventListener('DOMContentLoaded', event => {
-        setTimeout(function() {
-            showNotice()
-        }, 2000)
-    })
 })()
