@@ -79,6 +79,10 @@ preserveTaxonomyNames = true
 [params.social]
     github = "staugur"
     email = "me@tcw.im"
+    qq = "1663116375"
 
 [markup.goldmark.renderer]
     unsafe = true
+
+[params.custom]
+    js = ["js/_custom.js"]
