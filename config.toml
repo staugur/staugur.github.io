@@ -85,4 +85,4 @@ preserveTaxonomyNames = true
     unsafe = true
 
 [params.custom]
-    js = ["js/_custom.js"]
+    js = ["js/my.js"]
