@@ -3,8 +3,8 @@ title: 关于博客迁移的说明
 date: 2020-10-20
 categories:
   - 随笔
-sticky: 1
-weight: 1
+#sticky: 1
+#weight: 1
 ad: false
 ---
 
