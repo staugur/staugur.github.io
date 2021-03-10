@@ -23,7 +23,7 @@ if __name__ == "__main__":
     try:
         name = argv[1]
     except IndexError:
-        print("usage: {} go-module-name".format(argv[0]))
+        print("usage: {} go-module-name github-repo-name".format(argv[0]))
         exit(1)
     try:
         pkg = argv[2]
