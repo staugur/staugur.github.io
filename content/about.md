@@ -93,6 +93,11 @@ showComments: false
             -o-transform: rotate(45deg) translate(-13px, 15px);
         }
     }
+    section {
+        font-size: 1.1em;
+        font-weight: 600;
+        padding: 5px 0px;
+    }
 </style>
 
 
@@ -116,17 +121,39 @@ showComments: false
     </div>
 </div>
 
-<p>My Github Chart:</p>
+<section>My Github Chart:</section>
 
 <p><img src="https://ghchart.rshah.org/staugur" alt="staugur's Github chart" style="width: 100%;"></p>
 
-<p>My Public Page:</p>
+<section>My Public Page:</section>
 
 我的Pypi公共库是-->> [pypi/saintic](https://pypi.org/user/saintic/)
 
 我的GitHub私人代码仓库是-->> [github/staugur](https://github.com/staugur)
 
 我的Docker仓库是-->> [docker/staugur](https://hub.docker.com/u/staugur)
+
+<section>My Open Source Project:</section>
+
+<p>Python:</p>
+
+- [grab_huaban_board](https://github.com/staugur/grab_huaban_board) - 抓取花瓣网爬虫
+
+- [Flask-PluginKit](https://github.com/staugur/Flask-PluginKit) - Flask插件式开发工具包
+
+- [sapic(picbed)](https://github.com/sapicd/sapic) - 多存储、扩展式图床
+
+<p>Golang:</p>
+
+- [rtfd](https://github.com/staugur/rtfd) - sphinx文档构建工具
+
+<p>Javascript/Node.js/Vue.js:</p>
+
+- [down2local](https://github.com/staugur/down2local) - 下载中转
+
+- [vuepress-plugin-utterances](https://github.com/staugur/vuepress-plugin-utterances) - utterances评论系统的vuepress插件
+
+<small>节选部分，如有兴趣可至GitHub...</small>
 
 <br>
 
