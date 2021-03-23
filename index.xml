@@ -96,6 +96,11 @@ transform: rotate(45deg) translate(-13px, 15px);
 -o-transform: rotate(45deg) translate(-13px, 15px);
 }
 }
+section {
+font-size: 1.1em;
+font-weight: 600;
+padding: 5px 0px;
+}
 &lt;/style>
 &lt;div class="about-info">
 &lt;div class="about-info-left">
@@ -116,11 +121,38 @@ rel="nofollow noreferrer" target="_blank">staugur&lt;/a>&lt;/p>&lt;/li>
 &lt;div class="right-hand">و&lt;span style="font-size: 0.5em">✧&lt;/span>&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>My Github Chart:&lt;/p>
+&lt;section>My Github Chart:&lt;/section>
 &lt;p>&lt;img src="https://ghchart.rshah.org/staugur" alt="staugur's Github chart" style="width: 100%;">&lt;/p>
-&lt;p>My Public Page:&lt;/p>
+&lt;section>My Public Page:&lt;/section>
 &lt;p>我的Pypi公共库是&amp;ndash;&amp;raquo; &lt;a href="https://pypi.org/user/saintic/">pypi/saintic&lt;/a>&lt;/p>
 &lt;p>我的GitHub私人代码仓库是&amp;ndash;&amp;raquo; &lt;a href="https://github.com/staugur">github/staugur&lt;/a>&lt;/p>
 &lt;p>我的Docker仓库是&amp;ndash;&amp;raquo; &lt;a href="https://hub.docker.com/u/staugur">docker/staugur&lt;/a>&lt;/p>
+&lt;section>My Open Source Project:&lt;/section>
+&lt;p>Python:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/staugur/grab_huaban_board">grab_huaban_board&lt;/a> - 抓取花瓣网爬虫&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/staugur/Flask-PluginKit">Flask-PluginKit&lt;/a> - Flask插件式开发工具包&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/sapicd/sapic">sapic(picbed)&lt;/a> - 多存储、扩展式图床&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Golang:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/staugur/rtfd">rtfd&lt;/a> - sphinx文档构建工具&lt;/li>
+&lt;/ul>
+&lt;p>Javascript/Node.js/Vue.js:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/staugur/down2local">down2local&lt;/a> - 下载中转&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/staugur/vuepress-plugin-utterances">vuepress-plugin-utterances&lt;/a> - utterances评论系统的vuepress插件&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;small>节选部分，如有兴趣可至GitHub&amp;hellip;&lt;/small>&lt;/p>
 &lt;br>
 &lt;center> ·End· &lt;/center></description></item></channel></rss>
