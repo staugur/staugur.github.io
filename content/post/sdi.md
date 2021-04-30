@@ -47,6 +47,38 @@ iconfont.css modify:
 .saintic-icon-4-5{font-size: 4.5em;}
 
 .saintic-icon-5{font-size: 5em;}
+
+.saintic-icon-spin {
+    -webkit-animation: saintic-icon-spin 3s infinite linear;
+    animation: saintic-icon-spin 3s infinite linear;
+}
+
+.saitnic-icon-pulse {
+    -webkit-animation: saintic-icon-spin 1s infinite steps(8);
+    animation: saintic-icon-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes saintic-icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes saintic-icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 ```
 
 iconfont.css compress:
