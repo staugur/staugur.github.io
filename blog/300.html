@@ -41,39 +41,39 @@ in
 </span><span style=color:#75715e></span>        <span style=color:#75715e>//     - status(string): download status
 </span><span style=color:#75715e></span>        <span style=color:#75715e>//     - stream(object): with tellStatus method
 </span><span style=color:#75715e></span>        <span style=color:#75715e>//     - info(object): with getFiles method
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span> <span style=color:#f92672>=</span> {}
-        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>EventEmitter</span>()
-        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_ws</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>WebSocket</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>url</span>)
-        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_ws</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;message&#39;</span>, <span style=color:#a6e22e>res</span> =&gt; {
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span> <span style=color:#f92672>=</span> {}
+        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>EventEmitter</span>()
+        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>ws</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>WebSocket</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>url</span>)
+        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>ws</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;message&#39;</span>, <span style=color:#a6e22e>res</span> =&gt; {
             <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>parseResponse</span>(<span style=color:#a6e22e>res</span>)
         })
-        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_ws</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;error&#39;</span>, <span style=color:#a6e22e>err</span> =&gt; {
+        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>ws</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;error&#39;</span>, <span style=color:#a6e22e>err</span> =&gt; {
             <span style=color:#66d9ef>throw</span> Error(<span style=color:#a6e22e>err</span>)
         })
-        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_lastsid</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
+        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>lastsid</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
         <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;downInit&#39;</span>, <span style=color:#a6e22e>gid</span> =&gt; {
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>gid</span>] <span style=color:#f92672>=</span> { <span style=color:#a6e22e>status</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;init&#39;</span>, <span style=color:#a6e22e>gid</span> }
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>gid</span>] <span style=color:#f92672>=</span> { <span style=color:#a6e22e>status</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;init&#39;</span>, <span style=color:#a6e22e>gid</span> }
             <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>getFiles</span>(<span style=color:#a6e22e>gid</span>)
             <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>tellStatus</span>(<span style=color:#a6e22e>gid</span>)
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_lastsid</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setInterval</span>(() =&gt; {
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>lastsid</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setInterval</span>(() =&gt; {
                 <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>tellStatus</span>(<span style=color:#a6e22e>gid</span>)
             }, <span style=color:#ae81ff>1000</span>)
         })
         <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;downStatus&#39;</span>, <span style=color:#a6e22e>res</span> =&gt; {
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>stream</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>status</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>status</span>
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>stream</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>status</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>status</span>
         })
         <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;downInfo&#39;</span>, <span style=color:#a6e22e>res</span> =&gt; {
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>info</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>info</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>
         })
         <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;downComplete&#39;</span>, <span style=color:#a6e22e>gid</span> =&gt; {
-            <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_lastsid</span>) <span style=color:#a6e22e>clearInterval</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_lastsid</span>)
+            <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>lastsid</span>) <span style=color:#a6e22e>clearInterval</span>(<span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>lastsid</span>)
             <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>getFiles</span>(<span style=color:#a6e22e>gid</span>)
             <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>tellStatus</span>(<span style=color:#a6e22e>gid</span>)
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>status</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;complete&#39;</span>
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>status</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;complete&#39;</span>
         })
         <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;downError&#39;</span>, <span style=color:#a6e22e>gid</span> =&gt; {
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>status</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;error&#39;</span>
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>gid</span>].<span style=color:#a6e22e>status</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;error&#39;</span>
         })
         <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;response&#39;</span>, <span style=color:#a6e22e>res</span> =&gt; {
             <span style=color:#75715e>//console.log(res)
@@ -81,11 +81,11 @@ in
     }
 
     <span style=color:#a6e22e>send</span>(<span style=color:#a6e22e>body</span>) {
-        <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_ws</span>.<span style=color:#a6e22e>readyState</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>1</span>) {
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_ws</span>.<span style=color:#a6e22e>send</span>(<span style=color:#a6e22e>body</span>)
+        <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>ws</span>.<span style=color:#a6e22e>readyState</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>1</span>) {
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>ws</span>.<span style=color:#a6e22e>send</span>(<span style=color:#a6e22e>body</span>)
         } <span style=color:#66d9ef>else</span> {
             <span style=color:#a6e22e>setTimeout</span>(() =&gt; {
-                <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_ws</span>.<span style=color:#a6e22e>send</span>(<span style=color:#a6e22e>body</span>)
+                <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>ws</span>.<span style=color:#a6e22e>send</span>(<span style=color:#a6e22e>body</span>)
             }, <span style=color:#ae81ff>1000</span>)
         }
     }
@@ -102,7 +102,7 @@ in
 </span><span style=color:#75715e>             * @event downInfo: param is result(object with gid)
 </span><span style=color:#75715e>             * @event downComplete: param is gid
 </span><span style=color:#75715e>             */</span>
-            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>on</span>(<span style=color:#a6e22e>event</span>, <span style=color:#a6e22e>cb</span>)
+            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>on</span>(<span style=color:#a6e22e>event</span>, <span style=color:#a6e22e>cb</span>)
         }
     }
 
@@ -162,25 +162,25 @@ in
         } <span style=color:#66d9ef>catch</span> (<span style=color:#a6e22e>error</span>) {
             <span style=color:#66d9ef>throw</span> Error(<span style=color:#e6db74>&#39;invalid response&#39;</span>)
         }
-        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;response&#39;</span>, <span style=color:#a6e22e>res</span>)
+        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;response&#39;</span>, <span style=color:#a6e22e>res</span>)
         <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>isObject</span>(<span style=color:#a6e22e>res</span>) <span style=color:#f92672>||</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#e6db74>&#39;error&#39;</span>)) {
             <span style=color:#75715e>//error response
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;error&#39;</span>, <span style=color:#a6e22e>res</span>)
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;error&#39;</span>, <span style=color:#a6e22e>res</span>)
         } <span style=color:#66d9ef>else</span> {
             <span style=color:#75715e>//success response
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;success&#39;</span>, <span style=color:#a6e22e>res</span>)
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;success&#39;</span>, <span style=color:#a6e22e>res</span>)
             <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#e6db74>&#39;id&#39;</span>)) {
                 <span style=color:#75715e>//a request-response mapping pair
 </span><span style=color:#75715e></span>                <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>split</span>(<span style=color:#e6db74>&#39;.&#39;</span>)[<span style=color:#ae81ff>0</span>]) {
                     <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Init&#39;</span><span style=color:#f92672>:</span>
-                        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downInit&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>result</span>)
+                        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downInit&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>result</span>)
                         <span style=color:#66d9ef>break</span>
                     <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Status&#39;</span><span style=color:#f92672>:</span>
-                        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downStatus&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>result</span>)
+                        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downStatus&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>result</span>)
                         <span style=color:#66d9ef>break</span>
                     <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Info&#39;</span><span style=color:#f92672>:</span>
                         <span style=color:#66d9ef>let</span> { <span style=color:#a6e22e>completedLength</span>, <span style=color:#a6e22e>length</span>, <span style=color:#a6e22e>path</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>result</span>[<span style=color:#ae81ff>0</span>]
-                        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downInfo&#39;</span>, {
+                        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downInfo&#39;</span>, {
                             <span style=color:#a6e22e>gid</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>split</span>(<span style=color:#e6db74>&#39;.&#39;</span>)[<span style=color:#ae81ff>1</span>],
                             <span style=color:#a6e22e>path</span>,
                             <span style=color:#a6e22e>completedLength</span>,
@@ -192,10 +192,10 @@ in
                 <span style=color:#75715e>//a notification from server, has method, param as data
 </span><span style=color:#75715e></span>                <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>method</span>) {
                     <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;aria2.onDownloadError&#39;</span><span style=color:#f92672>:</span>
-                        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downError&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>params</span>[<span style=color:#ae81ff>0</span>].<span style=color:#a6e22e>gid</span>)
+                        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downError&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>params</span>[<span style=color:#ae81ff>0</span>].<span style=color:#a6e22e>gid</span>)
                         <span style=color:#66d9ef>break</span>
                     <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;aria2.onDownloadComplete&#39;</span><span style=color:#f92672>:</span>
-                        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downComplete&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>params</span>[<span style=color:#ae81ff>0</span>].<span style=color:#a6e22e>gid</span>)
+                        <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>emt</span>.<span style=color:#a6e22e>emit</span>(<span style=color:#e6db74>&#39;downComplete&#39;</span>, <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>params</span>[<span style=color:#ae81ff>0</span>].<span style=color:#a6e22e>gid</span>)
                         <span style=color:#66d9ef>break</span>
                 }
             }
@@ -203,7 +203,7 @@ in
     }
 
     <span style=color:#a6e22e>getData</span>(<span style=color:#a6e22e>gid</span>) {
-        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>_gd</span>[<span style=color:#a6e22e>gid</span>] <span style=color:#f92672>||</span> {}
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>gd</span>[<span style=color:#a6e22e>gid</span>] <span style=color:#f92672>||</span> {}
     }
 }
 
