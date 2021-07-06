@@ -54,7 +54,7 @@ affected_row_count <span style=color:#f92672>=</span> db<span style=color:#f9267
         sql <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;&#39; SELECT `status`, is_deleted FROM sms_task WHERE id = </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> FOR UPDATE &#39;&#39;&#39;</span>
         info <span style=color:#f92672>=</span> db<span style=color:#f92672>.</span>get(sql, <span style=color:#ae81ff>10</span>)
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> info:
-            <span style=color:#66d9ef>return</span> False
+            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>
 
         sql <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;&#39; UPDATE sms_task SET is_deleted = </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> WHERE id = </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> &#39;&#39;&#39;</span>
         db<span style=color:#f92672>.</span>update(sql, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>10</span>)
@@ -62,22 +62,22 @@ affected_row_count <span style=color:#f92672>=</span> db<span style=color:#f9267
         db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>commit()
     <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span>, e:
         db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>rollback()
-        <span style=color:#66d9ef>print</span> str(e)
-        <span style=color:#66d9ef>return</span> False
+        print str(e)
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>
 
-    <span style=color:#66d9ef>return</span> True
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>True</span>
 
 transacion_begin()
 
 <span style=color:#75715e>## autocommit 的方式使用事务</span>
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>transacion_autocommit</span>():
     <span style=color:#66d9ef>try</span>:
-        db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>autocommit(False)
+        db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>autocommit(<span style=color:#66d9ef>False</span>)
 
         sql <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;&#39; SELECT `status`, is_deleted FROM sms_task WHERE id = </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> FOR UPDATE &#39;&#39;&#39;</span>
         info <span style=color:#f92672>=</span> db<span style=color:#f92672>.</span>get(sql, <span style=color:#ae81ff>10</span>)
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> info:
-            <span style=color:#66d9ef>return</span> False
+            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>
 
         sql <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;&#39; UPDATE sms_task SET is_deleted = 1 WHERE id = </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> &#39;&#39;&#39;</span>
         db<span style=color:#f92672>.</span>update(sql, <span style=color:#ae81ff>10</span>)
@@ -85,12 +85,12 @@ transacion_begin()
         db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>commit()
     <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span>, e:
         db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>rollback()
-        <span style=color:#66d9ef>print</span> str(e)
-        <span style=color:#66d9ef>return</span> False
+        print str(e)
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>
     <span style=color:#66d9ef>finally</span>:
-        db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>autocommit(True)
+        db<span style=color:#f92672>.</span>_db<span style=color:#f92672>.</span>autocommit(<span style=color:#66d9ef>True</span>)
 
-    <span style=color:#66d9ef>return</span> True
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>True</span>
 
 transacion_autocommit()
 </code></pre></div><br><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>

@@ -39,9 +39,9 @@ cfg.test.a == cfg.test[&quot;a&quot;] ==  cfg[&quot;test&quot;].a == cfg[&quot;t
         <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>_cfg_obj<span style=color:#f92672>.</span>has_option(self<span style=color:#f92672>.</span>_section, option):
             value <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>_cfg_obj<span style=color:#f92672>.</span>get(self<span style=color:#f92672>.</span>_section, option)
             <span style=color:#66d9ef>if</span> value <span style=color:#f92672>in</span> (<span style=color:#e6db74>&#34;true&#34;</span>, <span style=color:#e6db74>&#34;True&#34;</span>):
-                value <span style=color:#f92672>=</span> True
+                value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
             <span style=color:#66d9ef>elif</span> value <span style=color:#f92672>in</span> (<span style=color:#e6db74>&#34;false&#34;</span>, <span style=color:#e6db74>&#34;False&#34;</span>):
-                value <span style=color:#f92672>=</span> False
+                value <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
             <span style=color:#66d9ef>return</span> value
         <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>AttributeError</span>(
             <span style=color:#e6db74>&#34;No option </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> in section: </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> (option, self<span style=color:#f92672>.</span>_section)
@@ -49,11 +49,11 @@ cfg.test.a == cfg.test[&quot;a&quot;] ==  cfg[&quot;test&quot;].a == cfg[&quot;t
 
     __getitem__ <span style=color:#f92672>=</span> __getattr__
 
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get</span>(self, option, converter<span style=color:#f92672>=</span>None, default<span style=color:#f92672>=</span>None, err_ignore<span style=color:#f92672>=</span>True):
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get</span>(self, option, converter<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>, default<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>, err_ignore<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
         <span style=color:#66d9ef>try</span>:
             value <span style=color:#f92672>=</span> getattr(self, option)
         <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>AttributeError</span>:
-            <span style=color:#66d9ef>if</span> err_ignore <span style=color:#f92672>is</span> True:
+            <span style=color:#66d9ef>if</span> err_ignore <span style=color:#f92672>is</span> <span style=color:#66d9ef>True</span>:
                 <span style=color:#66d9ef>return</span> default
             <span style=color:#66d9ef>else</span>:
                 <span style=color:#66d9ef>raise</span>
@@ -68,7 +68,7 @@ cfg.test.a == cfg.test[&quot;a&quot;] ==  cfg[&quot;test&quot;].a == cfg[&quot;t
 
 <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CfgHandler</span>(object):
 
-    <span style=color:#66d9ef>def</span> __init__(self, cfg<span style=color:#f92672>=</span>None):
+    <span style=color:#66d9ef>def</span> __init__(self, cfg<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>):
         self<span style=color:#f92672>.</span>_cfg_file <span style=color:#f92672>=</span> cfg
         self<span style=color:#f92672>.</span>_cfg_obj <span style=color:#f92672>=</span> ConfigParser(interpolation<span style=color:#f92672>=</span>ExtendedInterpolation())
         <span style=color:#66d9ef>if</span> isfile(self<span style=color:#f92672>.</span>_cfg_file):

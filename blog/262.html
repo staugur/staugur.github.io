@@ -41,21 +41,21 @@ setup(..., cmdclass={
 
     user_options <span style=color:#f92672>=</span> [
         <span style=color:#75715e># The format is (long option, short option, description).</span>
-        (<span style=color:#e6db74>&#34;test&#34;</span>, None, <span style=color:#e6db74>&#34;Publish to test.pypi.org&#34;</span>),
-        (<span style=color:#e6db74>&#34;release&#34;</span>, None, <span style=color:#e6db74>&#34;Publish to pypi.org&#34;</span>),
+        (<span style=color:#e6db74>&#34;test&#34;</span>, <span style=color:#66d9ef>None</span>, <span style=color:#e6db74>&#34;Publish to test.pypi.org&#34;</span>),
+        (<span style=color:#e6db74>&#34;release&#34;</span>, <span style=color:#66d9ef>None</span>, <span style=color:#e6db74>&#34;Publish to pypi.org&#34;</span>),
     ]
 
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize_options</span>(self):
         <span style=color:#e6db74>&#34;&#34;&#34;Set default values for options.&#34;&#34;&#34;</span>
-        self<span style=color:#f92672>.</span>test <span style=color:#f92672>=</span> False
-        self<span style=color:#f92672>.</span>release <span style=color:#f92672>=</span> False
+        self<span style=color:#f92672>.</span>test <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
+        self<span style=color:#f92672>.</span>release <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
 
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>finalize_options</span>(self):
         <span style=color:#e6db74>&#34;&#34;&#34;Post-process options.&#34;&#34;&#34;</span>
         <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
-            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the test.pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
+            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the test.pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
         <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
-            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
+            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
 
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>run</span>(self):
         <span style=color:#e6db74>&#34;&#34;&#34;Run command.&#34;&#34;&#34;</span>
@@ -68,9 +68,9 @@ setup(..., cmdclass={
             os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;twine upload dist/*&#34;</span>)
         os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;rm -rf build/ dist/ Flask_PluginKit.egg-info/&#34;</span>)
         <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
-            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the test.pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
+            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the test.pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
         <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
-            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
+            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
         exit()
 
 setup(<span style=color:#f92672>...</span>, cmdclass<span style=color:#f92672>=</span>{

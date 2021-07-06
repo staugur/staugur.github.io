@@ -77,23 +77,23 @@ getHeader <span style=color:#f92672>=</span> <span style=color:#66d9ef>lambda</s
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>getNowTime</span>():
     <span style=color:#66d9ef>return</span> time<span style=color:#f92672>.</span>strftime(<span style=color:#e6db74>&#39;%Y-%m-</span><span style=color:#e6db74>%d</span><span style=color:#e6db74> %H:%M:%S&#39;</span>,time<span style=color:#f92672>.</span>localtime(time<span style=color:#f92672>.</span>time()))
 
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get</span>(url, use_header<span style=color:#f92672>=</span>True):
-    request <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>Request(url, getHeader() <span style=color:#66d9ef>if</span> use_header <span style=color:#66d9ef>else</span> None)
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get</span>(url, use_header<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
+    request <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>Request(url, getHeader() <span style=color:#66d9ef>if</span> use_header <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>None</span>)
     response <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>urlopen(request)
     <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>loads(response<span style=color:#f92672>.</span>read())
 
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>post</span>(url, data, use_header<span style=color:#f92672>=</span>True):
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>post</span>(url, data, use_header<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
     <span style=color:#e6db74>&#34;&#34;&#34; POST请求 &#34;&#34;&#34;</span>
     <span style=color:#66d9ef>if</span> isinstance(data, dict):
         data <span style=color:#f92672>=</span> urllib<span style=color:#f92672>.</span>urlencode(data)  <span style=color:#75715e># 将字典以url形式编码</span>
-    request <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>Request(url, data, getHeader() <span style=color:#66d9ef>if</span> use_header <span style=color:#66d9ef>else</span> None)
+    request <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>Request(url, data, getHeader() <span style=color:#66d9ef>if</span> use_header <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>None</span>)
     response <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>urlopen(request)
     <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>loads(response<span style=color:#f92672>.</span>read())
 
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>getArea</span>(ip):
     url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;http://ip.taobao.com/service/getIpInfo.php?ip=</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>ip
     <span style=color:#66d9ef>try</span>:
-        data <span style=color:#f92672>=</span> get(url, use_header<span style=color:#f92672>=</span>False)
+        data <span style=color:#f92672>=</span> get(url, use_header<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
     <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span>,e:
         <span style=color:#66d9ef>raise</span>
     <span style=color:#66d9ef>else</span>:
