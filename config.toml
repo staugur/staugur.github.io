@@ -1,5 +1,5 @@
 baseURL = "https://blog.saintic.com" # <head> 里面的 baseurl 信息，填你的博客地址
-title = "陶先森de博客" # 浏览器的标题
+title = "一念 de 博客" # 浏览器的标题
 languageCode = "zh-cn" # 语言
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
 theme = "mogege" # 主题 
@@ -24,8 +24,13 @@ preserveTaxonomyNames = true
 [menu]
 
     [[menu.main]]
-        name = "Posts"
+        name = "Blog"
         url = "/blog.html"
+        weight = 1
+
+    [[menu.main]]
+        name = "Note"
+        url = "/note.html"
         weight = 2
 
     [[menu.main]]
@@ -59,8 +64,8 @@ preserveTaxonomyNames = true
 
     google_verification = ""
 
-    description = "Hiroshi.tao の 网络日志" # (Meta) 描述
-    keywords = "SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,picbed,sapic,Flask-PluginKit,rtfd" # site keywords
+    description = "陶先森de博客" # (Meta) 描述
+    keywords = "SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd" # site keywords
 
     beian = "京ICP备14058611号"
     baiduAnalytics = ""
