@@ -1,33 +1,237 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="Hiroshi.tao の 网络日志"><meta name=keywords content="SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,picbed,sapic,Flask-PluginKit,rtfd"><link rel=prev href=https://blog.saintic.com/blog/215.html><link rel=next href=https://blog.saintic.com/blog/219.html><link rel=canonical href=https://blog.saintic.com/blog/217.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>开源项目之SwarmOps | 陶先森de博客</title><meta name=title content="开源项目之SwarmOps | 陶先森de博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"开源项目之SwarmOps","headline":"开源项目之SwarmOps","description":"SwarmOps正式版终于来了！！ Docker使DevOps贴合亲近，官方自带的Swarm多主机调度系统，直接上手，简单粗暴，但是命令的使用","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2017","datePublished":"2017-01-11 00:00:00 \u002b0000 UTC","dateModified":"2017-01-11 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/217.html","wordCount":"702","keywords":["python","陶先森de博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
-<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
-<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Posts</a>
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noodp">
+<meta name=author content="Hiroshi.tao">
+<meta name=description content="陶先森de博客">
+<meta name=keywords content="SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
+<link rel=prev href=https://blog.saintic.com/blog/215.html>
+<link rel=next href=https://blog.saintic.com/blog/219.html>
+<link rel=canonical href=https://blog.saintic.com/blog/217.html>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<title>
+开源项目之SwarmOps | 一念 de 博客
+</title>
+<meta name=title content="开源项目之SwarmOps | 一念 de 博客">
+<link rel=stylesheet href=/css/main.min.css>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"开源项目之SwarmOps","headline":"开源项目之SwarmOps","description":"SwarmOps正式版终于来了！！ Docker使DevOps贴合亲近，官方自带的Swarm多主机调度系统，直接上手，简单粗暴，但是命令的使用","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2017","datePublished":"2017-01-11 00:00:00 \u002b0000 UTC","dateModified":"2017-01-11 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/217.html","wordCount":"702","keywords":["python","一念 de 博客"]}</script>
+</head>
+<body>
+<div class=wrapper>
+<nav class=navbar>
+<progress class=content_progress max=0 value=0></progress>
+<div class=container>
+<div class="navbar-header header-back2home-logo">
+<span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com>
+<span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span>
+</a>
+</div>
+<div class=navbar-right>
+<span class=menu>
+<a class=menu-item href=/blog.html title>Blog</a>
+<a class=menu-item href=/note.html title>Note</a>
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
 <a class=menu-item href=/link.html title>Links</a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Search</a>
 <a class=menu-item href=/about.html title=About>About</a>
-<span class=divide></span><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>陶先森de博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Posts</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Search</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><div class=toc><div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#swarmops%e6%ad%a3%e5%bc%8f%e7%89%88%e7%bb%88%e4%ba%8e%e6%9d%a5%e4%ba%86>SwarmOps正式版终于来了！！</a></li></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#release-001>Release 0.0.1</a></li></ul></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">开源项目之SwarmOps</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
-<span class=post-time>on <time datetime=2017-01-11 itemprop=datePublished>January 11, 2017</time></span>
+<span class=divide></span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
+</span>
+</div>
+</div>
+</nav>
+<nav class=navbar-mobile id=nav-mobile style=display:none>
+<progress class=content_progress max=0 value=0></progress>
+<div class=container>
+<div class=navbar>
+<div class="navbar-header header-logo">
+<a href=https://blog.saintic.com>一念 de 博客</a>
+</div>
+<div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
+<div class=menu-toggle>
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+<div class=menu id=mobile-menu>
+<nav class=mb-md>
+<a class=menu-item href=/blog.html title>
+<h3>Blog</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/note.html title>
+<h3>Note</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/categories.html title>
+<h3>Categories</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/tags.html title>
+<h3>Tags</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/link.html title>
+<h3>Links</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
+<h3>Search</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/about.html title=About>
+<h3>About</h3>
+<div class=menu-active></div>
+</a>
+</nav>
+</div>
+</div>
+</nav>
+<main class=main>
+<div class=container>
+<div class=toc>
+<div class=page-header><strong>- 目录 -</strong></div>
+<div id=page-scrollspy class=toc-nav>
+<ul class=nav>
+<ul class=nav>
+<li class=nav-item>
+<a class="nav-link text-left" href=#swarmops%e6%ad%a3%e5%bc%8f%e7%89%88%e7%bb%88%e4%ba%8e%e6%9d%a5%e4%ba%86>
+SwarmOps正式版终于来了！！
+</a>
+</li>
+</ul>
+</ul>
+<ul class=nav>
+<ul class=nav>
+<ul class=nav>
+<ul class=nav>
+<li class=nav-item>
+<a class="nav-link text-left" href=#release-001>
+Release 0.0.1
+</a>
+</li>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+</div>
+<article class=post-warp itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">开源项目之SwarmOps</h1>
+<div class=post-meta>
+Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>
+on <time datetime=2017-01-11 itemprop=datePublished>January 11, 2017</time>
+</span>
 in
 <i class="saintic-icon saintic-icon-folder"></i>
-<span class=post-category><a href=https://blog.saintic.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE.html>开源项目</a></span>
-<span class=post-word-count>702 words</span></div></header><div class=post-content><h2 id=swarmops正式版终于来了>SwarmOps正式版终于来了！！</h2><p>Docker使DevOps贴合亲近，官方自带的Swarm多主机调度系统，直接上手，简单粗暴，但是命令的使用、API的使用还是不那么友善(深受其害)，所以这款SwarmOps API&UI来了。</p><p>后来改用k8s，于是乎，从2016、10月底开始重构，将原本一个单独的API并且依赖于ssh、etcd的稍重的应用改造了，现在它不仅是Api，更是使用bootstrap构筑的UI，尽可能人性化地展示页面。</p><p>传送门：<a href=https://github.com/staugur/SwarmOps>https://github.com/staugur/SwarmOps</a></p><blockquote><p><strong>注意：关键信息！</strong></p><p>当前文档版本：Release 0.0.1, 0.0.2</p><p>最新版添加了对passport认证的支持，但部署稍微复杂。</p><p>演示地址：<a href=http://swarmops.demo.saintic.com>http://swarmops.demo.saintic.com</a></p></blockquote><h4 id=release-001>Release 0.0.1</h4><p><em>作为第一个正式发布版本，SwarmOps实现了对Docker Swarm模式的集群管理，所有操作均采用API形式。</em></p><pre><code>1. UI/API可以初始化、管理多个Swarm集群
+<span class=post-category>
+<a href=https://blog.saintic.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE.html> 开源项目 </a>
+</span>
+<span class=post-word-count>702 words</span>
+</div>
+</header>
+<div class=post-content>
+<h2 id=swarmops正式版终于来了>SwarmOps正式版终于来了！！</h2>
+<p>Docker使DevOps贴合亲近，官方自带的Swarm多主机调度系统，直接上手，简单粗暴，但是命令的使用、API的使用还是不那么友善(深受其害)，所以这款SwarmOps API&UI来了。</p>
+<p>后来改用k8s，于是乎，从2016、10月底开始重构，将原本一个单独的API并且依赖于ssh、etcd的稍重的应用改造了，现在它不仅是Api，更是使用bootstrap构筑的UI，尽可能人性化地展示页面。</p>
+<p>传送门：<a href=https://github.com/staugur/SwarmOps>https://github.com/staugur/SwarmOps</a></p>
+<blockquote>
+<p><strong>注意：关键信息！</strong></p>
+<p>当前文档版本：Release 0.0.1, 0.0.2</p>
+<p>最新版添加了对passport认证的支持，但部署稍微复杂。</p>
+<p>演示地址：<a href=http://swarmops.demo.saintic.com>http://swarmops.demo.saintic.com</a></p>
+</blockquote>
+<h4 id=release-001>Release 0.0.1</h4>
+<p><em>作为第一个正式发布版本，SwarmOps实现了对Docker Swarm模式的集群管理，所有操作均采用API形式。</em></p>
+<pre><code>1. UI/API可以初始化、管理多个Swarm集群
 2. UI/API可以增删查改服务
 3. UI/API可以增删查改节点
 4. UI/API可以查询服务的其他属性, 例如replicas节点，并生成Nginx样例配置
 5. 数据持久化存储local或redis, 使用redis可以多点部署
 6. 认证采用passport, 并设置只允许登陆的用户列表
-</code></pre><p>Relase 0.0.2</p><p><em>这一版本主题是UI</em></p><pre><code>1. UI大部分功能重磅更新, 采用layer弹层方式取消跳转
+</code></pre><p>Relase 0.0.2</p>
+<p><em>这一版本主题是UI</em></p>
+<pre><code>1. UI大部分功能重磅更新, 采用layer弹层方式取消跳转
 2. UI集成私有仓, 支持V1版本, 查删操作
 3. network查询
-</code></pre><p>部署文档链接： <a href=https://blog.saintic.com/blog/215.html>https://blog.saintic.com/blog/215.html</a></p><p>##############这是一个分隔符################</p><p>以下是相关UI展示：</p><p><a href=https://static.saintic.com/interest.blog/blog/swarm.png><img src=https://static.saintic.com/interest.blog/blog/swarm.png alt></a></p><p><a href=https://static.saintic.com/interest.blog/blog/service.png><img src=https://static.saintic.com/interest.blog/blog/service.png alt></a></p><p><a href=https://static.saintic.com/interest.blog/blog/node.png><img src=https://static.saintic.com/interest.blog/blog/node.png alt></a></p><p><a href=https://static.saintic.com/interest.blog/blog/network.png><img src=https://static.saintic.com/interest.blog/blog/network.png alt></a></p><p><a href=https://static.saintic.com/interest.blog/blog/registry.png><img src=https://static.saintic.com/interest.blog/blog/registry.png alt></a></p><p><em>API文档加紧更新中</em></p><p><img src=https://static.saintic.com/interest.blog/blog/201701112153372023.png alt=SwarmOpsApi loading=lazy><br></p><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
-<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
-<a href=https://blog.saintic.com/blog/217.html>https://blog.saintic.com/blog/217.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
-<a href=/tags/python.html rel=tag class=post-tags-link>#python</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
-<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/215.html class=prev rel=prev title=程序文档之SwarmOps><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;程序文档之SwarmOps</a>
-<a href=https://blog.saintic.com/blog/219.html class=next rel=next title=python生成指纹格式、MAC地址形式的字符串>python生成指纹格式、MAC地址形式的字符串&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
+</code></pre><p>部署文档链接： <a href=https://blog.saintic.com/blog/215.html>https://blog.saintic.com/blog/215.html</a></p>
+<p>##############这是一个分隔符################</p>
+<p>以下是相关UI展示：</p>
+<p><a href=https://static.saintic.com/interest.blog/blog/swarm.png><img src=https://static.saintic.com/interest.blog/blog/swarm.png alt></a></p>
+<p><a href=https://static.saintic.com/interest.blog/blog/service.png><img src=https://static.saintic.com/interest.blog/blog/service.png alt></a></p>
+<p><a href=https://static.saintic.com/interest.blog/blog/node.png><img src=https://static.saintic.com/interest.blog/blog/node.png alt></a></p>
+<p><a href=https://static.saintic.com/interest.blog/blog/network.png><img src=https://static.saintic.com/interest.blog/blog/network.png alt></a></p>
+<p><a href=https://static.saintic.com/interest.blog/blog/registry.png><img src=https://static.saintic.com/interest.blog/blog/registry.png alt></a></p>
+<p><em>API文档加紧更新中</em></p>
+<p><img src=https://static.saintic.com/interest.blog/blog/201701112153372023.png alt=SwarmOpsApi loading=lazy>
+<br></p>
+<center> ·End· </center>
+</div>
+<div class=post-copyright>
+<p class=copyright-item>
+<span>Author:</span>
+<span>Hiroshi.tao </span>
+</p>
+<p class=copyright-item>
+<span>Link:</span>
+<a href=https://blog.saintic.com/blog/217.html>https://blog.saintic.com/blog/217.html</span>
+</p>
+<p class="copyright-item lincese">
+本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
+</p>
+</div>
+<div class=post-tags>
+<section>
+<i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
+</section>
+<section>
+<a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span>
+</section>
+</div>
+<div class=post-nav>
+<a href=https://blog.saintic.com/blog/215.html class=prev rel=prev title=程序文档之SwarmOps><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;程序文档之SwarmOps</a>
+<a href=https://blog.saintic.com/blog/219.html class=next rel=next title=python生成指纹格式、MAC地址形式的字符串>python生成指纹格式、MAC地址形式的字符串&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
+</div>
+<div class=post-comment>
+<div id=utteranc-container>
+<script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer class=footer>
+<div class=copyright>
+&copy;
 <span itemprop=copyrightYear>2017 - 2021</span>
-<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
-<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
-<a href=http://www.miibeian.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号</a> |
-<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/Mogeko/Mogege target=_blank rel="external nofollow">Mogege</a></span></div></footer><script defer src=/js/vendor_main.min.js></script><script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script><script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>
+<span class=with-love>
+<i class="saintic-icon saintic-icon-love"></i>
+</span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
+<a href=http://www.miibeian.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号 </a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/Mogeko/Mogege target=_blank rel="external nofollow">Mogege</a></span>
+</div>
+</footer>
+<script defer src=/js/vendor_main.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
+<script>pangu.spacingPage()</script>
+<script defer src=https://blog.saintic.com/js/my.js></script>
+</div>
+</body>
+</html>
