@@ -497,7 +497,7 @@ $zipfilepath <span style=color:#f92672>=</span> $zip<span style=color:#f92672>-&
     }
 }
 </code></pre></div><p>示例：</p>
-<pre><code># cat test.php
+<pre tabindex=0><code># cat test.php
 &lt;?php
 require_once 'tool.php';
 Log::info('info');
@@ -550,7 +550,7 @@ Log::debug('debug');
 <p>解释说明：composer是php的包管理命令，如果没有安装，参考<a href=https://getcomposer.org/download/>官方文档</a>，也可以用操作系统的包管理器安装，比如Ubuntu用<code>apt-get install composer</code>，RHEL/CentOS系用<code>yum install composer</code></p>
 <p>7.2 创建文件</p>
 <p>上面安装了resque/php-resque后，会在当前demo目录下生成composer.json、composer.lock文件和vender目录：</p>
-<pre><code># tree -L 3
+<pre tabindex=0><code># tree -L 3
 .
 ├── composer.json
 ├── composer.lock
@@ -634,7 +634,7 @@ $args <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>(
 </code></pre></div><p>注意入列这行：default是队列名，可以设置为其他名称；TestJob是上面job.php任务类的类名；$args就是任务类<code>perform</code>方法所需参数。</p>
 <p><strong>7.2.3 启动Worker进程等待处理任务</strong></p>
 <p>使用php-resque单独启动worker处理进程在后台处理任务，参考<a href=https://github.com/resque/php-resque#workers>文档</a>，启动进程一条命令可以实现：</p>
-<pre><code># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque 
+<pre tabindex=0><code># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque 
 [notice] Starting worker your_hostname:499:default
 </code></pre><p>解释下，启动resque队列处理进程主要是靠vender/bin/resque，它运行时接收几个环境变量，参照上面的命令，环境变量有：</p>
 <ol>
@@ -659,7 +659,7 @@ Hello saintic.com
 has finished
 </code></pre></div><p>PS：以上输出内容我手动换行了。</p>
 <p>当前demo目录文件结构如下：</p>
-<pre><code># tree -L 1
+<pre tabindex=0><code># tree -L 1
 .
 ├── composer.json
 ├── composer.lock

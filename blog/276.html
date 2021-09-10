@@ -170,7 +170,7 @@ in
 <h3 id=安装>安装</h3>
 <p>打开脚本的作者教程（一键安装脚本 & 管理脚本地址）： <a href>https://233v2.com/post/1/</a>，跟着来基本没问题，我安装时的操作系统是CentOS7.7, 位于洛杉矶的vps，步骤大概如下：</p>
 <p><strong>1、运行脚本</strong></p>
-<pre><code># yum install -y curl unzip
+<pre tabindex=0><code># yum install -y curl unzip
 # bash &lt;(curl -s -L https://git.io/v2ray.sh)
 </code></pre><p>我安装中有一次好像unzip命令没安装失败了，所以直接先安装curl和unzip，脚本没毛病，也是开源的，无后门。</p>
 <p>这个脚本执行后交互确认是安装还是卸载，所以即便有毛病，大不了卸掉再安装，安装过程中提示的选项基本上保持默认也行了。</p>
@@ -183,7 +183,7 @@ in
 <p>到这里安装完毕，脚本输出服务的信息，依照输出，使用客户端连接吧。<br>
 <img src=https://static.saintic.com/EauDouce/blog/201911261507578192.png alt></p>
 <p>当然，此时系统有一个v2ray命令，用来管理v2ray服务，比如使用status查看状态：</p>
-<pre><code># v2ray status
+<pre tabindex=0><code># v2ray status
 
  V2Ray 状态: 正在运行
 </code></pre><p>使用-h/—help查看支持的选项，比如<code>v2ray info</code>查看v2ray信息，<code>v2ray ssinfo</code>查看ss信息等。</p>

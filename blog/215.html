@@ -179,7 +179,7 @@ in
 <p>第二种方法到&lt;redis.cn>中文版网站文档中查询资料采用源码部署，此处，我早前有个一键部署NoSQL的脚本，GitHub地址是<a href=https://github.com/staugur/CoreWeb>https://github.com/staugur/CoreWeb</a>。</p>
 <p>3. SwarmOps部署</p>
 <p>3.1 开发版本体验(不推荐)</p>
-<pre><code>[root@e50e93de4b75 ~]# yum install -y gcc gcc-c++ python-devel libffi-devel openssl-devel python-pip git
+<pre tabindex=0><code>[root@e50e93de4b75 ~]# yum install -y gcc gcc-c++ python-devel libffi-devel openssl-devel python-pip git
 [root@e50e93de4b75 ~]# git clone https://github.com/staugur/swarmops
 [root@e50e93de4b75 ~]# cd swarmops
 [root@e50e93de4b75 swarmops]# pip install -r requirements.txt
@@ -207,7 +207,7 @@ tcp        0      0 127.0.0.1:49804             127.0.0.1:6379             ESTAB
 tcp        0      0 :::10130                     :::*                      LISTEN           9298/SwarmOps  
 </code></pre><p>3.2 稳定版本(墙裂推荐)</p>
 <p>3.2.1 物理机、虚拟机等</p>
-<pre><code>wget -c -O SwarmOps-v0.0.2.tar.gz &quot;https://codeload.github.com/staugur/SwarmOps/tar.gz/v0.0.2&quot;
+<pre tabindex=0><code>wget -c -O SwarmOps-v0.0.2.tar.gz &quot;https://codeload.github.com/staugur/SwarmOps/tar.gz/v0.0.2&quot;
 tar zxf SwarmOps-v0.0.2.tar.gz
 cd SwarmOps-0.0.2/
 pip install -r requirements.txt
@@ -224,7 +224,7 @@ Control.sh start
 <p>附录2, 关于SwarmOps Api的使用(尚未更新完毕)：</p>
 <p><a href=https://github.com/staugur/SwarmOps/blob/master/docs/SwarmOpsApi_SwarmEngine.md>https://github.com/staugur/SwarmOps/blob/master/docs/SwarmOpsApi_SwarmEngine.md</a></p>
 <p>附录3,关于Nginx(tengine)的配置：</p>
-<pre><code>upstream SwarmOps {
+<pre tabindex=0><code>upstream SwarmOps {
     server 127.0.0.1:10130;
     check interval=3000 rise=2 fall=5 timeout=3000 type=http;
     check_http_send &quot;GET / HTTP/1.1\r\n\r\n&quot;;

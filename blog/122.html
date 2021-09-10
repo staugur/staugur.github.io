@@ -122,7 +122,7 @@ in
 <p>而docker里的时区也是频繁，之前通过挂载系统中/etc/localtime解决容器级的时区，不过java应用也发现在日志中仍旧是UTC时间，一般容器时区准确了，也就没问题，如果还不行，尝试加上"<strong>-Duser.timezone=GMT+08</strong>"。</p>
 <p>我说说我遇到的几种具体情况和解决方法吧。</p>
 <p>1.tomcat</p>
-<pre><code>vim bin/catalina.sh
+<pre tabindex=0><code>vim bin/catalina.sh
 增加或修改以下内容
 JAVA_OPTS=&quot;$JAVA_OPTS -Dfile.encoding=UTF8 -Duser.timezone=GMT+08&quot;
 </code></pre><p>2.netty</p>
@@ -148,12 +148,12 @@ $JAVA_HOME/bin/java -Xms1024m -Xmx2048m -Dfile.encoding<span style=color:#f92672
 echo $! &gt; $pid 
 echo <span style=color:#e6db74>&#34;ssp-creative start&#34;</span>
 </code></pre></div><p>3.resin</p>
-<pre><code>resin 作为web服务器，根据启动方式的不同，可以修改以下某一个。
+<pre tabindex=0><code>resin 作为web服务器，根据启动方式的不同，可以修改以下某一个。
 &gt; resin.xml          -Dfile.encoding=UTF-8
 &gt; resin.properties   jvm_args : -Dfile.encoding=UTF-8
 </code></pre><p>4.jar</p>
 <p>非web应用，直接启动jar程序，采用supervisord守护进程的方式，配置的启动命令是：</p>
-<pre><code>command=java -jar -Xms2048m -Dfile.encoding=UTF-8 -Dspring.config.location=./app.properties app.jar
+<pre tabindex=0><code>command=java -jar -Xms2048m -Dfile.encoding=UTF-8 -Dspring.config.location=./app.properties app.jar
 </code></pre><br>
 <center> ·End· </center>
 </div>

@@ -22,7 +22,7 @@
 </title>
 <meta name=title content="二进制方式部署k8s（v1.18 + containerd） | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版，单主两节点 系统：CentOS 7.2","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-11 20:26:00 \u002b0800 \u002b0800","dateModified":"2021-05-11 20:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"3879","keywords":["go","k8s","docker","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-11 20:26:00 \u002b0800 \u002b0800","dateModified":"2021-05-11 20:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"3916","keywords":["go","k8s","docker","一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -509,14 +509,14 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E8%BF%90%E7%BB%B4.html> 运维 </a>
 </span>
-<span class=post-word-count>3879 words</span>
+<span class=post-word-count>3916 words</span>
 </div>
 </header>
 <div class=post-content>
 <h2 id=前言>前言</h2>
 <p>目的：以二进制方式部署实验用途的kubernetes集群</p>
-<p>说明：实验性记录，无高可用，etcd亦单机版，单主两节点</p>
-<p>系统：CentOS 7.2（阿里云ECS，无安全组、iptables、selinux，时间同步，2C 4G）</p>
+<p>说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点</p>
+<p>系统：CentOS 7.2（阿里云ECS，无安全组、iptables，禁用selinux、swap，时间同步，2C 4G）</p>
 <p>服务器规划（写入到各节点hosts）：</p>
 <table>
 <thead>
@@ -553,14 +553,14 @@ in
 <li>flannel 0.13</li>
 <li>cni-plugins 0.9</li>
 </ul>
-<p>增加内核参数（所有节点）：</p>
+<p>增加内核参数，将桥接的IPv4流量传递到iptables的链（所有节点）：</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ cat &gt; /etc/sysctl.d/k8s.conf <span style=color:#e6db74>&lt;&lt; EOF
 </span><span style=color:#e6db74>net.bridge.bridge-nf-call-ip6tables = 1
 </span><span style=color:#e6db74>net.bridge.bridge-nf-call-iptables = 1
 </span><span style=color:#e6db74>net.ipv4.ip_forward = 1
 </span><span style=color:#e6db74>EOF</span>
 
-$ sysctl --system 
+$ sysctl -p /etc/sysctl.d/k8s.conf
 </code></pre></div><p>以下操作，代码区域 <code>$</code> 符号表示有输出或换行（无它时表示纯命令），<code>#</code>表示注释，一般情况下以root身份操作。</p>
 <h2 id=在master操作>在Master操作</h2>
 <h3 id=1-安装etcd>1. 安装etcd</h3>

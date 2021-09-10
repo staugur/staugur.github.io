@@ -140,7 +140,7 @@ in
 </ul>
 <p>Flask提供的session做登录分分钟的事情，使用原始cookie登录，稍微麻烦一点，主要是加密解密过程，防止伪造，实现防伪造cookie的关键是通过一个单向算法（例如MD5），demo repository简化了这一过程。</p>
 <p>1. 需要登录页地址如果没有登录返回登录页</p>
-<pre><code>    if request.cookies.get(&quot;username&quot;):
+<pre tabindex=0><code>    if request.cookies.get(&quot;username&quot;):
         return render_template(&quot;index.html&quot;)
     else:
         return &quot;&quot;&quot;&lt;form action=&quot;%s&quot; method='post'&gt;
@@ -150,7 +150,7 @@ in
             &lt;/form&gt;&quot;&quot;&quot; %url_for(&quot;login&quot;)
 </code></pre><p><img src=http://static.saintic.com/interest.blog/blog/9781998272413359.png alt></p>
 <p>2.提交表单到登录验证(默认admin、admin)，验证成功(设定cookie key:value)返回登录成功信息</p>
-<pre><code>    username = request.form.get(&quot;username&quot;)
+<pre tabindex=0><code>    username = request.form.get(&quot;username&quot;)
     password = request.form.get(&quot;password&quot;)
     if username == &quot;admin&quot; and password == &quot;admin&quot;:
         app.logger.info(url_for('index'))
@@ -162,7 +162,7 @@ in
         return &quot;login failed&quot;
 </code></pre><p><img src=http://static.saintic.com/interest.blog/blog/930215056535399.png alt></p>
 <p>3.注销登录即设定登录时的key:value过期时间为0</p>
-<pre><code>    resp.set_cookie(key='username',  value='', expires=0)
+<pre tabindex=0><code>    resp.set_cookie(key='username',  value='', expires=0)
     resp.set_cookie(key='sessionId',  value='', expires=0)
 </code></pre><p><img src=http://static.saintic.com/interest.blog/blog/5931434206370172.png alt></p>
 <p>代码库：<a href=https://github.com/staugur/flask-thirdLogin-demo/tree/master/flask-cookie-login>https://github.com/staugur/flask-thirdLogin-demo/tree/master/flask-cookie-login</a></p>

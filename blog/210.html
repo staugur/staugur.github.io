@@ -124,7 +124,7 @@ in
 <p>命令行推送时，post提交了一个包含url列表的文件，改用python如果用files提交一个url，那真是费力不讨好。</p>
 <p>经过测试，使用requests模块，post请求，data数据为url(string、unicode)，即可完成推送。</p>
 <p>主要代码；</p>
-<pre><code>def BaiduActivePush(pushUrl, original=True, callUrl=接口调用地址):
+<pre tabindex=0><code>def BaiduActivePush(pushUrl, original=True, callUrl=接口调用地址):
     &quot;&quot;&quot;百度主动推送(实时)接口提交链接&quot;&quot;&quot;
     callUrl = callUrl + &quot;&amp;type=original&quot; if original else callUrl
     res = requests.post(url=callUrl, data=pushUrl, timeout=3, headers={&quot;User-Agent&quot;: &quot;BaiduActivePush/www.saintic.com&quot;}).json()

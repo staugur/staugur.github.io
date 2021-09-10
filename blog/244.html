@@ -124,13 +124,13 @@ in
 <p>如 <code>version = ['2.0.1', '1.0.2', '1.0.21', '2,2.9', '1.2.11']</code><br>
 要求：要对version大小进行排序，获得最大的版本号(2.2.9)。<br>
 思路：可以转换成数字型tuple，再对其排序。</p>
-<pre><code>&gt;&gt;&gt; version = ['2.0.1', '1.0.2', '1.0.21', '2.2.9', '1.2.11']
+<pre tabindex=0><code>&gt;&gt;&gt; version = ['2.0.1', '1.0.2', '1.0.21', '2.2.9', '1.2.11']
 &gt;&gt;&gt; sorted(version, key=lambda x:tuple(int(v) for v in x.split(&quot;.&quot;)))
 ['1.0.2', '1.0.21', '1.2.11', '2.0.1', '2.2.9']
 </code></pre><ol start=2>
 <li>如果版本号带上前缀，key函数则会异常</li>
 </ol>
-<pre><code>&gt;&gt;&gt; version = ['v2.0.1', 'v1.0.2', 'v1.0.21', 'v2.2.9', 'v1.2.11']
+<pre tabindex=0><code>&gt;&gt;&gt; version = ['v2.0.1', 'v1.0.2', 'v1.0.21', 'v2.2.9', 'v1.2.11']
 &gt;&gt;&gt; version.sort(key=lambda x:tuple(int(v) for v in x.split(&quot;.&quot;)))
 Traceback (most recent call last):
 File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
@@ -138,7 +138,7 @@ File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;lambda&gt;
 File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;genexpr&gt;
 ValueError: invalid literal for int() with base 10: 'v2'
 </code></pre><p>原因：转换为tuple时将之数字化存在字符，可以稍微修改以适应前缀。</p>
-<pre><code>&gt;&gt;&gt; version = ['v2.0.1', 'v1.0.2', 'v1.0.21', 'v2.2.9', 'v1.2.11']
+<pre tabindex=0><code>&gt;&gt;&gt; version = ['v2.0.1', 'v1.0.2', 'v1.0.21', 'v2.2.9', 'v1.2.11']
 &gt;&gt;&gt; sorted(version, key=lambda x:tuple(int(v) for v in x.replace('v', '').split(&quot;.&quot;)))
 ['v1.0.2', 'v1.0.21', 'v1.2.11', 'v2.0.1', 'v2.2.9']
 </code></pre><br>

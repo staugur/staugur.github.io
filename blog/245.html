@@ -130,7 +130,7 @@ in
 <p>配置h2时，环境是：</p>
 <p>nginx1.10.2(aliyun mirror), centos7.3, openssl忘记查看了~~</p>
 <p>nginx -V如下(只保留有用部分)：</p>
-<pre><code>nginx version: nginx/1.10.2
+<pre tabindex=0><code>nginx version: nginx/1.10.2
 
 built by gcc 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) 
 
@@ -140,14 +140,14 @@ TLS SNI support enabled
 
 configure arguments: --prefix=/usr/share/nginx --with-http_ssl_module --with-http_v2_module
 </code></pre><p>从结果看，nginx版本符合但openssl版本是1.0.1e不符合要求，遂升级nginx，部分输出结果：</p>
-<pre><code>Updated:
+<pre tabindex=0><code>Updated:
   nginx.x86_64 1:1.12.2-1.el7                                                                                                                                                                                                                                                 
 
 Dependency Updated:
   nginx-all-modules.noarch 1:1.12.2-1.el7  nginx-filesystem.noarch 1:1.12.2-1.el7  nginx-mod-http-geoip.x86_64 1:1.12.2-1.el7  nginx-mod-http-image-filter.x86_64 1:1.12.2-1.el7  nginx-mod-http-perl.x86_64 1:1.12.2-1.el7  nginx-mod-http-xslt-filter.x86_64 1:1.12.2-1.el7 
   nginx-mod-mail.x86_64 1:1.12.2-1.el7     nginx-mod-stream.x86_64 1:1.12.2-1.el7 
 </code></pre><p>第二次从结果看并没有更新openssl，此时我才想起查看其版本：</p>
-<pre><code># openssl version
+<pre tabindex=0><code># openssl version
 OpenSSL 1.0.2k-fips  26 Jan 2017
  
 # nginx -V
@@ -161,11 +161,11 @@ built with OpenSSL 1.0.2k-fips  26 Jan 2017
 <p><img src=https://static.saintic.com/EauDouce/blog/201712291136074192.png alt=QQ截图20171229113500 loading=lazy></p>
 <p>#### 某个机器B</p>
 <p>这一个就淡定多了，nginx来自于官方yum源，操作前nginx -V结果是：</p>
-<pre><code>nginx version: nginx/1.10.1
+<pre tabindex=0><code>nginx version: nginx/1.10.1
 built by gcc 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) 
 built with OpenSSL 1.0.1e-fips 11 Feb 2013
 </code></pre><p>升级nginx输出部分：</p>
-<pre><code>Updated:
+<pre tabindex=0><code>Updated:
   nginx.x86_64 1:1.12.2-1.el7_4.ngx                                                                                                                                                                                                                                           
 
 Dependency Updated:
@@ -173,7 +173,7 @@ Dependency Updated:
 </code></pre><p>直接依赖更新了，更新后版本同机器A，万事大吉，今晚吃鸡。。。</p>
 <p>结论：更新一下、重启一下，解决大部分问题。</p>
 <p>#### 顺便贴一个https的配置：</p>
-<pre><code>server {
+<pre tabindex=0><code>server {
     listen 80;
     server_name your.domain.name;
     charset utf-8;

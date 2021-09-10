@@ -133,7 +133,7 @@ l)”中就点了下：</p>
 <p><img src=http://static.saintic.com/interest.blog/blog/45593656869462684.png alt></p>
 <p>另外对于你设定的响应返回 <code>[make_response()](http://flask.pocoo.org/docs/0.11/api/#flask.Flask.m
 ake_response)</code>的对象，都可以使用set_cookie，比如：</p>
-<pre><code>response = make_response(jsonify(success=True))
+<pre tabindex=0><code>response = make_response(jsonify(success=True))
 response = make_response(redirect(url_for(&quot;index&quot;)))
 response = make_response(render_template(&quot;xxx.html&quot;))
 </code></pre><p>这些response都可以附加上以返回。</p>
@@ -149,7 +149,7 @@ response = make_response(render_template(&quot;xxx.html&quot;))
 <p>max_age需要int作为秒，它会计算多少秒后，设为过期；</p>
 <p>expires需要datetime或timestamp作为值，再计算过期时间。</p>
 <p>两个转化的函数供参考：</p>
-<pre><code>import datatime, time
+<pre tabindex=0><code>import datatime, time
 def How_Much_Time(seconds=0, minutes=0, hours=0):
     &quot;&quot;&quot; 将s、m、h后的时间转化为Y-m-d &quot;&quot;&quot;
     dt = datetime.datetime.now() + datetime.timedelta(seconds=int(seconds), minutes=int(minutes), hours=int(hours))

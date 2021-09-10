@@ -123,11 +123,11 @@ in
 </blockquote>
 <p>linux命令审计功能，CentOS7下测试，记录所有用户的命令操作。</p>
 <p>1. 准备</p>
-<pre><code>touch /var/log/myaudit.log
+<pre tabindex=0><code>touch /var/log/myaudit.log
 chmod a+w /var/log/myaudit.log
 </code></pre><p>2. 根据变量写日志</p>
 <p>修改/etc/profile，追加以下代码，重新登录生效。</p>
-<pre><code>HISTTIMEFORMAT=&quot;%Y/%m/%d %T  &quot;
+<pre tabindex=0><code>HISTTIMEFORMAT=&quot;%Y/%m/%d %T  &quot;
 HISTORY_FILE=/var/log/myaudit.log
 readonly PROMPT_COMMAND='{ date &quot;+%y-%m-%d %T ##### $(who am i |awk &quot;{print \$1\&quot; \&quot;\$2\&quot; \&quot;\$5}&quot;) #### $(pwd) #### $(history 1 | { read x cmd; echo &quot;$cmd&quot;; })&quot;; } &gt;&gt; $HISTORY_FILE'
 export HISTTIMEFORMAT HISTORY_FILE PROMPT_COMMAND

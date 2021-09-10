@@ -155,7 +155,7 @@ in
 <p><strong>接口示例</strong>：</p>
 <p>考虑到Api文档的简陋性，这里放几个示例（同时包含缩短和还原），不同语言，请具体更改。</p>
 <p><em>1.1 shell</em></p>
-<pre><code># curl -s https://open.saintic.com/openservice/shorturl/v1/?Action=shorten -XPOST -d long_url=https://greasyfork.org/zh-CN/scripts/368427-花瓣网下载  #使用-d jid=自定义URL
+<pre tabindex=0><code># curl -s https://open.saintic.com/openservice/shorturl/v1/?Action=shorten -XPOST -d long_url=https://greasyfork.org/zh-CN/scripts/368427-花瓣网下载  #使用-d jid=自定义URL
 {&quot;msg&quot;: null, &quot;code&quot;: 0, &quot;data&quot;: {&quot;short_url&quot;: &quot;https://satic.io/f&quot;, &quot;shorten&quot;: &quot;f&quot;}}
 
 # curl -s https://open.saintic.com/openservice/shorturl/v1/?Action=reduction -XPOST -d short_url=https://satic.io/f |jq
@@ -171,13 +171,13 @@ in
   }
 }
 </code></pre><p><em>1.2 python2.7</em></p>
-<pre><code>&gt;&gt;&gt; import requests
+<pre tabindex=0><code>&gt;&gt;&gt; import requests
 &gt;&gt;&gt; requests.post(&quot;https://open.saintic.com/openservice/shorturl/v1/?Action=shorten&quot;, data=dict(long_url=&quot;https://greasyfork.org/zh-CN/scripts/368427-堆糖网下载&quot;)).json()
 {u'msg': None, u'code': 0, u'data': {u'short_url': u'https://satic.io/g', u'shorten': u'g'}}
 &gt;&gt;&gt; requests.post(&quot;https://open.saintic.com/openservice/shorturl/v1/?Action=reduction&quot;, data=dict(short_url=&quot;https://satic.io/g&quot;)).json()
 {u'msg': None, u'code': 0, u'data': {u'status': u'1', u'long_url': u'https://greasyfork.org/zh-CN/scripts/368427-\u5806\u7cd6\u7f51\u4e0b\u8f7d', u'safe': u'1', u'shorten': u'g', u'realname': u'0'}}
 </code></pre><p><em>1.3 php7.2</em></p>
-<pre><code># cat testapi.php 
+<pre tabindex=0><code># cat testapi.php 
 &lt;?php
 /**
  * POST 请求

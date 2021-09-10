@@ -149,10 +149,10 @@ Command <span style=color:#e6db74>&#34;/usr/bin/python -u -c &#34;</span>import 
 You are using pip version 8.1.2, however version 9.0.1 is available.
 You should consider upgrading via the <span style=color:#e6db74>&#39;pip install --upgrade pip&#39;</span> command.
 </code></pre></div><p>缺少linux/limits.h头文件，RHEL/CentOS系列可以安装glic-headers，alpine需要安装包——linux-headers，命令：</p>
-<pre><code>apk add --no-cache linux-headers
+<pre tabindex=0><code>apk add --no-cache linux-headers
 </code></pre><p>然后再执行pip install uwsgi即可安装。</p>
 <p>另一个方法是，alpine直接用apk安装uwsgi，命令：</p>
-<pre><code>apk add --no-cache uwsgi
+<pre tabindex=0><code>apk add --no-cache uwsgi
 </code></pre><p>参考：<a href="https://pkgs.alpinelinux.org/packages?name=*uwsgi*&branch=&repo=main&arch=&maintainer=">https://pkgs.alpinelinux.org/packages?name=*uwsgi*&branch=&repo=main&arch=&maintainer=</a>
 <br></p>
 <center> ·End· </center>

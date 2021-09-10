@@ -148,7 +148,7 @@ export HISTSIZE HISTFILESIZE HISTFILE PROMPT_COMMAND
 </code></pre></div><ol start=2>
 <li>上述保存后，重新登录的终端即可生效，建议手动创建下日志文件，并需要授予所有人可写权限</li>
 </ol>
-<pre><code># $HISTFILE改为实际日志文件路径
+<pre tabindex=0><code># $HISTFILE改为实际日志文件路径
 touch $HISTFILE &amp;&amp; chmod a+w $HISTFILE
 </code></pre><ol start=3>
 <li>使用python清洗日志，筛选出有效的命令数据并上报给运维平台、数据库等</li>

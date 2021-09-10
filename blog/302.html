@@ -433,7 +433,7 @@ sha256值，再提交后即可。</p>
 </code></pre></div><p>这个程序比较简单，就一个main包，传入没什么问题。</p>
 <p>不过有时候你可能想往子包中传值，参考这篇文章：<a href=https://www.yuque.com/wegoer/set/using-ldflags-to-set-version-information-for-go-applications>使用ldflags设置Go应用程序的版本信息</a></p>
 <p>假如你的程序目录结构如下：</p>
-<pre><code>rtfd
+<pre tabindex=0><code>rtfd
 ├── cmd
 │   └── root.go
 ├── go.mod
@@ -441,13 +441,13 @@ sha256值，再提交后即可。</p>
 ├── Makefile
 └── VERSION
 </code></pre><p>其中main.go是main包，cmd下go文件属于cmd包，按照上面文章应该这么传值：</p>
-<pre><code>$ go build -ldflags &quot;-X cmd.commitID=xxx -X cmd.built=xxx&quot;
+<pre tabindex=0><code>$ go build -ldflags &quot;-X cmd.commitID=xxx -X cmd.built=xxx&quot;
 $ go build -ldflags &quot;-X rtfd/cmd.commitID=xxx -X rtfd/cmd.built=xxx&quot;
 </code></pre><p>均失败！</p>
 <p>ldflag格式是：<code>-ldflags="-X 'package_path.variable_name=new_value'"</code></p>
 <p>可能是新手，没搞明白package_path含义，google也是没找到教新的分享，
 捣鼓好久突然灵机一动，改为这么传值：</p>
-<pre><code>go build -ldflags &quot;-X tcw.im/rtfd/cmd.commitID=xxx -X tcw.im/rtfd/cmd.built=xxx&quot;
+<pre tabindex=0><code>go build -ldflags &quot;-X tcw.im/rtfd/cmd.commitID=xxx -X tcw.im/rtfd/cmd.built=xxx&quot;
 </code></pre><p>行了！</p>
 <p>因为我的go项目全都是<code>go module</code>模式！</p>
 <p>此刻，好想吐槽（自己？）</p>

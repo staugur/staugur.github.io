@@ -129,10 +129,10 @@ in
 </li>
 </ul>
 <p>ini文件内容：</p>
-<pre><code>[test]
+<pre tabindex=0><code>[test]
 a = 1
 </code></pre><p>在python中调用：</p>
-<pre><code>cfg = CfgHandler(&quot;ini&quot;)
+<pre tabindex=0><code>cfg = CfgHandler(&quot;ini&quot;)
 cfg.test.a == cfg.test[&quot;a&quot;] ==  cfg[&quot;test&quot;].a == cfg[&quot;test&quot;][&quot;a&quot;]
 </code></pre><ul>
 <li>代码：</li>
@@ -223,12 +223,12 @@ cfg.test.a == cfg.test[&quot;a&quot;] ==  cfg[&quot;test&quot;].a == cfg[&quot;t
 </code></pre></div><h6 id=2-click的帮助选项版本选项>2. click的帮助选项、版本选项</h6>
 <p>2.1 使用-h显示帮助</p>
 <p>默认情况下，click需要使用—help才会显示帮助，不过可以设置这个，示例：</p>
-<pre><code>@click.group(context_settings={'help_option_names': ['-h', '--help']})
+<pre tabindex=0><code>@click.group(context_settings={'help_option_names': ['-h', '--help']})
 def cli():
     pass
 </code></pre><p>2.2 打印版本</p>
 <p>有时候我们想执行 <code>命令 \-v</code> 打印版本，对于click，示例：</p>
-<pre><code>def print_version(ctx, param, value):
+<pre tabindex=0><code>def print_version(ctx, param, value):
     if not value or ctx.resilient_parsing:
         return
     click.echo('版本')
