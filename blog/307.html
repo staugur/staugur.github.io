@@ -22,7 +22,7 @@
 </title>
 <meta name=title content="二进制方式部署k8s（v1.18 + containerd） | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-11 20:26:00 \u002b0800 \u002b0800","dateModified":"2021-05-11 20:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"3916","keywords":["go","k8s","docker","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-11 20:26:00 \u002b0800 \u002b0800","dateModified":"2021-05-11 20:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"3900","keywords":["go","k8s","docker","一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -509,7 +509,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E8%BF%90%E7%BB%B4.html> 运维 </a>
 </span>
-<span class=post-word-count>3916 words</span>
+<span class=post-word-count>3900 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -832,7 +832,7 @@ controller-manager   Healthy   ok
 </code></pre></div><h3 id=9-在master上准备worker环境所需>9. 在Master上准备Worker环境所需</h3>
 <h4 id=生成kubelet初次加入集群引导kubeconfig文件>生成kubelet初次加入集群引导kubeconfig文件</h4>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ KUBE_CONFIG<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/opt/k8s/cfg/bootstrap.kubeconfig&#34;</span>
-$ KUBE_APISERVER<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://172.17.89.23:6443&#34;</span> <span style=color:#75715e># 如同一终端可忽略，上一步已设置</span>
+$ KUBE_APISERVER<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://172.17.89.23:6443&#34;</span>
 $ TOKEN<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;cf2cdbdd07d06094e598d83d0b89006b&#34;</span>   <span style=color:#75715e># 与token.csv里保持一致</span>
 
 <span style=color:#75715e># 生成 kubelet bootstrap kubeconfig 配置文件</span>
