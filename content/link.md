@@ -15,7 +15,7 @@ showComments: false
 
 [主站](https://www.saintic.com) |
 [我的程序文档](https://docs.saintic.com) |
-[图床](https://picbed.pro)
+[图床](https://sapicd.com)
 [Fairyla](https://is.fairyla.com)
 
 # 本站公共服务及 API...

@@ -15,7 +15,7 @@ categories: ["笔记"]
 
 #### EOF式
 
-```
+```bash
 ssh user@host << EOF
 cmd1
 cmd2
