@@ -203,12 +203,12 @@ in
 <h4 id=分号式>分号式</h4>
 <p><code>ssh user@host 'cmd1 ; cmd2 ; cmdn'</code></p>
 <h4 id=eof式>EOF式</h4>
-<pre tabindex=0><code>ssh user@host &lt;&lt; EOF
-cmd1
-cmd2
-cmdn
-EOF
-</code></pre><h4 id=通过ssh在远端服务器上执行远程脚本>通过ssh在远端服务器上执行远程脚本</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ssh user@host <span style=color:#e6db74>&lt;&lt; EOF
+</span><span style=color:#e6db74>cmd1
+</span><span style=color:#e6db74>cmd2
+</span><span style=color:#e6db74>cmdn
+</span><span style=color:#e6db74>EOF</span>
+</code></pre></div><h4 id=通过ssh在远端服务器上执行远程脚本>通过ssh在远端服务器上执行远程脚本</h4>
 <p>即执行位于目标服务器本地的脚本</p>
 <p><code>ssh user@host /path/to/remote/script-file</code></p>
 <h4 id=通过ssh在远端服务器上执行本地脚本>通过ssh在远端服务器上执行本地脚本</h4>
