@@ -22,7 +22,7 @@
 </title>
 <meta name=title content="二进制方式部署k8s（v1.18 + containerd） | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-11 20:26:00 \u002b0800 \u002b0800","dateModified":"2021-05-11 20:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"3900","keywords":["go","k8s","docker","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-11 20:26:00 \u002b0800 \u002b0800","dateModified":"2021-05-11 20:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"3977","keywords":["go","k8s","docker","一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -509,7 +509,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E8%BF%90%E7%BB%B4.html> 运维 </a>
 </span>
-<span class=post-word-count>3900 words</span>
+<span class=post-word-count>3977 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -800,7 +800,7 @@ $ systemctl enable kube-controller-manager
 </span><span style=color:#e6db74>--v=2 \
 </span><span style=color:#e6db74>--log-dir=/opt/k8s/logs \
 </span><span style=color:#e6db74>--leader-elect \
-</span><span style=color:#e6db74>--kubeconfig=/opt/k8s/cfg/kube-scheduler.kubeconfig \
+</span><span style=color:#e6db74>--master=127.0.0.1:8080 \
 </span><span style=color:#e6db74>--bind-address=127.0.0.1&#34;
 </span><span style=color:#e6db74>EOF</span>
 </code></pre></div><h4 id=systemd管理scheduler>systemd管理scheduler</h4>
@@ -912,7 +912,7 @@ $ cp ca.pem /opt/k8s/ssl/
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install -y yum-utils
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum install -y containerd.io
-containerd config default | sudo tee /etc/containerd/config.toml
+containerd config default | tee /etc/containerd/config.toml
 sed -i <span style=color:#e6db74>&#39;s#k8s.gcr.io/pause#docker.io/staugur/pause#&#39;</span> /etc/containerd/config.toml
 systemctl daemon-reload
 systemctl start containerd
@@ -934,7 +934,7 @@ systemctl enable containerd
 </span><span style=color:#e6db74>EOF</span>
 </code></pre></div><p>参数说明：</p>
 <p>&ndash;hostname-override：显示名称，集群中唯一</p>
-<p>&ndash;kubeconfig：空路径，会自动生成，后面用于连接apiserver</p>
+<p>&ndash;kubeconfig：空路径，会自动生成（即TLS bootstraping流程，批准后生成），用于连接apiserver</p>
 <p>&ndash;bootstrap-kubeconfig：首次启动向apiserver申请证书</p>
 <p>&ndash;config：配置参数文件</p>
 <p>&ndash;cert-dir：kubelet证书生成目录</p>
@@ -1056,7 +1056,7 @@ tar zxf cni-plugins-linux-amd64-v<span style=color:#e6db74>${</span>version<span
 <hr>
 <h2 id=部署cni网络及其他可选组件在master上操作>部署CNI网络及其他可选组件（在Master上操作）</h2>
 <h3 id=部署flannel网络组件>部署flannel网络组件</h3>
-<p>使用flannel，部署到pod中（使用v0.13）</p>
+<p>使用flannel，部署到pod中（使用v0.13，注意flannel默认网络与上述集群网络一致）</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>KUBE_FLANNEL<span style=color:#f92672>=</span>https://raw.githubusercontent.com/flannel-io/flannel/v0.13.0/Documentation/kube-flannel.yml
 kubectl apply -f $KUBE_FLANNEL
 </code></pre></div><p>Pod部署完成后，<code>kubectl get node</code>状态应该是Ready</p>
@@ -1106,7 +1106,7 @@ $ cat &gt; apiserver-to-kubelet-rbac.yaml <span style=color:#e6db74>&lt;&lt; EOF
 $ kubectl apply -f apiserver-to-kubelet-rbac.yaml
 </code></pre></div><h3 id=部署coredns组件>部署CoreDNS组件</h3>
 <p>CoreDNS用于集群内部Service名称解析。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 安装依赖 jq 命令</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 安装依赖 jq 命令（coredns deploy.sh脚本生成yaml用到此命令）</span>
 $ yum install jq -y
 
 <span style=color:#75715e># 下载 CoreDNS 部署项目</span>

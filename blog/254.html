@@ -22,7 +22,7 @@ WSL开机自启动ssh服务 | 一念 de 博客
 </title>
 <meta name=title content="WSL开机自启动ssh服务 | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"WSL开机自启动ssh服务","headline":"WSL开机自启动ssh服务","description":"本文系整理\u002b修改而成，参考……忘记了，侵删。 主题是：WSL(Windows Subsystem for Linux)开机自启动ssh服务。 一般情况用于v1版本，不过初","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-04-27 00:00:00 \u002b0000 UTC","dateModified":"2018-04-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/254.html","wordCount":"472","keywords":["一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"WSL开机自启动ssh服务","headline":"WSL开机自启动ssh服务","description":"本文系整理\u002b修改而成，参考……忘记了，侵删。 主题是：WSL(Windows Subsystem for Linux)开机自启动ssh服务。 一般情况用于v1版本，不过初","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-04-27 00:00:00 \u002b0000 UTC","dateModified":"2018-04-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/254.html","wordCount":"476","keywords":["一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -145,7 +145,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.html> 操作系统 </a>
 </span>
-<span class=post-word-count>472 words</span>
+<span class=post-word-count>476 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -173,13 +173,13 @@ in
 </ol>
 <h4 id=贰代码><strong>贰、代码</strong></h4>
 <p>1. startWSL.vbs</p>
-<pre tabindex=0><code class=language-vbscript data-lang=vbscript>Set ws = WScript.CreateObject(&quot;WScript.Shell&quot;)
-cmd = &quot;C:\Windows\System32\bash.exe -c &quot;&quot;bash /init.sh&quot;&quot;&quot;
-'运行命令不显示cmd窗口
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-batch data-lang=batch><span style=color:#66d9ef>Set</span> ws = WScript.CreateObject(<span style=color:#e6db74>&#34;WScript.Shell&#34;</span>)
+cmd = <span style=color:#e6db74>&#34;C:\Windows\System32\bash.exe -c &#34;&#34;bash /init.sh&#34;&#34;&#34;</span>
+&#39;运行命令不显示cmd窗口
 ws.Run cmd, 0, false
-Set ws = Nothing
+<span style=color:#66d9ef>Set</span> ws = Nothing
 WScript.quit
-</code></pre><p>2. init.sh</p>
+</code></pre></div><p>2. init.sh</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
 </span><span style=color:#75715e></span>pn<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>ps aux|grep -v grep|grep sshd|wc -l<span style=color:#66d9ef>)</span>
 <span style=color:#f92672>[</span> -d /var/run/sshd <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> mkdir /var/run/sshd
