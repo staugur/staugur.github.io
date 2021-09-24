@@ -21,7 +21,7 @@
 </title>
 <meta name=title content="二进制方式部署k8s（v1.18 + containerd） | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-09-24 19:26:00 \u002b0800 \u002b0800","dateModified":"2021-09-24 19:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"4245","keywords":["go","k8s","docker","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制方式部署k8s（v1.18 \u002b containerd）","headline":"二进制方式部署k8s（v1.18 \u002b containerd）","description":"前言 目的：以二进制方式部署实验用途的kubernetes集群 说明：实验性记录，无高可用，etcd亦单机版无证书模式，单主两节点 系统：Cent","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-09-24 19:26:00 \u002b0800 \u002b0800","dateModified":"2021-09-24 19:26:00 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/307.html","wordCount":"4235","keywords":["go","k8s","docker","一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -508,7 +508,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E8%BF%90%E7%BB%B4.html> 运维 </a>
 </span>
-<span class=post-word-count>4245 words</span>
+<span class=post-word-count>4235 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -546,10 +546,10 @@ in
 <p>网络规划：</p>
 <ul>
 <li>
-<p>服务：10.0.0.0/24</p>
+<p>Service: 10.0.0.0/24</p>
 </li>
 <li>
-<p>Pod：10.244.0.0/16</p>
+<p>Pod: 10.244.0.0/16</p>
 </li>
 </ul>
 <p>软件版本：</p>
@@ -647,7 +647,7 @@ ca-key.pem  ca.pem
 
 <span style=color:#75715e># 使用自签CA签发kube-apiserver HTTPS证书</span>
 <span style=color:#75715e># hosts字段中IP为所有Master/LB/VIP IP，一个都不能少！为了方便后期扩容可以写几个预留的IP</span>
-<span style=color:#75715e># 注意也要加上服务网络范围的第一个IP，比如本示例是10.0.0.1</span>
+<span style=color:#75715e># 注意也要加上Service网络范围的第一个IP，比如本示例是10.0.0.1</span>
 $ cat &gt; server-csr.json <span style=color:#e6db74>&lt;&lt; EOF
 </span><span style=color:#e6db74>{
 </span><span style=color:#e6db74>    &#34;CN&#34;: &#34;kubernetes&#34;,
@@ -946,7 +946,7 @@ systemctl enable containerd
 <p>&ndash;cert-dir：kubelet证书生成目录</p>
 <p>&ndash;pod-infra-container-image：管理Pod网络容器的镜像</p>
 <p>&ndash;container-runtime：设定容器运行时，目前默认还是docker，需要改为remote</p>
-<p>&ndash;container-runtime-endpoint：远程运行时服务的端点，即containerd的sock路径</p>
+<p>&ndash;container-runtime-endpoint：远程运行时的端点，即containerd的sock路径</p>
 <h4 id=配置参数文件>配置参数文件</h4>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat &gt; /opt/k8s/cfg/kubelet-config.yml <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
 </span><span style=color:#e6db74>kind: KubeletConfiguration
@@ -981,7 +981,7 @@ systemctl enable containerd
 </span><span style=color:#e6db74>maxPods: 110
 </span><span style=color:#e6db74>EOF</span>
 </code></pre></div><p>参数说明：</p>
-<p>clusterDNS：根据实际修改，一般是服务网络第二个IP</p>
+<p>clusterDNS：根据实际修改，一般是Service网络第二个IP</p>
 <h4 id=systemd管理kubelet>systemd管理kubelet</h4>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat &gt; /lib/systemd/system/kubelet.service <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
 </span><span style=color:#e6db74>[Unit]
@@ -1043,7 +1043,7 @@ k8s-node7   NotReady   &lt;none&gt;   3m6s   v1.21.0
 它是集群中 Pod 的 CIDR 范围，但是很多文档变成了 Service 的 CIDR 范围。</p>
 </li>
 <li>
-<p>这在ipvs模式下有问题的，node/pod访问默认服务timeout，比如按照flannel网络，
+<p>这在ipvs模式下有问题的，node/pod访问默认Service ClusterIP超时，比如按照flannel网络，
 死活起不来，pod状态是CrashLoopBackOff，错误日志是
 <code>failed to create subnetmanager: error retrieving pod spec, dial tcp 10.0.0.1:443 i/o timeout</code></p>
 </li>
