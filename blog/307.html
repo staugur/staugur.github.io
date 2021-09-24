@@ -1014,7 +1014,7 @@ $ kubectl certificate approve node-csr-xxx
 <span style=color:#75715e># 查看节点（由于网络插件还没有部署，节点会没有准备就绪 NotReady）</span>
 $ kubectl get node
 NAME        STATUS     ROLES    AGE    VERSION
-k8s-node7   NotReady   &lt;none&gt;   3m6s   v1.21.0
+k8s-node7   NotReady   &lt;none&gt;   3m6s   v1.18.3
 </code></pre></div><h3 id=3-部署kube-proxy>3. 部署kube-proxy</h3>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat &gt; /opt/k8s/cfg/kube-proxy.conf <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
 </span><span style=color:#e6db74>KUBE_PROXY_OPTS=&#34;--logtostderr=false \
@@ -1073,7 +1073,7 @@ version<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;0.9.1&#3
 wget -c https://github.com/containernetworking/plugins/releases/download/v<span style=color:#e6db74>${</span>version<span style=color:#e6db74>}</span>/cni-plugins-linux-amd64-v<span style=color:#e6db74>${</span>version<span style=color:#e6db74>}</span>.tgz
 tar zxf cni-plugins-linux-amd64-v<span style=color:#e6db74>${</span>version<span style=color:#e6db74>}</span>.tgz -C /opt/cni/bin/
 </code></pre></div><p>至此，Worker节点大致是这样，增加节点按照本部分内容操作即可。</p>
-<p>//（省略）依此安装k8s-node8节点，注意更改主机名（hostname-override）</p>
+<p>//（省略）依次安装k8s-node8节点，注意更改主机名（hostname-override）</p>
 <hr>
 <h2 id=部署cni网络及其他可选组件在master上操作>部署CNI网络及其他可选组件（在Master上操作）</h2>
 <h3 id=部署flannel网络组件>部署flannel网络组件</h3>
