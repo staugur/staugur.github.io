@@ -25,7 +25,7 @@ import xlwings as xw
 
 app = xw.App(visible=visible, add_book=False) # visible 是否显示Excel界面
 app.display_alerts = False  # 不显示Excel消息框
-app.screen_updating = False  # 关闭屏幕更新,可加快宏的执行速度
+app.screen_updating = False  # 关闭屏幕更新,可加快宏的执行速度，不过某些可能有问题需要用True
 
 app.books.open("filename")
 ```
@@ -58,6 +58,17 @@ sht.last_cell.row
 sht.last_cell.column
 ```
 
+#### 设置单元格大小
+
+```python
+sht.autofit()    # 自动调整单元格大小。注：此方法是在单元格写入内容后，再使用，才有效。
+sht.range(1,4).column_width = 5    # 设置第4列 列宽。（1,4）为第1行第4列的单元格
+sht.range(1,4).row_height = 20     # 设置第1行 行高
+
+sht.range('A1').columns.autofit()  # 设置区域自动列宽
+sht.range('A1').rows.autofit()  # 设置区域自动行高
+```
+
 ### 保存和退出
 
 工作簿（Book）有一个close方法不保存数据并关闭工作簿。
@@ -77,7 +88,7 @@ sht = wb.sheets[0]
 # 操作了数据
 wb.save()
 wb.close()
-app.quit()
+# 没操作数据，可以不用save和close，建议直接使用 app.quit() 退出
 ```
 
 如果直接打开工作簿：
@@ -93,6 +104,7 @@ wb.close()
 
 #### 引用:
 
+- [xlwings Document](https://docs.xlwings.org/zh_CN/latest/)
 - [Python操作工作簿&表](https://zhuanlan.zhihu.com/p/120415076)
 - [xlwings入门攻略](https://juejin.cn/post/6941349529211895821)
 
