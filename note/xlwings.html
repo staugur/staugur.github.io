@@ -22,7 +22,7 @@ xlwings操作Excel | 一念 de 博客
 </title>
 <meta name=title content="xlwings操作Excel | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"xlwings操作Excel","headline":"xlwings操作Excel","description":"笔记中python版本3.9，使用xlwings模块操作Excel。 概念 详细概念可以从引用文章-Python操作工作簿查看。 据我理解，App","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-08-16 14:23:13 \u002b0800 \u002b0800","dateModified":"2021-08-16 14:23:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/xlwings.html","wordCount":"585","keywords":["python","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"xlwings操作Excel","headline":"xlwings操作Excel","description":"笔记中python版本3.9，使用xlwings模块操作Excel。 概念 详细概念可以从引用文章-Python操作工作簿查看。 据我理解，App","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-08-16 14:23:13 \u002b0800 \u002b0800","dateModified":"2021-08-16 14:23:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/xlwings.html","wordCount":"736","keywords":["python","一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -140,6 +140,19 @@ xlwings操作Excel | 一念 de 博客
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
+<ul class=nav>
+<li class=nav-item>
+<a class="nav-link text-left" href=#%e8%ae%be%e7%bd%ae%e5%8d%95%e5%85%83%e6%a0%bc%e5%a4%a7%e5%b0%8f>
+设置单元格大小
+</a>
+</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<ul class=nav>
+<ul class=nav>
+<ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#%e4%bf%9d%e5%ad%98%e5%92%8c%e9%80%80%e5%87%ba>
 保存和退出
@@ -176,7 +189,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E7%AC%94%E8%AE%B0.html> 笔记 </a>
 </span>
-<span class=post-word-count>585 words</span>
+<span class=post-word-count>736 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -192,7 +205,7 @@ in
 
 app <span style=color:#f92672>=</span> xw<span style=color:#f92672>.</span>App(visible<span style=color:#f92672>=</span>visible, add_book<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>) <span style=color:#75715e># visible 是否显示Excel界面</span>
 app<span style=color:#f92672>.</span>display_alerts <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>  <span style=color:#75715e># 不显示Excel消息框</span>
-app<span style=color:#f92672>.</span>screen_updating <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>  <span style=color:#75715e># 关闭屏幕更新,可加快宏的执行速度</span>
+app<span style=color:#f92672>.</span>screen_updating <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>  <span style=color:#75715e># 关闭屏幕更新,可加快宏的执行速度，不过某些可能有问题需要用True</span>
 
 app<span style=color:#f92672>.</span>books<span style=color:#f92672>.</span>open(<span style=color:#e6db74>&#34;filename&#34;</span>)
 </code></pre></div><p>或者直接打开：</p>
@@ -214,6 +227,13 @@ sht<span style=color:#f92672>.</span>used_range<span style=color:#f92672>.</span
 sht<span style=color:#f92672>.</span>last_cell<span style=color:#f92672>.</span>row
 <span style=color:#75715e># 列数，等于元组第二个</span>
 sht<span style=color:#f92672>.</span>last_cell<span style=color:#f92672>.</span>column
+</code></pre></div><h4 id=设置单元格大小>设置单元格大小</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>sht<span style=color:#f92672>.</span>autofit()    <span style=color:#75715e># 自动调整单元格大小。注：此方法是在单元格写入内容后，再使用，才有效。</span>
+sht<span style=color:#f92672>.</span>range(<span style=color:#ae81ff>1</span>,<span style=color:#ae81ff>4</span>)<span style=color:#f92672>.</span>column_width <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>    <span style=color:#75715e># 设置第4列 列宽。（1,4）为第1行第4列的单元格</span>
+sht<span style=color:#f92672>.</span>range(<span style=color:#ae81ff>1</span>,<span style=color:#ae81ff>4</span>)<span style=color:#f92672>.</span>row_height <span style=color:#f92672>=</span> <span style=color:#ae81ff>20</span>     <span style=color:#75715e># 设置第1行 行高</span>
+
+sht<span style=color:#f92672>.</span>range(<span style=color:#e6db74>&#39;A1&#39;</span>)<span style=color:#f92672>.</span>columns<span style=color:#f92672>.</span>autofit()  <span style=color:#75715e># 设置区域自动列宽</span>
+sht<span style=color:#f92672>.</span>range(<span style=color:#e6db74>&#39;A1&#39;</span>)<span style=color:#f92672>.</span>rows<span style=color:#f92672>.</span>autofit()  <span style=color:#75715e># 设置区域自动行高</span>
 </code></pre></div><h3 id=保存和退出>保存和退出</h3>
 <p>工作簿（Book）有一个close方法不保存数据并关闭工作簿。</p>
 <p>App有一个quit方法不保存数据并关闭进程。</p>
@@ -227,7 +247,7 @@ sht <span style=color:#f92672>=</span> wb<span style=color:#f92672>.</span>sheet
 <span style=color:#75715e># 操作了数据</span>
 wb<span style=color:#f92672>.</span>save()
 wb<span style=color:#f92672>.</span>close()
-app<span style=color:#f92672>.</span>quit()
+<span style=color:#75715e># 没操作数据，可以不用save和close，建议直接使用 app.quit() 退出</span>
 </code></pre></div><p>如果直接打开工作簿：</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> xlwings <span style=color:#66d9ef>as</span> xw
 
@@ -238,6 +258,7 @@ wb<span style=color:#f92672>.</span>save()
 wb<span style=color:#f92672>.</span>close()
 </code></pre></div><h4 id=引用>引用:</h4>
 <ul>
+<li><a href=https://docs.xlwings.org/zh_CN/latest/>xlwings Document</a></li>
 <li><a href=https://zhuanlan.zhihu.com/p/120415076>Python操作工作簿&表</a></li>
 <li><a href=https://juejin.cn/post/6941349529211895821>xlwings入门攻略</a></li>
 </ul>
