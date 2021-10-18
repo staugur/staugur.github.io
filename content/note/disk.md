@@ -142,9 +142,9 @@ $ vgextend VG /dev/sdc1
 
 $ lvextend -L +10G /dev/VG/Data
   # -L：指定扩展（后）的大小。例如，-L +800M表示扩大800M，而-L 800M表示扩大至800M
-  # -l：指定扩展（后）的大小（LE数）
+  # -l：指定扩展（后）的大小（LE数），比如： lvextend -l +100%FREE /dev/VG/Data
 
-$ resize2fs/xfs_growfs 
+$ resize2fs/xfs_growfs <DEVICE>
   # ext2/ext3/ext4文件系统的调整命令是resize2fs（增大和减小都支持）
   # xfs文件系统的调整命令是xfs_growfs（只支持增大）
 ```
