@@ -21,7 +21,7 @@
 </title>
 <meta name=title content="磁盘与LVM简介 | 一念 de 博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"磁盘与LVM简介","headline":"磁盘与LVM简介","description":"磁盘基本概述 磁盘分类 固态硬盘 机械硬盘 服务器硬盘 固态硬盘的优缺点 优点： 读写速度快 防震抗摔性强 低功耗 无躁音 体积小，携带方便 缺点： 容量比机械硬盘小","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-08-16 14:23:13 \u002b0800 \u002b0800","dateModified":"2021-08-16 14:23:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/disk.html","wordCount":"2061","keywords":["LVM","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"磁盘与LVM简介","headline":"磁盘与LVM简介","description":"磁盘基本概述 磁盘分类 固态硬盘 机械硬盘 服务器硬盘 固态硬盘的优缺点 优点： 读写速度快 防震抗摔性强 低功耗 无躁音 体积小，携带方便 缺点： 容量比机械硬盘小","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-08-16 14:23:13 \u002b0800 \u002b0800","dateModified":"2021-08-16 14:23:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/disk.html","wordCount":"2070","keywords":["LVM","一念 de 博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -248,7 +248,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E7%AC%94%E8%AE%B0.html> 笔记 </a>
 </span>
-<span class=post-word-count>2061 words</span>
+<span class=post-word-count>2070 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -386,9 +386,9 @@ $ vgextend VG /dev/sdc1
 
 $ lvextend -L +10G /dev/VG/Data
   <span style=color:#75715e># -L：指定扩展（后）的大小。例如，-L +800M表示扩大800M，而-L 800M表示扩大至800M</span>
-  <span style=color:#75715e># -l：指定扩展（后）的大小（LE数）</span>
+  <span style=color:#75715e># -l：指定扩展（后）的大小（LE数），比如： lvextend -l +100%FREE /dev/VG/Data</span>
 
-$ resize2fs/xfs_growfs 
+$ resize2fs/xfs_growfs &lt;DEVICE&gt;
   <span style=color:#75715e># ext2/ext3/ext4文件系统的调整命令是resize2fs（增大和减小都支持）</span>
   <span style=color:#75715e># xfs文件系统的调整命令是xfs_growfs（只支持增大）</span>
 </code></pre></div><h4 id=引用>引用:</h4>
