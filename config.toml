@@ -64,10 +64,10 @@ preserveTaxonomyNames = true
 
     google_verification = ""
 
-    description = "陶先森de博客" # (Meta) 描述
+    description = "一念de博客" # (Meta) 描述
     keywords = "SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd" # site keywords
 
-    beian = "京ICP备14058611号"
+    beian = "京ICP备14058611号-1"
     baiduAnalytics = ""
     googleAnalytics = "" # Google 统计 id
 
