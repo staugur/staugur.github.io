@@ -18,11 +18,11 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=theme-color content="#ffffff">
 <title>
-Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念 de 博客
+Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客
 </title>
-<meta name=title content="Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念 de 博客">
+<meta name=title content="Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Python获取系统信息(CPU、Mem、Disk、Network、User等)","headline":"Python获取系统信息(CPU、Mem、Disk、Network、User等)","description":"#!\/usr\/bin\/env python #coding:utf8 #get system info from psutil #required:psutil try: import sys,psutil,platform,commands,json,socket,os except ImportError as msg: print \u0026#34;Import Error, because %s\u0026#34; % msg sys.exit(1) class SysInfo(): sys_ip=socket.gethostbyname(socket.gethostname()) try: client_ip=os.environ[\u0026#39;SSH_CONNECTION\u0026#39;].split()[0] except: client_ip=\u0026#39;unknown\u0026#39; sys_version=platform.linux_distribution() sys_fqdn=platform.uname()[1] #hostname,eg:localhost.localdomain sys_kernel=platform.uname()[2] #kernel version sys_arch=platform.uname()[4] #eg:x86_64 amd64 win32 def hostname(self): return json.dumps({\u0026#34;Hostname\u0026#34;: self.sys_fqdn}) def ip(self): return json.dumps({\u0026#34;ServerIP\u0026#34;: self.sys_ip, \u0026#39;SSH_Client_IP\u0026#39;: self.client_ip}) def Kernel(self): return json.dumps({\u0026#34;Kernel\u0026#34;: self.sys_kernel}) def Arch(self): return json.dumps({\u0026#34;Arch\u0026#34;: self.sys_arch}) def Version(self): return json.dumps({\u0026#34;SysVersion\u0026#34;: self.sys_version}) def CPU(self):","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-10-27 00:00:00 \u002b0000 UTC","dateModified":"2016-10-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/86.html","wordCount":"212","keywords":["python","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Python获取系统信息(CPU、Mem、Disk、Network、User等)","headline":"Python获取系统信息(CPU、Mem、Disk、Network、User等)","description":"#!\/usr\/bin\/env python #coding:utf8 #get system info from psutil #required:psutil try: import sys,psutil,platform,commands,json,socket,os except ImportError as msg: print \u0026#34;Import Error, because %s\u0026#34; % msg sys.exit(1) class SysInfo(): sys_ip=socket.gethostbyname(socket.gethostname()) try: client_ip=os.environ[\u0026#39;SSH_CONNECTION\u0026#39;].split()[0] except: client_ip=\u0026#39;unknown\u0026#39; sys_version=platform.linux_distribution() sys_fqdn=platform.uname()[1] #hostname,eg:localhost.localdomain sys_kernel=platform.uname()[2] #kernel version sys_arch=platform.uname()[4] #eg:x86_64 amd64 win32 def hostname(self): return json.dumps({\u0026#34;Hostname\u0026#34;: self.sys_fqdn}) def ip(self): return json.dumps({\u0026#34;ServerIP\u0026#34;: self.sys_ip, \u0026#39;SSH_Client_IP\u0026#39;: self.client_ip}) def Kernel(self): return json.dumps({\u0026#34;Kernel\u0026#34;: self.sys_kernel}) def Arch(self): return json.dumps({\u0026#34;Arch\u0026#34;: self.sys_arch}) def Version(self): return json.dumps({\u0026#34;SysVersion\u0026#34;: self.sys_version}) def CPU(self):","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-10-27 00:00:00 \u002b0000 UTC","dateModified":"2016-10-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/86.html","wordCount":"212","keywords":["python","一念博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -43,7 +43,8 @@ Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念 de 博�
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
 <a class=menu-item href=/link.html title>Links</a>
-<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Search</a>
+<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Baidu</a>
+<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
 <a class=menu-item href=/about.html title=About>About</a>
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
@@ -56,7 +57,7 @@ Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念 de 博�
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
-<a href=https://blog.saintic.com>一念 de 博客</a>
+<a href=https://blog.saintic.com>一念博客</a>
 </div>
 <div class=navbar-right>
 <div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
@@ -88,7 +89,11 @@ Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念 de 博�
 <div class=menu-active></div>
 </a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Search</h3>
+<h3>Baidu</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
+<h3>Google</h3>
 <div class=menu-active></div>
 </a>
 <a class=menu-item href=/about.html title=About>

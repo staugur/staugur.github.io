@@ -18,11 +18,11 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=theme-color content="#ffffff">
 <title>
-Nginx日志切割脚本 | 一念 de 博客
+Nginx日志切割脚本 | 一念博客
 </title>
-<meta name=title content="Nginx日志切割脚本 | 一念 de 博客">
+<meta name=title content="Nginx日志切割脚本 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Nginx日志切割脚本","headline":"Nginx日志切割脚本","description":"适用于以*.access.log开头的访问日志。 #!\/bin\/bash #This script run at 00:00. logs_path=\u0026#34;\/data\/app\/nginx\/logs\u0026#34; #切分后log存放的目录 bak_path=\u0026#34;\/data\/logs\u0026#34; yesterday=$(date -d \u0026#34;yesterday\u0026#34; \u002b\u0026#34;%Y%m%d\u0026#34;) nginx_pid=$(cat ${logs_path}\/nginx.pid) host=$(ls -l ${logs_path}\/*.access.log | awk -F \u0026#34; \u0026#34; \u0026#39;{print $9}\u0026#39; | awk -F \u0026#34;.access\u0026#34; \u0026#39;{print $1}\u0026#39; | awk -F \u0026#34;$logs_path\/\u0026#34;","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-10-27 00:00:00 \u002b0000 UTC","dateModified":"2016-10-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/97.html","wordCount":"185","keywords":["nginx","一念 de 博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Nginx日志切割脚本","headline":"Nginx日志切割脚本","description":"适用于以*.access.log开头的访问日志。 #!\/bin\/bash #This script run at 00:00. logs_path=\u0026#34;\/data\/app\/nginx\/logs\u0026#34; #切分后log存放的目录 bak_path=\u0026#34;\/data\/logs\u0026#34; yesterday=$(date -d \u0026#34;yesterday\u0026#34; \u002b\u0026#34;%Y%m%d\u0026#34;) nginx_pid=$(cat ${logs_path}\/nginx.pid) host=$(ls -l ${logs_path}\/*.access.log | awk -F \u0026#34; \u0026#34; \u0026#39;{print $9}\u0026#39; | awk -F \u0026#34;.access\u0026#34; \u0026#39;{print $1}\u0026#39; | awk -F \u0026#34;$logs_path\/\u0026#34;","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-10-27 00:00:00 \u002b0000 UTC","dateModified":"2016-10-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/97.html","wordCount":"185","keywords":["nginx","一念博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -43,7 +43,8 @@ Nginx日志切割脚本 | 一念 de 博客
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
 <a class=menu-item href=/link.html title>Links</a>
-<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Search</a>
+<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Baidu</a>
+<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
 <a class=menu-item href=/about.html title=About>About</a>
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
@@ -56,7 +57,7 @@ Nginx日志切割脚本 | 一念 de 博客
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
-<a href=https://blog.saintic.com>一念 de 博客</a>
+<a href=https://blog.saintic.com>一念博客</a>
 </div>
 <div class=navbar-right>
 <div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
@@ -88,7 +89,11 @@ Nginx日志切割脚本 | 一念 de 博客
 <div class=menu-active></div>
 </a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Search</h3>
+<h3>Baidu</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
+<h3>Google</h3>
 <div class=menu-active></div>
 </a>
 <a class=menu-item href=/about.html title=About>
