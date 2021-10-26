@@ -1,5 +1,5 @@
 baseURL = "https://blog.saintic.com" # <head> 里面的 baseurl 信息，填你的博客地址
-title = "一念 de 博客" # 浏览器的标题
+title = "一念博客" # 浏览器的标题
 languageCode = "zh-cn" # 语言
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
 theme = "mogege" # 主题 
@@ -49,14 +49,19 @@ preserveTaxonomyNames = true
         weight = 5
 
     [[menu.main]]
-        name = "Search"
+        name = "Baidu"
         url = "https://www.baidu.com/s?wd=site:blog.saintic.com+"
         weight = 6
+
+    [[menu.main]]
+        name = "Google"
+        url = "https://www.google.com/search?q=site:blog.saintic.com+"
+        weight = 7
 
 [params]
     since = 2017
     author = "Hiroshi.tao"                          # Author's name
-    avatar = "https://static.saintic.com/cdn/images/avatar.png!/fw/200" # Author's avatar
+    avatar = "https://static.saintic.com/cdn/images/at.png!/fw/300" # Author's avatar
     subtitle = "记录技术点滴，开源项目与文档，分享经验与技术"                  # Subtitle
     home_mode = "" # post or other
     enableGitalk = false # gitalk 评论系统
