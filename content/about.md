@@ -115,7 +115,7 @@ showComments: false
     <div class="about-info-right">
 	    <div class="left-hand"><span style="font-size: 0.5em">&ensp;</span>٩</div>
         <div class="left-ear">▲</div>
-        <img alt="Mogeko" src="https://static.saintic.com/cdn/images/avatar.png">
+        <img alt="Avatar" src="https://static.saintic.com/cdn/images/at.png!/fw/300">
         <div class="right-ear">▲</div>
         <div class="right-hand">و<span style="font-size: 0.5em">✧</span></div>
     </div>
