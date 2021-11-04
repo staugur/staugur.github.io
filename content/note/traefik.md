@@ -19,7 +19,11 @@ ports:
   websecure:
     port: 443
     hostPort: 443
+  # 关闭 metrics entrypoints
+  metrics: null
+metrics: null
 service:
+  enabled: false
   type: NodePort
 hostNetwork: true
 securityContext:

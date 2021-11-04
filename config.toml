@@ -69,7 +69,7 @@ preserveTaxonomyNames = true
 
     google_verification = ""
 
-    description = "一念de博客" # (Meta) 描述
+    description = "一念博客,陶先森の博客" # (Meta) 描述
     keywords = "SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd" # site keywords
 
     beian = "京ICP备14058611号-1"
