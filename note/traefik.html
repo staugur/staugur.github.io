@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=robots content="noodp">
 <meta name=author content="Hiroshi.tao">
-<meta name=description content="一念de博客">
+<meta name=description content="一念博客,陶先森の博客">
 <meta name=keywords content="SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
 <link rel=prev href=https://blog.saintic.com/note/ssh.html>
 <link rel=canonical href=https://blog.saintic.com/note/traefik.html>
@@ -21,7 +21,7 @@ traefik | 一念博客
 </title>
 <meta name=title content="traefik | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"traefik","headline":"traefik","description":"使用 Helm(v3) 安装 Traefik(v2)， 部署为：DaemonSet，使用主机网络，监听Node的80、443。 deployment: kind: DaemonSet dnsPolicy: ClusterFirstWithHostNet ports: web: port: 80 hostPort: 80 websecure: port: 443 hostPort: 443 service: type:","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-10-22 12:00:13 \u002b0800 \u002b0800","dateModified":"2021-10-22 12:00:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/traefik.html","wordCount":"92","keywords":["k8s","一念博客"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"traefik","headline":"traefik","description":"使用 Helm(v3) 安装 Traefik(v2)， 部署为：DaemonSet，使用主机网络，监听Node的80、443。 deployment: kind: DaemonSet dnsPolicy: ClusterFirstWithHostNet ports: web: port: 80 hostPort: 80 websecure: port: 443 hostPort: 443 # 关","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-10-22 12:00:13 \u002b0800 \u002b0800","dateModified":"2021-10-22 12:00:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/traefik.html","wordCount":"103","keywords":["k8s","一念博客"]}</script>
 </head>
 <body>
 <div class=wrapper>
@@ -118,7 +118,7 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E7%AC%94%E8%AE%B0.html> 笔记 </a>
 </span>
-<span class=post-word-count>92 words</span>
+<span class=post-word-count>103 words</span>
 </div>
 </header>
 <div class=post-content>
@@ -134,7 +134,11 @@ in
   <span style=color:#f92672>websecure</span>:
     <span style=color:#f92672>port</span>: <span style=color:#ae81ff>443</span>
     <span style=color:#f92672>hostPort</span>: <span style=color:#ae81ff>443</span>
+  <span style=color:#75715e># 关闭 metrics entrypoints</span>
+  <span style=color:#f92672>metrics</span>: <span style=color:#66d9ef>null</span>
+<span style=color:#f92672>metrics</span>: <span style=color:#66d9ef>null</span>
 <span style=color:#f92672>service</span>:
+  <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
   <span style=color:#f92672>type</span>: <span style=color:#ae81ff>NodePort</span>
 <span style=color:#f92672>hostNetwork</span>: <span style=color:#66d9ef>true</span>
 <span style=color:#f92672>securityContext</span>:
