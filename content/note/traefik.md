@@ -26,6 +26,7 @@ service:
   enabled: false
   type: NodePort
 hostNetwork: true
+# 开启80、443端口需要特权
 securityContext:
   capabilities:
     drop: [ALL]
