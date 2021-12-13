@@ -5,8 +5,8 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=robots content="noodp">
 <meta name=author content="Hiroshi.tao">
-<meta name=description content="一念博客,陶先森の博客">
-<meta name=keywords content="SaintIC,staugur,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
+<meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档">
+<meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
 <link rel=prev href=https://blog.saintic.com/blog/269.html>
 <link rel=next href=https://blog.saintic.com/blog/271.html>
 <link rel=canonical href=https://blog.saintic.com/blog/270.html>
@@ -147,7 +147,7 @@ in
     </span><span class=hljs-tag>&lt;/<span class=hljs-name>script</span>&gt;</span>
 <span class=hljs-tag>&lt;/<span class=hljs-name>body</span>&gt;</span>
 <span class=hljs-tag>&lt;/<span class=hljs-name>html</span>&gt;</span></code></pre><p><b><br></b></p><p><b>2.&nbsp; 新评论提醒<br></b></p><p>&nbsp; &nbsp; 2.1 valine有回复邮件提醒，但限制极大，而且验证码反人类，当然上面说的增强版有一个<a href=https://github.com/DesertsP/Valine-Admin target=_blank>valine-admin</a>完善了邮件提醒，但无所谓，因为我说的不是这个。</p><p>&nbsp; &nbsp; 2.2 我说的是：有用户新评论了一条（包括回复），即数据库中增加了评论数据时，发送给站长邮件提醒。</p><p>&nbsp; &nbsp; 2.3 是的，不晓得大家怎么想，有时候用户评论，站长（比如我），本着热心助人的心情（闲着没事），尽量快的响应评论，并且还想知道有了新评论。</p><p>&nbsp; &nbsp; 2.4 所以，我用python写了个小脚本，比较暴力地分析leancloud后端存储的评论数据，定时请求，新旧对比，以发现新评论。</p><p><font color=#ff0000>&nbsp; &nbsp; 2.5 脚本地址：<a href=https://satic.cn/valine_comment_reminder target=_blank style=background-color:#fff>https://satic.cn/valine_comment_reminder</a></font></p><p>&nbsp; &nbsp; 2.6 使用方法：</p><p>&nbsp; &nbsp; &nbsp; &nbsp; 2.6.1 Windows下，可以使用计划任务，每几分钟执行一次，不过需要安装python2.7环境（当然可以把脚本编译成exe可执行文件，就不需要python环境了）。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; 2.6.2 Linux下，好吧，完美，使用crontab即可，更多说明可以在脚本地址中查看。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; 2.6.3 其他操作系统，还真没用过<img src=http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/15/j_thumb.gif>，不过只需要支持python2.7环境，定时执行应该没问题。</p><p>&nbsp; &nbsp; 2.7 提醒效果：</p><p><img src=https://github.com/staugur/scripts/raw/master/valine_comment_reminder/valine_comment_reminder.png style=max-width:100%></p><p>&nbsp; &nbsp; 2.8 备注：</p><p>&nbsp; &nbsp; &nbsp; &nbsp; - 目前只能使本地跑，需要配置邮件服务，比如QQ、163、腾讯企业邮箱等；</p><p>&nbsp; &nbsp; &nbsp; &nbsp; - 看需求，可以放到<a href=https://open.saintic.com target=_blank>https://open.saintic.com</a>中，用户提供appid、appkey即可，请求任务交给系统。</p><p><br></p><p><b>3. 其他-基于Flask的Web应用的集成插件</b></p><p>&nbsp; &nbsp; - 如果你使用Python Flask框架写Web，可以试试<a href=https://github.com/flask-pluginkit/flask-pluginkit-valine style=background-color:#fff>https://github.com/flask-pluginkit/flask-pluginkit-valine</a></p>
-<p><br></p>
+<br>
 <center> ·End· </center>
 </div>
 <div class=post-copyright>
