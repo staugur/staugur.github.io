@@ -28,7 +28,7 @@ showComments: true
 
 登录用户：**20/d/user**（每用户每天总共 20 次）。
 
-如次数不足，请登录 [诏预开放平台-搜索引擎收录订单](https://open.saintic.com/order/sec) 查看付费说明。
+如次数不足，请查看 [诏预开放平台-OpenApi-文档](https://docs.saintic.com/open/api.html) 查看付费说明。
 
 <br>
 
