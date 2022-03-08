@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 PHP7的使用记录 | 一念博客
-</title>
-<meta name=title content="PHP7的使用记录 | 一念博客">
+</title><meta name=title content="PHP7的使用记录 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"PHP7的使用记录","headline":"PHP7的使用记录","description":"PHP7 2015年正式发版php7.0，随后每年都有发布新版，截止本文时，php7.4已经出了，不过官网上稳定版还是7.3。 PHP7是趋势，不过我","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2019","datePublished":"2019-06-20 00:00:00 \u002b0000 UTC","dateModified":"2019-06-20 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/272.html","wordCount":"4516","keywords":["php","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ PHP7的使用记录 | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,85 +46,50 @@ PHP7的使用记录 | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <div class=toc>
-<div class=page-header><strong>- 目录 -</strong></div>
-<div id=page-scrollspy class=toc-nav>
+<div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#php7>
 PHP7
 </a>
-</li>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul><ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#tdi-php>
 Tdi-php
 </a>
-</li>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -135,12 +97,7 @@ Tdi-php
 <a class="nav-link text-left" href=#1-%e7%b3%bb%e7%bb%9f%e8%b4%9f%e8%bd%bd%e7%a3%81%e7%9b%98%e5%86%85%e5%ad%98%e7%ad%89>
 1. 系统负载、磁盘、内存等
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -148,12 +105,7 @@ Tdi-php
 <a class="nav-link text-left" href=#2-%e7%bb%9f%e8%ae%a1%e7%9b%ae%e5%bd%95%e4%b8%ad%e6%89%80%e6%9c%89%e6%96%87%e4%bb%b6%e6%80%bb%e5%ad%97%e8%8a%82%e4%b8%8d%e5%8c%85%e6%8b%ac%e5%ad%90%e7%9b%ae%e5%bd%95>
 2. 统计目录中所有文件总字节(不包括子目录)
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -161,12 +113,7 @@ Tdi-php
 <a class="nav-link text-left" href=#3-%e5%bd%bb%e5%ba%95%e5%88%a0%e9%99%a4%e7%9b%ae%e5%bd%95%e6%96%87%e4%bb%b6%e5%92%8c%e5%ad%90%e7%9b%ae%e5%bd%95%e7%ad%89%e5%90%8crm--rf>
 3. 彻底删除目录(文件和子目录，等同rm -rf)
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -174,12 +121,7 @@ Tdi-php
 <a class="nav-link text-left" href=#4-zip%e5%8e%8b%e7%bc%a9%e7%9b%ae%e5%bd%95>
 4. Zip压缩目录
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -187,12 +129,7 @@ Tdi-php
 <a class="nav-link text-left" href=#5-%e7%ae%80%e5%8d%95%e5%9c%b0%e6%97%a5%e5%bf%97%e8%ae%b0%e5%bd%95>
 5. 简单地日志记录
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -200,12 +137,7 @@ Tdi-php
 <a class="nav-link text-left" href=#6-curl%e7%9a%84%e5%b0%81%e8%a3%85>
 6. curl的封装
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -213,12 +145,7 @@ Tdi-php
 <a class="nav-link text-left" href=#7-php-resque%e7%9a%84%e4%bd%bf%e7%94%a8>
 7. php-resque的使用
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -226,17 +153,9 @@ Tdi-php
 <a class="nav-link text-left" href=#end>
 END
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-</div>
-</div>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
+</li></ul></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">PHP7的使用记录</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">PHP7的使用记录</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2019-06-20 itemprop=datePublished>June 20, 2019</time>
@@ -247,315 +166,282 @@ in
 <a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html> 开发 </a>
 </span>
 <span class=post-word-count>4516 words</span>
-</div>
-</header>
-<div class=post-content>
-<h2 id=php7>PHP7</h2>
-<p>2015年正式发版php7.0，随后每年都有发布新版，截止本文时，php7.4已经出了，不过官网上稳定版还是7.3。</p>
-<p>PHP7是趋势，不过我之前只是简单了解php语法，这次为了接入tdi，再捡起来索性放弃5.x，而且php7.1都快超过安全支持期了，7.2、7.3才比较靠谱。</p>
-<h2 id=tdi-php>Tdi-php</h2>
-<p>这个<a href=https://github.com/staugur/tdi-php>小应用</a>是用来下载大量图片的，基于php7，开发版本php7.2，但是并没有用其新特性，所以支持7.0+，另外测试过的操作系统也只有CentOS、Ubuntu。</p>
-<p>本文即记录开发这个小应用时的一些工具，本人菜鸟，文中有误万请指点！</p>
-<h4 id=1-系统负载磁盘内存等>1. 系统负载、磁盘、内存等</h4>
-<p>这些函数是从几个探针程序中剥离，并添加一些其他的，不过数据来源于系统运行时产生的/proc文件，Windows并不适用。</p>
-<p><strong>1.1 获取系统内存使用率</strong></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>//返回内存使用率百分比，类型float
-</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>memRate</span>()
-{
-    $res <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>();
-    <span style=color:#75715e>// MEMORY
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>false</span> <span style=color:#f92672>===</span> ($str <span style=color:#f92672>=</span> <span style=color:#f92672>@</span><span style=color:#a6e22e>file</span>(<span style=color:#e6db74>&#39;/proc/meminfo&#39;</span>))) {
-        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
-    }
-    $str <span style=color:#f92672>=</span> <span style=color:#a6e22e>implode</span>(<span style=color:#e6db74>&#39;&#39;</span>, $str);
-    <span style=color:#a6e22e>preg_match_all</span>(<span style=color:#e6db74>&#39;/MemTotal\s{0,}\:+\s{0,}([\d\.]+).+?MemFree\s{0,}\:+\s{0,}([\d\.]+).+?Cached\s{0,}\:+\s{0,}([\d\.]+).+?SwapTotal\s{0,}\:+\s{0,}([\d\.]+).+?SwapFree\s{0,}\:+\s{0,}([\d\.]+)/s&#39;</span>, $str, $buf);
-    <span style=color:#a6e22e>preg_match_all</span>(<span style=color:#e6db74>&#39;/Buffers\s{0,}\:+\s{0,}([\d\.]+)/s&#39;</span>, $str, $buffers);
-    $res[<span style=color:#e6db74>&#39;memTotal&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buf[<span style=color:#ae81ff>1</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
-    $res[<span style=color:#e6db74>&#39;memFree&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buf[<span style=color:#ae81ff>2</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
-    $res[<span style=color:#e6db74>&#39;memBuffers&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buffers[<span style=color:#ae81ff>1</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
-    $res[<span style=color:#e6db74>&#39;memCached&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buf[<span style=color:#ae81ff>3</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
-    $res[<span style=color:#e6db74>&#39;memUsed&#39;</span>] <span style=color:#f92672>=</span> $res[<span style=color:#e6db74>&#39;memTotal&#39;</span>]<span style=color:#f92672>-</span>$res[<span style=color:#e6db74>&#39;memFree&#39;</span>];
-    $res[<span style=color:#e6db74>&#39;memPercent&#39;</span>] <span style=color:#f92672>=</span> (<span style=color:#a6e22e>floatval</span>($res[<span style=color:#e6db74>&#39;memTotal&#39;</span>])<span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span>)<span style=color:#f92672>?</span><span style=color:#a6e22e>round</span>($res[<span style=color:#e6db74>&#39;memUsed&#39;</span>]<span style=color:#f92672>/</span>$res[<span style=color:#e6db74>&#39;memTotal&#39;</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>2</span>)<span style=color:#f92672>:</span><span style=color:#ae81ff>0</span>;
-    <span style=color:#66d9ef>return</span> $res[<span style=color:#e6db74>&#39;memPercent&#39;</span>];
-}
-</code></pre></div><p><strong>1.2 获取系统负载</strong></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>//返回五分钟负载，类型float
-</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>loadStat</span>()
-{
-    <span style=color:#75715e>// LOAD AVG
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>false</span> <span style=color:#f92672>===</span> ($str <span style=color:#f92672>=</span> <span style=color:#f92672>@</span><span style=color:#a6e22e>file</span>(<span style=color:#e6db74>&#39;/proc/loadavg&#39;</span>))) {
-        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
-    }
-    $load <span style=color:#f92672>=</span> <span style=color:#a6e22e>explode</span>(<span style=color:#e6db74>&#39; &#39;</span>, <span style=color:#a6e22e>implode</span>(<span style=color:#e6db74>&#39;&#39;</span>, $str));
-    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>floatval</span>($load[<span style=color:#ae81ff>1</span>]);
-}
-</code></pre></div><p><strong>1.3 获取目录所在磁盘的使用率</strong></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>//返回path目录所在磁盘的使用率百分比，类型int；传参ret不为percent时，返回目录所在磁盘的数据，类型array
-</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>diskRate</span>(<span style=color:#a6e22e>string</span> $path<span style=color:#f92672>=</span><span style=color:#66d9ef>null</span>, <span style=color:#a6e22e>string</span> $ret<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;percent&#39;</span>)
-{
-    <span style=color:#75715e>//硬盘
-</span><span style=color:#75715e></span>    $checkPath <span style=color:#f92672>=</span> $path <span style=color:#f92672>?</span> $path <span style=color:#f92672>:</span> <span style=color:#66d9ef>__DIR__</span>;
-    $dt <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>(<span style=color:#f92672>@</span><span style=color:#a6e22e>disk_total_space</span>($checkPath), <span style=color:#ae81ff>3</span>); <span style=color:#75715e>//总
-</span><span style=color:#75715e></span>    $df <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>(<span style=color:#f92672>@</span><span style=color:#a6e22e>disk_free_space</span>($checkPath), <span style=color:#ae81ff>3</span>); <span style=color:#75715e>//可用
-</span><span style=color:#75715e></span>    $du <span style=color:#f92672>=</span> $dt<span style=color:#f92672>-</span>$df; <span style=color:#75715e>//已用
-</span><span style=color:#75715e></span>    $hdPercent <span style=color:#f92672>=</span> (<span style=color:#a6e22e>floatval</span>($dt)<span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span>)<span style=color:#f92672>?</span><span style=color:#a6e22e>round</span>($du<span style=color:#f92672>/</span>$dt<span style=color:#f92672>*</span><span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>2</span>)<span style=color:#f92672>:</span><span style=color:#ae81ff>0</span>;
-    <span style=color:#66d9ef>return</span> $ret <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;percent&#39;</span> <span style=color:#f92672>?</span> $hdPercent <span style=color:#f92672>:</span> <span style=color:#66d9ef>array</span>(<span style=color:#e6db74>&#39;total&#39;</span><span style=color:#f92672>=&gt;</span>$dt, <span style=color:#e6db74>&#39;available&#39;</span><span style=color:#f92672>=&gt;</span>$df, <span style=color:#e6db74>&#39;used&#39;</span><span style=color:#f92672>=&gt;</span>$du, <span style=color:#e6db74>&#39;percent&#39;</span><span style=color:#f92672>=&gt;</span>$hdPercent);
-}
-</code></pre></div><h4 id=2-统计目录中所有文件总字节不包括子目录>2. 统计目录中所有文件总字节(不包括子目录)</h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>//用来统计一个目录的大小，返回字节，exclude允许排除统计某些后缀，比如$exclude = [&#39;zip&#39;,&#39;txt&#39;]
-</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getDirSize</span>(<span style=color:#a6e22e>string</span> $dir, <span style=color:#66d9ef>array</span> $exclude<span style=color:#f92672>=</span><span style=color:#66d9ef>array</span>())
-{
-    $sizeResult <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
-    $handle <span style=color:#f92672>=</span> <span style=color:#a6e22e>opendir</span>($dir);
-    <span style=color:#66d9ef>while</span> (<span style=color:#66d9ef>false</span><span style=color:#f92672>!==</span>($FolderOrFile <span style=color:#f92672>=</span> <span style=color:#a6e22e>readdir</span>($handle))) {
-        <span style=color:#66d9ef>if</span> ($FolderOrFile <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;.&#34;</span> <span style=color:#f92672>&amp;&amp;</span> $FolderOrFile <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;..&#34;</span>) {
-            $f <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>$dir</span><span style=color:#e6db74>/</span><span style=color:#e6db74>$FolderOrFile</span><span style=color:#e6db74>&#34;</span>;
-            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($f) <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>in_array</span>(<span style=color:#a6e22e>pathinfo</span>($f, <span style=color:#a6e22e>PATHINFO_EXTENSION</span>), $exclude)) {
-                $sizeResult <span style=color:#f92672>+=</span> <span style=color:#a6e22e>filesize</span>($f);
-            }
-        }
-    }
-    <span style=color:#a6e22e>closedir</span>($handle);
-    <span style=color:#66d9ef>return</span> $sizeResult;
-}
-</code></pre></div><h4 id=3-彻底删除目录文件和子目录等同rm--rf>3. 彻底删除目录(文件和子目录，等同rm -rf)</h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>delDir</span>(<span style=color:#a6e22e>string</span> $directory)
-{
-    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>file_exists</span>($directory)) {<span style=color:#75715e>//判断目录是否存在，如果不存在rmdir()函数会出错
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> ($dir_handle<span style=color:#f92672>=@</span><span style=color:#a6e22e>opendir</span>($directory)) {<span style=color:#75715e>//打开目录返回目录资源，并判断是否成功
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>while</span> ($filename<span style=color:#f92672>=</span><span style=color:#a6e22e>readdir</span>($dir_handle)) {<span style=color:#75715e>//遍历目录，读出目录中的文件或文件夹
-</span><span style=color:#75715e></span>                <span style=color:#66d9ef>if</span> ($filename<span style=color:#f92672>!=</span><span style=color:#e6db74>&#39;.&#39;</span> <span style=color:#f92672>&amp;&amp;</span> $filename<span style=color:#f92672>!=</span><span style=color:#e6db74>&#39;..&#39;</span>) {<span style=color:#75715e>//一定要排除两个特殊的目录
-</span><span style=color:#75715e></span>                    $subFile<span style=color:#f92672>=</span>$directory<span style=color:#f92672>.</span><span style=color:#e6db74>&#34;/&#34;</span><span style=color:#f92672>.</span>$filename;<span style=color:#75715e>//将目录下的文件与当前目录相连
-</span><span style=color:#75715e></span>                    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_dir</span>($subFile)) {<span style=color:#75715e>//如果是目录条件则成了
-</span><span style=color:#75715e></span>                        <span style=color:#a6e22e>delDir</span>($subFile);<span style=color:#75715e>//递归调用自己删除子目录
-</span><span style=color:#75715e></span>                    }
-                    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($subFile)) {<span style=color:#75715e>//如果是文件条件则成立
-</span><span style=color:#75715e></span>                        <span style=color:#a6e22e>unlink</span>($subFile);<span style=color:#75715e>//直接删除这个文件
-</span><span style=color:#75715e></span>                    }
-                }
-            }
-            <span style=color:#a6e22e>closedir</span>($dir_handle);<span style=color:#75715e>//关闭目录资源
-</span><span style=color:#75715e></span>            <span style=color:#a6e22e>rmdir</span>($directory);<span style=color:#75715e>//删除空目录
-</span><span style=color:#75715e></span>        }
-    }
-}
-</code></pre></div><h4 id=4-zip压缩目录>4. Zip压缩目录</h4>
-<p>注释里有参考，整理并改进了一下，其效果是：压缩某个目录所有文件，但不包含子目录，也可以排除压缩某些后缀的文件。</p>
-<p>不过注意：要压缩的文件（压缩时文件名放入待删除数组to_be_unlinked ）在完成压缩后会删除，如果不想删除，参考下面代码第50行（<code>foreach ($to_be_unlinked as $v)</code>）的注释提示。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>/*
-</span><span style=color:#75715e>    // 生成zip压缩文件的函数，参考：https://blog.csdn.net/zhao_teng/article/details/84941828
-</span><span style=color:#75715e>    @param $dir             string 需要压缩的文件夹名
-</span><span style=color:#75715e>    @param $filename     string 压缩后的zip文件名  包括zip后缀
-</span><span style=color:#75715e>    @param $exclude      array   不需要压缩的文件后缀，后缀不包含点
-</span><span style=color:#75715e>    @return 成功时返回压缩文件的绝对路径，否则返回false
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MakeZip</span>
-{
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>zip</span>(<span style=color:#a6e22e>string</span> $dir, <span style=color:#a6e22e>string</span> $filename, <span style=color:#66d9ef>array</span> $exclude<span style=color:#f92672>=</span><span style=color:#66d9ef>array</span>())
-    {
-        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_dir</span>($dir)) {
-            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39;can not exists dir &#39;</span><span style=color:#f92672>.</span>$dir);
-        }
-
-        <span style=color:#75715e>//判断是否为zip后缀
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>pathinfo</span>($filename, <span style=color:#a6e22e>PATHINFO_EXTENSION</span>) <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#39;zip&#39;</span>) {
-            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39;only Support zip files&#39;</span>);
-        }
-
-        $dir <span style=color:#f92672>=</span> <span style=color:#a6e22e>str_replace</span>(<span style=color:#e6db74>&#39;\\&#39;</span>, <span style=color:#e6db74>&#39;/&#39;</span>, $dir);
-        $filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>str_replace</span>(<span style=color:#e6db74>&#39;\\&#39;</span>, <span style=color:#e6db74>&#39;/&#39;</span>, $filename);
-        $filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>iconv</span>(<span style=color:#e6db74>&#39;utf-8&#39;</span>, <span style=color:#e6db74>&#39;gb2312&#39;</span>, $filename);
-        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($filename)) {
-            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39;the zip file &#39;</span><span style=color:#f92672>.</span>$filename<span style=color:#f92672>.</span><span style=color:#e6db74>&#39; has exists !&#39;</span>);
-        }
-
-        <span style=color:#75715e>//目录中的所有文件
-</span><span style=color:#75715e></span>        $files <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>();
-        $this<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>getfiles</span>($dir, $files);
-        $files <span style=color:#f92672>=</span> $this<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>array_iconv</span>($files);
-        <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>empty</span>($files)) {
-            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39; the dir is empty&#39;</span>);
-        }
-
-        <span style=color:#75715e>//执行压缩
-</span><span style=color:#75715e></span>        $zip <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>ZipArchive</span>();
-        $res <span style=color:#f92672>=</span> $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>open</span>($filename, <span style=color:#a6e22e>ZipArchive</span><span style=color:#f92672>::</span><span style=color:#a6e22e>CREATE</span>);
-        <span style=color:#66d9ef>if</span> ($res <span style=color:#f92672>===</span> <span style=color:#66d9ef>true</span>) {
-            <span style=color:#66d9ef>foreach</span> ($files <span style=color:#66d9ef>as</span> $v) {
-                <span style=color:#75715e>// 设定在压缩包内文件名
-</span><span style=color:#75715e></span>                $_in_zip_filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>str_replace</span>($dir<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>, $v);
-                <span style=color:#75715e>// 依据文件后缀判断是否排除(即不压缩)
-</span><span style=color:#75715e></span>                <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($v) <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>in_array</span>(<span style=color:#a6e22e>pathinfo</span>($_in_zip_filename, <span style=color:#a6e22e>PATHINFO_EXTENSION</span>), $exclude)) {
-                    $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>addFile</span>($v, $_in_zip_filename);
-                    $to_be_unlinked[] <span style=color:#f92672>=</span> $v;
-                }
-            }
-            $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>close</span>();
-            <span style=color:#75715e>//由于zip需要close后才执行压缩操作，所以只能在这里删除压缩的文件，如果不想删除，请注释下面三行
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>foreach</span> ($to_be_unlinked <span style=color:#66d9ef>as</span> $v) {
-                <span style=color:#a6e22e>unlink</span>($v);
-            }
-            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>realpath</span>($filename);
-        } <span style=color:#66d9ef>else</span> {
-            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
-        }
-    }
-
-    <span style=color:#75715e>//定义图片字符集
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>array_iconv</span>($data, $in_charset<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;GBK&#39;</span>, $out_charset<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;UTF-8&#39;</span>)
-    {
-        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_array</span>($data)) {
-            $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>iconv</span>($in_charset, $out_charset, $data);
-        } <span style=color:#66d9ef>elseif</span> (<span style=color:#a6e22e>count</span>($data) <span style=color:#f92672>===</span> <span style=color:#a6e22e>count</span>($data, <span style=color:#ae81ff>1</span>)) {<span style=color:#75715e>//判断是否是二维数组
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>foreach</span> ($data <span style=color:#66d9ef>as</span> $key <span style=color:#f92672>=&gt;</span> $value) {
-                $output[$key] <span style=color:#f92672>=</span> <span style=color:#a6e22e>iconv</span>($in_charset, $out_charset, $value);
-            }
-        } <span style=color:#66d9ef>else</span> {
-            <span style=color:#a6e22e>eval_r</span>(<span style=color:#e6db74>&#39;$output = &#39;</span> <span style=color:#f92672>.</span> <span style=color:#a6e22e>iconv</span>($in_charset, $out_charset, <span style=color:#a6e22e>var_export</span>($data, <span style=color:#66d9ef>true</span>)) <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;;&#39;</span>);
-        }
-        <span style=color:#66d9ef>return</span> $output;
-    }
-
-    <span style=color:#75715e>//获取目录中文件赋值给$files
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getfiles</span>($dir, <span style=color:#f92672>&amp;</span>$files<span style=color:#f92672>=</span><span style=color:#66d9ef>array</span>())
-    {
-        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_dir</span>($dir)) {
-            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
-        }
-        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>substr</span>($dir, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)<span style=color:#f92672>==</span><span style=color:#e6db74>&#39;/&#39;</span>) {
-            $dir <span style=color:#f92672>=</span> <span style=color:#a6e22e>substr</span>($dir, <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>strlen</span>($dir)<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>);
-        }
-        $_files <span style=color:#f92672>=</span> <span style=color:#a6e22e>scandir</span>($dir);
-        <span style=color:#66d9ef>foreach</span> ($_files <span style=color:#66d9ef>as</span> $v) {
-            <span style=color:#66d9ef>if</span> ($v <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#39;.&#39;</span> <span style=color:#f92672>&amp;&amp;</span> $v<span style=color:#f92672>!=</span><span style=color:#e6db74>&#39;..&#39;</span>) {
-                <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($dir<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>.</span>$v)) {
-                    $files[] <span style=color:#f92672>=</span> $dir<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>.</span>$v;
-                }
-            }
-        }
-        <span style=color:#66d9ef>return</span> $files;
-    }
-}
-</code></pre></div><p>示例：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
-<span style=color:#66d9ef>require_once</span> <span style=color:#e6db74>&#39;tool.php&#39;</span>;
-<span style=color:#75715e>//压缩test_dir目录，生成test.zip压缩文件，但压缩时不会压缩目录中.zip结尾的文件。
-</span><span style=color:#75715e></span>$zip <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>MakeZip</span>;
-$zipfilepath <span style=color:#f92672>=</span> $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>zip</span>(<span style=color:#e6db74>&#39;test_dir&#39;</span>, <span style=color:#e6db74>&#39;test.zip&#39;</span>, [<span style=color:#e6db74>&#39;zip&#39;</span>]);
-</code></pre></div><h4 id=5-简单地日志记录>5. 简单地日志记录</h4>
-<p>由于是个小应用，但是也有些信息需要记录，所以直接使用file_put_contents写入到文件中，利用debug_backtrace获取写日志的文件和行号。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>/*
-</span><span style=color:#75715e>    * 日志类
-</span><span style=color:#75715e>    * 当文件超过指定大小则备份日志文件并重新生成新的日志文件
-</span><span style=color:#75715e>    * 使用时，直接调用三个静态方法，info、error、debug
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Log</span>
-{
-    <span style=color:#75715e>//日志文件名，放到了logs目录了
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> $filename <span style=color:#f92672>=</span> <span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/logs/sys.log&#39;</span>;
-    <span style=color:#75715e>//最大文件大小10M
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> $maxsize <span style=color:#f92672>=</span> <span style=color:#ae81ff>10240000</span>;
-
-    <span style=color:#75715e>//写入日志
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>_log</span>($msg, $level<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;INFO&#39;</span>)
-    {
-        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_dir</span>(<span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/logs&#39;</span>)) {
-            <span style=color:#a6e22e>mkdir</span>(<span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/logs&#39;</span>);
-        }
-        $filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>self</span><span style=color:#f92672>::</span>$filename;
-        <span style=color:#75715e>// 来源文件与行号，回溯2条
-</span><span style=color:#75715e></span>        $trace <span style=color:#f92672>=</span> <span style=color:#a6e22e>debug_backtrace</span>(<span style=color:#a6e22e>DEBUG_BACKTRACE_IGNORE_ARGS</span>, $limit<span style=color:#f92672>=</span><span style=color:#ae81ff>2</span>);
-        $file <span style=color:#f92672>=</span> $trace[<span style=color:#ae81ff>1</span>][<span style=color:#e6db74>&#39;file&#39;</span>];
-        $line <span style=color:#f92672>=</span> $trace[<span style=color:#ae81ff>1</span>][<span style=color:#e6db74>&#39;line&#39;</span>];
-        <span style=color:#75715e>// 格式化消息
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_array</span>($msg)) {
-            $msg <span style=color:#f92672>=</span> <span style=color:#a6e22e>json_encode</span>($msg);
-        }
-        $content <span style=color:#f92672>=</span> <span style=color:#a6e22e>sprintf</span>(<span style=color:#e6db74>&#34;[ %s ] %s %s:%s %s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, $level, <span style=color:#a6e22e>date</span>(<span style=color:#e6db74>&#39;Y-m-d H:i:s&#39;</span>, <span style=color:#a6e22e>time</span>()), <span style=color:#a6e22e>str_replace</span>(<span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>, $file), $line, $msg);
-
-        <span style=color:#75715e>//如果日志文件超过了指定大小则备份日志文件
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>file_exists</span>($filename) <span style=color:#f92672>&amp;&amp;</span> (<span style=color:#a6e22e>abs</span>(<span style=color:#a6e22e>filesize</span>($filename)) <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>self</span><span style=color:#f92672>::</span>$maxsize)) {
-            $newfilename <span style=color:#f92672>=</span> <span style=color:#a6e22e>dirname</span>($filename)<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>.</span><span style=color:#a6e22e>time</span>()<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;-&#39;</span><span style=color:#f92672>.</span><span style=color:#a6e22e>basename</span>($filename);
-            <span style=color:#a6e22e>rename</span>($filename, $newfilename);
-        }
-
-        <span style=color:#75715e>//往日志文件内容后面追加日志内容
-</span><span style=color:#75715e></span>        <span style=color:#a6e22e>file_put_contents</span>($filename, $content, <span style=color:#a6e22e>FILE_APPEND</span>);
-    }
-
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>debug</span>($msg)
-    {
-        $log <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>self</span>();
-        $log<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>_log</span>($msg, <span style=color:#e6db74>&#39;DEBUG&#39;</span>);
-    }
-
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>info</span>($msg)
-    {
-        $log <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>self</span>();
-        $log<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>_log</span>($msg, <span style=color:#e6db74>&#39;INFO&#39;</span>);
-    }
-
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>error</span>($msg)
-    {
-        $log <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>self</span>();
-        $log<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>_log</span>($msg, <span style=color:#e6db74>&#39;ERROR&#39;</span>);
-    }
-}
-</code></pre></div><p>示例：</p>
-<pre tabindex=0><code># cat test.php
+</div></header><div class=post-content>
+<h2 id=php7>PHP7</h2><p>2015年正式发版php7.0，随后每年都有发布新版，截止本文时，php7.4已经出了，不过官网上稳定版还是7.3。</p><p>PHP7是趋势，不过我之前只是简单了解php语法，这次为了接入tdi，再捡起来索性放弃5.x，而且php7.1都快超过安全支持期了，7.2、7.3才比较靠谱。</p><h2 id=tdi-php>Tdi-php</h2><p>这个<a href=https://github.com/staugur/tdi-php>小应用</a>是用来下载大量图片的，基于php7，开发版本php7.2，但是并没有用其新特性，所以支持7.0+，另外测试过的操作系统也只有CentOS、Ubuntu。</p><p>本文即记录开发这个小应用时的一些工具，本人菜鸟，文中有误万请指点！</p><h4 id=1-系统负载磁盘内存等>1. 系统负载、磁盘、内存等</h4><p>这些函数是从几个探针程序中剥离，并添加一些其他的，不过数据来源于系统运行时产生的/proc文件，Windows并不适用。</p><p><strong>1.1 获取系统内存使用率</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>//返回内存使用率百分比，类型float
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>memRate</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    $res <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>();
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// MEMORY
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>false</span> <span style=color:#f92672>===</span> ($str <span style=color:#f92672>=</span> <span style=color:#f92672>@</span><span style=color:#a6e22e>file</span>(<span style=color:#e6db74>&#39;/proc/meminfo&#39;</span>))) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    $str <span style=color:#f92672>=</span> <span style=color:#a6e22e>implode</span>(<span style=color:#e6db74>&#39;&#39;</span>, $str);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>preg_match_all</span>(<span style=color:#e6db74>&#39;/MemTotal\s{0,}\:+\s{0,}([\d\.]+).+?MemFree\s{0,}\:+\s{0,}([\d\.]+).+?Cached\s{0,}\:+\s{0,}([\d\.]+).+?SwapTotal\s{0,}\:+\s{0,}([\d\.]+).+?SwapFree\s{0,}\:+\s{0,}([\d\.]+)/s&#39;</span>, $str, $buf);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>preg_match_all</span>(<span style=color:#e6db74>&#39;/Buffers\s{0,}\:+\s{0,}([\d\.]+)/s&#39;</span>, $str, $buffers);
+</span></span><span style=display:flex><span>    $res[<span style=color:#e6db74>&#39;memTotal&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buf[<span style=color:#ae81ff>1</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    $res[<span style=color:#e6db74>&#39;memFree&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buf[<span style=color:#ae81ff>2</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    $res[<span style=color:#e6db74>&#39;memBuffers&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buffers[<span style=color:#ae81ff>1</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    $res[<span style=color:#e6db74>&#39;memCached&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>($buf[<span style=color:#ae81ff>3</span>][<span style=color:#ae81ff>0</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    $res[<span style=color:#e6db74>&#39;memUsed&#39;</span>] <span style=color:#f92672>=</span> $res[<span style=color:#e6db74>&#39;memTotal&#39;</span>]<span style=color:#f92672>-</span>$res[<span style=color:#e6db74>&#39;memFree&#39;</span>];
+</span></span><span style=display:flex><span>    $res[<span style=color:#e6db74>&#39;memPercent&#39;</span>] <span style=color:#f92672>=</span> (<span style=color:#a6e22e>floatval</span>($res[<span style=color:#e6db74>&#39;memTotal&#39;</span>])<span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span>)<span style=color:#f92672>?</span><span style=color:#a6e22e>round</span>($res[<span style=color:#e6db74>&#39;memUsed&#39;</span>]<span style=color:#f92672>/</span>$res[<span style=color:#e6db74>&#39;memTotal&#39;</span>]<span style=color:#f92672>*</span><span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>2</span>)<span style=color:#f92672>:</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> $res[<span style=color:#e6db74>&#39;memPercent&#39;</span>];
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>1.2 获取系统负载</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>//返回五分钟负载，类型float
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>loadStat</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// LOAD AVG
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>false</span> <span style=color:#f92672>===</span> ($str <span style=color:#f92672>=</span> <span style=color:#f92672>@</span><span style=color:#a6e22e>file</span>(<span style=color:#e6db74>&#39;/proc/loadavg&#39;</span>))) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    $load <span style=color:#f92672>=</span> <span style=color:#a6e22e>explode</span>(<span style=color:#e6db74>&#39; &#39;</span>, <span style=color:#a6e22e>implode</span>(<span style=color:#e6db74>&#39;&#39;</span>, $str));
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>floatval</span>($load[<span style=color:#ae81ff>1</span>]);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>1.3 获取目录所在磁盘的使用率</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>//返回path目录所在磁盘的使用率百分比，类型int；传参ret不为percent时，返回目录所在磁盘的数据，类型array
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>diskRate</span>(<span style=color:#a6e22e>string</span> $path<span style=color:#f92672>=</span><span style=color:#66d9ef>null</span>, <span style=color:#a6e22e>string</span> $ret<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;percent&#39;</span>)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//硬盘
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    $checkPath <span style=color:#f92672>=</span> $path <span style=color:#f92672>?</span> $path <span style=color:#f92672>:</span> <span style=color:#66d9ef>__DIR__</span>;
+</span></span><span style=display:flex><span>    $dt <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>(<span style=color:#f92672>@</span><span style=color:#a6e22e>disk_total_space</span>($checkPath), <span style=color:#ae81ff>3</span>); <span style=color:#75715e>//总
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    $df <span style=color:#f92672>=</span> <span style=color:#a6e22e>round</span>(<span style=color:#f92672>@</span><span style=color:#a6e22e>disk_free_space</span>($checkPath), <span style=color:#ae81ff>3</span>); <span style=color:#75715e>//可用
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    $du <span style=color:#f92672>=</span> $dt<span style=color:#f92672>-</span>$df; <span style=color:#75715e>//已用
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    $hdPercent <span style=color:#f92672>=</span> (<span style=color:#a6e22e>floatval</span>($dt)<span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span>)<span style=color:#f92672>?</span><span style=color:#a6e22e>round</span>($du<span style=color:#f92672>/</span>$dt<span style=color:#f92672>*</span><span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>2</span>)<span style=color:#f92672>:</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> $ret <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;percent&#39;</span> <span style=color:#f92672>?</span> $hdPercent <span style=color:#f92672>:</span> <span style=color:#66d9ef>array</span>(<span style=color:#e6db74>&#39;total&#39;</span><span style=color:#f92672>=&gt;</span>$dt, <span style=color:#e6db74>&#39;available&#39;</span><span style=color:#f92672>=&gt;</span>$df, <span style=color:#e6db74>&#39;used&#39;</span><span style=color:#f92672>=&gt;</span>$du, <span style=color:#e6db74>&#39;percent&#39;</span><span style=color:#f92672>=&gt;</span>$hdPercent);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=2-统计目录中所有文件总字节不包括子目录>2. 统计目录中所有文件总字节(不包括子目录)</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>//用来统计一个目录的大小，返回字节，exclude允许排除统计某些后缀，比如$exclude = [&#39;zip&#39;,&#39;txt&#39;]
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getDirSize</span>(<span style=color:#a6e22e>string</span> $dir, <span style=color:#66d9ef>array</span> $exclude<span style=color:#f92672>=</span><span style=color:#66d9ef>array</span>())
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    $sizeResult <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    $handle <span style=color:#f92672>=</span> <span style=color:#a6e22e>opendir</span>($dir);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (<span style=color:#66d9ef>false</span><span style=color:#f92672>!==</span>($FolderOrFile <span style=color:#f92672>=</span> <span style=color:#a6e22e>readdir</span>($handle))) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> ($FolderOrFile <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;.&#34;</span> <span style=color:#f92672>&amp;&amp;</span> $FolderOrFile <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;..&#34;</span>) {
+</span></span><span style=display:flex><span>            $f <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>$dir</span><span style=color:#e6db74>/</span><span style=color:#e6db74>$FolderOrFile</span><span style=color:#e6db74>&#34;</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($f) <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>in_array</span>(<span style=color:#a6e22e>pathinfo</span>($f, <span style=color:#a6e22e>PATHINFO_EXTENSION</span>), $exclude)) {
+</span></span><span style=display:flex><span>                $sizeResult <span style=color:#f92672>+=</span> <span style=color:#a6e22e>filesize</span>($f);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>closedir</span>($handle);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> $sizeResult;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=3-彻底删除目录文件和子目录等同rm--rf>3. 彻底删除目录(文件和子目录，等同rm -rf)</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>delDir</span>(<span style=color:#a6e22e>string</span> $directory)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>file_exists</span>($directory)) {<span style=color:#75715e>//判断目录是否存在，如果不存在rmdir()函数会出错
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> ($dir_handle<span style=color:#f92672>=@</span><span style=color:#a6e22e>opendir</span>($directory)) {<span style=color:#75715e>//打开目录返回目录资源，并判断是否成功
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>while</span> ($filename<span style=color:#f92672>=</span><span style=color:#a6e22e>readdir</span>($dir_handle)) {<span style=color:#75715e>//遍历目录，读出目录中的文件或文件夹
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#66d9ef>if</span> ($filename<span style=color:#f92672>!=</span><span style=color:#e6db74>&#39;.&#39;</span> <span style=color:#f92672>&amp;&amp;</span> $filename<span style=color:#f92672>!=</span><span style=color:#e6db74>&#39;..&#39;</span>) {<span style=color:#75715e>//一定要排除两个特殊的目录
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    $subFile<span style=color:#f92672>=</span>$directory<span style=color:#f92672>.</span><span style=color:#e6db74>&#34;/&#34;</span><span style=color:#f92672>.</span>$filename;<span style=color:#75715e>//将目录下的文件与当前目录相连
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_dir</span>($subFile)) {<span style=color:#75715e>//如果是目录条件则成了
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                        <span style=color:#a6e22e>delDir</span>($subFile);<span style=color:#75715e>//递归调用自己删除子目录
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    }
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($subFile)) {<span style=color:#75715e>//如果是文件条件则成立
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                        <span style=color:#a6e22e>unlink</span>($subFile);<span style=color:#75715e>//直接删除这个文件
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    }
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>closedir</span>($dir_handle);<span style=color:#75715e>//关闭目录资源
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#a6e22e>rmdir</span>($directory);<span style=color:#75715e>//删除空目录
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=4-zip压缩目录>4. Zip压缩目录</h4><p>注释里有参考，整理并改进了一下，其效果是：压缩某个目录所有文件，但不包含子目录，也可以排除压缩某些后缀的文件。</p><p>不过注意：要压缩的文件（压缩时文件名放入待删除数组to_be_unlinked ）在完成压缩后会删除，如果不想删除，参考下面代码第50行（<code>foreach ($to_be_unlinked as $v)</code>）的注释提示。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    // 生成zip压缩文件的函数，参考：https://blog.csdn.net/zhao_teng/article/details/84941828
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $dir             string 需要压缩的文件夹名
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $filename     string 压缩后的zip文件名  包括zip后缀
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $exclude      array   不需要压缩的文件后缀，后缀不包含点
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @return 成功时返回压缩文件的绝对路径，否则返回false
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MakeZip</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>zip</span>(<span style=color:#a6e22e>string</span> $dir, <span style=color:#a6e22e>string</span> $filename, <span style=color:#66d9ef>array</span> $exclude<span style=color:#f92672>=</span><span style=color:#66d9ef>array</span>())
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_dir</span>($dir)) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39;can not exists dir &#39;</span><span style=color:#f92672>.</span>$dir);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//判断是否为zip后缀
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>pathinfo</span>($filename, <span style=color:#a6e22e>PATHINFO_EXTENSION</span>) <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#39;zip&#39;</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39;only Support zip files&#39;</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        $dir <span style=color:#f92672>=</span> <span style=color:#a6e22e>str_replace</span>(<span style=color:#e6db74>&#39;\\&#39;</span>, <span style=color:#e6db74>&#39;/&#39;</span>, $dir);
+</span></span><span style=display:flex><span>        $filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>str_replace</span>(<span style=color:#e6db74>&#39;\\&#39;</span>, <span style=color:#e6db74>&#39;/&#39;</span>, $filename);
+</span></span><span style=display:flex><span>        $filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>iconv</span>(<span style=color:#e6db74>&#39;utf-8&#39;</span>, <span style=color:#e6db74>&#39;gb2312&#39;</span>, $filename);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($filename)) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39;the zip file &#39;</span><span style=color:#f92672>.</span>$filename<span style=color:#f92672>.</span><span style=color:#e6db74>&#39; has exists !&#39;</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//目录中的所有文件
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        $files <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>();
+</span></span><span style=display:flex><span>        $this<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>getfiles</span>($dir, $files);
+</span></span><span style=display:flex><span>        $files <span style=color:#f92672>=</span> $this<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>array_iconv</span>($files);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#66d9ef>empty</span>($files)) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>die</span>(<span style=color:#e6db74>&#39; the dir is empty&#39;</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//执行压缩
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        $zip <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>ZipArchive</span>();
+</span></span><span style=display:flex><span>        $res <span style=color:#f92672>=</span> $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>open</span>($filename, <span style=color:#a6e22e>ZipArchive</span><span style=color:#f92672>::</span><span style=color:#a6e22e>CREATE</span>);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> ($res <span style=color:#f92672>===</span> <span style=color:#66d9ef>true</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>foreach</span> ($files <span style=color:#66d9ef>as</span> $v) {
+</span></span><span style=display:flex><span>                <span style=color:#75715e>// 设定在压缩包内文件名
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                $_in_zip_filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>str_replace</span>($dir<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>, $v);
+</span></span><span style=display:flex><span>                <span style=color:#75715e>// 依据文件后缀判断是否排除(即不压缩)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($v) <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>in_array</span>(<span style=color:#a6e22e>pathinfo</span>($_in_zip_filename, <span style=color:#a6e22e>PATHINFO_EXTENSION</span>), $exclude)) {
+</span></span><span style=display:flex><span>                    $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>addFile</span>($v, $_in_zip_filename);
+</span></span><span style=display:flex><span>                    $to_be_unlinked[] <span style=color:#f92672>=</span> $v;
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>close</span>();
+</span></span><span style=display:flex><span>            <span style=color:#75715e>//由于zip需要close后才执行压缩操作，所以只能在这里删除压缩的文件，如果不想删除，请注释下面三行
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>foreach</span> ($to_be_unlinked <span style=color:#66d9ef>as</span> $v) {
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>unlink</span>($v);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>realpath</span>($filename);
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//定义图片字符集
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>array_iconv</span>($data, $in_charset<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;GBK&#39;</span>, $out_charset<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;UTF-8&#39;</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_array</span>($data)) {
+</span></span><span style=display:flex><span>            $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>iconv</span>($in_charset, $out_charset, $data);
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>elseif</span> (<span style=color:#a6e22e>count</span>($data) <span style=color:#f92672>===</span> <span style=color:#a6e22e>count</span>($data, <span style=color:#ae81ff>1</span>)) {<span style=color:#75715e>//判断是否是二维数组
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>foreach</span> ($data <span style=color:#66d9ef>as</span> $key <span style=color:#f92672>=&gt;</span> $value) {
+</span></span><span style=display:flex><span>                $output[$key] <span style=color:#f92672>=</span> <span style=color:#a6e22e>iconv</span>($in_charset, $out_charset, $value);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>eval_r</span>(<span style=color:#e6db74>&#39;$output = &#39;</span> <span style=color:#f92672>.</span> <span style=color:#a6e22e>iconv</span>($in_charset, $out_charset, <span style=color:#a6e22e>var_export</span>($data, <span style=color:#66d9ef>true</span>)) <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;;&#39;</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> $output;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//获取目录中文件赋值给$files
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getfiles</span>($dir, <span style=color:#f92672>&amp;</span>$files<span style=color:#f92672>=</span><span style=color:#66d9ef>array</span>())
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_dir</span>($dir)) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>substr</span>($dir, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)<span style=color:#f92672>==</span><span style=color:#e6db74>&#39;/&#39;</span>) {
+</span></span><span style=display:flex><span>            $dir <span style=color:#f92672>=</span> <span style=color:#a6e22e>substr</span>($dir, <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>strlen</span>($dir)<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        $_files <span style=color:#f92672>=</span> <span style=color:#a6e22e>scandir</span>($dir);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>foreach</span> ($_files <span style=color:#66d9ef>as</span> $v) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> ($v <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#39;.&#39;</span> <span style=color:#f92672>&amp;&amp;</span> $v<span style=color:#f92672>!=</span><span style=color:#e6db74>&#39;..&#39;</span>) {
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_file</span>($dir<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>.</span>$v)) {
+</span></span><span style=display:flex><span>                    $files[] <span style=color:#f92672>=</span> $dir<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>.</span>$v;
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> $files;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>示例：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>require_once</span> <span style=color:#e6db74>&#39;tool.php&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>//压缩test_dir目录，生成test.zip压缩文件，但压缩时不会压缩目录中.zip结尾的文件。
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>$zip <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>MakeZip</span>;
+</span></span><span style=display:flex><span>$zipfilepath <span style=color:#f92672>=</span> $zip<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>zip</span>(<span style=color:#e6db74>&#39;test_dir&#39;</span>, <span style=color:#e6db74>&#39;test.zip&#39;</span>, [<span style=color:#e6db74>&#39;zip&#39;</span>]);
+</span></span></code></pre></div><h4 id=5-简单地日志记录>5. 简单地日志记录</h4><p>由于是个小应用，但是也有些信息需要记录，所以直接使用file_put_contents写入到文件中，利用debug_backtrace获取写日志的文件和行号。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    * 日志类
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    * 当文件超过指定大小则备份日志文件并重新生成新的日志文件
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    * 使用时，直接调用三个静态方法，info、error、debug
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Log</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//日志文件名，放到了logs目录了
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> $filename <span style=color:#f92672>=</span> <span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/logs/sys.log&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//最大文件大小10M
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> $maxsize <span style=color:#f92672>=</span> <span style=color:#ae81ff>10240000</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//写入日志
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>_log</span>($msg, $level<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;INFO&#39;</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>is_dir</span>(<span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/logs&#39;</span>)) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>mkdir</span>(<span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/logs&#39;</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        $filename <span style=color:#f92672>=</span> <span style=color:#a6e22e>self</span><span style=color:#f92672>::</span>$filename;
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 来源文件与行号，回溯2条
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        $trace <span style=color:#f92672>=</span> <span style=color:#a6e22e>debug_backtrace</span>(<span style=color:#a6e22e>DEBUG_BACKTRACE_IGNORE_ARGS</span>, $limit<span style=color:#f92672>=</span><span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>        $file <span style=color:#f92672>=</span> $trace[<span style=color:#ae81ff>1</span>][<span style=color:#e6db74>&#39;file&#39;</span>];
+</span></span><span style=display:flex><span>        $line <span style=color:#f92672>=</span> $trace[<span style=color:#ae81ff>1</span>][<span style=color:#e6db74>&#39;line&#39;</span>];
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 格式化消息
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>is_array</span>($msg)) {
+</span></span><span style=display:flex><span>            $msg <span style=color:#f92672>=</span> <span style=color:#a6e22e>json_encode</span>($msg);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        $content <span style=color:#f92672>=</span> <span style=color:#a6e22e>sprintf</span>(<span style=color:#e6db74>&#34;[ %s ] %s %s:%s %s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, $level, <span style=color:#a6e22e>date</span>(<span style=color:#e6db74>&#39;Y-m-d H:i:s&#39;</span>, <span style=color:#a6e22e>time</span>()), <span style=color:#a6e22e>str_replace</span>(<span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>, $file), $line, $msg);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//如果日志文件超过了指定大小则备份日志文件
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>file_exists</span>($filename) <span style=color:#f92672>&amp;&amp;</span> (<span style=color:#a6e22e>abs</span>(<span style=color:#a6e22e>filesize</span>($filename)) <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>self</span><span style=color:#f92672>::</span>$maxsize)) {
+</span></span><span style=display:flex><span>            $newfilename <span style=color:#f92672>=</span> <span style=color:#a6e22e>dirname</span>($filename)<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>.</span><span style=color:#a6e22e>time</span>()<span style=color:#f92672>.</span><span style=color:#e6db74>&#39;-&#39;</span><span style=color:#f92672>.</span><span style=color:#a6e22e>basename</span>($filename);
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>rename</span>($filename, $newfilename);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//往日志文件内容后面追加日志内容
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>file_put_contents</span>($filename, $content, <span style=color:#a6e22e>FILE_APPEND</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>debug</span>($msg)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        $log <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>self</span>();
+</span></span><span style=display:flex><span>        $log<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>_log</span>($msg, <span style=color:#e6db74>&#39;DEBUG&#39;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>info</span>($msg)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        $log <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>self</span>();
+</span></span><span style=display:flex><span>        $log<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>_log</span>($msg, <span style=color:#e6db74>&#39;INFO&#39;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>error</span>($msg)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        $log <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>self</span>();
+</span></span><span style=display:flex><span>        $log<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>_log</span>($msg, <span style=color:#e6db74>&#39;ERROR&#39;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>示例：</p><pre tabindex=0><code># cat test.php
 &lt;?php
-require_once 'tool.php';
-Log::info('info');
-Log::error('error');
-Log::debug('debug');
+require_once &#39;tool.php&#39;;
+Log::info(&#39;info&#39;);
+Log::error(&#39;error&#39;);
+Log::debug(&#39;debug&#39;);
 
 # cat logs/sys.log
 [ INFO ] 2019-06-19 17:50:30 test.php:5 info
 [ ERROR ] 2019-06-19 17:50:31 test.php:6 error
 [ DEBUG ] 2019-06-19 17:50:31 test.php:7 debug
-</code></pre><h4 id=6-curl的封装>6. curl的封装</h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e>/*
-</span><span style=color:#75715e>    //使用curl扩展发起http请求，支持https，可以发起get、post请求
-</span><span style=color:#75715e>    @param $url  string: 请求地址
-</span><span style=color:#75715e>    @param $data array:  如果存在，则为post请求
-</span><span style=color:#75715e>    @param $timeout int: 超时秒数
-</span><span style=color:#75715e>    @param $parse_json boolean: 是否将响应进行json解码
-</span><span style=color:#75715e>    @return array
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>request</span>(<span style=color:#a6e22e>string</span> $url, <span style=color:#66d9ef>array</span> $data<span style=color:#f92672>=</span><span style=color:#66d9ef>null</span>, <span style=color:#a6e22e>int</span> $timeout<span style=color:#f92672>=</span><span style=color:#ae81ff>10</span>, <span style=color:#a6e22e>bool</span> $parse_json<span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>)
-{
-    $useragent <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Tdi-PHP/v1&#39;</span>;
-    $curl <span style=color:#f92672>=</span> <span style=color:#a6e22e>curl_init</span>();
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_URL</span>, $url);
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_HEADER</span>, <span style=color:#ae81ff>1</span>); <span style=color:#75715e>//设置返回响应头
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_USERAGENT</span>, $useragent);
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_TIMEOUT</span>, $timeout);
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_SSL_VERIFYPEER</span>, <span style=color:#66d9ef>false</span>);
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_SSL_VERIFYHOST</span>, <span style=color:#66d9ef>false</span>);
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_FOLLOWLOCATION</span>, <span style=color:#ae81ff>1</span>);
-    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_RETURNTRANSFER</span>, <span style=color:#ae81ff>1</span>);
-    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#66d9ef>empty</span>($data)) {
-        <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_POST</span>, <span style=color:#ae81ff>1</span>);
-        <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_POSTFIELDS</span>, $data);
-    }
-    $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>curl_exec</span>($curl);
-    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>curl_getinfo</span>($curl, <span style=color:#a6e22e>CURLINFO_HTTP_CODE</span>) <span style=color:#f92672>===</span> <span style=color:#ae81ff>200</span>) {
-        <span style=color:#66d9ef>list</span>($header, $body) <span style=color:#f92672>=</span> <span style=color:#a6e22e>explode</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\r\n\r\n</span><span style=color:#e6db74>&#34;</span>, $output, <span style=color:#ae81ff>2</span>);
-    }
-    <span style=color:#a6e22e>curl_close</span>($curl);
-    <span style=color:#66d9ef>return</span> $parse_json <span style=color:#f92672>?</span> <span style=color:#a6e22e>json_decode</span>($body, <span style=color:#66d9ef>true</span>) <span style=color:#f92672>:</span> $body;
-}
-</code></pre></div><h4 id=7-php-resque的使用>7. php-resque的使用</h4>
-<p>前面有说，本文就是在写一个小应用时的使用记录，觉得有用的几个函数、类分享出来，而这个应用在下载大量图片时，采用了后台队列的方式，将下载功能独立一个类，并采用php-resque这个轻量级队列程序将下载放到队列中，另行处理。</p>
-<p>php-resque是resque（ruby）的php实现，原作者仓库是<a href=https://github.com/chrisboulton/php-resque>https://github.com/chrisboulton/php-resque</a>, 但是我用composer安装这个仓库代码时无法运行，少了些东西；原仓库已经几年没更新了，作者将项目交给了resque社区维护，仓库地址是：<a href=https://github.com/resque/php-resque>https://github.com/resque/php-resque</a></p>
-<p>以下步骤会运行一个简单的示例，但不是官方给的demo，可以参考示例集成到你的项目中。</p>
-<p>此示例假设，项目目录是demo，redis密码abc，端口默认6379，使用0库，其DSN-style连接串是redis://:<a href=mailto:abc@127.0.0>abc@127.0.0</a>.1</p>
-<p>7.1 安装</p>
-<p>使用命令：<code>composer require resque/php-resque</code></p>
-<p>解释说明：composer是php的包管理命令，如果没有安装，参考<a href=https://getcomposer.org/download/>官方文档</a>，也可以用操作系统的包管理器安装，比如Ubuntu用<code>apt-get install composer</code>，RHEL/CentOS系用<code>yum install composer</code></p>
-<p>7.2 创建文件</p>
-<p>上面安装了resque/php-resque后，会在当前demo目录下生成composer.json、composer.lock文件和vender目录：</p>
-<pre tabindex=0><code># tree -L 3
+</code></pre><h4 id=6-curl的封装>6. curl的封装</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    //使用curl扩展发起http请求，支持https，可以发起get、post请求
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $url  string: 请求地址
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $data array:  如果存在，则为post请求
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $timeout int: 超时秒数
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @param $parse_json boolean: 是否将响应进行json解码
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    @return array
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>request</span>(<span style=color:#a6e22e>string</span> $url, <span style=color:#66d9ef>array</span> $data<span style=color:#f92672>=</span><span style=color:#66d9ef>null</span>, <span style=color:#a6e22e>int</span> $timeout<span style=color:#f92672>=</span><span style=color:#ae81ff>10</span>, <span style=color:#a6e22e>bool</span> $parse_json<span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    $useragent <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Tdi-PHP/v1&#39;</span>;
+</span></span><span style=display:flex><span>    $curl <span style=color:#f92672>=</span> <span style=color:#a6e22e>curl_init</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_URL</span>, $url);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_HEADER</span>, <span style=color:#ae81ff>1</span>); <span style=color:#75715e>//设置返回响应头
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_USERAGENT</span>, $useragent);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_TIMEOUT</span>, $timeout);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_SSL_VERIFYPEER</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_SSL_VERIFYHOST</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_FOLLOWLOCATION</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_RETURNTRANSFER</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#66d9ef>empty</span>($data)) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_POST</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>curl_setopt</span>($curl, <span style=color:#a6e22e>CURLOPT_POSTFIELDS</span>, $data);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>curl_exec</span>($curl);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>curl_getinfo</span>($curl, <span style=color:#a6e22e>CURLINFO_HTTP_CODE</span>) <span style=color:#f92672>===</span> <span style=color:#ae81ff>200</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>list</span>($header, $body) <span style=color:#f92672>=</span> <span style=color:#a6e22e>explode</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\r\n\r\n</span><span style=color:#e6db74>&#34;</span>, $output, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>curl_close</span>($curl);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> $parse_json <span style=color:#f92672>?</span> <span style=color:#a6e22e>json_decode</span>($body, <span style=color:#66d9ef>true</span>) <span style=color:#f92672>:</span> $body;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=7-php-resque的使用>7. php-resque的使用</h4><p>前面有说，本文就是在写一个小应用时的使用记录，觉得有用的几个函数、类分享出来，而这个应用在下载大量图片时，采用了后台队列的方式，将下载功能独立一个类，并采用php-resque这个轻量级队列程序将下载放到队列中，另行处理。</p><p>php-resque是resque（ruby）的php实现，原作者仓库是<a href=https://github.com/chrisboulton/php-resque>https://github.com/chrisboulton/php-resque</a>, 但是我用composer安装这个仓库代码时无法运行，少了些东西；原仓库已经几年没更新了，作者将项目交给了resque社区维护，仓库地址是：<a href=https://github.com/resque/php-resque>https://github.com/resque/php-resque</a></p><p>以下步骤会运行一个简单的示例，但不是官方给的demo，可以参考示例集成到你的项目中。</p><p>此示例假设，项目目录是demo，redis密码abc，端口默认6379，使用0库，其DSN-style连接串是redis://:<a href=mailto:abc@127.0.0>abc@127.0.0</a>.1</p><p>7.1 安装</p><p>使用命令：<code>composer require resque/php-resque</code></p><p>解释说明：composer是php的包管理命令，如果没有安装，参考<a href=https://getcomposer.org/download/>官方文档</a>，也可以用操作系统的包管理器安装，比如Ubuntu用<code>apt-get install composer</code>，RHEL/CentOS系用<code>yum install composer</code></p><p>7.2 创建文件</p><p>上面安装了resque/php-resque后，会在当前demo目录下生成composer.json、composer.lock文件和vender目录：</p><pre tabindex=0><code># tree -L 3
 .
 ├── composer.json
 ├── composer.lock
@@ -578,142 +464,81 @@ Log::debug('debug');
     │   └── log
     └── resque
         └── php-resque
-</code></pre><p>关于composer生成的这些文件，可以只保留<code>composer.json</code>，也可以全都要，更多了解请自行Google，现在了解下php-resque。</p>
-<p><strong>在Resque中，一个后台任务被抽象为由三种角色共同完成：</strong></p>
-<ul>
+</code></pre><p>关于composer生成的这些文件，可以只保留<code>composer.json</code>，也可以全都要，更多了解请自行Google，现在了解下php-resque。</p><p><strong>在Resque中，一个后台任务被抽象为由三种角色共同完成：</strong></p><ul>
 <li>
-<p>Job | 任务 ： 一个Job就是一个需要在后台完成的任务，比如发邮件、下载图片，就可以抽象为一个Job。在Resque中一个Job就是一个Class。</p>
-</li>
+<p>Job | 任务 ： 一个Job就是一个需要在后台完成的任务，比如发邮件、下载图片，就可以抽象为一个Job。在Resque中一个Job就是一个Class。</p></li><li>
+<p>Queue | 队列 ： 在Resque中，队列则是由Redis实现的。Resque还提供了一个简单的队列管理器，可以实现将Job插入/取出队列等功能。</p></li><li>
+<p>Worker | 执行者 ： 负责从队列中取出Job并执行，可以以守护进程的方式运行在后台。</p></li></ul><p><strong>其流程如下：</strong></p><ol>
 <li>
-<p>Queue | 队列 ： 在Resque中，队列则是由Redis实现的。Resque还提供了一个简单的队列管理器，可以实现将Job插入/取出队列等功能。</p>
-</li>
-<li>
-<p>Worker | 执行者 ： 负责从队列中取出Job并执行，可以以守护进程的方式运行在后台。</p>
-</li>
-</ul>
-<p><strong>其流程如下：</strong></p>
-<ol>
-<li>
-<p>将一个后台任务编写为一个独立的Class，这个Class就是一个Job。</p>
-</li>
-<li>
-<p>在需要使用后台程序的地方，系统将Job Class的名称以及所需参数放入队列。</p>
-</li>
-<li>
-<p>以命令行方式开启一个Worker，并通过参数指定Worker所需要处理的队列。</p>
-</li>
-<li>
-<p>Worker作为守护进程运行，并且定时检查队列。</p>
-</li>
-<li>
-<p>当队列中有Job时，Worker取出Job并运行，即实例化Job Class并执行Class中的方法。</p>
-</li>
-</ol>
-<p>php-resque是resque的php实现，所以角色和流程是一致的，不过php-resque没有web的队列管理器等。</p>
-<p><strong>7.2.1 编写任务类文件：job.php</strong></p>
-<p>任务类要实现<code>perform</code>方法，参考<a href=https://github.com/resque/php-resque#defining-jobs title=文档>文档</a>，这个方法所需参数可以用<code>$this->args['参数']</code>获取。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
-
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TestJob</span>
-{
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>perform</span>()
-    {
-        $name <span style=color:#f92672>=</span> $this<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>args</span>[<span style=color:#e6db74>&#39;name&#39;</span>];
-        <span style=color:#66d9ef>echo</span> <span style=color:#e6db74>&#39;Hello &#39;</span><span style=color:#f92672>.</span>$name;
-    }
-}
-</code></pre></div><p><strong>7.2.2 编写调用任务代码：index.php</strong></p>
-<p>上面job.php中的TestJob类，在项目中不会直接调用，项目代码中需要主动往队列Queue中扔任务，参考<a href=https://github.com/resque/php-resque#queueing-jobs>文档</a></p>
-<p>以下模拟项目代码index.php：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
-
-<span style=color:#75715e>// 执行成功，将任务放到队列中
-</span><span style=color:#75715e></span><span style=color:#66d9ef>require_once</span> <span style=color:#e6db74>&#39;./vendor/autoload.php&#39;</span>;
-<span style=color:#75715e>// 设置resque的redis连接信息
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Resque</span><span style=color:#f92672>::</span><span style=color:#a6e22e>setBackend</span>(<span style=color:#e6db74>&#39;redis://:abc@127.0.0.1&#39;</span>);
-$args <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>(
-    <span style=color:#e6db74>&#39;name&#39;</span><span style=color:#f92672>=&gt;</span> <span style=color:#e6db74>&#39;saintic.com&#39;</span>
-);
-<span style=color:#75715e>// 入列
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Resque</span><span style=color:#f92672>::</span><span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;default&#39;</span>, <span style=color:#e6db74>&#39;TestJob&#39;</span>, $args);
-</code></pre></div><p>注意入列这行：default是队列名，可以设置为其他名称；TestJob是上面job.php任务类的类名；$args就是任务类<code>perform</code>方法所需参数。</p>
-<p><strong>7.2.3 启动Worker进程等待处理任务</strong></p>
-<p>使用php-resque单独启动worker处理进程在后台处理任务，参考<a href=https://github.com/resque/php-resque#workers>文档</a>，启动进程一条命令可以实现：</p>
-<pre tabindex=0><code># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque 
+<p>将一个后台任务编写为一个独立的Class，这个Class就是一个Job。</p></li><li>
+<p>在需要使用后台程序的地方，系统将Job Class的名称以及所需参数放入队列。</p></li><li>
+<p>以命令行方式开启一个Worker，并通过参数指定Worker所需要处理的队列。</p></li><li>
+<p>Worker作为守护进程运行，并且定时检查队列。</p></li><li>
+<p>当队列中有Job时，Worker取出Job并运行，即实例化Job Class并执行Class中的方法。</p></li></ol><p>php-resque是resque的php实现，所以角色和流程是一致的，不过php-resque没有web的队列管理器等。</p><p><strong>7.2.1 编写任务类文件：job.php</strong></p><p>任务类要实现<code>perform</code>方法，参考<a href=https://github.com/resque/php-resque#defining-jobs title=文档>文档</a>，这个方法所需参数可以用<code>$this->args['参数']</code>获取。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TestJob</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>perform</span>()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        $name <span style=color:#f92672>=</span> $this<span style=color:#f92672>-&gt;</span><span style=color:#a6e22e>args</span>[<span style=color:#e6db74>&#39;name&#39;</span>];
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>echo</span> <span style=color:#e6db74>&#39;Hello &#39;</span><span style=color:#f92672>.</span>$name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>7.2.2 编写调用任务代码：index.php</strong></p><p>上面job.php中的TestJob类，在项目中不会直接调用，项目代码中需要主动往队列Queue中扔任务，参考<a href=https://github.com/resque/php-resque#queueing-jobs>文档</a></p><p>以下模拟项目代码index.php：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 执行成功，将任务放到队列中
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>require_once</span> <span style=color:#e6db74>&#39;./vendor/autoload.php&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// 设置resque的redis连接信息
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Resque</span><span style=color:#f92672>::</span><span style=color:#a6e22e>setBackend</span>(<span style=color:#e6db74>&#39;redis://:abc@127.0.0.1&#39;</span>);
+</span></span><span style=display:flex><span>$args <span style=color:#f92672>=</span> <span style=color:#66d9ef>array</span>(
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;name&#39;</span><span style=color:#f92672>=&gt;</span> <span style=color:#e6db74>&#39;saintic.com&#39;</span>
+</span></span><span style=display:flex><span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// 入列
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Resque</span><span style=color:#f92672>::</span><span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;default&#39;</span>, <span style=color:#e6db74>&#39;TestJob&#39;</span>, $args);
+</span></span></code></pre></div><p>注意入列这行：default是队列名，可以设置为其他名称；TestJob是上面job.php任务类的类名；$args就是任务类<code>perform</code>方法所需参数。</p><p><strong>7.2.3 启动Worker进程等待处理任务</strong></p><p>使用php-resque单独启动worker处理进程在后台处理任务，参考<a href=https://github.com/resque/php-resque#workers>文档</a>，启动进程一条命令可以实现：</p><pre tabindex=0><code># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque 
 [notice] Starting worker your_hostname:499:default
-</code></pre><p>解释下，启动resque队列处理进程主要是靠vender/bin/resque，它运行时接收几个环境变量，参照上面的命令，环境变量有：</p>
-<ol>
+</code></pre><p>解释下，启动resque队列处理进程主要是靠vender/bin/resque，它运行时接收几个环境变量，参照上面的命令，环境变量有：</p><ol>
 <li>
-<p>QUEUE - 必需，队列名，resque进程会处理哪些队列</p>
-</li>
-<li>
-<p>APP_INCLUDE - 也是必需，引入任务类文件</p>
-</li>
-<li>
-<p>REDIS_BACKEND - redis连接信息，可以使用DSN-style，默认localhost:6379</p>
-</li>
-</ol>
-<p>这命令会在前台启动，新开终端可以看到resque进程。</p>
-<p><strong>7.2.4 测试执行任务</strong></p>
-<p>现在在新终端以cli方法执行index.php，会向default队列扔一个TestJob任务，然后worker检测到任务后会执行，worker那个终端会输出<code>"Hello saintic.com"</code></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque </span>
-<span style=color:#f92672>[</span>notice<span style=color:#f92672>]</span> Starting worker taochengwei:499:default
-<span style=color:#f92672>[</span>notice<span style=color:#f92672>]</span> Starting work on <span style=color:#f92672>(</span>Job<span style=color:#f92672>{</span>default<span style=color:#f92672>}</span> | ID: 71ef15f4246b450abe9fd6436758e73f | TestJob | <span style=color:#f92672>[{</span><span style=color:#e6db74>&#34;name&#34;</span>:<span style=color:#e6db74>&#34;saintic.com&#34;</span><span style=color:#f92672>}])</span>
-Hello saintic.com
-<span style=color:#f92672>[</span>notice<span style=color:#f92672>]</span> <span style=color:#f92672>(</span>Job<span style=color:#f92672>{</span>default<span style=color:#f92672>}</span> | ID: 71ef15f4246b450abe9fd6436758e73f | TestJob | <span style=color:#f92672>[{</span><span style=color:#e6db74>&#34;name&#34;</span>:<span style=color:#e6db74>&#34;saintic.com&#34;</span><span style=color:#f92672>}])</span>
-has finished
-</code></pre></div><p>PS：以上输出内容我手动换行了。</p>
-<p>当前demo目录文件结构如下：</p>
-<pre tabindex=0><code># tree -L 1
+<p>QUEUE - 必需，队列名，resque进程会处理哪些队列</p></li><li>
+<p>APP_INCLUDE - 也是必需，引入任务类文件</p></li><li>
+<p>REDIS_BACKEND - redis连接信息，可以使用DSN-style，默认localhost:6379</p></li></ol><p>这命令会在前台启动，新开终端可以看到resque进程。</p><p><strong>7.2.4 测试执行任务</strong></p><p>现在在新终端以cli方法执行index.php，会向default队列扔一个TestJob任务，然后worker检测到任务后会执行，worker那个终端会输出<code>"Hello saintic.com"</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># QUEUE=default APP_INCLUDE=job.php REDIS_BACKEND=redis://:abc@127.0.0.1 php vendor/bin/resque </span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>notice<span style=color:#f92672>]</span> Starting worker taochengwei:499:default
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>notice<span style=color:#f92672>]</span> Starting work on <span style=color:#f92672>(</span>Job<span style=color:#f92672>{</span>default<span style=color:#f92672>}</span> | ID: 71ef15f4246b450abe9fd6436758e73f | TestJob | <span style=color:#f92672>[{</span><span style=color:#e6db74>&#34;name&#34;</span>:<span style=color:#e6db74>&#34;saintic.com&#34;</span><span style=color:#f92672>}])</span>
+</span></span><span style=display:flex><span>Hello saintic.com
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>notice<span style=color:#f92672>]</span> <span style=color:#f92672>(</span>Job<span style=color:#f92672>{</span>default<span style=color:#f92672>}</span> | ID: 71ef15f4246b450abe9fd6436758e73f | TestJob | <span style=color:#f92672>[{</span><span style=color:#e6db74>&#34;name&#34;</span>:<span style=color:#e6db74>&#34;saintic.com&#34;</span><span style=color:#f92672>}])</span>
+</span></span><span style=display:flex><span>has finished
+</span></span></code></pre></div><p>PS：以上输出内容我手动换行了。</p><p>当前demo目录文件结构如下：</p><pre tabindex=0><code># tree -L 1
 .
 ├── composer.json
 ├── composer.lock
 ├── index.php
 ├── job.php
 └── vendor
-</code></pre><p>以上php-resque示例中，php版本7.2，操作系统Ubuntu 18.04.1 LTS</p>
-<p>附录：一个启动、停止php-resque worker进程的脚本，<a href=https://github.com/staugur/tdi-php/blob/master/src/online_rq.sh>github这里</a>，这个脚本中任务类文件写死是qf.php，供参考，自行修改哦。</p>
-<p>注意：停止进程最好使用signals，参考<a href=https://github.com/resque/php-resque#signals>文档</a>，上面脚本用的是QUIT信号。</p>
-<h4 id=end>END</h4>
-<br>
+</code></pre><p>以上php-resque示例中，php版本7.2，操作系统Ubuntu 18.04.1 LTS</p><p>附录：一个启动、停止php-resque worker进程的脚本，<a href=https://github.com/staugur/tdi-php/blob/master/src/online_rq.sh>github这里</a>，这个脚本中任务类文件写死是qf.php，供参考，自行修改哦。</p><p>注意：停止进程最好使用signals，参考<a href=https://github.com/resque/php-resque#signals>文档</a>，上面脚本用的是QUIT信号。</p><h4 id=end>END</h4><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/272.html>https://blog.saintic.com/blog/272.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/php.html rel=tag class=post-tags-link>#php</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/271.html class=prev rel=prev title=关于github+vscode+sphinx+readthedocs写文档的记录><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;关于github+vscode+sphinx+readthedocs写文档的记录</a>
 <a href=https://blog.saintic.com/blog/274.html class=next rel=next title=分享开发rtfd中的部分技巧>分享开发rtfd中的部分技巧&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -723,12 +548,8 @@ has finished
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

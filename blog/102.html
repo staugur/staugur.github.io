@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 vsftpd服务与虚拟用户创建脚本 | 一念博客
-</title>
-<meta name=title content="vsftpd服务与虚拟用户创建脚本 | 一念博客">
+</title><meta name=title content="vsftpd服务与虚拟用户创建脚本 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"vsftpd服务与虚拟用户创建脚本","headline":"vsftpd服务与虚拟用户创建脚本","description":"第一个脚本保存为vsftpd.sh，赋予x权限，或者sh vsftpd.sh user passwd执行，会根据系统(仅支持CentOS5,6,7,建议为6)配置虚拟用","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-11-01 00:00:00 \u002b0000 UTC","dateModified":"2016-11-01 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/102.html","wordCount":"465","keywords":["一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ vsftpd服务与虚拟用户创建脚本 | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,67 +46,38 @@ vsftpd服务与虚拟用户创建脚本 | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">vsftpd服务与虚拟用户创建脚本</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">vsftpd服务与虚拟用户创建脚本</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2016-11-01 itemprop=datePublished>November 1, 2016</time>
@@ -120,157 +88,139 @@ in
 <a href=https://blog.saintic.com/categories/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1.html> 应用服务 </a>
 </span>
 <span class=post-word-count>465 words</span>
-</div>
-</header>
-<div class=post-content>
-<p>第一个脚本保存为vsftpd.sh，赋予x权限，或者sh vsftpd.sh user passwd执行，会根据系统(仅支持CentOS5,6,7,建议为6)配置虚拟用户登录ftp环境； 第二个脚本为创建虚拟用户函数，请往下看。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
-</span><span style=color:#75715e></span><span style=color:#75715e>#Create virtual ftp users, first user is test</span>
-error<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
-    echo <span style=color:#e6db74>&#34;Error, usage: </span>$0<span style=color:#e6db74> user password&#34;</span>
-    exit <span style=color:#ae81ff>1</span>
-<span style=color:#f92672>}</span>
-SYS_VERSION<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>awk -F <span style=color:#e6db74>&#34;release&#34;</span> <span style=color:#e6db74>&#39;{print $2}&#39;</span> /etc/redhat-release | awk <span style=color:#e6db74>&#39;{print $1}&#39;</span> | awk -F . <span style=color:#e6db74>&#39;{print $1}&#39;</span><span style=color:#66d9ef>)</span>
-<span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$#<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;2&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> error
-vfu<span style=color:#f92672>=</span>/etc/vsftpd/vfu.list
-vfudb<span style=color:#f92672>=</span>/etc/vsftpd/vfu.db
-vfudir<span style=color:#f92672>=</span>/etc/vsftpd/vfu_dir
-user<span style=color:#f92672>=</span>$1
-passwd<span style=color:#f92672>=</span>$2
-
-yum -y install vsftpd ftp
-<span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;5&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> yum -y install db4-utils
-<span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;6&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> yum -y install db4-utils
-<span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;7&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> yum -y install libdb-utils
-cat &gt;&gt;$vfu <span style=color:#e6db74>&lt;&lt;EOF
-</span><span style=color:#e6db74>$user
-</span><span style=color:#e6db74>$passwd
-</span><span style=color:#e6db74>EOF</span>
-db_load -T -t hash -f $vfu $vfudb
-chmod <span style=color:#ae81ff>600</span> $vfu $vfudb
-
-cat &gt;/etc/pam.d/vsftpd.vu <span style=color:#e6db74>&lt;&lt;EOF
-</span><span style=color:#e6db74>#%PAM-1.0
-</span><span style=color:#e6db74>auth   required     pam_userdb.so  db=/etc/vsftpd/vfu
-</span><span style=color:#e6db74>account required    pam_userdb.so  db=/etc/vsftpd/vfu
-</span><span style=color:#e6db74>EOF</span>
-
-mv /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.bak
-cat &gt;/etc/vsftpd/vsftpd.conf <span style=color:#e6db74>&lt;&lt;EOF
-</span><span style=color:#e6db74>ftpd_banner=Ftp CodeSourceRoot
-</span><span style=color:#e6db74>anonymous_enable=NO
-</span><span style=color:#e6db74>local_enable=YES
-</span><span style=color:#e6db74>write_enable=YES
-</span><span style=color:#e6db74>local_umask=022
-</span><span style=color:#e6db74>xferlog_enable=YES
-</span><span style=color:#e6db74>xferlog_std_format=YES
-</span><span style=color:#e6db74>xferlog_file=/var/log/vsftpd.log
-</span><span style=color:#e6db74>userlist_enable=YES
-</span><span style=color:#e6db74>userlist_deny=YES
-</span><span style=color:#e6db74>listen=YES
-</span><span style=color:#e6db74>listen_ipv6=NO
-</span><span style=color:#e6db74>max_per_ip=5
-</span><span style=color:#e6db74>tcp_wrappers=YES
-</span><span style=color:#e6db74>pam_service_name=vsftpd.vu
-</span><span style=color:#e6db74>virtual_use_local_privs=YES
-</span><span style=color:#e6db74>guest_enable=YES
-</span><span style=color:#e6db74>guest_username=ftp
-</span><span style=color:#e6db74>user_config_dir=$vfudir
-</span><span style=color:#e6db74>chroot_list_enable=YES
-</span><span style=color:#e6db74>chroot_list_file=/etc/vsftpd/chroot_list
-</span><span style=color:#e6db74>chroot_local_user=YES
-</span><span style=color:#e6db74>local_root=/var/ftp/
-</span><span style=color:#e6db74>EOF</span>
-<span style=color:#75715e>#chroot_list:open user</span>
-<span style=color:#75715e>#chown -R ftp.ftp /var/ftp</span>
-<span style=color:#75715e>#chmod -R a+t /vat/ftp/</span>
-touch /etc/vsftpd/chroot_list
-mkdir -p $vfudir
-cd $vfudir
-cat &gt;$user <span style=color:#e6db74>&lt;&lt;EOF
-</span><span style=color:#e6db74>write_enable=YES
-</span><span style=color:#e6db74>anon_world_readable_only=NO
-</span><span style=color:#e6db74>anon_upload_enable=YES
-</span><span style=color:#e6db74>anon_mkdir_write_enable=YES
-</span><span style=color:#e6db74>anon_other_write_enable=YES
-</span><span style=color:#e6db74>local_root=/var/ftp/
-</span><span style=color:#e6db74>EOF</span>
-/etc/init.d/vsftpd start
-echo <span style=color:#e6db74>&#34;Ending,Succeed!!!&#34;</span>
-<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;6&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;5&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
-    sed -i <span style=color:#e6db74>&#39;s/IPTABLES_MODULES=&#34;&#34;/IPTABLES_MODULES=&#34;nf_conntrack_ftp&#34;/&#39;</span> /etc/sysconfig/iptables-config
-    modprobe nf_conntrack_ftp
-    iptables -I INPUT -p tcp --dport <span style=color:#ae81ff>21</span> -j ACCEPT
-<span style=color:#66d9ef>elif</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;7&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
-    echo <span style=color:#e6db74>&#34;Please check firewalld:stop or set rule.&#34;</span>
-<span style=color:#66d9ef>fi</span>
-</code></pre></div><p>第二个脚本保存为create_ftp.sh，需要传递三个参数，user、password、home，会自动创建虚拟用户可直接登录 home(自定义user的根目录)。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#/bin/bash</span>
-<span style=color:#75715e>#create virtual ftp user.</span>
-error<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
-    echo <span style=color:#e6db74>&#34;Error, usage: </span>$0<span style=color:#e6db74> user password home&#34;</span>
-    exit <span style=color:#ae81ff>1</span>
-<span style=color:#f92672>}</span>
-<span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$#<span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;3&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> error
-<span style=color:#75715e>#arg:$init_user $init_passwd $init_user_home_root</span>
-vfu<span style=color:#f92672>=</span>/etc/vsftpd/vfu.list
-vfudb<span style=color:#f92672>=</span>/etc/vsftpd/vfu.db
-vfudir<span style=color:#f92672>=</span>/etc/vsftpd/vfu_dir
-cat &gt;&gt;$vfu <span style=color:#e6db74>&lt;&lt;EOF
-</span><span style=color:#e6db74>$1
-</span><span style=color:#e6db74>$2
-</span><span style=color:#e6db74>EOF</span>
-db_load -T -t hash -f $vfu $vfudb
-cat &gt;<span style=color:#e6db74>${</span>vfudir<span style=color:#e6db74>}</span>/$1 <span style=color:#e6db74>&lt;&lt;EOF
-</span><span style=color:#e6db74>write_enable=YES
-</span><span style=color:#e6db74>anon_world_readable_only=NO
-</span><span style=color:#e6db74>anon_upload_enable=YES
-</span><span style=color:#e6db74>anon_mkdir_write_enable=YES
-</span><span style=color:#e6db74>anon_other_write_enable=YES
-</span><span style=color:#e6db74>local_root=$3
-</span><span style=color:#e6db74>EOF</span>
-chown -R ftp.ftp $3
-chmod -R a+t $3
-/etc/init.d/vsftpd reload
-</code></pre></div><br>
+</div></header><div class=post-content>
+<p>第一个脚本保存为vsftpd.sh，赋予x权限，或者sh vsftpd.sh user passwd执行，会根据系统(仅支持CentOS5,6,7,建议为6)配置虚拟用户登录ftp环境； 第二个脚本为创建虚拟用户函数，请往下看。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e>#Create virtual ftp users, first user is test</span>
+</span></span><span style=display:flex><span>error<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;Error, usage: </span>$0<span style=color:#e6db74> user password&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>SYS_VERSION<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>awk -F <span style=color:#e6db74>&#34;release&#34;</span> <span style=color:#e6db74>&#39;{print $2}&#39;</span> /etc/redhat-release | awk <span style=color:#e6db74>&#39;{print $1}&#39;</span> | awk -F . <span style=color:#e6db74>&#39;{print $1}&#39;</span><span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$#<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;2&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> error
+</span></span><span style=display:flex><span>vfu<span style=color:#f92672>=</span>/etc/vsftpd/vfu.list
+</span></span><span style=display:flex><span>vfudb<span style=color:#f92672>=</span>/etc/vsftpd/vfu.db
+</span></span><span style=display:flex><span>vfudir<span style=color:#f92672>=</span>/etc/vsftpd/vfu_dir
+</span></span><span style=display:flex><span>user<span style=color:#f92672>=</span>$1
+</span></span><span style=display:flex><span>passwd<span style=color:#f92672>=</span>$2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>yum -y install vsftpd ftp
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;5&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> yum -y install db4-utils
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;6&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> yum -y install db4-utils
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;7&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> yum -y install libdb-utils
+</span></span><span style=display:flex><span>cat &gt;&gt;$vfu <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>$user
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>$passwd
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>db_load -T -t hash -f $vfu $vfudb
+</span></span><span style=display:flex><span>chmod <span style=color:#ae81ff>600</span> $vfu $vfudb
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cat &gt;/etc/pam.d/vsftpd.vu <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#%PAM-1.0
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>auth   required     pam_userdb.so  db=/etc/vsftpd/vfu
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>account required    pam_userdb.so  db=/etc/vsftpd/vfu
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>mv /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.bak
+</span></span><span style=display:flex><span>cat &gt;/etc/vsftpd/vsftpd.conf <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ftpd_banner=Ftp CodeSourceRoot
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anonymous_enable=NO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>local_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>local_umask=022
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>xferlog_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>xferlog_std_format=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>xferlog_file=/var/log/vsftpd.log
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>userlist_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>userlist_deny=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>listen=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>listen_ipv6=NO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>max_per_ip=5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>tcp_wrappers=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>pam_service_name=vsftpd.vu
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>virtual_use_local_privs=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>guest_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>guest_username=ftp
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>user_config_dir=$vfudir
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>chroot_list_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>chroot_list_file=/etc/vsftpd/chroot_list
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>chroot_local_user=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>local_root=/var/ftp/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#chroot_list:open user</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#chown -R ftp.ftp /var/ftp</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#chmod -R a+t /vat/ftp/</span>
+</span></span><span style=display:flex><span>touch /etc/vsftpd/chroot_list
+</span></span><span style=display:flex><span>mkdir -p $vfudir
+</span></span><span style=display:flex><span>cd $vfudir
+</span></span><span style=display:flex><span>cat &gt;$user <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_world_readable_only=NO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_upload_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_mkdir_write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_other_write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>local_root=/var/ftp/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>/etc/init.d/vsftpd start
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Ending,Succeed!!!&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;6&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;5&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    sed -i <span style=color:#e6db74>&#39;s/IPTABLES_MODULES=&#34;&#34;/IPTABLES_MODULES=&#34;nf_conntrack_ftp&#34;/&#39;</span> /etc/sysconfig/iptables-config
+</span></span><span style=display:flex><span>    modprobe nf_conntrack_ftp
+</span></span><span style=display:flex><span>    iptables -I INPUT -p tcp --dport <span style=color:#ae81ff>21</span> -j ACCEPT
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elif</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$SYS_VERSION<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;7&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;Please check firewalld:stop or set rule.&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span></code></pre></div><p>第二个脚本保存为create_ftp.sh，需要传递三个参数，user、password、home，会自动创建虚拟用户可直接登录 home(自定义user的根目录)。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#/bin/bash</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#create virtual ftp user.</span>
+</span></span><span style=display:flex><span>error<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;Error, usage: </span>$0<span style=color:#e6db74> user password home&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$#<span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;3&#34;</span> <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> error
+</span></span><span style=display:flex><span><span style=color:#75715e>#arg:$init_user $init_passwd $init_user_home_root</span>
+</span></span><span style=display:flex><span>vfu<span style=color:#f92672>=</span>/etc/vsftpd/vfu.list
+</span></span><span style=display:flex><span>vfudb<span style=color:#f92672>=</span>/etc/vsftpd/vfu.db
+</span></span><span style=display:flex><span>vfudir<span style=color:#f92672>=</span>/etc/vsftpd/vfu_dir
+</span></span><span style=display:flex><span>cat &gt;&gt;$vfu <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>$1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>$2
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>db_load -T -t hash -f $vfu $vfudb
+</span></span><span style=display:flex><span>cat &gt;<span style=color:#e6db74>${</span>vfudir<span style=color:#e6db74>}</span>/$1 <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_world_readable_only=NO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_upload_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_mkdir_write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>anon_other_write_enable=YES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>local_root=$3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>chown -R ftp.ftp $3
+</span></span><span style=display:flex><span>chmod -R a+t $3
+</span></span><span style=display:flex><span>/etc/init.d/vsftpd reload
+</span></span></code></pre></div><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/102.html>https://blog.saintic.com/blog/102.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 （无）
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/97.html class=prev rel=prev title=Nginx日志切割脚本><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;Nginx日志切割脚本</a>
 <a href=https://blog.saintic.com/blog/103.html class=next rel=next title=RTBAsia真人概率值查询接口>RTBAsia真人概率值查询接口&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -280,12 +230,8 @@ chmod -R a+t $3
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

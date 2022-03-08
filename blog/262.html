@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 python打包分发工具setuptools使用记录 | 一念博客
-</title>
-<meta name=title content="python打包分发工具setuptools使用记录 | 一念博客">
+</title><meta name=title content="python打包分发工具setuptools使用记录 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"python打包分发工具setuptools使用记录","headline":"python打包分发工具setuptools使用记录","description":"关于python setup.py文件的编写技巧 环境：最新版setuptools，初步认识setuptools可以参考这篇文章 1. 自定义命令 from setuptools","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-09-21 00:00:00 \u002b0000 UTC","dateModified":"2018-09-21 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/262.html","wordCount":"595","keywords":["python","一念博客"]}</script>
-</head>
-<body>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"python打包分发工具setuptools使用记录","headline":"python打包分发工具setuptools使用记录","description":"关于python setup.py文件的编写技巧 环境：最新版setuptools，初步认识setuptools可以参考这篇文章 1. 自定义命令 from setuptools","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-09-21 00:00:00 \u002b0000 UTC","dateModified":"2018-09-21 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/262.html","wordCount":"593","keywords":["python","一念博客"]}</script>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ python打包分发工具setuptools使用记录 | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,67 +46,38 @@ python打包分发工具setuptools使用记录 | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">python打包分发工具setuptools使用记录</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">python打包分发工具setuptools使用记录</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2018-09-21 itemprop=datePublished>September 21, 2018</time>
@@ -119,19 +87,13 @@ in
 <span class=post-category>
 <a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html> 开发 </a>
 </span>
-<span class=post-word-count>595 words</span>
-</div>
-</header>
-<div class=post-content>
+<span class=post-word-count>593 words</span>
+</div></header><div class=post-content>
 <blockquote>
-<p>关于python setup.py文件的编写技巧</p>
-</blockquote>
-<p>环境：最新版setuptools，初步认识setuptools可以参考<a href=http://blog.konghy.cn/2018/04/29/setup-dot-py/>这篇文章</a></p>
-<p><strong>1. 自定义命令</strong></p>
-<pre tabindex=0><code>from setuptools import setup, Command
+<p>关于python setup.py文件的编写技巧</p></blockquote><p>环境：最新版setuptools，初步认识setuptools可以参考<a href=http://blog.konghy.cn/2018/04/29/setup-dot-py/>这篇文章</a></p><p><strong>1. 自定义命令</strong></p><pre tabindex=0><code>from setuptools import setup, Command
 
 class MyCommand(Command):
-    description = &quot;Description of the command&quot;
+    description = &#34;Description of the command&#34;
     user_options = []
 
     # This method must be implemented
@@ -143,119 +105,102 @@ class MyCommand(Command):
         pass
 
     def run(self):
-        print(&quot;My command runs!&quot;)
+        print(&#34;My command runs!&#34;)
 
 setup(..., cmdclass={
-    #&quot;命令&quot;: 继承类
-    &quot;mycommand&quot;: MyCommand
+    #&#34;命令&#34;: 继承类
+    &#34;mycommand&#34;: MyCommand
 })
-</code></pre><p>格式大概是上面这样了，这是一个没有自定义命令子选项的最简单例子，下面是一个稍微复杂的例子，它的作用是将包发布到pypi：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> os
-<span style=color:#f92672>from</span> setuptools <span style=color:#f92672>import</span> setup, Command
-
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PublishCommand</span>(Command):
-
-    description <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Publish a new version to pypi&#34;</span>
-
-    user_options <span style=color:#f92672>=</span> [
-        <span style=color:#75715e># The format is (long option, short option, description).</span>
-        (<span style=color:#e6db74>&#34;test&#34;</span>, <span style=color:#66d9ef>None</span>, <span style=color:#e6db74>&#34;Publish to test.pypi.org&#34;</span>),
-        (<span style=color:#e6db74>&#34;release&#34;</span>, <span style=color:#66d9ef>None</span>, <span style=color:#e6db74>&#34;Publish to pypi.org&#34;</span>),
-    ]
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize_options</span>(self):
-        <span style=color:#e6db74>&#34;&#34;&#34;Set default values for options.&#34;&#34;&#34;</span>
-        self<span style=color:#f92672>.</span>test <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
-        self<span style=color:#f92672>.</span>release <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>finalize_options</span>(self):
-        <span style=color:#e6db74>&#34;&#34;&#34;Post-process options.&#34;&#34;&#34;</span>
-        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
-            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the test.pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
-        <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
-            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>run</span>(self):
-        <span style=color:#e6db74>&#34;&#34;&#34;Run command.&#34;&#34;&#34;</span>
-        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;pip install -U setuptools twine wheel&#34;</span>)
-        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;rm -rf build/ dist/ Flask_PluginKit.egg-info/&#34;</span>)
-        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;python setup.py sdist bdist_wheel&#34;</span>)
-        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
-            os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;twine upload --repository-url https://test.pypi.org/legacy/ dist/*&#34;</span>)
-        <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
-            os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;twine upload dist/*&#34;</span>)
-        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;rm -rf build/ dist/ Flask_PluginKit.egg-info/&#34;</span>)
-        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
-            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the test.pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
-        <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
-            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
-        exit()
-
-setup(<span style=color:#f92672>...</span>, cmdclass<span style=color:#f92672>=</span>{
-    <span style=color:#e6db74>&#39;publish&#39;</span>: PublishCommand,
-})
-</code></pre></div><p>这个发布命令使用方法是：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ python setup.py publish --help
-Common commands: <span style=color:#f92672>(</span>see <span style=color:#e6db74>&#39;--help-commands&#39;</span> <span style=color:#66d9ef>for</span> more<span style=color:#f92672>)</span>
-
-  setup.py build      will build the package underneath <span style=color:#e6db74>&#39;build/&#39;</span>
-  setup.py install    will install the package
-
-Global options:
-  --verbose <span style=color:#f92672>(</span>-v<span style=color:#f92672>)</span>  run verbosely <span style=color:#f92672>(</span>default<span style=color:#f92672>)</span>
-  --quiet <span style=color:#f92672>(</span>-q<span style=color:#f92672>)</span>    run quietly <span style=color:#f92672>(</span>turns verbosity off<span style=color:#f92672>)</span>
-  --dry-run <span style=color:#f92672>(</span>-n<span style=color:#f92672>)</span>  don<span style=color:#e6db74>&#39;t actually do anything
-</span><span style=color:#e6db74>  --help (-h)     show detailed help message
-</span><span style=color:#e6db74>  --no-user-cfg   ignore pydistutils.cfg in your home directory
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>Options for &#39;</span>PublishCommand<span style=color:#960050;background-color:#1e0010>&#39;</span> command:
-  --test     Publish to test.pypi.org
-  --release  Publish to pypi.org
-
-usage: setup.py <span style=color:#f92672>[</span>global_opts<span style=color:#f92672>]</span> cmd1 <span style=color:#f92672>[</span>cmd1_opts<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>cmd2 <span style=color:#f92672>[</span>cmd2_opts<span style=color:#f92672>]</span> ...<span style=color:#f92672>]</span>
-   or: setup.py --help <span style=color:#f92672>[</span>cmd1 cmd2 ...<span style=color:#f92672>]</span>
-   or: setup.py --help-commands
-   or: setup.py cmd --help
-</code></pre></div><p>解释：参考代码和帮助，publish定义了两个子选项，test和release，后面run根据判断子选项值来执行上传到不同环境的命令，所以执行<code>python setup.py publish --test</code>可以发布到python官方测试仓库test.pypi.org，执行<code>python setup.py publish --release</code>可以发布到python官方正式仓库pypi.org！
-<br></p>
-<center> ·End· </center>
-</div>
-<div class=post-copyright>
+</code></pre><p>格式大概是上面这样了，这是一个没有自定义命令子选项的最简单例子，下面是一个稍微复杂的例子，它的作用是将包发布到pypi：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> setuptools <span style=color:#f92672>import</span> setup, Command
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PublishCommand</span>(Command):
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    description <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Publish a new version to pypi&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    user_options <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>        <span style=color:#75715e># The format is (long option, short option, description).</span>
+</span></span><span style=display:flex><span>        (<span style=color:#e6db74>&#34;test&#34;</span>, <span style=color:#66d9ef>None</span>, <span style=color:#e6db74>&#34;Publish to test.pypi.org&#34;</span>),
+</span></span><span style=display:flex><span>        (<span style=color:#e6db74>&#34;release&#34;</span>, <span style=color:#66d9ef>None</span>, <span style=color:#e6db74>&#34;Publish to pypi.org&#34;</span>),
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize_options</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Set default values for options.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>test <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>release <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>finalize_options</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Post-process options.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the test.pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> will publish to the pypi.org&#34;</span> <span style=color:#f92672>%</span> version)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>run</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Run command.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;pip install -U setuptools twine wheel&#34;</span>)
+</span></span><span style=display:flex><span>        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;rm -rf build/ dist/ Flask_PluginKit.egg-info/&#34;</span>)
+</span></span><span style=display:flex><span>        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;python setup.py sdist bdist_wheel&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
+</span></span><span style=display:flex><span>            os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;twine upload --repository-url https://test.pypi.org/legacy/ dist/*&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
+</span></span><span style=display:flex><span>            os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;twine upload dist/*&#34;</span>)
+</span></span><span style=display:flex><span>        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;rm -rf build/ dist/ Flask_PluginKit.egg-info/&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>test:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the test.pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> self<span style=color:#f92672>.</span>release:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;V</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> publish to the pypi.org successfully&#34;</span> <span style=color:#f92672>%</span> version)
+</span></span><span style=display:flex><span>        exit()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>setup(<span style=color:#f92672>...</span>, cmdclass<span style=color:#f92672>=</span>{
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;publish&#39;</span>: PublishCommand,
+</span></span><span style=display:flex><span>})
+</span></span></code></pre></div><p>这个发布命令使用方法是：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ python setup.py publish --help
+</span></span><span style=display:flex><span>Common commands: <span style=color:#f92672>(</span>see <span style=color:#e6db74>&#39;--help-commands&#39;</span> <span style=color:#66d9ef>for</span> more<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  setup.py build      will build the package underneath <span style=color:#e6db74>&#39;build/&#39;</span>
+</span></span><span style=display:flex><span>  setup.py install    will install the package
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Global options:
+</span></span><span style=display:flex><span>  --verbose <span style=color:#f92672>(</span>-v<span style=color:#f92672>)</span>  run verbosely <span style=color:#f92672>(</span>default<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  --quiet <span style=color:#f92672>(</span>-q<span style=color:#f92672>)</span>    run quietly <span style=color:#f92672>(</span>turns verbosity off<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  --dry-run <span style=color:#f92672>(</span>-n<span style=color:#f92672>)</span>  don<span style=color:#e6db74>&#39;t actually do anything
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  --help (-h)     show detailed help message
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  --no-user-cfg   ignore pydistutils.cfg in your home directory
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Options for &#39;</span>PublishCommand<span style=color:#960050;background-color:#1e0010>&#39;</span> command:
+</span></span><span style=display:flex><span>  --test     Publish to test.pypi.org
+</span></span><span style=display:flex><span>  --release  Publish to pypi.org
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>usage: setup.py <span style=color:#f92672>[</span>global_opts<span style=color:#f92672>]</span> cmd1 <span style=color:#f92672>[</span>cmd1_opts<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>cmd2 <span style=color:#f92672>[</span>cmd2_opts<span style=color:#f92672>]</span> ...<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>   or: setup.py --help <span style=color:#f92672>[</span>cmd1 cmd2 ...<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>   or: setup.py --help-commands
+</span></span><span style=display:flex><span>   or: setup.py cmd --help
+</span></span></code></pre></div><p>解释：参考代码和帮助，publish定义了两个子选项，test和release，后面run根据判断子选项值来执行上传到不同环境的命令，所以执行<code>python setup.py publish --test</code>可以发布到python官方测试仓库test.pypi.org，执行<code>python setup.py publish --release</code>可以发布到python官方正式仓库pypi.org！
+<br></p><center> ·End· </center>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/262.html>https://blog.saintic.com/blog/262.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/261.html class=prev rel=prev title=开源项目之IncetOps><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;开源项目之IncetOps</a>
 <a href=https://blog.saintic.com/blog/263.html class=next rel=next title=使用sphinx制作接口文档并托管到readthedocs>使用sphinx制作接口文档并托管到readthedocs&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -265,12 +210,8 @@ usage: setup.py <span style=color:#f92672>[</span>global_opts<span style=color:#
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

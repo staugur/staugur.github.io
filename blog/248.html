@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 记一次十字符病毒 libudev.so | 一念博客
-</title>
-<meta name=title content="记一次十字符病毒 libudev.so | 一念博客">
+</title><meta name=title content="记一次十字符病毒 libudev.so | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"记一次十字符病毒 libudev.so","headline":"记一次十字符病毒 libudev.so","description":"同事发现一台CentOS7.4系统上CPU异常的高，以为挖矿，遂登录查看，top下发现一个进程百分百多，简单kill随后又生成，并且有个特点","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-02-01 00:00:00 \u002b0000 UTC","dateModified":"2018-02-01 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/248.html","wordCount":"444","keywords":["安全","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,67 +46,38 @@
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">记一次十字符病毒 libudev.so</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">记一次十字符病毒 libudev.so</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2018-02-01 itemprop=datePublished>February 1, 2018</time>
@@ -120,19 +88,12 @@ in
 <a href=https://blog.saintic.com/categories/%E8%BF%90%E7%BB%B4.html> 运维 </a>
 </span>
 <span class=post-word-count>444 words</span>
-</div>
-</header>
-<div class=post-content>
-<p>同事发现一台CentOS7.4系统上CPU异常的高，以为挖矿，遂登录查看，top下发现一个进程百分百多，简单kill随后又生成，并且有个特点，进程名称全部是十个字符组成，它会监听自身并重新启动。</p>
-<p>根据处理挖矿木马的经验，查看crontab相关，发现/etc/crontab写了两个定时任务(这个文件正常人应该是不会写入的)，奇中一个定时任务是执行/etc/cron.hourly/gcc.sh这个脚本，搜索gcc.sh关键字，发现很多遇到的，名叫“十字符病毒”，脚本内容大概是这样：</p>
-<pre tabindex=0><code>PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin
-for i in `cat /proc/net/dev|grep :|awk -F: {'print $1'}`; do ifconfig $i up&amp; done
+</div></header><div class=post-content>
+<p>同事发现一台CentOS7.4系统上CPU异常的高，以为挖矿，遂登录查看，top下发现一个进程百分百多，简单kill随后又生成，并且有个特点，进程名称全部是十个字符组成，它会监听自身并重新启动。</p><p>根据处理挖矿木马的经验，查看crontab相关，发现/etc/crontab写了两个定时任务(这个文件正常人应该是不会写入的)，奇中一个定时任务是执行/etc/cron.hourly/gcc.sh这个脚本，搜索gcc.sh关键字，发现很多遇到的，名叫“十字符病毒”，脚本内容大概是这样：</p><pre tabindex=0><code>PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin
+for i in `cat /proc/net/dev|grep :|awk -F: {&#39;print $1&#39;}`; do ifconfig $i up&amp; done
 cp /lib/libudev.so /lib/libudev.so.6
 /lib/libudev.so.6
-</code></pre><p>其原罪就是libudev.so这个了，结合查询的资料，处理如下：</p>
-<p><img src=https://static.saintic.com/EauDouce/blog/201802011214271637.png alt=10 loading=lazy></p>
-<p>也有人整理成了脚本(用法：通过top命令找到病毒的进程名，赋给变量”VIRUS_P“，然后执行这个shell就可以了)，如下：</p>
-<pre tabindex=0><code>VIRUS_P=njafjgycsl
+</code></pre><p>其原罪就是libudev.so这个了，结合查询的资料，处理如下：</p><p><img src=https://static.saintic.com/EauDouce/blog/201802011214271637.png alt=10 loading=lazy></p><p>也有人整理成了脚本(用法：通过top命令找到病毒的进程名，赋给变量”VIRUS_P“，然后执行这个shell就可以了)，如下：</p><pre tabindex=0><code>VIRUS_P=njafjgycsl
  
 #暂停病毒进程
 kill -stop `pgrep $VIRUS_P`
@@ -140,63 +101,43 @@ kill -stop `pgrep $VIRUS_P`
 rm -f /usr/bin/$VIRUS_P
  
 #/etc/cron.hourly/gcc.sh
-find /etc/cron* -name &quot;gcc.sh&quot; -exec rm {} \;
+find /etc/cron* -name &#34;gcc.sh&#34; -exec rm {} \;
  
-find /etc/init.d/ -name &quot;*$VIRUS_P*&quot; -exec rm {} \;
+find /etc/init.d/ -name &#34;*$VIRUS_P*&#34; -exec rm {} \;
  
-find /etc/rc* -name &quot;*$VIRUS_P*&quot; -exec rm {} \;
+find /etc/rc* -name &#34;*$VIRUS_P*&#34; -exec rm {} \;
  
 pkill $VIRUS_P
  
 rm -f /lib/libudev.so /lib/libudev.so.6
-</code></pre><p>参考：</p>
-<ol>
+</code></pre><p>参考：</p><ol>
 <li>
-<p><a href=http://www.cnblogs.com/MYSQLZOUQI/articles/4990966.html>Linux 10字符串命令病毒的处理记录</a></p>
-</li>
-<li>
+<p><a href=http://www.cnblogs.com/MYSQLZOUQI/articles/4990966.html>Linux 10字符串命令病毒的处理记录</a></p></li><li>
 <p><a href=https://zoublog.com/libudev-so-virus-clean-shell-script/>libudev.so病毒清理shell脚本</a>
-<br></p>
-</li>
-</ol>
-<center> ·End· </center>
-</div>
-<div class=post-copyright>
+<br></p></li></ol><center> ·End· </center>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/248.html>https://blog.saintic.com/blog/248.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/%E5%AE%89%E5%85%A8.html rel=tag class=post-tags-link>#安全</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/247.html class=prev rel=prev title="torndb 常用操作和两种事务方式"><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;torndb 常用操作和两种事务方式</a>
 <a href=https://blog.saintic.com/blog/249.html class=next rel=next title=开机自动下载必应今日图片并更换桌面壁纸>开机自动下载必应今日图片并更换桌面壁纸&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -206,12 +147,8 @@ rm -f /lib/libudev.so /lib/libudev.so.6
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

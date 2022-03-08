@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 redis不同实例间数据迁移 | 一念博客
-</title>
-<meta name=title content="redis不同实例间数据迁移 | 一念博客">
+</title><meta name=title content="redis不同实例间数据迁移 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"redis不同实例间数据迁移","headline":"redis不同实例间数据迁移","description":"redis单机版数据迁移。 从一个实例迁移到另一个实例，使用于本机不同端口迁移备份、其他机器间迁移备份。 工具是一个简单的python脚本，指定","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2019","datePublished":"2019-01-07 00:00:00 \u002b0000 UTC","dateModified":"2019-01-07 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/265.html","wordCount":"511","keywords":["redis","python","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ redis不同实例间数据迁移 | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,67 +46,38 @@ redis不同实例间数据迁移 | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">redis不同实例间数据迁移</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">redis不同实例间数据迁移</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2019-01-07 itemprop=datePublished>January 7, 2019</time>
@@ -120,97 +88,72 @@ in
 <a href=https://blog.saintic.com/categories/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1.html> 应用服务 </a>
 </span>
 <span class=post-word-count>511 words</span>
-</div>
-</header>
-<div class=post-content>
-<p>redis单机版数据迁移。</p>
-<p>从一个实例迁移到另一个实例，使用于本机不同端口迁移备份、其他机器间迁移备份。</p>
-<p>工具是一个简单的python脚本，指定redis的源和目标信息即可。</p>
-<p>脚本链接：<a href=https://github.com/staugur/scripts/blob/master/services/migrateredis.py>https://github.com/staugur/scripts/blob/master/services/migrateredis.py</a></p>
-<p>其内容直接贴在下面：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># -*- coding: utf-8 -*-</span>
-<span style=color:#e6db74>&#34;&#34;&#34;
-</span><span style=color:#e6db74>    migrateredis.py
-</span><span style=color:#e6db74>    ---------------
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>    迁移redis数据，可以从本机迁移到其他机器，迁移一个库或多个库中数据。
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>    原理：redis dump/restore命令
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>    依赖：pip install redis&gt;=2.10.5
-</span><span style=color:#e6db74>&#34;&#34;&#34;</span>
-
-<span style=color:#f92672>from</span> redis <span style=color:#f92672>import</span> from_url, RedisError
-
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>migrate</span>(src_url, dst_url):
-    src <span style=color:#f92672>=</span> from_url(src_url)
-    dst <span style=color:#f92672>=</span> from_url(dst_url)
-    <span style=color:#66d9ef>for</span> key <span style=color:#f92672>in</span> src<span style=color:#f92672>.</span>keys():
-        <span style=color:#66d9ef>try</span>:
-            dst<span style=color:#f92672>.</span>restore(key, src<span style=color:#f92672>.</span>ttl(key), src<span style=color:#f92672>.</span>dump(key))
-        <span style=color:#66d9ef>except</span> RedisError:
-            print(<span style=color:#e6db74>&#39;Migrate </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> failed&#39;</span> <span style=color:#f92672>%</span> key)
-
-<span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
-    <span style=color:#75715e># 源redis的url，格式：</span>
-    <span style=color:#75715e>#redis://[:password]@host:port/db</span>
-    <span style=color:#75715e>#host,port必填项,如有密码,记得密码前加冒号,比如redis://localhost:6379/0</span>
-    src_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;redis://@127.0.0.1:6379/0&#34;</span>
-    <span style=color:#75715e># 迁移目标redis的url</span>
-    dst_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;redis://@127.0.0.1:16379/0&#34;</span>
-    <span style=color:#75715e># 执行</span>
-    <span style=color:#66d9ef>if</span> src_url <span style=color:#f92672>and</span> dst_url:
-        migrate(src_url, dst_url)
-</code></pre></div><p><strong>注意：</strong></p>
-<pre><code>使用时先安装依赖模块，命令是：pip install redis&gt;=2.10.5
+</div></header><div class=post-content>
+<p>redis单机版数据迁移。</p><p>从一个实例迁移到另一个实例，使用于本机不同端口迁移备份、其他机器间迁移备份。</p><p>工具是一个简单的python脚本，指定redis的源和目标信息即可。</p><p>脚本链接：<a href=https://github.com/staugur/scripts/blob/master/services/migrateredis.py>https://github.com/staugur/scripts/blob/master/services/migrateredis.py</a></p><p>其内容直接贴在下面：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># -*- coding: utf-8 -*-</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    migrateredis.py
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    ---------------
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    迁移redis数据，可以从本机迁移到其他机器，迁移一个库或多个库中数据。
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    原理：redis dump/restore命令
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    依赖：pip install redis&gt;=2.10.5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> redis <span style=color:#f92672>import</span> from_url, RedisError
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>migrate</span>(src_url, dst_url):
+</span></span><span style=display:flex><span>    src <span style=color:#f92672>=</span> from_url(src_url)
+</span></span><span style=display:flex><span>    dst <span style=color:#f92672>=</span> from_url(dst_url)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> key <span style=color:#f92672>in</span> src<span style=color:#f92672>.</span>keys():
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            dst<span style=color:#f92672>.</span>restore(key, src<span style=color:#f92672>.</span>ttl(key), src<span style=color:#f92672>.</span>dump(key))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> RedisError:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#39;Migrate </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> failed&#39;</span> <span style=color:#f92672>%</span> key)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 源redis的url，格式：</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>#redis://[:password]@host:port/db</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>#host,port必填项,如有密码,记得密码前加冒号,比如redis://localhost:6379/0</span>
+</span></span><span style=display:flex><span>    src_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;redis://@127.0.0.1:6379/0&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 迁移目标redis的url</span>
+</span></span><span style=display:flex><span>    dst_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;redis://@127.0.0.1:16379/0&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 执行</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> src_url <span style=color:#f92672>and</span> dst_url:
+</span></span><span style=display:flex><span>        migrate(src_url, dst_url)
+</span></span></code></pre></div><p><strong>注意：</strong></p><pre><code>使用时先安装依赖模块，命令是：pip install redis&gt;=2.10.5
 
 再修改src\_url和dst\_url，参见注释，然后用python执行此脚本。
-</code></pre>
-<p>FAQ:</p>
-<pre><code>1. pip install时提示not found command
+</code></pre><p>FAQ:</p><pre><code>1. pip install时提示not found command
 
     答：CentOS系统使用yum install \-y python-pip安装，Ubuntu使用apt-get install python-pip
-</code></pre>
-<br>
+</code></pre><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/265.html>https://blog.saintic.com/blog/265.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/redis.html rel=tag class=post-tags-link>#redis</a>
 <a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/264.html class=prev rel=prev title=服务器命令审计功能><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;服务器命令审计功能</a>
 <a href=https://blog.saintic.com/blog/266.html class=next rel=next title="Python-SecureHTTP - 基于RSA+AES的加密通信的代码实现">Python-SecureHTTP - 基于RSA+AES的加密通信的代码实现&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -220,12 +163,8 @@ in
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

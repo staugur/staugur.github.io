@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 Stunnel加密Squid代理服务 | 一念博客
-</title>
-<meta name=title content="Stunnel加密Squid代理服务 | 一念博客">
+</title><meta name=title content="Stunnel加密Squid代理服务 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Stunnel加密Squid代理服务","headline":"Stunnel加密Squid代理服务","description":"加密代理功能的实现，越过封锁限制，访问被墙的国外站点，比如Google、FaceBook。 用户访问配置了代理服务的浏览器（可使用扩展实现自动","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-10-27 00:00:00 \u002b0000 UTC","dateModified":"2016-10-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/95.html","wordCount":"1231","keywords":["linux","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ Stunnel加密Squid代理服务 | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,156 +46,94 @@ Stunnel加密Squid代理服务 | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <div class=toc>
-<div class=page-header><strong>- 目录 -</strong></div>
-<div id=page-scrollspy class=toc-nav>
+<div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#%e4%b8%80%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%ae%89%e8%a3%85squid%e5%92%8cstunnel>
 一、国外的服务器安装squid和stunnel
 </a>
-</li>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#1%e5%ae%89%e8%a3%85squid>
 1.安装Squid
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#2%e5%ae%89%e8%a3%85stunnel>
 2.安装Stunnel
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#3%e5%90%af%e5%8a%a8squid%e5%92%8cstunnel>
 3.启动squid和stunnel
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#%e4%ba%8c%e5%9b%bd%e5%86%85%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%ae%89%e8%a3%85stunnel>
 二、国内服务器安装stunnel
 </a>
-</li>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#1-%e5%ae%89%e8%a3%85stunnel>
 1. 安装stunnel
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#2-%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6>
 2. 修改配置文件
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#3-%e5%90%af%e5%8a%a8stunnel%e6%9c%8d%e5%8a%a1>
 3. 启动stunnel服务
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</div>
-</div>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
+</li></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">Stunnel加密Squid代理服务</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">Stunnel加密Squid代理服务</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2016-10-27 itemprop=datePublished>October 27, 2016</time>
@@ -209,140 +144,94 @@ in
 <a href=https://blog.saintic.com/categories/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1.html> 应用服务 </a>
 </span>
 <span class=post-word-count>1231 words</span>
-</div>
-</header>
-<div class=post-content>
-<p>加密代理功能的实现，越过封锁限制，访问被墙的国外站点，比如Google、FaceBook。</p>
-<p>用户访问配置了代理服务的浏览器（可使用扩展实现自动切换代理，代理服务即国内stunnel监听地址），
+</div></header><div class=post-content>
+<p>加密代理功能的实现，越过封锁限制，访问被墙的国外站点，比如Google、FaceBook。</p><p>用户访问配置了代理服务的浏览器（可使用扩展实现自动切换代理，代理服务即国内stunnel监听地址），
 国内stunnel开启加密连接国外stunnel再连接国外squid真实代理服务器请求实际网站并返回数据，
-如下架构图：</p>
-<p><img src=https://static.saintic.com/picbed/staugur/2020/12/08/stunnel-squid-arch.png alt=stunnel-squid-arch.png loading=lazy></p>
-<p>按照上述图，也就是需要两台服务器，不过可以简化，国内stunnel可以直接在用户个人笔记本/台式机
-启动，因为stunnel程序支持windows、macOS、Linux。</p>
-<p>以下步骤适用于CentOS/RHEL 7.x 系统，stunnel版本4.56</p>
-<h2 id=一国外的服务器安装squid和stunnel>一、国外的服务器安装squid和stunnel</h2>
-<h3 id=1安装squid>1.安装Squid</h3>
-<p><code>yum -y install squid</code></p>
-<p>也不用修改配置，因为单单squid代理根本翻不了墙，所以需要一个加密的通道，stunnel，而stunnel只需要连接localhost的squid端口即可。</p>
-<h3 id=2安装stunnel>2.安装Stunnel</h3>
-<p><code>yum -y install stunnel openssl openssl-devel</code></p>
-<p>生成pem证书：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cd /etc/stunnel/
-openssl req -new -x509 -days <span style=color:#ae81ff>365</span> -nodes -out stunnel.pem -keyout stunnel.pem
-openssl gendh <span style=color:#ae81ff>512</span> &gt;&gt; stunnel.pem <span style=color:#75715e>#警告：这行不是必须的</span>
-useradd -s /sbin/nologin -M stunnel
-touch stunnel.log <span style=color:#f92672>&amp;&amp;</span> chown stunnel:stunnel stunnel.log <span style=color:#75715e># 手动创建日志并授权，否则启动失败</span>
-</code></pre></div><p>修改/etc/stunnel/stunnel.conf(stunnel默认的配置文件)，复制以下内容：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=color:#a6e22e>cert</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
-<span style=color:#a6e22e>CAfile</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
-<span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>l:TCP_NODELAY=1</span>
-<span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>r:TCP_NODELAY=1</span>
-
-<span style=color:#75715e>;;;chroot = /var/run/stunnel</span>
-<span style=color:#a6e22e>pid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/tmp/stunnel.pid</span>
-<span style=color:#a6e22e>verify</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>3</span>
-
-<span style=color:#75715e>;;; CApath = certs</span>
-<span style=color:#75715e>;;; CRLpath = crls</span>
-<span style=color:#75715e>;;; CRLfile = crls.pem</span>
-
-<span style=color:#a6e22e>setuid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>stunnel</span>
-<span style=color:#a6e22e>setgid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>stunnel</span>
-
-<span style=color:#75715e>;;; client=yes</span>
-<span style=color:#a6e22e>compression</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>zlib</span>
-<span style=color:#75715e>;;; taskbar = no</span>
-<span style=color:#a6e22e>delay</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>no</span>
-<span style=color:#75715e>;;; failover = rr</span>
-<span style=color:#75715e>;;; failover = prio</span>
-<span style=color:#a6e22e>sslVersion</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>TLSv1</span>
-<span style=color:#75715e>;;; fips=no</span>
-
-<span style=color:#a6e22e>debug</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>7</span>
-<span style=color:#a6e22e>syslog</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>no</span>
-<span style=color:#a6e22e>output</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.log</span>
-
-<span style=color:#66d9ef>[sproxy]</span>
-<span style=color:#a6e22e>accept</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>34567</span>
-<span style=color:#a6e22e>connect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>127.0.0.1:3128</span>
-</code></pre></div><p>accept = 34567 是 stunned要监听的端口号</p>
-<p>connect = 127.0.0.1:3128 是Squid的监听地址和端口</p>
-<p>在参考的原文中 fips=no 是未被注释的，但在我机器上此参数导致不能启动，所以我才注释掉，如遇到无法启动，可去掉注释。</p>
-<p>另外，最好同步下国外服务器的时间，并与国内保持一致时区，否则有可能SSL验证错误。</p>
-<h3 id=3启动squid和stunnel>3.启动squid和stunnel</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>service squid start
-stunnel
-</code></pre></div><p>如果没有错误输出表示配置成功，并可以使用以下命令查看是否启动成功。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ps aux | grep -E <span style=color:#e6db74>&#34;squid|stunnel&#34;</span>
-netstat -an | grep “LISTEN” | grep -E <span style=color:#e6db74>&#34;squid|stunnel&#34;</span>
-</code></pre></div><h2 id=二国内服务器安装stunnel>二、国内服务器安装stunnel</h2>
-<h3 id=1-安装stunnel>1. 安装stunnel</h3>
-<p><code>yum -y install stunnel openssl-devel</code></p>
-<h3 id=2-修改配置文件>2. 修改配置文件</h3>
-<p>将国外服务器生成的stunnel.pem复制过来，唯一的不同在于配置文件中 <strong>sproxy</strong> 那段，
-编辑stunnel.conf：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=color:#a6e22e>cert</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
-<span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>l:TCP_NODELAY=1</span>
-<span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>r:TCP_NODELAY=1</span>
-<span style=color:#a6e22e>verify</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>2</span>
-<span style=color:#a6e22e>CAfile</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
-<span style=color:#a6e22e>client</span><span style=color:#f92672>=</span><span style=color:#e6db74>yes</span>
-<span style=color:#a6e22e>compression</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>zlib</span>
-<span style=color:#a6e22e>ciphers</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>AES256-SHA</span>
-<span style=color:#a6e22e>delay</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>no</span>
-<span style=color:#a6e22e>failover</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>prio</span>
-<span style=color:#a6e22e>sslVersion</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>TLSv1</span>
-<span style=color:#75715e>;; fips = no</span>
-<span style=color:#66d9ef>[sproxy]</span>
-<span style=color:#a6e22e>accept</span>  <span style=color:#f92672>=</span> <span style=color:#e6db74>0.0.0.0:7071</span>
-<span style=color:#a6e22e>connect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>国外服务器IP:34567</span>
-</code></pre></div><p>解释说明：
+如下架构图：</p><p><img src=https://static.saintic.com/picbed/staugur/2020/12/08/stunnel-squid-arch.png alt=stunnel-squid-arch.png loading=lazy></p><p>按照上述图，也就是需要两台服务器，不过可以简化，国内stunnel可以直接在用户个人笔记本/台式机
+启动，因为stunnel程序支持windows、macOS、Linux。</p><p>以下步骤适用于CentOS/RHEL 7.x 系统，stunnel版本4.56</p><h2 id=一国外的服务器安装squid和stunnel>一、国外的服务器安装squid和stunnel</h2><h3 id=1安装squid>1.安装Squid</h3><p><code>yum -y install squid</code></p><p>也不用修改配置，因为单单squid代理根本翻不了墙，所以需要一个加密的通道，stunnel，而stunnel只需要连接localhost的squid端口即可。</p><h3 id=2安装stunnel>2.安装Stunnel</h3><p><code>yum -y install stunnel openssl openssl-devel</code></p><p>生成pem证书：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cd /etc/stunnel/
+</span></span><span style=display:flex><span>openssl req -new -x509 -days <span style=color:#ae81ff>365</span> -nodes -out stunnel.pem -keyout stunnel.pem
+</span></span><span style=display:flex><span>openssl gendh <span style=color:#ae81ff>512</span> &gt;&gt; stunnel.pem <span style=color:#75715e>#警告：这行不是必须的</span>
+</span></span><span style=display:flex><span>useradd -s /sbin/nologin -M stunnel
+</span></span><span style=display:flex><span>touch stunnel.log <span style=color:#f92672>&amp;&amp;</span> chown stunnel:stunnel stunnel.log <span style=color:#75715e># 手动创建日志并授权，否则启动失败</span>
+</span></span></code></pre></div><p>修改/etc/stunnel/stunnel.conf(stunnel默认的配置文件)，复制以下内容：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#a6e22e>cert</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>CAfile</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>l:TCP_NODELAY=1</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>r:TCP_NODELAY=1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;;chroot = /var/run/stunnel</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>pid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/tmp/stunnel.pid</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>verify</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>3</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; CApath = certs</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; CRLpath = crls</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; CRLfile = crls.pem</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setuid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>stunnel</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setgid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>stunnel</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; client=yes</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>compression</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>zlib</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; taskbar = no</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>delay</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>no</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; failover = rr</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; failover = prio</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>sslVersion</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>TLSv1</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;; fips=no</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>debug</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>7</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>syslog</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>no</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>output</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.log</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>[sproxy]</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>accept</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>34567</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>connect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>127.0.0.1:3128</span>
+</span></span></code></pre></div><p>accept = 34567 是 stunned要监听的端口号</p><p>connect = 127.0.0.1:3128 是Squid的监听地址和端口</p><p>在参考的原文中 fips=no 是未被注释的，但在我机器上此参数导致不能启动，所以我才注释掉，如遇到无法启动，可去掉注释。</p><p>另外，最好同步下国外服务器的时间，并与国内保持一致时区，否则有可能SSL验证错误。</p><h3 id=3启动squid和stunnel>3.启动squid和stunnel</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>service squid start
+</span></span><span style=display:flex><span>stunnel
+</span></span></code></pre></div><p>如果没有错误输出表示配置成功，并可以使用以下命令查看是否启动成功。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ps aux | grep -E <span style=color:#e6db74>&#34;squid|stunnel&#34;</span>
+</span></span><span style=display:flex><span>netstat -an | grep “LISTEN” | grep -E <span style=color:#e6db74>&#34;squid|stunnel&#34;</span>
+</span></span></code></pre></div><h2 id=二国内服务器安装stunnel>二、国内服务器安装stunnel</h2><h3 id=1-安装stunnel>1. 安装stunnel</h3><p><code>yum -y install stunnel openssl-devel</code></p><h3 id=2-修改配置文件>2. 修改配置文件</h3><p>将国外服务器生成的stunnel.pem复制过来，唯一的不同在于配置文件中 <strong>sproxy</strong> 那段，
+编辑stunnel.conf：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#a6e22e>cert</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>l:TCP_NODELAY=1</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>socket</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>r:TCP_NODELAY=1</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>verify</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>2</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>CAfile</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/etc/stunnel/stunnel.pem</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>client</span><span style=color:#f92672>=</span><span style=color:#e6db74>yes</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>compression</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>zlib</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ciphers</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>AES256-SHA</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>delay</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>no</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>failover</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>prio</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>sslVersion</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>TLSv1</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;; fips = no</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>[sproxy]</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>accept</span>  <span style=color:#f92672>=</span> <span style=color:#e6db74>0.0.0.0:7071</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>connect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>国外服务器IP:34567</span>
+</span></span></code></pre></div><p>解释说明：
 accept = 0.0.0.0:7071 即是用户要设置的端口，
-connect = 国外服务器IP:34567 ，即国外服务器IP和Stunnel监听的端口号</p>
-<h3 id=3-启动stunnel服务>3. 启动stunnel服务</h3>
-<p><code>stunnel</code></p>
-<p>此时用户连接到国内服务器7071作为代理就可以访问一些被墙的网站。</p>
-<p>在国内没有服务器，可以在本地安装的一个Stunnel，用来加解密，所以没有国内服务也不要紧。</p>
-<p>去stunnel官网下载一个windows版的客户端（也许被qiang，<a href=https://static.saintic.com/download/soft/stunnel-5.55-win64-installer.exe>这里</a>是5.55，可直接下载），将上面国内服务器的stunnel.conf配置文件和国外服务器stunnel.pem证书放到stunnel安装目录/config/下启动即可。
-<br></p>
-<center> ·End· </center>
-</div>
-<div class=post-copyright>
+connect = 国外服务器IP:34567 ，即国外服务器IP和Stunnel监听的端口号</p><h3 id=3-启动stunnel服务>3. 启动stunnel服务</h3><p><code>stunnel</code></p><p>此时用户连接到国内服务器7071作为代理就可以访问一些被墙的网站。</p><p>在国内没有服务器，可以在本地安装的一个Stunnel，用来加解密，所以没有国内服务也不要紧。</p><p>去stunnel官网下载一个windows版的客户端（也许被qiang，<a href=https://static.saintic.com/download/soft/stunnel-5.55-win64-installer.exe>这里</a>是5.55，可直接下载），将上面国内服务器的stunnel.conf配置文件和国外服务器stunnel.pem证书放到stunnel安装目录/config/下启动即可。
+<br></p><center> ·End· </center>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/95.html>https://blog.saintic.com/blog/95.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/linux.html rel=tag class=post-tags-link>#linux</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/89.html class=prev rel=prev title="Update nginx version"><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;Update nginx version</a>
 <a href=https://blog.saintic.com/blog/86.html class=next rel=next title=Python获取系统信息(CPU、Mem、Disk、Network、User等)>Python获取系统信息(CPU、Mem、Disk、Network、User等)&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -352,12 +241,8 @@ connect = 国外服务器IP:34567 ，即国外服务器IP和Stunnel监听的端�
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

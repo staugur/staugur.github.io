@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 10进制、64进制互相转换 | 一念博客
-</title>
-<meta name=title content="10进制、64进制互相转换 | 一念博客">
+</title><meta name=title content="10进制、64进制互相转换 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"10进制、64进制互相转换","headline":"10进制、64进制互相转换","description":"10 进制转为 62 进制网上有不少文章的，64 进制也就是多了 - _ 这种 10 进制转到高进制，常用在短网址缩短服务中，以下片段是之前 shorturl 跳转程序的部分 编码方法","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-01-26 00:00:00 \u002b0000 UTC","dateModified":"2021-01-26 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/304.html","wordCount":"798","keywords":["python","go","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,90 +46,52 @@
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <div class=toc>
-<div class=page-header><strong>- 目录 -</strong></div>
-<div id=page-scrollspy class=toc-nav>
+<div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav>
 <ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#python>
 Python
 </a>
-</li>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul><ul class=nav>
 <ul class=nav>
 <li class=nav-item>
 <a class="nav-link text-left" href=#golang>
 Golang
 </a>
-</li>
-</ul>
-</ul>
-</div>
-</div>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
+</li></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">10进制、64进制互相转换</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">10进制、64进制互相转换</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2021-01-26 itemprop=datePublished>January 26, 2021</time>
@@ -143,236 +102,214 @@ in
 <a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html> 开发 </a>
 </span>
 <span class=post-word-count>798 words</span>
-</div>
-</header>
-<div class=post-content>
-<p>10 进制转为 62 进制网上有不少文章的，64 进制也就是多了 <code>-</code> <code>_</code></p>
-<p>这种 10 进制转到高进制，常用在短网址缩短服务中，以下片段是之前 shorturl 跳转程序的部分
-编码方法，Python 和 Golang 的。</p>
-<h2 id=python>Python</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#coding:utf8</span>
-
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>encode_b64</span>(number):
-    <span style=color:#e6db74>&#34;&#34;&#34;10进制编码为64进制&#34;&#34;&#34;</span>
-    number <span style=color:#f92672>=</span> int(number)
-    table <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_&#39;</span>
-    result <span style=color:#f92672>=</span> []
-    temp <span style=color:#f92672>=</span> number
-    <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>==</span> temp:
-        result<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#39;0&#39;</span>)
-    <span style=color:#66d9ef>else</span>:
-        <span style=color:#66d9ef>while</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>&lt;</span> temp:
-            result<span style=color:#f92672>.</span>append(table[temp <span style=color:#f92672>%</span> <span style=color:#ae81ff>64</span>])
-            temp <span style=color:#f92672>/=</span> <span style=color:#ae81ff>64</span>
-    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join([x <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> reversed(result)])
-
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>decode_b64</span>(string):
-    <span style=color:#e6db74>&#34;&#34;&#34;64进制解码为10进制&#34;&#34;&#34;</span>
-    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> string <span style=color:#f92672>or</span> <span style=color:#f92672>not</span> isinstance(string, basestring):
-        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>TypeError</span>(<span style=color:#e6db74>&#34;Invalid string&#34;</span>)
-    table <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;0&#34;</span>: <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#34;1&#34;</span>: <span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#34;2&#34;</span>: <span style=color:#ae81ff>2</span>, <span style=color:#e6db74>&#34;3&#34;</span>: <span style=color:#ae81ff>3</span>, <span style=color:#e6db74>&#34;4&#34;</span>: <span style=color:#ae81ff>4</span>, <span style=color:#e6db74>&#34;5&#34;</span>: <span style=color:#ae81ff>5</span>,
-             <span style=color:#e6db74>&#34;6&#34;</span>: <span style=color:#ae81ff>6</span>, <span style=color:#e6db74>&#34;7&#34;</span>: <span style=color:#ae81ff>7</span>, <span style=color:#e6db74>&#34;8&#34;</span>: <span style=color:#ae81ff>8</span>, <span style=color:#e6db74>&#34;9&#34;</span>: <span style=color:#ae81ff>9</span>,
-             <span style=color:#e6db74>&#34;a&#34;</span>: <span style=color:#ae81ff>10</span>, <span style=color:#e6db74>&#34;b&#34;</span>: <span style=color:#ae81ff>11</span>, <span style=color:#e6db74>&#34;c&#34;</span>: <span style=color:#ae81ff>12</span>, <span style=color:#e6db74>&#34;d&#34;</span>: <span style=color:#ae81ff>13</span>, <span style=color:#e6db74>&#34;e&#34;</span>: <span style=color:#ae81ff>14</span>, <span style=color:#e6db74>&#34;f&#34;</span>: <span style=color:#ae81ff>15</span>, <span style=color:#e6db74>&#34;g&#34;</span>: <span style=color:#ae81ff>16</span>,
-             <span style=color:#e6db74>&#34;h&#34;</span>: <span style=color:#ae81ff>17</span>, <span style=color:#e6db74>&#34;i&#34;</span>: <span style=color:#ae81ff>18</span>, <span style=color:#e6db74>&#34;j&#34;</span>: <span style=color:#ae81ff>19</span>, <span style=color:#e6db74>&#34;k&#34;</span>: <span style=color:#ae81ff>20</span>, <span style=color:#e6db74>&#34;l&#34;</span>: <span style=color:#ae81ff>21</span>, <span style=color:#e6db74>&#34;m&#34;</span>: <span style=color:#ae81ff>22</span>, <span style=color:#e6db74>&#34;n&#34;</span>: <span style=color:#ae81ff>23</span>,
-             <span style=color:#e6db74>&#34;o&#34;</span>: <span style=color:#ae81ff>24</span>, <span style=color:#e6db74>&#34;p&#34;</span>: <span style=color:#ae81ff>25</span>, <span style=color:#e6db74>&#34;q&#34;</span>: <span style=color:#ae81ff>26</span>, <span style=color:#e6db74>&#34;r&#34;</span>: <span style=color:#ae81ff>27</span>, <span style=color:#e6db74>&#34;s&#34;</span>: <span style=color:#ae81ff>28</span>, <span style=color:#e6db74>&#34;t&#34;</span>: <span style=color:#ae81ff>29</span>, <span style=color:#e6db74>&#34;u&#34;</span>: <span style=color:#ae81ff>30</span>,
-             <span style=color:#e6db74>&#34;v&#34;</span>: <span style=color:#ae81ff>31</span>, <span style=color:#e6db74>&#34;w&#34;</span>: <span style=color:#ae81ff>32</span>, <span style=color:#e6db74>&#34;x&#34;</span>: <span style=color:#ae81ff>33</span>, <span style=color:#e6db74>&#34;y&#34;</span>: <span style=color:#ae81ff>34</span>, <span style=color:#e6db74>&#34;z&#34;</span>: <span style=color:#ae81ff>35</span>,
-             <span style=color:#e6db74>&#34;A&#34;</span>: <span style=color:#ae81ff>36</span>, <span style=color:#e6db74>&#34;B&#34;</span>: <span style=color:#ae81ff>37</span>, <span style=color:#e6db74>&#34;C&#34;</span>: <span style=color:#ae81ff>38</span>, <span style=color:#e6db74>&#34;D&#34;</span>: <span style=color:#ae81ff>39</span>, <span style=color:#e6db74>&#34;E&#34;</span>: <span style=color:#ae81ff>40</span>, <span style=color:#e6db74>&#34;F&#34;</span>: <span style=color:#ae81ff>41</span>, <span style=color:#e6db74>&#34;G&#34;</span>: <span style=color:#ae81ff>42</span>,
-             <span style=color:#e6db74>&#34;H&#34;</span>: <span style=color:#ae81ff>43</span>, <span style=color:#e6db74>&#34;I&#34;</span>: <span style=color:#ae81ff>44</span>, <span style=color:#e6db74>&#34;J&#34;</span>: <span style=color:#ae81ff>45</span>, <span style=color:#e6db74>&#34;K&#34;</span>: <span style=color:#ae81ff>46</span>, <span style=color:#e6db74>&#34;L&#34;</span>: <span style=color:#ae81ff>47</span>, <span style=color:#e6db74>&#34;M&#34;</span>: <span style=color:#ae81ff>48</span>, <span style=color:#e6db74>&#34;N&#34;</span>: <span style=color:#ae81ff>49</span>,
-             <span style=color:#e6db74>&#34;O&#34;</span>: <span style=color:#ae81ff>50</span>, <span style=color:#e6db74>&#34;P&#34;</span>: <span style=color:#ae81ff>51</span>, <span style=color:#e6db74>&#34;Q&#34;</span>: <span style=color:#ae81ff>52</span>, <span style=color:#e6db74>&#34;R&#34;</span>: <span style=color:#ae81ff>53</span>, <span style=color:#e6db74>&#34;S&#34;</span>: <span style=color:#ae81ff>54</span>, <span style=color:#e6db74>&#34;T&#34;</span>: <span style=color:#ae81ff>55</span>, <span style=color:#e6db74>&#34;U&#34;</span>: <span style=color:#ae81ff>56</span>,
-             <span style=color:#e6db74>&#34;V&#34;</span>: <span style=color:#ae81ff>57</span>, <span style=color:#e6db74>&#34;W&#34;</span>: <span style=color:#ae81ff>58</span>, <span style=color:#e6db74>&#34;X&#34;</span>: <span style=color:#ae81ff>59</span>, <span style=color:#e6db74>&#34;Y&#34;</span>: <span style=color:#ae81ff>60</span>, <span style=color:#e6db74>&#34;Z&#34;</span>: <span style=color:#ae81ff>61</span>,
-             <span style=color:#e6db74>&#34;-&#34;</span>: <span style=color:#ae81ff>62</span>, <span style=color:#e6db74>&#34;_&#34;</span>: <span style=color:#ae81ff>63</span>}
-    result <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
-    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> xrange(len(string)):
-        result <span style=color:#f92672>*=</span> <span style=color:#ae81ff>64</span>
-        result <span style=color:#f92672>+=</span> table[string[i]]
-    <span style=color:#66d9ef>return</span> result
-
-<span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
-    <span style=color:#e6db74>&#39;&#39;&#39;
-</span><span style=color:#e6db74>    for n in range(0, 100):
-</span><span style=color:#e6db74>        e = encode_b64(n)
-</span><span style=color:#e6db74>        print(n, e, decode_b64(e))
-</span><span style=color:#e6db74>    &#39;&#39;&#39;</span>
-    <span style=color:#f92672>from</span> sys <span style=color:#f92672>import</span> argv
-    n <span style=color:#f92672>=</span> argv[<span style=color:#ae81ff>1</span>]
-    e <span style=color:#f92672>=</span> encode_b64(n)
-    print(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(n, e, decode_b64(e)))
-    print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
-</code></pre></div><p>用法：将上述代码保存成 xx.py，执行：<code>python xx.py 正整数</code></p>
-<h2 id=golang>Golang</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
-
-<span style=color:#f92672>import</span> (
-	<span style=color:#e6db74>&#34;flag&#34;</span>
-	<span style=color:#e6db74>&#34;fmt&#34;</span>
-	<span style=color:#e6db74>&#34;math&#34;</span>
-	<span style=color:#e6db74>&#34;strconv&#34;</span>
-	<span style=color:#e6db74>&#34;strings&#34;</span>
-)
-
-<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>tenToAny</span> <span style=color:#66d9ef>map</span>[<span style=color:#66d9ef>int</span>]<span style=color:#66d9ef>string</span> = <span style=color:#66d9ef>map</span>[<span style=color:#66d9ef>int</span>]<span style=color:#66d9ef>string</span>{
-	<span style=color:#ae81ff>0</span>:  <span style=color:#e6db74>&#34;0&#34;</span>,
-	<span style=color:#ae81ff>1</span>:  <span style=color:#e6db74>&#34;1&#34;</span>,
-	<span style=color:#ae81ff>2</span>:  <span style=color:#e6db74>&#34;2&#34;</span>,
-	<span style=color:#ae81ff>3</span>:  <span style=color:#e6db74>&#34;3&#34;</span>,
-	<span style=color:#ae81ff>4</span>:  <span style=color:#e6db74>&#34;4&#34;</span>,
-	<span style=color:#ae81ff>5</span>:  <span style=color:#e6db74>&#34;5&#34;</span>,
-	<span style=color:#ae81ff>6</span>:  <span style=color:#e6db74>&#34;6&#34;</span>,
-	<span style=color:#ae81ff>7</span>:  <span style=color:#e6db74>&#34;7&#34;</span>,
-	<span style=color:#ae81ff>8</span>:  <span style=color:#e6db74>&#34;8&#34;</span>,
-	<span style=color:#ae81ff>9</span>:  <span style=color:#e6db74>&#34;9&#34;</span>,
-	<span style=color:#ae81ff>10</span>: <span style=color:#e6db74>&#34;a&#34;</span>,
-	<span style=color:#ae81ff>11</span>: <span style=color:#e6db74>&#34;b&#34;</span>,
-	<span style=color:#ae81ff>12</span>: <span style=color:#e6db74>&#34;c&#34;</span>,
-	<span style=color:#ae81ff>13</span>: <span style=color:#e6db74>&#34;d&#34;</span>,
-	<span style=color:#ae81ff>14</span>: <span style=color:#e6db74>&#34;e&#34;</span>,
-	<span style=color:#ae81ff>15</span>: <span style=color:#e6db74>&#34;f&#34;</span>,
-	<span style=color:#ae81ff>16</span>: <span style=color:#e6db74>&#34;g&#34;</span>,
-	<span style=color:#ae81ff>17</span>: <span style=color:#e6db74>&#34;h&#34;</span>,
-	<span style=color:#ae81ff>18</span>: <span style=color:#e6db74>&#34;i&#34;</span>,
-	<span style=color:#ae81ff>19</span>: <span style=color:#e6db74>&#34;j&#34;</span>,
-	<span style=color:#ae81ff>20</span>: <span style=color:#e6db74>&#34;k&#34;</span>,
-	<span style=color:#ae81ff>21</span>: <span style=color:#e6db74>&#34;l&#34;</span>,
-	<span style=color:#ae81ff>22</span>: <span style=color:#e6db74>&#34;m&#34;</span>,
-	<span style=color:#ae81ff>23</span>: <span style=color:#e6db74>&#34;n&#34;</span>,
-	<span style=color:#ae81ff>24</span>: <span style=color:#e6db74>&#34;o&#34;</span>,
-	<span style=color:#ae81ff>25</span>: <span style=color:#e6db74>&#34;p&#34;</span>,
-	<span style=color:#ae81ff>26</span>: <span style=color:#e6db74>&#34;q&#34;</span>,
-	<span style=color:#ae81ff>27</span>: <span style=color:#e6db74>&#34;r&#34;</span>,
-	<span style=color:#ae81ff>28</span>: <span style=color:#e6db74>&#34;s&#34;</span>,
-	<span style=color:#ae81ff>29</span>: <span style=color:#e6db74>&#34;t&#34;</span>,
-	<span style=color:#ae81ff>30</span>: <span style=color:#e6db74>&#34;u&#34;</span>,
-	<span style=color:#ae81ff>31</span>: <span style=color:#e6db74>&#34;v&#34;</span>,
-	<span style=color:#ae81ff>32</span>: <span style=color:#e6db74>&#34;w&#34;</span>,
-	<span style=color:#ae81ff>33</span>: <span style=color:#e6db74>&#34;x&#34;</span>,
-	<span style=color:#ae81ff>34</span>: <span style=color:#e6db74>&#34;y&#34;</span>,
-	<span style=color:#ae81ff>35</span>: <span style=color:#e6db74>&#34;z&#34;</span>,
-	<span style=color:#ae81ff>36</span>: <span style=color:#e6db74>&#34;A&#34;</span>,
-	<span style=color:#ae81ff>37</span>: <span style=color:#e6db74>&#34;B&#34;</span>,
-	<span style=color:#ae81ff>38</span>: <span style=color:#e6db74>&#34;C&#34;</span>,
-	<span style=color:#ae81ff>39</span>: <span style=color:#e6db74>&#34;D&#34;</span>,
-	<span style=color:#ae81ff>40</span>: <span style=color:#e6db74>&#34;E&#34;</span>,
-	<span style=color:#ae81ff>41</span>: <span style=color:#e6db74>&#34;F&#34;</span>,
-	<span style=color:#ae81ff>42</span>: <span style=color:#e6db74>&#34;G&#34;</span>,
-	<span style=color:#ae81ff>43</span>: <span style=color:#e6db74>&#34;H&#34;</span>,
-	<span style=color:#ae81ff>44</span>: <span style=color:#e6db74>&#34;I&#34;</span>,
-	<span style=color:#ae81ff>45</span>: <span style=color:#e6db74>&#34;J&#34;</span>,
-	<span style=color:#ae81ff>46</span>: <span style=color:#e6db74>&#34;K&#34;</span>,
-	<span style=color:#ae81ff>47</span>: <span style=color:#e6db74>&#34;L&#34;</span>,
-	<span style=color:#ae81ff>48</span>: <span style=color:#e6db74>&#34;M&#34;</span>,
-	<span style=color:#ae81ff>49</span>: <span style=color:#e6db74>&#34;N&#34;</span>,
-	<span style=color:#ae81ff>50</span>: <span style=color:#e6db74>&#34;O&#34;</span>,
-	<span style=color:#ae81ff>51</span>: <span style=color:#e6db74>&#34;P&#34;</span>,
-	<span style=color:#ae81ff>52</span>: <span style=color:#e6db74>&#34;Q&#34;</span>,
-	<span style=color:#ae81ff>53</span>: <span style=color:#e6db74>&#34;R&#34;</span>,
-	<span style=color:#ae81ff>54</span>: <span style=color:#e6db74>&#34;S&#34;</span>,
-	<span style=color:#ae81ff>55</span>: <span style=color:#e6db74>&#34;T&#34;</span>,
-	<span style=color:#ae81ff>56</span>: <span style=color:#e6db74>&#34;U&#34;</span>,
-	<span style=color:#ae81ff>57</span>: <span style=color:#e6db74>&#34;V&#34;</span>,
-	<span style=color:#ae81ff>58</span>: <span style=color:#e6db74>&#34;W&#34;</span>,
-	<span style=color:#ae81ff>59</span>: <span style=color:#e6db74>&#34;X&#34;</span>,
-	<span style=color:#ae81ff>60</span>: <span style=color:#e6db74>&#34;Y&#34;</span>,
-	<span style=color:#ae81ff>61</span>: <span style=color:#e6db74>&#34;Z&#34;</span>,
-	<span style=color:#ae81ff>62</span>: <span style=color:#e6db74>&#34;-&#34;</span>,
-    <span style=color:#ae81ff>63</span>: <span style=color:#e6db74>&#34;_&#34;</span>,
-}
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
-    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>num</span> <span style=color:#66d9ef>int</span>
-	<span style=color:#a6e22e>flag</span>.<span style=color:#a6e22e>IntVar</span>(<span style=color:#f92672>&amp;</span><span style=color:#a6e22e>num</span>, <span style=color:#e6db74>&#34;num&#34;</span>, <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#34;number&#34;</span>)
-    <span style=color:#a6e22e>flag</span>.<span style=color:#a6e22e>Parse</span>()
-
-    <span style=color:#75715e>//n, _ := strconv.Atoi(num)
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>e</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>decimalToAny</span>(<span style=color:#a6e22e>num</span>, <span style=color:#ae81ff>64</span>)
-	<span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Println</span>(<span style=color:#a6e22e>num</span>, <span style=color:#a6e22e>e</span>, <span style=color:#a6e22e>anyToDecimal</span>(<span style=color:#a6e22e>e</span>, <span style=color:#ae81ff>64</span>))
-}
-
-<span style=color:#75715e>// 10进制转任意进制
-</span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>decimalToAny</span>(<span style=color:#a6e22e>num</span>, <span style=color:#a6e22e>n</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>string</span> {
-	<span style=color:#a6e22e>new_num_str</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;&#34;</span>
-	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>remainder</span> <span style=color:#66d9ef>int</span>
-	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>remainder_string</span> <span style=color:#66d9ef>string</span>
-	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>num</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span> {
-		<span style=color:#a6e22e>remainder</span> = <span style=color:#a6e22e>num</span> <span style=color:#f92672>%</span> <span style=color:#a6e22e>n</span>
-		<span style=color:#66d9ef>if</span> <span style=color:#ae81ff>76</span> &gt; <span style=color:#a6e22e>remainder</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>remainder</span> &gt; <span style=color:#ae81ff>9</span> {
-			<span style=color:#a6e22e>remainder_string</span> = <span style=color:#a6e22e>tenToAny</span>[<span style=color:#a6e22e>remainder</span>]
-		} <span style=color:#66d9ef>else</span> {
-			<span style=color:#a6e22e>remainder_string</span> = <span style=color:#a6e22e>strconv</span>.<span style=color:#a6e22e>Itoa</span>(<span style=color:#a6e22e>remainder</span>)
-		}
-		<span style=color:#a6e22e>new_num_str</span> = <span style=color:#a6e22e>remainder_string</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>new_num_str</span>
-		<span style=color:#a6e22e>num</span> = <span style=color:#a6e22e>num</span> <span style=color:#f92672>/</span> <span style=color:#a6e22e>n</span>
-	}
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>new_num_str</span>
-}
-
-<span style=color:#75715e>// map根据value找key
-</span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>findKey</span>(<span style=color:#a6e22e>in</span> <span style=color:#66d9ef>string</span>) <span style=color:#66d9ef>int</span> {
-	<span style=color:#a6e22e>result</span> <span style=color:#f92672>:=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
-	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>k</span>, <span style=color:#a6e22e>v</span> <span style=color:#f92672>:=</span> <span style=color:#66d9ef>range</span> <span style=color:#a6e22e>tenToAny</span> {
-		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>in</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>v</span> {
-			<span style=color:#a6e22e>result</span> = <span style=color:#a6e22e>k</span>
-		}
-	}
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>result</span>
-}
-
-<span style=color:#75715e>// 任意进制转10进制
-</span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>anyToDecimal</span>(<span style=color:#a6e22e>num</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>n</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>int</span> {
-	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>new_num</span> <span style=color:#66d9ef>float64</span>
-	<span style=color:#a6e22e>new_num</span> = <span style=color:#ae81ff>0.0</span>
-	<span style=color:#a6e22e>nNum</span> <span style=color:#f92672>:=</span> len(<span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>num</span>, <span style=color:#e6db74>&#34;&#34;</span>)) <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
-	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>_</span>, <span style=color:#a6e22e>value</span> <span style=color:#f92672>:=</span> <span style=color:#66d9ef>range</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>num</span>, <span style=color:#e6db74>&#34;&#34;</span>) {
-		<span style=color:#a6e22e>tmp</span> <span style=color:#f92672>:=</span> float64(<span style=color:#a6e22e>findKey</span>(<span style=color:#a6e22e>value</span>))
-		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>tmp</span> <span style=color:#f92672>!=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span> {
-			<span style=color:#a6e22e>new_num</span> = <span style=color:#a6e22e>new_num</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>tmp</span><span style=color:#f92672>*</span><span style=color:#a6e22e>math</span>.<span style=color:#a6e22e>Pow</span>(float64(<span style=color:#a6e22e>n</span>), float64(<span style=color:#a6e22e>nNum</span>))
-			<span style=color:#a6e22e>nNum</span> = <span style=color:#a6e22e>nNum</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
-		} <span style=color:#66d9ef>else</span> {
-			<span style=color:#66d9ef>break</span>
-		}
-	}
-	<span style=color:#66d9ef>return</span> int(<span style=color:#a6e22e>new_num</span>)
-}
-</code></pre></div><p>用法：将上述代码保存成 xx.go，执行：<code>go run xx.go -num 正整数</code></p>
-<br>
+</div></header><div class=post-content>
+<p>10 进制转为 62 进制网上有不少文章的，64 进制也就是多了 <code>-</code> <code>_</code></p><p>这种 10 进制转到高进制，常用在短网址缩短服务中，以下片段是之前 shorturl 跳转程序的部分
+编码方法，Python 和 Golang 的。</p><h2 id=python>Python</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e>#coding:utf8</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>encode_b64</span>(number):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;10进制编码为64进制&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    number <span style=color:#f92672>=</span> int(number)
+</span></span><span style=display:flex><span>    table <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_&#39;</span>
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    temp <span style=color:#f92672>=</span> number
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>==</span> temp:
+</span></span><span style=display:flex><span>        result<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#39;0&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>&lt;</span> temp:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(table[temp <span style=color:#f92672>%</span> <span style=color:#ae81ff>64</span>])
+</span></span><span style=display:flex><span>            temp <span style=color:#f92672>/=</span> <span style=color:#ae81ff>64</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join([x <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> reversed(result)])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>decode_b64</span>(string):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;64进制解码为10进制&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> string <span style=color:#f92672>or</span> <span style=color:#f92672>not</span> isinstance(string, basestring):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>TypeError</span>(<span style=color:#e6db74>&#34;Invalid string&#34;</span>)
+</span></span><span style=display:flex><span>    table <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;0&#34;</span>: <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#34;1&#34;</span>: <span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#34;2&#34;</span>: <span style=color:#ae81ff>2</span>, <span style=color:#e6db74>&#34;3&#34;</span>: <span style=color:#ae81ff>3</span>, <span style=color:#e6db74>&#34;4&#34;</span>: <span style=color:#ae81ff>4</span>, <span style=color:#e6db74>&#34;5&#34;</span>: <span style=color:#ae81ff>5</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;6&#34;</span>: <span style=color:#ae81ff>6</span>, <span style=color:#e6db74>&#34;7&#34;</span>: <span style=color:#ae81ff>7</span>, <span style=color:#e6db74>&#34;8&#34;</span>: <span style=color:#ae81ff>8</span>, <span style=color:#e6db74>&#34;9&#34;</span>: <span style=color:#ae81ff>9</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;a&#34;</span>: <span style=color:#ae81ff>10</span>, <span style=color:#e6db74>&#34;b&#34;</span>: <span style=color:#ae81ff>11</span>, <span style=color:#e6db74>&#34;c&#34;</span>: <span style=color:#ae81ff>12</span>, <span style=color:#e6db74>&#34;d&#34;</span>: <span style=color:#ae81ff>13</span>, <span style=color:#e6db74>&#34;e&#34;</span>: <span style=color:#ae81ff>14</span>, <span style=color:#e6db74>&#34;f&#34;</span>: <span style=color:#ae81ff>15</span>, <span style=color:#e6db74>&#34;g&#34;</span>: <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;h&#34;</span>: <span style=color:#ae81ff>17</span>, <span style=color:#e6db74>&#34;i&#34;</span>: <span style=color:#ae81ff>18</span>, <span style=color:#e6db74>&#34;j&#34;</span>: <span style=color:#ae81ff>19</span>, <span style=color:#e6db74>&#34;k&#34;</span>: <span style=color:#ae81ff>20</span>, <span style=color:#e6db74>&#34;l&#34;</span>: <span style=color:#ae81ff>21</span>, <span style=color:#e6db74>&#34;m&#34;</span>: <span style=color:#ae81ff>22</span>, <span style=color:#e6db74>&#34;n&#34;</span>: <span style=color:#ae81ff>23</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;o&#34;</span>: <span style=color:#ae81ff>24</span>, <span style=color:#e6db74>&#34;p&#34;</span>: <span style=color:#ae81ff>25</span>, <span style=color:#e6db74>&#34;q&#34;</span>: <span style=color:#ae81ff>26</span>, <span style=color:#e6db74>&#34;r&#34;</span>: <span style=color:#ae81ff>27</span>, <span style=color:#e6db74>&#34;s&#34;</span>: <span style=color:#ae81ff>28</span>, <span style=color:#e6db74>&#34;t&#34;</span>: <span style=color:#ae81ff>29</span>, <span style=color:#e6db74>&#34;u&#34;</span>: <span style=color:#ae81ff>30</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;v&#34;</span>: <span style=color:#ae81ff>31</span>, <span style=color:#e6db74>&#34;w&#34;</span>: <span style=color:#ae81ff>32</span>, <span style=color:#e6db74>&#34;x&#34;</span>: <span style=color:#ae81ff>33</span>, <span style=color:#e6db74>&#34;y&#34;</span>: <span style=color:#ae81ff>34</span>, <span style=color:#e6db74>&#34;z&#34;</span>: <span style=color:#ae81ff>35</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;A&#34;</span>: <span style=color:#ae81ff>36</span>, <span style=color:#e6db74>&#34;B&#34;</span>: <span style=color:#ae81ff>37</span>, <span style=color:#e6db74>&#34;C&#34;</span>: <span style=color:#ae81ff>38</span>, <span style=color:#e6db74>&#34;D&#34;</span>: <span style=color:#ae81ff>39</span>, <span style=color:#e6db74>&#34;E&#34;</span>: <span style=color:#ae81ff>40</span>, <span style=color:#e6db74>&#34;F&#34;</span>: <span style=color:#ae81ff>41</span>, <span style=color:#e6db74>&#34;G&#34;</span>: <span style=color:#ae81ff>42</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;H&#34;</span>: <span style=color:#ae81ff>43</span>, <span style=color:#e6db74>&#34;I&#34;</span>: <span style=color:#ae81ff>44</span>, <span style=color:#e6db74>&#34;J&#34;</span>: <span style=color:#ae81ff>45</span>, <span style=color:#e6db74>&#34;K&#34;</span>: <span style=color:#ae81ff>46</span>, <span style=color:#e6db74>&#34;L&#34;</span>: <span style=color:#ae81ff>47</span>, <span style=color:#e6db74>&#34;M&#34;</span>: <span style=color:#ae81ff>48</span>, <span style=color:#e6db74>&#34;N&#34;</span>: <span style=color:#ae81ff>49</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;O&#34;</span>: <span style=color:#ae81ff>50</span>, <span style=color:#e6db74>&#34;P&#34;</span>: <span style=color:#ae81ff>51</span>, <span style=color:#e6db74>&#34;Q&#34;</span>: <span style=color:#ae81ff>52</span>, <span style=color:#e6db74>&#34;R&#34;</span>: <span style=color:#ae81ff>53</span>, <span style=color:#e6db74>&#34;S&#34;</span>: <span style=color:#ae81ff>54</span>, <span style=color:#e6db74>&#34;T&#34;</span>: <span style=color:#ae81ff>55</span>, <span style=color:#e6db74>&#34;U&#34;</span>: <span style=color:#ae81ff>56</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;V&#34;</span>: <span style=color:#ae81ff>57</span>, <span style=color:#e6db74>&#34;W&#34;</span>: <span style=color:#ae81ff>58</span>, <span style=color:#e6db74>&#34;X&#34;</span>: <span style=color:#ae81ff>59</span>, <span style=color:#e6db74>&#34;Y&#34;</span>: <span style=color:#ae81ff>60</span>, <span style=color:#e6db74>&#34;Z&#34;</span>: <span style=color:#ae81ff>61</span>,
+</span></span><span style=display:flex><span>             <span style=color:#e6db74>&#34;-&#34;</span>: <span style=color:#ae81ff>62</span>, <span style=color:#e6db74>&#34;_&#34;</span>: <span style=color:#ae81ff>63</span>}
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> xrange(len(string)):
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>*=</span> <span style=color:#ae81ff>64</span>
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>+=</span> table[string[i]]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> result
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;&#39;&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    for n in range(0, 100):
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        e = encode_b64(n)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        print(n, e, decode_b64(e))
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>from</span> sys <span style=color:#f92672>import</span> argv
+</span></span><span style=display:flex><span>    n <span style=color:#f92672>=</span> argv[<span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>    e <span style=color:#f92672>=</span> encode_b64(n)
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74> </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(n, e, decode_b64(e)))
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+</span></span></code></pre></div><p>用法：将上述代码保存成 xx.py，执行：<code>python xx.py 正整数</code></p><h2 id=golang>Golang</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> (
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;flag&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;fmt&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;math&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;strconv&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;strings&#34;</span>
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>tenToAny</span> <span style=color:#66d9ef>map</span>[<span style=color:#66d9ef>int</span>]<span style=color:#66d9ef>string</span> = <span style=color:#66d9ef>map</span>[<span style=color:#66d9ef>int</span>]<span style=color:#66d9ef>string</span>{
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>0</span>:  <span style=color:#e6db74>&#34;0&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>1</span>:  <span style=color:#e6db74>&#34;1&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>2</span>:  <span style=color:#e6db74>&#34;2&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>3</span>:  <span style=color:#e6db74>&#34;3&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>4</span>:  <span style=color:#e6db74>&#34;4&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>5</span>:  <span style=color:#e6db74>&#34;5&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>6</span>:  <span style=color:#e6db74>&#34;6&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>7</span>:  <span style=color:#e6db74>&#34;7&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>8</span>:  <span style=color:#e6db74>&#34;8&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>9</span>:  <span style=color:#e6db74>&#34;9&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>10</span>: <span style=color:#e6db74>&#34;a&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>11</span>: <span style=color:#e6db74>&#34;b&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>12</span>: <span style=color:#e6db74>&#34;c&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>13</span>: <span style=color:#e6db74>&#34;d&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>14</span>: <span style=color:#e6db74>&#34;e&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>15</span>: <span style=color:#e6db74>&#34;f&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>16</span>: <span style=color:#e6db74>&#34;g&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>17</span>: <span style=color:#e6db74>&#34;h&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>18</span>: <span style=color:#e6db74>&#34;i&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>19</span>: <span style=color:#e6db74>&#34;j&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>20</span>: <span style=color:#e6db74>&#34;k&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>21</span>: <span style=color:#e6db74>&#34;l&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>22</span>: <span style=color:#e6db74>&#34;m&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>23</span>: <span style=color:#e6db74>&#34;n&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>24</span>: <span style=color:#e6db74>&#34;o&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>25</span>: <span style=color:#e6db74>&#34;p&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>26</span>: <span style=color:#e6db74>&#34;q&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>27</span>: <span style=color:#e6db74>&#34;r&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>28</span>: <span style=color:#e6db74>&#34;s&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>29</span>: <span style=color:#e6db74>&#34;t&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>30</span>: <span style=color:#e6db74>&#34;u&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>31</span>: <span style=color:#e6db74>&#34;v&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>32</span>: <span style=color:#e6db74>&#34;w&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>33</span>: <span style=color:#e6db74>&#34;x&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>34</span>: <span style=color:#e6db74>&#34;y&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>35</span>: <span style=color:#e6db74>&#34;z&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>36</span>: <span style=color:#e6db74>&#34;A&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>37</span>: <span style=color:#e6db74>&#34;B&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>38</span>: <span style=color:#e6db74>&#34;C&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>39</span>: <span style=color:#e6db74>&#34;D&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>40</span>: <span style=color:#e6db74>&#34;E&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>41</span>: <span style=color:#e6db74>&#34;F&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>42</span>: <span style=color:#e6db74>&#34;G&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>43</span>: <span style=color:#e6db74>&#34;H&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>44</span>: <span style=color:#e6db74>&#34;I&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>45</span>: <span style=color:#e6db74>&#34;J&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>46</span>: <span style=color:#e6db74>&#34;K&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>47</span>: <span style=color:#e6db74>&#34;L&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>48</span>: <span style=color:#e6db74>&#34;M&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>49</span>: <span style=color:#e6db74>&#34;N&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>50</span>: <span style=color:#e6db74>&#34;O&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>51</span>: <span style=color:#e6db74>&#34;P&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>52</span>: <span style=color:#e6db74>&#34;Q&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>53</span>: <span style=color:#e6db74>&#34;R&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>54</span>: <span style=color:#e6db74>&#34;S&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>55</span>: <span style=color:#e6db74>&#34;T&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>56</span>: <span style=color:#e6db74>&#34;U&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>57</span>: <span style=color:#e6db74>&#34;V&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>58</span>: <span style=color:#e6db74>&#34;W&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>59</span>: <span style=color:#e6db74>&#34;X&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>60</span>: <span style=color:#e6db74>&#34;Y&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>61</span>: <span style=color:#e6db74>&#34;Z&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#ae81ff>62</span>: <span style=color:#e6db74>&#34;-&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#ae81ff>63</span>: <span style=color:#e6db74>&#34;_&#34;</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>num</span> <span style=color:#66d9ef>int</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>flag</span>.<span style=color:#a6e22e>IntVar</span>(<span style=color:#f92672>&amp;</span><span style=color:#a6e22e>num</span>, <span style=color:#e6db74>&#34;num&#34;</span>, <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#34;number&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>flag</span>.<span style=color:#a6e22e>Parse</span>()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//n, _ := strconv.Atoi(num)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>e</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>decimalToAny</span>(<span style=color:#a6e22e>num</span>, <span style=color:#ae81ff>64</span>)
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Println</span>(<span style=color:#a6e22e>num</span>, <span style=color:#a6e22e>e</span>, <span style=color:#a6e22e>anyToDecimal</span>(<span style=color:#a6e22e>e</span>, <span style=color:#ae81ff>64</span>))
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 10进制转任意进制
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>decimalToAny</span>(<span style=color:#a6e22e>num</span>, <span style=color:#a6e22e>n</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>string</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>new_num_str</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>remainder</span> <span style=color:#66d9ef>int</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>remainder_string</span> <span style=color:#66d9ef>string</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>num</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span> {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>remainder</span> = <span style=color:#a6e22e>num</span> <span style=color:#f92672>%</span> <span style=color:#a6e22e>n</span>
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#ae81ff>76</span> &gt; <span style=color:#a6e22e>remainder</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>remainder</span> &gt; <span style=color:#ae81ff>9</span> {
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>remainder_string</span> = <span style=color:#a6e22e>tenToAny</span>[<span style=color:#a6e22e>remainder</span>]
+</span></span><span style=display:flex><span>		} <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>remainder_string</span> = <span style=color:#a6e22e>strconv</span>.<span style=color:#a6e22e>Itoa</span>(<span style=color:#a6e22e>remainder</span>)
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>new_num_str</span> = <span style=color:#a6e22e>remainder_string</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>new_num_str</span>
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>num</span> = <span style=color:#a6e22e>num</span> <span style=color:#f92672>/</span> <span style=color:#a6e22e>n</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>new_num_str</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// map根据value找key
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>findKey</span>(<span style=color:#a6e22e>in</span> <span style=color:#66d9ef>string</span>) <span style=color:#66d9ef>int</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>result</span> <span style=color:#f92672>:=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>k</span>, <span style=color:#a6e22e>v</span> <span style=color:#f92672>:=</span> <span style=color:#66d9ef>range</span> <span style=color:#a6e22e>tenToAny</span> {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>in</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>v</span> {
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>result</span> = <span style=color:#a6e22e>k</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>result</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 任意进制转10进制
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>anyToDecimal</span>(<span style=color:#a6e22e>num</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>n</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>int</span> {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>new_num</span> <span style=color:#66d9ef>float64</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>new_num</span> = <span style=color:#ae81ff>0.0</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>nNum</span> <span style=color:#f92672>:=</span> len(<span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>num</span>, <span style=color:#e6db74>&#34;&#34;</span>)) <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>_</span>, <span style=color:#a6e22e>value</span> <span style=color:#f92672>:=</span> <span style=color:#66d9ef>range</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>num</span>, <span style=color:#e6db74>&#34;&#34;</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>tmp</span> <span style=color:#f92672>:=</span> float64(<span style=color:#a6e22e>findKey</span>(<span style=color:#a6e22e>value</span>))
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>tmp</span> <span style=color:#f92672>!=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span> {
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>new_num</span> = <span style=color:#a6e22e>new_num</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>tmp</span><span style=color:#f92672>*</span><span style=color:#a6e22e>math</span>.<span style=color:#a6e22e>Pow</span>(float64(<span style=color:#a6e22e>n</span>), float64(<span style=color:#a6e22e>nNum</span>))
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>nNum</span> = <span style=color:#a6e22e>nNum</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>		} <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>break</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> int(<span style=color:#a6e22e>new_num</span>)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>用法：将上述代码保存成 xx.go，执行：<code>go run xx.go -num 正整数</code></p><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/304.html>https://blog.saintic.com/blog/304.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
 <a href=/tags/go.html rel=tag class=post-tags-link>#go</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/303.html class=prev rel=prev title=K站随机二次元动漫壁纸接口><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;K站随机二次元动漫壁纸接口</a>
 <a href=https://blog.saintic.com/blog/305.html class=next rel=next title="golang内嵌数据库 NutsDB 常用方法封装示例">golang内嵌数据库 NutsDB 常用方法封装示例&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -382,12 +319,8 @@ in
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

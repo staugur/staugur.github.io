@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 WSL开机自启动ssh服务 | 一念博客
-</title>
-<meta name=title content="WSL开机自启动ssh服务 | 一念博客">
+</title><meta name=title content="WSL开机自启动ssh服务 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"WSL开机自启动ssh服务","headline":"WSL开机自启动ssh服务","description":"本文系整理\u002b修改而成，参考……忘记了，侵删。 主题是：WSL(Windows Subsystem for Linux)开机自启动ssh服务。 一般情况用于v1版本，不过初","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-04-27 00:00:00 \u002b0000 UTC","dateModified":"2018-04-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/254.html","wordCount":"476","keywords":["一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ WSL开机自启动ssh服务 | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,66 +46,37 @@ WSL开机自启动ssh服务 | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <div class=toc>
-<div class=page-header><strong>- 目录 -</strong></div>
-<div id=page-scrollspy class=toc-nav>
+<div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -117,12 +85,7 @@ WSL开机自启动ssh服务 | 一念博客
 <a class="nav-link text-left" href=#%e5%a3%b9%e7%94%a8%e6%b3%95>
 壹、用法
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-<ul class=nav>
+</li></ul></ul></ul></ul><ul class=nav>
 <ul class=nav>
 <ul class=nav>
 <ul class=nav>
@@ -130,17 +93,9 @@ WSL开机自启动ssh服务 | 一念博客
 <a class="nav-link text-left" href=#%e8%b4%b0%e4%bb%a3%e7%a0%81>
 贰、代码
 </a>
-</li>
-</ul>
-</ul>
-</ul>
-</ul>
-</div>
-</div>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
+</li></ul></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">WSL开机自启动ssh服务</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">WSL开机自启动ssh服务</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2018-04-27 itemprop=datePublished>April 27, 2018</time>
@@ -151,88 +106,53 @@ in
 <a href=https://blog.saintic.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.html> 操作系统 </a>
 </span>
 <span class=post-word-count>476 words</span>
-</div>
-</header>
-<div class=post-content>
+</div></header><div class=post-content>
 <blockquote>
-<p>本文系整理+修改而成，参考……忘记了，侵删。</p>
-<p>主题是：WSL(Windows Subsystem for Linux)开机自启动ssh服务。</p>
-</blockquote>
-<p>一般情况用于v1版本，不过初步试过v2下也可用（不过v2有更简洁方式）。</p>
-<h4 id=壹用法><strong>壹、用法</strong></h4>
-<ol>
+<p>本文系整理+修改而成，参考……忘记了，侵删。</p><p>主题是：WSL(Windows Subsystem for Linux)开机自启动ssh服务。</p></blockquote><p>一般情况用于v1版本，不过初步试过v2下也可用（不过v2有更简洁方式）。</p><h4 id=壹用法><strong>壹、用法</strong></h4><ol>
 <li>
-<p>win+R键调出运行，输入shell:startup确定进入开始菜单启动程序目录(大致是C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup);</p>
-</li>
-<li>
-<p>startWSL.vbs放到上述目录;</p>
-</li>
-<li>
-<p>打开wsl，将init.sh放到/目录，即/init.sh，记得要提前安装openssh-server(apt-get install openssh-server)，应该默认安装好了;</p>
-</li>
-<li>
-<p>下次开机将自动启动wsl，并运行着ssh的进程，任务管理器中可以看到如下图内容。</p>
-<p>此时，可以使用xshell等连接localhost，可以使用密码或密钥连接，方式同linux，这里不予累述。</p>
-<p><img src=https://static.saintic.com/EauDouce/blog/201804271004293550.png alt=p loading=lazy></p>
-</li>
-</ol>
-<h4 id=贰代码><strong>贰、代码</strong></h4>
-<p>1. startWSL.vbs</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-batch data-lang=batch><span style=color:#66d9ef>Set</span> ws = WScript.CreateObject(<span style=color:#e6db74>&#34;WScript.Shell&#34;</span>)
-cmd = <span style=color:#e6db74>&#34;C:\Windows\System32\bash.exe -c &#34;&#34;bash /init.sh&#34;&#34;&#34;</span>
-&#39;运行命令不显示cmd窗口
-ws.Run cmd, 0, false
-<span style=color:#66d9ef>Set</span> ws = Nothing
-WScript.quit
-</code></pre></div><p>2. init.sh</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
-</span><span style=color:#75715e></span>pn<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>ps aux|grep -v grep|grep sshd|wc -l<span style=color:#66d9ef>)</span>
-<span style=color:#f92672>[</span> -d /var/run/sshd <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> mkdir /var/run/sshd
-chmod <span style=color:#ae81ff>744</span> /var/run/sshd
-<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>pn<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;0&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
-    pid<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>ps aux|grep -v grep|grep /usr/sbin/sshd|awk <span style=color:#e6db74>&#39;{print $2}&#39;</span><span style=color:#66d9ef>)</span>
-    kill $pid
-<span style=color:#66d9ef>fi</span>
-/usr/sbin/sshd -D
-</code></pre></div><br>
+<p>win+R键调出运行，输入shell:startup确定进入开始菜单启动程序目录(大致是C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup);</p></li><li>
+<p>startWSL.vbs放到上述目录;</p></li><li>
+<p>打开wsl，将init.sh放到/目录，即/init.sh，记得要提前安装openssh-server(apt-get install openssh-server)，应该默认安装好了;</p></li><li>
+<p>下次开机将自动启动wsl，并运行着ssh的进程，任务管理器中可以看到如下图内容。</p><p>此时，可以使用xshell等连接localhost，可以使用密码或密钥连接，方式同linux，这里不予累述。</p><p><img src=https://static.saintic.com/EauDouce/blog/201804271004293550.png alt=p loading=lazy></p></li></ol><h4 id=贰代码><strong>贰、代码</strong></h4><p>1. startWSL.vbs</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-batch data-lang=batch><span style=display:flex><span><span style=color:#66d9ef>Set</span> ws = WScript.CreateObject(<span style=color:#e6db74>&#34;WScript.Shell&#34;</span>)
+</span></span><span style=display:flex><span>cmd = <span style=color:#e6db74>&#34;C:\Windows\System32\bash.exe -c &#34;&#34;bash /init.sh&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>&#39;运行命令不显示cmd窗口
+</span></span><span style=display:flex><span>ws.Run cmd, 0, false
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Set</span> ws = Nothing
+</span></span><span style=display:flex><span>WScript.quit
+</span></span></code></pre></div><p>2. init.sh</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>pn<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>ps aux|grep -v grep|grep sshd|wc -l<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span> -d /var/run/sshd <span style=color:#f92672>]</span> <span style=color:#f92672>||</span> mkdir /var/run/sshd
+</span></span><span style=display:flex><span>chmod <span style=color:#ae81ff>744</span> /var/run/sshd
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>pn<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;0&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    pid<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>ps aux|grep -v grep|grep /usr/sbin/sshd|awk <span style=color:#e6db74>&#39;{print $2}&#39;</span><span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>    kill $pid
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>/usr/sbin/sshd -D
+</span></span></code></pre></div><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/254.html>https://blog.saintic.com/blog/254.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 （无）
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/253.html class=prev rel=prev title=必应、百度收录查询接口><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;必应、百度收录查询接口</a>
 <a href=https://blog.saintic.com/blog/256.html class=next rel=next title=Js抓取花瓣、堆糖图片>Js抓取花瓣、堆糖图片&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -242,12 +162,8 @@ chmod <span style=color:#ae81ff>744</span> /var/run/sshd
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

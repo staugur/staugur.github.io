@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客
-</title>
-<meta name=title content="Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客">
+</title><meta name=title content="Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Python获取系统信息(CPU、Mem、Disk、Network、User等)","headline":"Python获取系统信息(CPU、Mem、Disk、Network、User等)","description":"#!\/usr\/bin\/env python #coding:utf8 #get system info from psutil #required:psutil try: import sys,psutil,platform,commands,json,socket,os except ImportError as msg: print \u0026#34;Import Error, because %s\u0026#34; % msg sys.exit(1) class SysInfo(): sys_ip=socket.gethostbyname(socket.gethostname()) try: client_ip=os.environ[\u0026#39;SSH_CONNECTION\u0026#39;].split()[0] except: client_ip=\u0026#39;unknown\u0026#39; sys_version=platform.linux_distribution() sys_fqdn=platform.uname()[1] #hostname,eg:localhost.localdomain sys_kernel=platform.uname()[2] #kernel version sys_arch=platform.uname()[4] #eg:x86_64 amd64 win32 def hostname(self): return json.dumps({\u0026#34;Hostname\u0026#34;: self.sys_fqdn}) def ip(self): return json.dumps({\u0026#34;ServerIP\u0026#34;: self.sys_ip, \u0026#39;SSH_Client_IP\u0026#39;: self.client_ip}) def Kernel(self): return json.dumps({\u0026#34;Kernel\u0026#34;: self.sys_kernel}) def Arch(self): return json.dumps({\u0026#34;Arch\u0026#34;: self.sys_arch}) def Version(self): return json.dumps({\u0026#34;SysVersion\u0026#34;: self.sys_version}) def CPU(self):","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-10-27 00:00:00 \u002b0000 UTC","dateModified":"2016-10-27 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/86.html","wordCount":"212","keywords":["python","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,67 +46,38 @@ Python获取系统信息(CPU、Mem、Disk、Network、User等) | 一念博客
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">Python获取系统信息(CPU、Mem、Disk、Network、User等)</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">Python获取系统信息(CPU、Mem、Disk、Network、User等)</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2016-10-27 itemprop=datePublished>October 27, 2016</time>
@@ -120,139 +88,123 @@ in
 <a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html> 开发 </a>
 </span>
 <span class=post-word-count>212 words</span>
-</div>
-</header>
-<div class=post-content>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#!/usr/bin/env python</span>
-<span style=color:#75715e>#coding:utf8</span>
-<span style=color:#75715e>#get system info from psutil</span>
-<span style=color:#75715e>#required:psutil</span>
-<span style=color:#66d9ef>try</span>:
-    <span style=color:#f92672>import</span> sys<span style=color:#f92672>,</span>psutil<span style=color:#f92672>,</span>platform<span style=color:#f92672>,</span>commands<span style=color:#f92672>,</span>json<span style=color:#f92672>,</span>socket<span style=color:#f92672>,</span>os
-<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>ImportError</span> <span style=color:#66d9ef>as</span> msg:
-    print <span style=color:#e6db74>&#34;Import Error, because </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> msg
-    sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
-
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SysInfo</span>():
-    sys_ip<span style=color:#f92672>=</span>socket<span style=color:#f92672>.</span>gethostbyname(socket<span style=color:#f92672>.</span>gethostname())
-    <span style=color:#66d9ef>try</span>:
-        client_ip<span style=color:#f92672>=</span>os<span style=color:#f92672>.</span>environ[<span style=color:#e6db74>&#39;SSH_CONNECTION&#39;</span>]<span style=color:#f92672>.</span>split()[<span style=color:#ae81ff>0</span>]
-    <span style=color:#66d9ef>except</span>:
-        client_ip<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;unknown&#39;</span>
-    sys_version<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>linux_distribution()
-    sys_fqdn<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>uname()[<span style=color:#ae81ff>1</span>]   <span style=color:#75715e>#hostname,eg:localhost.localdomain</span>
-    sys_kernel<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>uname()[<span style=color:#ae81ff>2</span>] <span style=color:#75715e>#kernel version</span>
-    sys_arch<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>uname()[<span style=color:#ae81ff>4</span>]   <span style=color:#75715e>#eg:x86_64 amd64 win32</span>
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hostname</span>(self):
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Hostname&#34;</span>: self<span style=color:#f92672>.</span>sys_fqdn})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>ip</span>(self):
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;ServerIP&#34;</span>: self<span style=color:#f92672>.</span>sys_ip, <span style=color:#e6db74>&#39;SSH_Client_IP&#39;</span>: self<span style=color:#f92672>.</span>client_ip})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>Kernel</span>(self):
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Kernel&#34;</span>: self<span style=color:#f92672>.</span>sys_kernel})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>Arch</span>(self):
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Arch&#34;</span>: self<span style=color:#f92672>.</span>sys_arch})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>Version</span>(self):
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;SysVersion&#34;</span>: self<span style=color:#f92672>.</span>sys_version})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>CPU</span>(self):
-        cpu_label<span style=color:#f92672>=</span>str(commands<span style=color:#f92672>.</span>getoutput(<span style=color:#e6db74>&#39;grep &#34;model name&#34; /proc/cpuinfo | awk -F &#34;: &#34; </span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74>{print $2}</span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74> | head -1&#39;</span>))
-        cpu_cache<span style=color:#f92672>=</span>str(commands<span style=color:#f92672>.</span>getoutput(<span style=color:#e6db74>&#39;grep &#34;cache size&#34; /proc/cpuinfo|uniq|awk </span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74>{print $4,$5}</span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74>&#39;</span>))
-        cpu_time<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>cpu_times()
-        cpu_logical_nums<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>cpu_count()
-        cpu_physical_nums<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>cpu_count(logical<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Label&#34;</span>: str(cpu_label), <span style=color:#e6db74>&#34;Logical&#34;</span>: int(cpu_logical_nums), <span style=color:#e6db74>&#34;Cache_size&#34;</span>: str(cpu_cache)})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>MEM</span>(self):
-        mem<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>virtual_memory()
-        total<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>total
-        free<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>free
-        mem_total<span style=color:#f92672>=</span>str(total <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;M&#39;</span>
-        mem_free<span style=color:#f92672>=</span>str(free <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;M&#39;</span>
-        <span style=color:#66d9ef>try</span>:
-            buffers<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>buffers
-            cached<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>cached
-            UsedPerc<span style=color:#f92672>=</span><span style=color:#ae81ff>100</span> <span style=color:#f92672>*</span> int(total <span style=color:#f92672>-</span> free <span style=color:#f92672>-</span> cached <span style=color:#f92672>-</span> buffers) <span style=color:#f92672>/</span> int(total)
-
-            memused<span style=color:#f92672>=</span>str(UsedPerc)<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;%&#39;</span>
-            <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Total&#34;</span>: mem_total, <span style=color:#e6db74>&#34;Free&#34;</span>: mem_free, <span style=color:#e6db74>&#34;Memory_UsageRate&#34;</span>: memused})
-        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>AttributeError</span>:
-            <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Total&#34;</span>: mem_total, <span style=color:#e6db74>&#34;Free&#34;</span>: mem_free})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>DISK</span>(self):
-        ps<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>
-        pt<span style=color:#f92672>=</span>[]
-        <span style=color:#66d9ef>while</span> ps <span style=color:#f92672>&lt;</span> len(psutil<span style=color:#f92672>.</span>disk_partitions()):
-            <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>3</span>):
-                pt<span style=color:#f92672>.</span>append(psutil<span style=color:#f92672>.</span>disk_partitions()[ps][i])
-                pt<span style=color:#f92672>.</span>append(str(psutil<span style=color:#f92672>.</span>disk_usage(psutil<span style=color:#f92672>.</span>disk_partitions()[ps][<span style=color:#ae81ff>1</span>])[<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>])<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;%&#39;</span>)
-                ps<span style=color:#f92672>+=</span><span style=color:#ae81ff>1</span>
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Partitions&#34;</span>: len(psutil<span style=color:#f92672>.</span>disk_partitions()), <span style=color:#e6db74>&#34;DiskInfo&#34;</span>: pt})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>NETWORK</span>(self):
-        net_io<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>net_io_counters(pernic<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)[<span style=color:#ae81ff>0</span>:<span style=color:#ae81ff>4</span>]
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;NetworkFlow&#34;</span>: str(net_io)})
-
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>OTHER</span>(self):
-        login_users<span style=color:#f92672>=</span>len(psutil<span style=color:#f92672>.</span>users())
-        pid_nums<span style=color:#f92672>=</span>len(psutil<span style=color:#f92672>.</span>pids())
-        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;LoginUserNums&#34;</span>: int(login_users), <span style=color:#e6db74>&#34;PidNums&#34;</span>: int(pid_nums)})
-
-<span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;__main__&#39;</span>:
-    info<span style=color:#f92672>=</span>SysInfo()
-    print info<span style=color:#f92672>.</span>hostname()
-    print info<span style=color:#f92672>.</span>ip()
-    print info<span style=color:#f92672>.</span>Version()
-    print info<span style=color:#f92672>.</span>Kernel()
-    print info<span style=color:#f92672>.</span>Arch()
-    print info<span style=color:#f92672>.</span>CPU()
-    print info<span style=color:#f92672>.</span>MEM()
-    print info<span style=color:#f92672>.</span>DISK()
-    <span style=color:#75715e>#print info.NETWORK()</span>
-    print info<span style=color:#f92672>.</span>OTHER()
-</code></pre></div><br>
+</div></header><div class=post-content>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#coding:utf8</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#get system info from psutil</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#required:psutil</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> sys<span style=color:#f92672>,</span>psutil<span style=color:#f92672>,</span>platform<span style=color:#f92672>,</span>commands<span style=color:#f92672>,</span>json<span style=color:#f92672>,</span>socket<span style=color:#f92672>,</span>os
+</span></span><span style=display:flex><span><span style=color:#66d9ef>except</span> <span style=color:#a6e22e>ImportError</span> <span style=color:#66d9ef>as</span> msg:
+</span></span><span style=display:flex><span>    print <span style=color:#e6db74>&#34;Import Error, because </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> msg
+</span></span><span style=display:flex><span>    sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SysInfo</span>():
+</span></span><span style=display:flex><span>    sys_ip<span style=color:#f92672>=</span>socket<span style=color:#f92672>.</span>gethostbyname(socket<span style=color:#f92672>.</span>gethostname())
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        client_ip<span style=color:#f92672>=</span>os<span style=color:#f92672>.</span>environ[<span style=color:#e6db74>&#39;SSH_CONNECTION&#39;</span>]<span style=color:#f92672>.</span>split()[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span>:
+</span></span><span style=display:flex><span>        client_ip<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;unknown&#39;</span>
+</span></span><span style=display:flex><span>    sys_version<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>linux_distribution()
+</span></span><span style=display:flex><span>    sys_fqdn<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>uname()[<span style=color:#ae81ff>1</span>]   <span style=color:#75715e>#hostname,eg:localhost.localdomain</span>
+</span></span><span style=display:flex><span>    sys_kernel<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>uname()[<span style=color:#ae81ff>2</span>] <span style=color:#75715e>#kernel version</span>
+</span></span><span style=display:flex><span>    sys_arch<span style=color:#f92672>=</span>platform<span style=color:#f92672>.</span>uname()[<span style=color:#ae81ff>4</span>]   <span style=color:#75715e>#eg:x86_64 amd64 win32</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hostname</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Hostname&#34;</span>: self<span style=color:#f92672>.</span>sys_fqdn})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>ip</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;ServerIP&#34;</span>: self<span style=color:#f92672>.</span>sys_ip, <span style=color:#e6db74>&#39;SSH_Client_IP&#39;</span>: self<span style=color:#f92672>.</span>client_ip})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>Kernel</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Kernel&#34;</span>: self<span style=color:#f92672>.</span>sys_kernel})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>Arch</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Arch&#34;</span>: self<span style=color:#f92672>.</span>sys_arch})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>Version</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;SysVersion&#34;</span>: self<span style=color:#f92672>.</span>sys_version})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>CPU</span>(self):
+</span></span><span style=display:flex><span>        cpu_label<span style=color:#f92672>=</span>str(commands<span style=color:#f92672>.</span>getoutput(<span style=color:#e6db74>&#39;grep &#34;model name&#34; /proc/cpuinfo | awk -F &#34;: &#34; </span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74>{print $2}</span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74> | head -1&#39;</span>))
+</span></span><span style=display:flex><span>        cpu_cache<span style=color:#f92672>=</span>str(commands<span style=color:#f92672>.</span>getoutput(<span style=color:#e6db74>&#39;grep &#34;cache size&#34; /proc/cpuinfo|uniq|awk </span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74>{print $4,$5}</span><span style=color:#ae81ff>\&#39;</span><span style=color:#e6db74>&#39;</span>))
+</span></span><span style=display:flex><span>        cpu_time<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>cpu_times()
+</span></span><span style=display:flex><span>        cpu_logical_nums<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>cpu_count()
+</span></span><span style=display:flex><span>        cpu_physical_nums<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>cpu_count(logical<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Label&#34;</span>: str(cpu_label), <span style=color:#e6db74>&#34;Logical&#34;</span>: int(cpu_logical_nums), <span style=color:#e6db74>&#34;Cache_size&#34;</span>: str(cpu_cache)})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>MEM</span>(self):
+</span></span><span style=display:flex><span>        mem<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>virtual_memory()
+</span></span><span style=display:flex><span>        total<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>total
+</span></span><span style=display:flex><span>        free<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>free
+</span></span><span style=display:flex><span>        mem_total<span style=color:#f92672>=</span>str(total <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;M&#39;</span>
+</span></span><span style=display:flex><span>        mem_free<span style=color:#f92672>=</span>str(free <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>1024</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;M&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            buffers<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>buffers
+</span></span><span style=display:flex><span>            cached<span style=color:#f92672>=</span>mem<span style=color:#f92672>.</span>cached
+</span></span><span style=display:flex><span>            UsedPerc<span style=color:#f92672>=</span><span style=color:#ae81ff>100</span> <span style=color:#f92672>*</span> int(total <span style=color:#f92672>-</span> free <span style=color:#f92672>-</span> cached <span style=color:#f92672>-</span> buffers) <span style=color:#f92672>/</span> int(total)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            memused<span style=color:#f92672>=</span>str(UsedPerc)<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;%&#39;</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Total&#34;</span>: mem_total, <span style=color:#e6db74>&#34;Free&#34;</span>: mem_free, <span style=color:#e6db74>&#34;Memory_UsageRate&#34;</span>: memused})
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>AttributeError</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Total&#34;</span>: mem_total, <span style=color:#e6db74>&#34;Free&#34;</span>: mem_free})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>DISK</span>(self):
+</span></span><span style=display:flex><span>        ps<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        pt<span style=color:#f92672>=</span>[]
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span> ps <span style=color:#f92672>&lt;</span> len(psutil<span style=color:#f92672>.</span>disk_partitions()):
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>3</span>):
+</span></span><span style=display:flex><span>                pt<span style=color:#f92672>.</span>append(psutil<span style=color:#f92672>.</span>disk_partitions()[ps][i])
+</span></span><span style=display:flex><span>                pt<span style=color:#f92672>.</span>append(str(psutil<span style=color:#f92672>.</span>disk_usage(psutil<span style=color:#f92672>.</span>disk_partitions()[ps][<span style=color:#ae81ff>1</span>])[<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>])<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;%&#39;</span>)
+</span></span><span style=display:flex><span>                ps<span style=color:#f92672>+=</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;Partitions&#34;</span>: len(psutil<span style=color:#f92672>.</span>disk_partitions()), <span style=color:#e6db74>&#34;DiskInfo&#34;</span>: pt})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>NETWORK</span>(self):
+</span></span><span style=display:flex><span>        net_io<span style=color:#f92672>=</span>psutil<span style=color:#f92672>.</span>net_io_counters(pernic<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)[<span style=color:#ae81ff>0</span>:<span style=color:#ae81ff>4</span>]
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;NetworkFlow&#34;</span>: str(net_io)})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>OTHER</span>(self):
+</span></span><span style=display:flex><span>        login_users<span style=color:#f92672>=</span>len(psutil<span style=color:#f92672>.</span>users())
+</span></span><span style=display:flex><span>        pid_nums<span style=color:#f92672>=</span>len(psutil<span style=color:#f92672>.</span>pids())
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> json<span style=color:#f92672>.</span>dumps({<span style=color:#e6db74>&#34;LoginUserNums&#34;</span>: int(login_users), <span style=color:#e6db74>&#34;PidNums&#34;</span>: int(pid_nums)})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;__main__&#39;</span>:
+</span></span><span style=display:flex><span>    info<span style=color:#f92672>=</span>SysInfo()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>hostname()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>ip()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>Version()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>Kernel()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>Arch()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>CPU()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>MEM()
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>DISK()
+</span></span><span style=display:flex><span>    <span style=color:#75715e>#print info.NETWORK()</span>
+</span></span><span style=display:flex><span>    print info<span style=color:#f92672>.</span>OTHER()
+</span></span></code></pre></div><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/86.html>https://blog.saintic.com/blog/86.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/95.html class=prev rel=prev title=Stunnel加密Squid代理服务><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;Stunnel加密Squid代理服务</a>
 <a href=https://blog.saintic.com/blog/97.html class=next rel=next title=Nginx日志切割脚本>Nginx日志切割脚本&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -262,12 +214,8 @@ in
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>

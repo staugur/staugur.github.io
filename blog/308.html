@@ -19,12 +19,10 @@
 <meta name=theme-color content="#ffffff">
 <title>
 Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码 | 一念博客
-</title>
-<meta name=title content="Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码 | 一念博客">
+</title><meta name=title content="Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码 | 一念博客">
 <link rel=stylesheet href=/css/main.min.css>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码","headline":"Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码","description":"之前常用Python Flask框架写Web应用，涉及到用户密码这一点，一般是用werkzeug的generate_password_hash","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-05-27 21:04:22 \u002b0800 \u002b0800","dateModified":"2021-05-27 21:04:22 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/308.html","wordCount":"475","keywords":["flask","go","一念博客"]}</script>
-</head>
-<body>
+</head><body>
 <div class=wrapper>
 <nav class=navbar>
 <progress class=content_progress max=0 value=0></progress>
@@ -35,8 +33,7 @@ Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码 | 一�
 <span class=logo_text>cd /home/</span>
 <span class=logo_cursor></span>
 </a>
-</div>
-<div class=navbar-right>
+</div><div class=navbar-right>
 <span class=menu>
 <a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
@@ -49,67 +46,38 @@ Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码 | 一�
 <span class=divide></span>
 <a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
 </span>
-</div>
-</div>
-</nav>
-<nav class=navbar-mobile id=nav-mobile style=display:none>
+</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
 <progress class=content_progress max=0 value=0></progress>
 <div class=container>
 <div class=navbar>
 <div class="navbar-header header-logo">
 <a href=https://blog.saintic.com>一念博客</a>
-</div>
-<div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div>
-<div class=menu-toggle>
+</div><div class=navbar-right>
+<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
 <span></span><span></span><span></span>
-</div>
-</div>
-</div>
-<div class=menu id=mobile-menu>
+</div></div></div><div class=menu id=mobile-menu>
 <nav class=mb-md>
 <a class=menu-item href=/blog.html title>
-<h3>Blog</h3>
-<div class=menu-active></div>
-</a>
+<h3>Blog</h3><div class=menu-active></div></a>
 <a class=menu-item href=/note.html title>
-<h3>Note</h3>
-<div class=menu-active></div>
-</a>
+<h3>Note</h3><div class=menu-active></div></a>
 <a class=menu-item href=/categories.html title>
-<h3>Categories</h3>
-<div class=menu-active></div>
-</a>
+<h3>Categories</h3><div class=menu-active></div></a>
 <a class=menu-item href=/tags.html title>
-<h3>Tags</h3>
-<div class=menu-active></div>
-</a>
+<h3>Tags</h3><div class=menu-active></div></a>
 <a class=menu-item href=/link.html title>
-<h3>Links</h3>
-<div class=menu-active></div>
-</a>
+<h3>Links</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3>
-<div class=menu-active></div>
-</a>
+<h3>Baidu</h3><div class=menu-active></div></a>
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3>
-<div class=menu-active></div>
-</a>
+<h3>Google</h3><div class=menu-active></div></a>
 <a class=menu-item href=/about.html title=About>
-<h3>About</h3>
-<div class=menu-active></div>
-</a>
-</nav>
-</div>
-</div>
-</nav>
-<main class=main>
+<h3>About</h3><div class=menu-active></div></a>
+</nav></div></div></nav><main class=main>
 <div class=container>
 <article class=post-warp itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码</h1>
-<div class=post-meta>
+<h1 class=post-title itemprop="name headline">Golang、Python（Flask）统一使用 pbkdf2 生成与验证用户密码</h1><div class=post-meta>
 Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
 <span class=post-time>
 on <time datetime=2021-05-27 itemprop=datePublished>May 27, 2021</time>
@@ -121,151 +89,129 @@ in
 <a href=https://blog.saintic.com/categories/python.html> python </a>
 </span>
 <span class=post-word-count>475 words</span>
-</div>
-</header>
-<div class=post-content>
-<p>之前常用Python Flask框架写Web应用，涉及到用户密码这一点，一般是用werkzeug的generate_password_hash函数。</p>
-<p>现在写一些新应用开始用Go了，但有时候两者间可能要进行用户密码统一认证，要求双方都能验证
-对方生成的密码。</p>
-<p>参照了网上的几个案例，虽然自身可以生成、验证，但换到对方反而不行，所以参考 pbkdf2 算法和
-werkzeug 的实现函数，重新写了下。</p>
-<p>需要注意的是，限定使用了 sha256 哈希算法。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>package</span> <span style=color:#a6e22e>util</span>
-
-<span style=color:#f92672>import</span> (
-	<span style=color:#e6db74>&#34;crypto/sha256&#34;</span>
-	<span style=color:#e6db74>&#34;encoding/hex&#34;</span>
-	<span style=color:#e6db74>&#34;fmt&#34;</span>
-	<span style=color:#e6db74>&#34;math/rand&#34;</span>
-	<span style=color:#e6db74>&#34;strconv&#34;</span>
-	<span style=color:#e6db74>&#34;strings&#34;</span>
-
-	<span style=color:#e6db74>&#34;golang.org/x/crypto/pbkdf2&#34;</span>
-)
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SALT_LENGTH</span> = <span style=color:#ae81ff>8</span>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SALT_CHARS</span> = <span style=color:#e6db74>&#34;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#34;</span>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>DEFAULT_PBKDF2_ITERATIONS</span> = <span style=color:#ae81ff>150000</span>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>DEFAULT_PBKDF2_METHOD</span> = <span style=color:#e6db74>&#34;pbkdf2:sha256&#34;</span>
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>genSalt</span>() <span style=color:#66d9ef>string</span> {
-	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>bytes</span> = make([]<span style=color:#66d9ef>byte</span>, <span style=color:#a6e22e>SALT_LENGTH</span>)
-	<span style=color:#a6e22e>rand</span>.<span style=color:#a6e22e>Read</span>(<span style=color:#a6e22e>bytes</span>)
-	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>k</span>, <span style=color:#a6e22e>v</span> <span style=color:#f92672>:=</span> <span style=color:#66d9ef>range</span> <span style=color:#a6e22e>bytes</span> {
-		<span style=color:#a6e22e>bytes</span>[<span style=color:#a6e22e>k</span>] = <span style=color:#a6e22e>SALT_CHARS</span>[<span style=color:#a6e22e>v</span><span style=color:#f92672>%</span>byte(len(<span style=color:#a6e22e>SALT_CHARS</span>))]
-	}
-	<span style=color:#66d9ef>return</span> string(<span style=color:#a6e22e>bytes</span>)
-}
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>rendeMethod</span>(<span style=color:#a6e22e>iter</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>string</span> {
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Sprintf</span>(<span style=color:#e6db74>&#34;%s:%d&#34;</span>, <span style=color:#a6e22e>DEFAULT_PBKDF2_METHOD</span>, <span style=color:#a6e22e>iter</span>)
-}
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>hashInternal</span>(<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>salt</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>iter</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>string</span> {
-	<span style=color:#a6e22e>t</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>pbkdf2</span>.<span style=color:#a6e22e>Key</span>([]byte(<span style=color:#a6e22e>password</span>), []byte(<span style=color:#a6e22e>salt</span>), <span style=color:#a6e22e>iter</span>, <span style=color:#ae81ff>32</span>, <span style=color:#a6e22e>sha256</span>.<span style=color:#a6e22e>New</span>)
-	<span style=color:#a6e22e>pwh</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>hex</span>.<span style=color:#a6e22e>EncodeToString</span>(<span style=color:#a6e22e>t</span>)
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Sprintf</span>(<span style=color:#e6db74>&#34;%s$%s$%s&#34;</span>, <span style=color:#a6e22e>rendeMethod</span>(<span style=color:#a6e22e>iter</span>), <span style=color:#a6e22e>salt</span>, <span style=color:#a6e22e>pwh</span>)
-}
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>GeneratePasswordHash</span>(<span style=color:#a6e22e>password</span> <span style=color:#66d9ef>string</span>) <span style=color:#66d9ef>string</span> {
-	<span style=color:#a6e22e>salt</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>genSalt</span>()
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>hashInternal</span>(<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>salt</span>, <span style=color:#a6e22e>DEFAULT_PBKDF2_ITERATIONS</span>)
-}
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pwhash</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>password</span> <span style=color:#66d9ef>string</span>) <span style=color:#66d9ef>bool</span> {
-	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Count</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;$&#34;</span>) &lt; <span style=color:#ae81ff>2</span> {
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
-	}
-	<span style=color:#a6e22e>pws</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;$&#34;</span>)
-	<span style=color:#a6e22e>method</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>pws</span>[<span style=color:#ae81ff>0</span>]
-	<span style=color:#a6e22e>salt</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>pws</span>[<span style=color:#ae81ff>1</span>]
-	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>HasPrefix</span>(<span style=color:#a6e22e>method</span>, <span style=color:#a6e22e>DEFAULT_PBKDF2_METHOD</span>) {
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
-	}
-	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Count</span>(<span style=color:#a6e22e>method</span>, <span style=color:#e6db74>&#34;:&#34;</span>) &lt; <span style=color:#ae81ff>2</span> {
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
-	}
-	<span style=color:#a6e22e>mds</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>method</span>, <span style=color:#e6db74>&#34;:&#34;</span>)
-	<span style=color:#a6e22e>iter</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>strconv</span>.<span style=color:#a6e22e>Atoi</span>(<span style=color:#a6e22e>mds</span>[<span style=color:#ae81ff>2</span>])
-	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
-	}
-
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>EqualFold</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#a6e22e>hashInternal</span>(<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>salt</span>, <span style=color:#a6e22e>iter</span>))
-}
-</code></pre></div><p>测试用例（go）：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>package</span> <span style=color:#a6e22e>util</span>
-
-<span style=color:#f92672>import</span> (
-	<span style=color:#e6db74>&#34;strings&#34;</span>
-	<span style=color:#e6db74>&#34;testing&#34;</span>
-)
-
-<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>TestPasswd</span>(<span style=color:#a6e22e>t</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>testing</span>.<span style=color:#a6e22e>T</span>) {
-	<span style=color:#a6e22e>pwd</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;Abc123@$-*&amp;&#34;</span>
-    <span style=color:#75715e>// pwhash 是下面python测试用例中的密码
-</span><span style=color:#75715e></span>	<span style=color:#a6e22e>pwhash</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>GeneratePasswordHash</span>(<span style=color:#a6e22e>pwd</span>)
-
-	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>HasPrefix</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;pbkdf2&#34;</span>) {
-		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;hash password format error&#34;</span>)
-	}
-	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#a6e22e>pwd</span>) {
-		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;CheckPasswordHash error (true)&#34;</span>)
-	}
-
-	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;ejaA5W4866&#34;</span>) {
-		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;CheckPasswordHash error (false)&#34;</span>)
-	}
-
-	<span style=color:#75715e>// 验证 werkzeug generate_password_hash 生成的密码
-</span><span style=color:#75715e></span>	<span style=color:#a6e22e>pypwhash</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;pbkdf2:sha256:150000$XqnEnB37$cf2bffd0ccf0ae5d5c7c9486a6c3dc8f4add525f6faf9c4d85c91e98bb360b86&#34;</span>
-	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pypwhash</span>, <span style=color:#e6db74>&#34;123456&#34;</span>) {
-		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;CheckPasswordHash error (werkzeug)&#34;</span>)
-	}
-}
-</code></pre></div><p>测试用例（python）：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> werkzeug.security <span style=color:#f92672>import</span> check_password_hash
-check_password_hash(<span style=color:#e6db74>&#34;pbkdf2:sha256:150000$ufehHgNr$48915f0de52612c5df20946d30c2b7e2619896348ac7f5aaf07d59cbea1cfb18&#34;</span>,<span style=color:#e6db74>&#34;Abc123@$-*&amp;&#34;</span>)
-</code></pre></div><br>
+</div></header><div class=post-content>
+<p>之前常用Python Flask框架写Web应用，涉及到用户密码这一点，一般是用werkzeug的generate_password_hash函数。</p><p>现在写一些新应用开始用Go了，但有时候两者间可能要进行用户密码统一认证，要求双方都能验证
+对方生成的密码。</p><p>参照了网上的几个案例，虽然自身可以生成、验证，但换到对方反而不行，所以参考 pbkdf2 算法和
+werkzeug 的实现函数，重新写了下。</p><p>需要注意的是，限定使用了 sha256 哈希算法。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>util</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> (
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;crypto/sha256&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;encoding/hex&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;fmt&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;math/rand&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;strconv&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;strings&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;golang.org/x/crypto/pbkdf2&#34;</span>
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SALT_LENGTH</span> = <span style=color:#ae81ff>8</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SALT_CHARS</span> = <span style=color:#e6db74>&#34;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>DEFAULT_PBKDF2_ITERATIONS</span> = <span style=color:#ae81ff>150000</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>DEFAULT_PBKDF2_METHOD</span> = <span style=color:#e6db74>&#34;pbkdf2:sha256&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>genSalt</span>() <span style=color:#66d9ef>string</span> {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>bytes</span> = make([]<span style=color:#66d9ef>byte</span>, <span style=color:#a6e22e>SALT_LENGTH</span>)
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>rand</span>.<span style=color:#a6e22e>Read</span>(<span style=color:#a6e22e>bytes</span>)
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span> <span style=color:#a6e22e>k</span>, <span style=color:#a6e22e>v</span> <span style=color:#f92672>:=</span> <span style=color:#66d9ef>range</span> <span style=color:#a6e22e>bytes</span> {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>bytes</span>[<span style=color:#a6e22e>k</span>] = <span style=color:#a6e22e>SALT_CHARS</span>[<span style=color:#a6e22e>v</span><span style=color:#f92672>%</span>byte(len(<span style=color:#a6e22e>SALT_CHARS</span>))]
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> string(<span style=color:#a6e22e>bytes</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>rendeMethod</span>(<span style=color:#a6e22e>iter</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>string</span> {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Sprintf</span>(<span style=color:#e6db74>&#34;%s:%d&#34;</span>, <span style=color:#a6e22e>DEFAULT_PBKDF2_METHOD</span>, <span style=color:#a6e22e>iter</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>hashInternal</span>(<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>salt</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>iter</span> <span style=color:#66d9ef>int</span>) <span style=color:#66d9ef>string</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>t</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>pbkdf2</span>.<span style=color:#a6e22e>Key</span>([]byte(<span style=color:#a6e22e>password</span>), []byte(<span style=color:#a6e22e>salt</span>), <span style=color:#a6e22e>iter</span>, <span style=color:#ae81ff>32</span>, <span style=color:#a6e22e>sha256</span>.<span style=color:#a6e22e>New</span>)
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>pwh</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>hex</span>.<span style=color:#a6e22e>EncodeToString</span>(<span style=color:#a6e22e>t</span>)
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Sprintf</span>(<span style=color:#e6db74>&#34;%s$%s$%s&#34;</span>, <span style=color:#a6e22e>rendeMethod</span>(<span style=color:#a6e22e>iter</span>), <span style=color:#a6e22e>salt</span>, <span style=color:#a6e22e>pwh</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>GeneratePasswordHash</span>(<span style=color:#a6e22e>password</span> <span style=color:#66d9ef>string</span>) <span style=color:#66d9ef>string</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>salt</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>genSalt</span>()
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>hashInternal</span>(<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>salt</span>, <span style=color:#a6e22e>DEFAULT_PBKDF2_ITERATIONS</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pwhash</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>password</span> <span style=color:#66d9ef>string</span>) <span style=color:#66d9ef>bool</span> {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Count</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;$&#34;</span>) &lt; <span style=color:#ae81ff>2</span> {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>pws</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;$&#34;</span>)
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>method</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>pws</span>[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>salt</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>pws</span>[<span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>HasPrefix</span>(<span style=color:#a6e22e>method</span>, <span style=color:#a6e22e>DEFAULT_PBKDF2_METHOD</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Count</span>(<span style=color:#a6e22e>method</span>, <span style=color:#e6db74>&#34;:&#34;</span>) &lt; <span style=color:#ae81ff>2</span> {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>mds</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>Split</span>(<span style=color:#a6e22e>method</span>, <span style=color:#e6db74>&#34;:&#34;</span>)
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>iter</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>strconv</span>.<span style=color:#a6e22e>Atoi</span>(<span style=color:#a6e22e>mds</span>[<span style=color:#ae81ff>2</span>])
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>EqualFold</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#a6e22e>hashInternal</span>(<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>salt</span>, <span style=color:#a6e22e>iter</span>))
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>测试用例（go）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>util</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> (
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;strings&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;testing&#34;</span>
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>TestPasswd</span>(<span style=color:#a6e22e>t</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>testing</span>.<span style=color:#a6e22e>T</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>pwd</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;Abc123@$-*&amp;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// pwhash 是下面python测试用例中的密码
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>pwhash</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>GeneratePasswordHash</span>(<span style=color:#a6e22e>pwd</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>strings</span>.<span style=color:#a6e22e>HasPrefix</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;pbkdf2&#34;</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;hash password format error&#34;</span>)
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#a6e22e>pwd</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;CheckPasswordHash error (true)&#34;</span>)
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pwhash</span>, <span style=color:#e6db74>&#34;ejaA5W4866&#34;</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;CheckPasswordHash error (false)&#34;</span>)
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#75715e>// 验证 werkzeug generate_password_hash 生成的密码
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>pypwhash</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;pbkdf2:sha256:150000$XqnEnB37$cf2bffd0ccf0ae5d5c7c9486a6c3dc8f4add525f6faf9c4d85c91e98bb360b86&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>CheckPasswordHash</span>(<span style=color:#a6e22e>pypwhash</span>, <span style=color:#e6db74>&#34;123456&#34;</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fatal</span>(<span style=color:#e6db74>&#34;CheckPasswordHash error (werkzeug)&#34;</span>)
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>测试用例（python）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> werkzeug.security <span style=color:#f92672>import</span> check_password_hash
+</span></span><span style=display:flex><span>check_password_hash(<span style=color:#e6db74>&#34;pbkdf2:sha256:150000$ufehHgNr$48915f0de52612c5df20946d30c2b7e2619896348ac7f5aaf07d59cbea1cfb18&#34;</span>,<span style=color:#e6db74>&#34;Abc123@$-*&amp;&#34;</span>)
+</span></span></code></pre></div><br>
 <center> ·End· </center>
-</div>
-<div class=post-copyright>
+</div><div class=post-copyright>
 <p class=copyright-item>
 <span>Author:</span>
 <span>Hiroshi.tao </span>
-</p>
-<p class=copyright-item>
+</p><p class=copyright-item>
 <span>Link:</span>
 <a href=https://blog.saintic.com/blog/308.html>https://blog.saintic.com/blog/308.html</span>
-</p>
-<p class="copyright-item lincese">
+</p><p class="copyright-item lincese">
 本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p>
-</div>
-<div class=post-tags>
+</p></div><div class=post-tags>
 <section>
 <i class="saintic-icon saintic-icon-tag"></i>Tag(s):
 <a href=/tags/flask.html rel=tag class=post-tags-link>#flask</a>
 <a href=/tags/go.html rel=tag class=post-tags-link>#go</a>
-</section>
-<section>
+</section><section>
 <a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span>
-</section>
-</div>
-<div class=post-nav>
+</section></div><div class=post-nav>
 <a href=https://blog.saintic.com/blog/306.html class=prev rel=prev title="redigo 常用方法封装示例"><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;redigo 常用方法封装示例</a>
 <a href=https://blog.saintic.com/blog/307.html class=next rel=next title="二进制方式部署k8s（v1.18 + containerd）">二进制方式部署k8s（v1.18 + containerd）&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div>
-<div class=post-comment>
+</div><div class=post-comment>
 <div id=utteranc-container>
 <script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer class=footer>
+</div></div></article></div></main><footer class=footer>
 <div class=copyright>
 &copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
@@ -275,12 +221,8 @@ check_password_hash(<span style=color:#e6db74>&#34;pbkdf2:sha256:150000$ufehHgNr
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
 <span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div>
-</footer>
-<script defer src=/js/vendor_main.min.js></script>
+</div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
 <script>pangu.spacingPage()</script>
 <script defer src=https://blog.saintic.com/js/my.js></script>
-</div>
-</body>
-</html>
+</div></body></html>
