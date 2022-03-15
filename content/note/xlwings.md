@@ -69,6 +69,19 @@ sht.range('A1').columns.autofit()  # 设置区域自动列宽
 sht.range('A1').rows.autofit()  # 设置区域自动行高
 ```
 
+#### 其他可能用到的操记录
+
+1. 加粗
+```python
+sht.range("A1:A10").api.Font.Bold=True
+```
+
+2. 合并、拆分单元格
+```python
+sht.range("A1:A10").api.Merge()
+sht.range("A1:A10").api.UnMerge()
+```
+
 ### 保存和退出
 
 工作簿（Book）有一个close方法不保存数据并关闭工作簿。
