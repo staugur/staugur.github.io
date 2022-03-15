@@ -1,40 +1,6 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="chrome=1">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta name=author content="Hiroshi.tao">
-<meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档">
-<meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
-<link rel=prev href=https://blog.saintic.com/blog/311.html>
-<link rel=canonical href=https://blog.saintic.com/blog/312.html>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
-<link rel=manifest href=/site.webmanifest>
-<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=theme-color content="#ffffff">
-<title>
-CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务 | 一念博客
-</title><meta name=title content="CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务 | 一念博客">
-<link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu\/Debian 提供软件源服务","headline":"CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu\/Debian 提供软件源服务","description":"系统：CentOS 7.9 前言：内网有少量Ubuntu服务器（无法联网），版本都是20.04，想着提供下软件源服务，但是不值得同步庞大的源所有包文","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2022","datePublished":"2022-03-04 13:30:01 \u002b0800 \u002b0800","dateModified":"2022-03-04 13:30:01 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/312.html","wordCount":"731","keywords":["linux","一念博客"]}</script>
-</head><body>
-<div class=wrapper>
-<nav class=navbar>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class="navbar-header header-back2home-logo">
-<span class=logo_mark>>$</span>
-<a href=https://blog.saintic.com>
-<span class=logo_text>cd /home/</span>
-<span class=logo_cursor></span>
-</a>
-</div><div class=navbar-right>
-<span class=menu>
-<a class=menu-item href=/blog.html title>Blog</a>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档"><meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd"><link rel=prev href=https://blog.saintic.com/blog/311.html><link rel=canonical href=https://blog.saintic.com/blog/312.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务 | 一念博客</title><meta name=title content="CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务 | 一念博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu\/Debian 提供软件源服务","headline":"CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu\/Debian 提供软件源服务","description":"系统：CentOS 7.9 前言：内网有少量Ubuntu服务器（无法联网），版本都是20.04，想着提供下软件源服务，但是不值得同步庞大的源所有包文","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2022","datePublished":"2022-03-04 13:30:01 \u002b0800 \u002b0800","dateModified":"2022-03-04 13:30:01 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/312.html","wordCount":"731","keywords":["linux","一念博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
@@ -43,96 +9,26 @@ CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务 | 一念�
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
 <a class=menu-item href=/about.html title=About>About</a>
 <span class=divide></span>
-<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
-</span>
-</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class=navbar>
-<div class="navbar-header header-logo">
-<a href=https://blog.saintic.com>一念博客</a>
-</div><div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
-<span></span><span></span><span></span>
-</div></div></div><div class=menu id=mobile-menu>
-<nav class=mb-md>
-<a class=menu-item href=/blog.html title>
-<h3>Blog</h3><div class=menu-active></div></a>
-<a class=menu-item href=/note.html title>
-<h3>Note</h3><div class=menu-active></div></a>
-<a class=menu-item href=/categories.html title>
-<h3>Categories</h3><div class=menu-active></div></a>
-<a class=menu-item href=/tags.html title>
-<h3>Tags</h3><div class=menu-active></div></a>
-<a class=menu-item href=/link.html title>
-<h3>Links</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3><div class=menu-active></div></a>
-<a class=menu-item href=/about.html title=About>
-<h3>About</h3><div class=menu-active></div></a>
-</nav></div></div></nav><main class=main>
-<div class=container>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务</h1><div class=post-meta>
-Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
-<span class=post-time>
-on <time datetime=2022-03-04 itemprop=datePublished>March 4, 2022</time>
-</span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>一念博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/note.html title><h3>Note</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Baidu</h3><div class=menu-active></div></a><a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title><h3>Google</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">CentOS 7 安装 Apt-Cacher-NG 为 Ubuntu/Debian 提供软件源服务</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>on <time datetime=2022-03-04 itemprop=datePublished>March 4, 2022</time></span>
 in
 <i class="saintic-icon saintic-icon-folder"></i>
-<span class=post-category>
-<a href=https://blog.saintic.com/categories/linux.html> linux </a>
-</span>
-<span class=post-word-count>731 words</span>
-</div></header><div class=post-content>
-<p>系统：CentOS 7.9</p><p>前言：内网有少量Ubuntu服务器（无法联网），版本都是20.04，想着提供下软件源服务，但是不值得同步庞大的源所有包文件，
-正好发现 <strong>apt-cacher-ng</strong> 这款软件，相当于以代理的模式中转下载并提供缓存，面向Ubuntu、Debian等，恰巧符合我的要求。</p><p>部署：</p><ol>
-<li>使用 docker:sameersbn/apt-cacher-ng 部署</li></ol><p>如前言所讲，早先量少，不值得单独一台Ubuntu服务器来部署，于是准备进行容器化部署，在 dockerhub 中找到了 <a href=https://hub.docker.com/r/sameersbn/apt-cacher-ng>sameersbn/apt-cacher-ng</a></p><p>很可惜，测试中发现客户端安装软件几乎百分百出现 <strong>Hash Sum mismatch failures</strong> 这个错误，而查看 issue 发现其他人也遇到，而在 issue 中发现了他人推荐的 <a href=https://hub.docker.com/r/mbentley/apt-cacher-ng>mbentley/apt-cacher-ng</a></p><ol start=2>
-<li>使用 docker:mbentley/apt-cacher-ng 部署</li></ol><p>这个镜像很棒，一开始使用起来没有问题（其实也没问题，属于我没有配置好），开始投入正式使用，但之后一次偶然机会安装桌面环境，大量的软件包触发了 HTTP 502 错误，找不到软件包（实际是有的），在查询这一错误时看到引用中的文章，在 CentOS 7 中安装，赶紧试试。</p><ol start=3>
-<li>使用 centos 部署</li></ol><p>这，惯性使然，之前居然没想到在 centos 系统中直接安装（下意识将 apt-cacher-ng 固定在了Debian系），在 centos 中直接包管理器安装即可：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>yum -y install apt-cacher-ng
+<span class=post-category><a href=https://blog.saintic.com/categories/linux.html>linux</a></span>
+<span class=post-word-count>731 words</span></div></header><div class=post-content><p>系统：CentOS 7.9</p><p>前言：内网有少量Ubuntu服务器（无法联网），版本都是20.04，想着提供下软件源服务，但是不值得同步庞大的源所有包文件，
+正好发现 <strong>apt-cacher-ng</strong> 这款软件，相当于以代理的模式中转下载并提供缓存，面向Ubuntu、Debian等，恰巧符合我的要求。</p><p>部署：</p><ol><li>使用 docker:sameersbn/apt-cacher-ng 部署</li></ol><p>如前言所讲，早先量少，不值得单独一台Ubuntu服务器来部署，于是准备进行容器化部署，在 dockerhub 中找到了 <a href=https://hub.docker.com/r/sameersbn/apt-cacher-ng>sameersbn/apt-cacher-ng</a></p><p>很可惜，测试中发现客户端安装软件几乎百分百出现 <strong>Hash Sum mismatch failures</strong> 这个错误，而查看 issue 发现其他人也遇到，而在 issue 中发现了他人推荐的 <a href=https://hub.docker.com/r/mbentley/apt-cacher-ng>mbentley/apt-cacher-ng</a></p><ol start=2><li>使用 docker:mbentley/apt-cacher-ng 部署</li></ol><p>这个镜像很棒，一开始使用起来没有问题（其实也没问题，属于我没有配置好），开始投入正式使用，但之后一次偶然机会安装桌面环境，大量的软件包触发了 HTTP 502 错误，找不到软件包（实际是有的），在查询这一错误时看到引用中的文章，在 CentOS 7 中安装，赶紧试试。</p><ol start=3><li>使用 centos 部署</li></ol><p>这，惯性使然，之前居然没想到在 centos 系统中直接安装（下意识将 apt-cacher-ng 固定在了Debian系），在 centos 中直接包管理器安装即可：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>yum -y install apt-cacher-ng
 </span></span></code></pre></div><p>配置文件：<code>/etc/apt-cacher-ng</code>，修改 acng.conf ，添加一行 <code>PassThroughPattern: .*</code> 允许客户端所有模式请求。</p><p>在国内，还应该配置下 <code>/etc/apt-cacher-ng/backends_ubuntu</code> ，用来定义apt-cacher-ng请求的源，默认是官方，第二步的容器部署就是因为此处采用官方默认源，才导致偶尔 502 错误，这里我用的中科大代替，速度杠杠的：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#34;http://mirrors.ustc.edu.cn/ubuntu/&#34;</span> &gt; /etc/apt-cacher-ng/backends_ubuntu
 </span></span></code></pre></div><p>PS：代理 Debian 的话，请添加或修改 backends_debian 文件。</p><p>接下来使用 <code>systemctl start apt-cacher-ng</code> 启动服务即可，不要忘记 <code>systemctl enable apt-cacher-ng</code> 设为开机自启动。</p><p>使用：</p><p>Apt-Cacher-NG默认监听全部地址的 3142 端口，浏览器打开这个端口就有使用方法。</p><p>第一种：</p><p>添加配置，自动代理：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#39;Acquire::http::Proxy &#34;http://127.0.0.1:3142&#34;;&#39;</span> &gt; /etc/apt/apt.conf.d/00aptproxy
 </span></span></code></pre></div><p>第二种：
 修改 source.list 仓库地址：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sed -i <span style=color:#e6db74>&#34;s#archive.ubuntu.com#127.0.0.1:3142/&amp;#g&#34;</span> /etc/apt/sources.list
-</span></span></code></pre></div><p>最后更新下缓存：<code>apt update</code></p><p>完事。</p><p>引用：</p><ul>
-<li><a href=https://installati.one/centos/7/apt-cacher-ng/>How To Install apt-cacher-ng on CentOS 7</a></li><li><a href=https://www.unix-ag.uni-kl.de/~bloch/acng/html/index.html>Apt-Cacher-NG User Manual</a></li></ul><br>
-<center> ·End· </center>
-</div><div class=post-copyright>
-<p class=copyright-item>
-<span>Author:</span>
-<span>Hiroshi.tao </span>
-</p><p class=copyright-item>
-<span>Link:</span>
-<a href=https://blog.saintic.com/blog/312.html>https://blog.saintic.com/blog/312.html</span>
-</p><p class="copyright-item lincese">
-本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p></div><div class=post-tags>
-<section>
-<i class="saintic-icon saintic-icon-tag"></i>Tag(s):
-<a href=/tags/linux.html rel=tag class=post-tags-link>#linux</a>
-</section><section>
-<a href=javascript:window.history.back();>back</a></span> ·
-<span><a href=https://blog.saintic.com>home</a></span>
-</section></div><div class=post-nav>
-<a href=https://blog.saintic.com/blog/311.html class=prev rel=prev title="passwd: Authentication token manipulation error"><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;passwd: Authentication token manipulation error</a>
-</div><div class=post-comment>
-<div id=utteranc-container>
-<script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div></div></article></div></main><footer class=footer>
-<div class=copyright>
-&copy;
+</span></span></code></pre></div><p>最后更新下缓存：<code>apt update</code></p><p>完事。</p><p>引用：</p><ul><li><a href=https://installati.one/centos/7/apt-cacher-ng/>How To Install apt-cacher-ng on CentOS 7</a></li><li><a href=https://www.unix-ag.uni-kl.de/~bloch/acng/html/index.html>Apt-Cacher-NG User Manual</a></li></ul><br><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
+<a href=https://blog.saintic.com/blog/312.html>https://blog.saintic.com/blog/312.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/linux.html rel=tag class=post-tags-link>#linux</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/311.html class=prev rel=prev title="passwd: Authentication token manipulation error"><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;passwd: Authentication token manipulation error</a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
-<span class=with-love>
-<i class="saintic-icon saintic-icon-love"></i>
-</span>
-<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
-<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
-<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div></footer><script defer src=/js/vendor_main.min.js></script>
+<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
+<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span></div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
-<script>pangu.spacingPage()</script>
-<script defer src=https://blog.saintic.com/js/my.js></script>
-</div></body></html>
+<script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>

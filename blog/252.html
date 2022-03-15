@@ -1,41 +1,6 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="chrome=1">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta name=author content="Hiroshi.tao">
-<meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档">
-<meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
-<link rel=prev href=https://blog.saintic.com/blog/249.html>
-<link rel=next href=https://blog.saintic.com/blog/253.html>
-<link rel=canonical href=https://blog.saintic.com/blog/252.html>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
-<link rel=manifest href=/site.webmanifest>
-<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=theme-color content="#ffffff">
-<title>
-js获取base64图片大小 | 一念博客
-</title><meta name=title content="js获取base64图片大小 | 一念博客">
-<link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"js获取base64图片大小","headline":"js获取base64图片大小","description":"canvas等裁剪后的图片，base64地址形式，前端获取其大小的函数： function showSize(base64url) { \/\/获取base64图片大小，返回KB数字 var str = base64url.replace(\u0026#39;data:image\/png;base64,\u0026#39;, \u0026#39;\u0026#39;); var equalIndex = str.indexOf(\u0026#39;=\u0026#39;); if","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-03-20 00:00:00 \u002b0000 UTC","dateModified":"2018-03-20 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/252.html","wordCount":"259","keywords":["js","一念博客"]}</script>
-</head><body>
-<div class=wrapper>
-<nav class=navbar>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class="navbar-header header-back2home-logo">
-<span class=logo_mark>>$</span>
-<a href=https://blog.saintic.com>
-<span class=logo_text>cd /home/</span>
-<span class=logo_cursor></span>
-</a>
-</div><div class=navbar-right>
-<span class=menu>
-<a class=menu-item href=/blog.html title>Blog</a>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档"><meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd"><link rel=prev href=https://blog.saintic.com/blog/249.html><link rel=next href=https://blog.saintic.com/blog/253.html><link rel=canonical href=https://blog.saintic.com/blog/252.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>js获取base64图片大小 | 一念博客</title><meta name=title content="js获取base64图片大小 | 一念博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"js获取base64图片大小","headline":"js获取base64图片大小","description":"canvas等裁剪后的图片，base64地址形式，前端获取其大小的函数： function showSize(base64url) { \/\/获取base64图片大小，返回KB数字 var str = base64url.replace(\u0026#39;data:image\/png;base64,\u0026#39;, \u0026#39;\u0026#39;); var equalIndex = str.indexOf(\u0026#39;=\u0026#39;); if","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2018","datePublished":"2018-03-20 00:00:00 \u002b0000 UTC","dateModified":"2018-03-20 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/252.html","wordCount":"259","keywords":["js","一念博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
@@ -44,52 +9,12 @@ js获取base64图片大小 | 一念博客
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
 <a class=menu-item href=/about.html title=About>About</a>
 <span class=divide></span>
-<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
-</span>
-</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class=navbar>
-<div class="navbar-header header-logo">
-<a href=https://blog.saintic.com>一念博客</a>
-</div><div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
-<span></span><span></span><span></span>
-</div></div></div><div class=menu id=mobile-menu>
-<nav class=mb-md>
-<a class=menu-item href=/blog.html title>
-<h3>Blog</h3><div class=menu-active></div></a>
-<a class=menu-item href=/note.html title>
-<h3>Note</h3><div class=menu-active></div></a>
-<a class=menu-item href=/categories.html title>
-<h3>Categories</h3><div class=menu-active></div></a>
-<a class=menu-item href=/tags.html title>
-<h3>Tags</h3><div class=menu-active></div></a>
-<a class=menu-item href=/link.html title>
-<h3>Links</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3><div class=menu-active></div></a>
-<a class=menu-item href=/about.html title=About>
-<h3>About</h3><div class=menu-active></div></a>
-</nav></div></div></nav><main class=main>
-<div class=container>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">js获取base64图片大小</h1><div class=post-meta>
-Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
-<span class=post-time>
-on <time datetime=2018-03-20 itemprop=datePublished>March 20, 2018</time>
-</span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>一念博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/note.html title><h3>Note</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Baidu</h3><div class=menu-active></div></a><a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title><h3>Google</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">js获取base64图片大小</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>on <time datetime=2018-03-20 itemprop=datePublished>March 20, 2018</time></span>
 in
 <i class="saintic-icon saintic-icon-folder"></i>
-<span class=post-category>
-<a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html> 开发 </a>
-</span>
-<span class=post-word-count>259 words</span>
-</div></header><div class=post-content>
-<p>canvas等裁剪后的图片，base64地址形式，前端获取其大小的函数：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>showSize</span>(<span style=color:#a6e22e>base64url</span>) {
+<span class=post-category><a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html>开发</a></span>
+<span class=post-word-count>259 words</span></div></header><div class=post-content><p>canvas等裁剪后的图片，base64地址形式，前端获取其大小的函数：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>showSize</span>(<span style=color:#a6e22e>base64url</span>) {
 </span></span><span style=display:flex><span>        <span style=color:#75715e>//获取base64图片大小，返回KB数字
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>str</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>base64url</span>.<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>&#39;data:image/png;base64,&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>);
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>equalIndex</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>str</span>.<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#39;=&#39;</span>);
@@ -110,42 +35,16 @@ in
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> parseInt(<span style=color:#a6e22e>size</span>);
 </span></span><span style=display:flex><span>    }
 </span></span></code></pre></div><p>其中base64url参数类似于以下代码，请注意replace部分，需要替换base64url头部(,前)</p><pre tabindex=0><code>data:image/png;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAB9SR//fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/6mHbP+LXDf/fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/99SR//i104/5lwT/+RZkP/fksh/6eFaP/8/Pv/mG9N/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/+tjHL/6uHb//7+/v////////////Xx7v/8+/r//////6N/Yv99SR//fUkf/31JH/99SR//fUkf/35LIf/PvK3///////////////////////////////////////////+vj3b/fUkf/31JH/99SR//fUkf/31JH/++pI/////////////08Oz/vqSQ/8y3p///////////////////////u6CK/31JH/99SR//fUkf/31JH/+IWDL/+vn3///////s5d//iVo1/6B7XP/6+ff/8Orl/9TDtv+5nYb/nXZX/4NRKf9+SyL/fUkf/31JH/99SR//sJF3////////////onxe/35LIv+ge1z/ils1/31JH/99SR//fUkf/6qIbf/dz8T/1MK0/31JH/99SR//fUkf/8WunP///////Pv7/39MIv99SR//fUkf/31JH/99SR//fUkf/31JH//ay7///////+ri2/99SR//fUkf/31JH//Frpv///////38+/9/TCP/fUkf/31JH/99SR//fUkf/31JH/99SR//2szA///////q4dv/fUkf/31JH/99SR//r491////////////pIBi/31JH/99SR//fUkf/31JH/99SR//hVUt//j29P//////1MK1/31JH/99SR//fUkf/4dXMP/59/b//////+7o4/+MXjn/fUkf/31JH/99SR//gE0k/9XFuP///////////6aDZ/99SR//fUkf/31JH/99SR//up+I////////////9vPw/8OrmP+si3D/uZ2G/+ri2////////////97Rx/99SiD/fUkf/31JH/99SR//fUkf/31KIP/KtqX//v7+/////////////////////////////////+Xb0/+HWDH/fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/6eFaP/l2tL//v7+////////////8evn/7yhi/+BTyb/fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/4dXMP+Uakf/jV86/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</code></pre><p>参考：</p><p><a href=http://blog.csdn.net/chenyejunjun/article/details/54924355>http://blog.csdn.net/chenyejunjun/article/details/54924355</a>
-<br></p><center> ·End· </center>
-</div><div class=post-copyright>
-<p class=copyright-item>
-<span>Author:</span>
-<span>Hiroshi.tao </span>
-</p><p class=copyright-item>
-<span>Link:</span>
-<a href=https://blog.saintic.com/blog/252.html>https://blog.saintic.com/blog/252.html</span>
-</p><p class="copyright-item lincese">
-本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p></div><div class=post-tags>
-<section>
-<i class="saintic-icon saintic-icon-tag"></i>Tag(s):
-<a href=/tags/js.html rel=tag class=post-tags-link>#js</a>
-</section><section>
-<a href=javascript:window.history.back();>back</a></span> ·
-<span><a href=https://blog.saintic.com>home</a></span>
-</section></div><div class=post-nav>
-<a href=https://blog.saintic.com/blog/249.html class=prev rel=prev title=开机自动下载必应今日图片并更换桌面壁纸><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;开机自动下载必应今日图片并更换桌面壁纸</a>
-<a href=https://blog.saintic.com/blog/253.html class=next rel=next title=必应、百度收录查询接口>必应、百度收录查询接口&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div><div class=post-comment>
-<div id=utteranc-container>
-<script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div></div></article></div></main><footer class=footer>
-<div class=copyright>
-&copy;
+</code></pre><p>参考：</p><p><a href=http://blog.csdn.net/chenyejunjun/article/details/54924355>http://blog.csdn.net/chenyejunjun/article/details/54924355</a><br></p><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
+<a href=https://blog.saintic.com/blog/252.html>https://blog.saintic.com/blog/252.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/js.html rel=tag class=post-tags-link>#js</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/249.html class=prev rel=prev title=开机自动下载必应今日图片并更换桌面壁纸><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;开机自动下载必应今日图片并更换桌面壁纸</a>
+<a href=https://blog.saintic.com/blog/253.html class=next rel=next title=必应、百度收录查询接口>必应、百度收录查询接口&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
-<span class=with-love>
-<i class="saintic-icon saintic-icon-love"></i>
-</span>
-<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
-<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
-<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div></footer><script defer src=/js/vendor_main.min.js></script>
+<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
+<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span></div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
-<script>pangu.spacingPage()</script>
-<script defer src=https://blog.saintic.com/js/my.js></script>
-</div></body></html>
+<script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>

@@ -1,40 +1,6 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="chrome=1">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta name=author content="Hiroshi.tao">
-<meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档">
-<meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
-<link rel=next href=https://blog.saintic.com/note/xlwings.html>
-<link rel=canonical href=https://blog.saintic.com/note/disk.html>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
-<link rel=manifest href=/site.webmanifest>
-<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=theme-color content="#ffffff">
-<title>
-磁盘与LVM简介 | 一念博客
-</title><meta name=title content="磁盘与LVM简介 | 一念博客">
-<link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"磁盘与LVM简介","headline":"磁盘与LVM简介","description":"磁盘基本概述 磁盘分类 固态硬盘 机械硬盘 服务器硬盘 固态硬盘的优缺点 优点： 读写速度快 防震抗摔性强 低功耗 无躁音 体积小，携带方便 缺点： 容量比机械硬盘小","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-08-16 14:23:13 \u002b0800 \u002b0800","dateModified":"2021-08-16 14:23:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/disk.html","wordCount":"2070","keywords":["LVM","一念博客"]}</script>
-</head><body>
-<div class=wrapper>
-<nav class=navbar>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class="navbar-header header-back2home-logo">
-<span class=logo_mark>>$</span>
-<a href=https://blog.saintic.com>
-<span class=logo_text>cd /home/</span>
-<span class=logo_cursor></span>
-</a>
-</div><div class=navbar-right>
-<span class=menu>
-<a class=menu-item href=/blog.html title>Blog</a>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档"><meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd"><link rel=next href=https://blog.saintic.com/note/xlwings.html><link rel=canonical href=https://blog.saintic.com/note/disk.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>磁盘与LVM简介 | 一念博客</title><meta name=title content="磁盘与LVM简介 | 一念博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"note","name":"磁盘与LVM简介","headline":"磁盘与LVM简介","description":"磁盘基本概述 磁盘分类 固态硬盘 机械硬盘 服务器硬盘 固态硬盘的优缺点 优点： 读写速度快 防震抗摔性强 低功耗 无躁音 体积小，携带方便 缺点： 容量比机械硬盘小","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2021","datePublished":"2021-08-16 14:23:13 \u002b0800 \u002b0800","dateModified":"2021-08-16 14:23:13 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/note\/disk.html","wordCount":"2070","keywords":["LVM","一念博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
@@ -43,166 +9,14 @@
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
 <a class=menu-item href=/about.html title=About>About</a>
 <span class=divide></span>
-<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
-</span>
-</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class=navbar>
-<div class="navbar-header header-logo">
-<a href=https://blog.saintic.com>一念博客</a>
-</div><div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
-<span></span><span></span><span></span>
-</div></div></div><div class=menu id=mobile-menu>
-<nav class=mb-md>
-<a class=menu-item href=/blog.html title>
-<h3>Blog</h3><div class=menu-active></div></a>
-<a class=menu-item href=/note.html title>
-<h3>Note</h3><div class=menu-active></div></a>
-<a class=menu-item href=/categories.html title>
-<h3>Categories</h3><div class=menu-active></div></a>
-<a class=menu-item href=/tags.html title>
-<h3>Tags</h3><div class=menu-active></div></a>
-<a class=menu-item href=/link.html title>
-<h3>Links</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3><div class=menu-active></div></a>
-<a class=menu-item href=/about.html title=About>
-<h3>About</h3><div class=menu-active></div></a>
-</nav></div></div></nav><main class=main>
-<div class=container>
-<div class=toc>
-<div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e7%a3%81%e7%9b%98%e5%9f%ba%e6%9c%ac%e6%a6%82%e8%bf%b0>
-磁盘基本概述
-</a>
-</li></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e7%a3%81%e7%9b%98%e5%88%86%e7%b1%bb>
-磁盘分类
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e5%9b%ba%e6%80%81%e7%a1%ac%e7%9b%98%e7%9a%84%e4%bc%98%e7%bc%ba%e7%82%b9>
-固态硬盘的优缺点
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#linux%e7%a3%81%e7%9b%98%e5%91%bd%e5%90%8d%e6%96%b9%e5%bc%8f>
-Linux磁盘命名方式
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#mbr%e4%b8%8egpt>
-MBR与GPT
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#mbr>
-MBR
-</a>
-</li></ul></ul></ul><ul class=nav>
-<ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#gpt>
-GPT
-</a>
-</li></ul></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e5%88%86%e5%8c%ba%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f>
-分区、文件系统
-</a>
-</li></ul></ul><ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#lvm>
-LVM
-</a>
-</li></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#lvm%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5>
-LVM基本概念
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#lvm%e5%91%bd%e4%bb%a4>
-LVM命令
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e6%96%b0%e5%a2%9e%e9%80%bb%e8%be%91%e5%8d%b7>
-新增逻辑卷
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e6%89%a9%e5%ae%b9%e9%80%bb%e8%be%91%e5%8d%b7>
-扩容逻辑卷
-</a>
-</li></ul></ul><ul class=nav>
-<ul class=nav>
-<ul class=nav>
-<ul class=nav>
-<li class=nav-item>
-<a class="nav-link text-left" href=#%e5%bc%95%e7%94%a8>
-引用:
-</a>
-</li></ul></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">磁盘与LVM简介</h1><div class=post-meta>
-Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
-<span class=post-time>
-on <time datetime=2021-08-16 itemprop=datePublished>August 16, 2021</time>
-</span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>一念博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/note.html title><h3>Note</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Baidu</h3><div class=menu-active></div></a><a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title><h3>Google</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><div class=toc><div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e7%a3%81%e7%9b%98%e5%9f%ba%e6%9c%ac%e6%a6%82%e8%bf%b0>磁盘基本概述</a></li></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e7%a3%81%e7%9b%98%e5%88%86%e7%b1%bb>磁盘分类</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e5%9b%ba%e6%80%81%e7%a1%ac%e7%9b%98%e7%9a%84%e4%bc%98%e7%bc%ba%e7%82%b9>固态硬盘的优缺点</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#linux%e7%a3%81%e7%9b%98%e5%91%bd%e5%90%8d%e6%96%b9%e5%bc%8f>Linux磁盘命名方式</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#mbr%e4%b8%8egpt>MBR与GPT</a></li></ul></ul><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#mbr>MBR</a></li></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#gpt>GPT</a></li></ul></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e5%88%86%e5%8c%ba%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f>分区、文件系统</a></li></ul></ul><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#lvm>LVM</a></li></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#lvm%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5>LVM基本概念</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#lvm%e5%91%bd%e4%bb%a4>LVM命令</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e6%96%b0%e5%a2%9e%e9%80%bb%e8%be%91%e5%8d%b7>新增逻辑卷</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e6%89%a9%e5%ae%b9%e9%80%bb%e8%be%91%e5%8d%b7>扩容逻辑卷</a></li></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e5%bc%95%e7%94%a8>引用:</a></li></ul></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">磁盘与LVM简介</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>on <time datetime=2021-08-16 itemprop=datePublished>August 16, 2021</time></span>
 in
 <i class="saintic-icon saintic-icon-folder"></i>
-<span class=post-category>
-<a href=https://blog.saintic.com/categories/%E7%AC%94%E8%AE%B0.html> 笔记 </a>
-</span>
-<span class=post-word-count>2070 words</span>
-</div></header><div class=post-content>
-<h1 id=磁盘基本概述>磁盘基本概述</h1><h2 id=磁盘分类>磁盘分类</h2><ul>
-<li>固态硬盘</li><li>机械硬盘</li><li>服务器硬盘</li></ul><h2 id=固态硬盘的优缺点>固态硬盘的优缺点</h2><ul>
-<li>
-<p>优点：</p><ul>
-<li>读写速度快</li><li>防震抗摔性强</li><li>低功耗</li><li>无躁音</li><li>体积小，携带方便</li></ul></li><li>
-<p>缺点：</p><ul>
-<li>容量比机械硬盘小</li><li>寿命比机械硬盘短</li><li>制造成本高所以价格比机械硬盘高</li></ul></li></ul><span class=spoiler>
-【附录】固态硬盘的总线，协议和接口：
+<span class=post-category><a href=https://blog.saintic.com/categories/%E7%AC%94%E8%AE%B0.html>笔记</a></span>
+<span class=post-word-count>2070 words</span></div></header><div class=post-content><h1 id=磁盘基本概述>磁盘基本概述</h1><h2 id=磁盘分类>磁盘分类</h2><ul><li>固态硬盘</li><li>机械硬盘</li><li>服务器硬盘</li></ul><h2 id=固态硬盘的优缺点>固态硬盘的优缺点</h2><ul><li><p>优点：</p><ul><li>读写速度快</li><li>防震抗摔性强</li><li>低功耗</li><li>无躁音</li><li>体积小，携带方便</li></ul></li><li><p>缺点：</p><ul><li>容量比机械硬盘小</li><li>寿命比机械硬盘短</li><li>制造成本高所以价格比机械硬盘高</li></ul></li></ul><span class=spoiler>【附录】固态硬盘的总线，协议和接口：
 从理论上来说，一款固态硬盘选择M.2接口，走PCIe总线，用NVMe协议，性能发挥是最好的。
-欲知详情，请参考: https://ssdzg.com/243.html
-</span>
-<h2 id=linux磁盘命名方式>Linux磁盘命名方式</h2><ul>
-<li>传统IDE接口硬盘：/dev/hd[a-z]</li><li>SCISI接口硬盘：/dev/sd[a-z]</li><li>虚拟化硬盘：/dev/vd[a-z]</li></ul><p>系统中分区由数字编号表示, 1-4留给主分区使用和扩展分区, 逻辑分区从5开始</p><h2 id=mbr与gpt>MBR与GPT</h2><p>MBR支持的磁盘最大容量为2 TB，GPT最大支持的磁盘容量为18 EB，当前数据盘支持的最大容量为32 TB，如果您需要使用大于2 TB的磁盘容量，分区形式请采用GPT。</p><p>当磁盘已经投入使用后，此时切换磁盘分区形式时，磁盘上的原有数据将会清除，因此请在磁盘初始化时谨慎选择磁盘分区形式。</p><h3 id=mbr>MBR</h3><p>MBR是Master Boot Record的简称，也就是主引导记录，是位于磁盘最前边的一段引导（Loader）代码，主要用来引导操作系统的加载与启动</p><p>特点：</p><ul>
-<li>MBR支持最大2TB磁盘，无法处理大于2TB容量的磁盘</li><li>只支持最多4个主分区。需要更多的分区，则需要创建拓展分区，并在其中创建逻辑分区</li></ul><p>备注：在linux操作系统中可用fdisk对磁盘分区。</p><h3 id=gpt>GPT</h3><p>GPT磁盘是指使用GUID分区表的磁盘，GUID磁盘分区表（GUID Partition Table，缩写：GPT）其含义为“全局唯一标识磁盘分区表”，是一个实体硬盘的分区表的结构布局的标准</p><p>特点：</p><ul>
-<li>GPT对磁盘的大小没有限制</li><li>最多可以创建128个分区</li><li>注意：MBR与GPT之间互相转换会导致数据丢失</li><li>磁盘容量检查</li></ul><p>备注：在linux操作系统中可用gdisk对磁盘分区。</p><h2 id=分区文件系统>分区、文件系统</h2><ul>
-<li>
-<p><a href=https://www.cnblogs.com/sammyliu/p/4521315.html>分区和文件系统</a></p></li><li>
-<p><a href=http://xiaqunfeng.cc/2017/07/06/XFS-vs-EXT4/>XFS vs EXT4</a></p></li></ul><h1 id=lvm>LVM</h1><p>LVM 是 Logical Volume Manager 的缩写，中文一般翻译为 &ldquo;逻辑卷管理&rdquo;，它是 Linux 下对磁盘分区进行管理的一种机制。LVM 是建立在磁盘分区和文件系统之间的一个逻辑层，系统管理员可以利用 LVM 在不重新对磁盘分区的情况下动态的调整分区的大小。如果系统新增了一块硬盘，通过 LVM 就可以将新增的硬盘空间直接扩展到原来的磁盘分区上。</p><p>LVM 的优点如下：</p><ul>
-<li>文件系统可以跨多个磁盘，因此大小不再受物理磁盘的限制。</li><li>可以在系统运行状态下动态地扩展文件系统大小。</li><li>可以以镜像的方式冗余重要数据到多个物理磁盘上。</li><li>可以很方便地导出整个卷组，并导入到另外一台机器上。</li></ul><p>LVM 也有一些缺点：</p><ul>
-<li>在从卷组中移除一个磁盘的时候必须使用 reducevg 命令(这个命令要求root权限，并且不允许在快照卷组中使用)。</li><li>当卷组中的一个磁盘损坏时，整个卷组都会受影响。</li><li>因为增加了一个逻辑层，存储的性能会受影响。</li></ul><h2 id=lvm基本概念>LVM基本概念</h2><ul>
-<li>
-<p>物理存储设备(Physical Media)：指系统的存储设备文件，比如 /dev/sda、/dev/sdb 等。</p></li><li>
-<p>物理卷(PV)：把常规的块设备（硬盘，分区等可以读写数据的设备）通过pvcreate命令对其进行初始化，就成了物理卷</p></li><li>
-<p>卷组(VG):把多个物理卷的容量组成一个逻辑整体，可以从里面灵活分配容量</p></li><li>
-<p>逻辑卷(LV):从卷组中划分部分空间成为一个可以读写数据的逻辑单元。需要对其格式化然后挂载使用</p></li><li>
-<p>PE(Physical Extent)：PV(物理卷)中可以分配的最小存储单元称为 PE，PE 的大小是可以指定的。</p></li><li>
-<p>LE(Logical Extent)：LV(逻辑卷)中可以分配的最小存储单元称为 LE，在同一个卷组中，LE 的大小和 PE 的大小是一样的，并且一一对应。</p></li></ul><p>可以这么理解，LVM 是把硬盘的分区分成了更小的单位(PE)，再用这些单元拼成更大的看上去像分区的东西(PV)，进而用 PV 拼成看上去像硬盘的东西(VG)，最后在这个新的硬盘上创建分区(LV)。文件系统则建立在 LV 之上，这样就在物理硬盘和文件系统中间添加了一层抽象(LVM)。</p><h2 id=lvm命令>LVM命令</h2><p>磁盘分区 - pvcreate添加标记为物理卷 - vgcreate创建卷组 - lvcreate创建逻辑卷 - 格式化lv - 挂载lv</p><h2 id=新增逻辑卷>新增逻辑卷</h2><p>新增一块sdb，设为名为VG的卷组，全部空间创建名为Data的lv，挂载到/data</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ fdisk /dev/sdb <span style=color:#75715e>#（如果磁盘大于2T，使用GPT类型，用 gdisk /dev/sdb分区），分区</span>
+欲知详情，请参考: https://ssdzg.com/243.html</span><h2 id=linux磁盘命名方式>Linux磁盘命名方式</h2><ul><li>传统IDE接口硬盘：/dev/hd[a-z]</li><li>SCISI接口硬盘：/dev/sd[a-z]</li><li>虚拟化硬盘：/dev/vd[a-z]</li></ul><p>系统中分区由数字编号表示, 1-4留给主分区使用和扩展分区, 逻辑分区从5开始</p><h2 id=mbr与gpt>MBR与GPT</h2><p>MBR支持的磁盘最大容量为2 TB，GPT最大支持的磁盘容量为18 EB，当前数据盘支持的最大容量为32 TB，如果您需要使用大于2 TB的磁盘容量，分区形式请采用GPT。</p><p>当磁盘已经投入使用后，此时切换磁盘分区形式时，磁盘上的原有数据将会清除，因此请在磁盘初始化时谨慎选择磁盘分区形式。</p><h3 id=mbr>MBR</h3><p>MBR是Master Boot Record的简称，也就是主引导记录，是位于磁盘最前边的一段引导（Loader）代码，主要用来引导操作系统的加载与启动</p><p>特点：</p><ul><li>MBR支持最大2TB磁盘，无法处理大于2TB容量的磁盘</li><li>只支持最多4个主分区。需要更多的分区，则需要创建拓展分区，并在其中创建逻辑分区</li></ul><p>备注：在linux操作系统中可用fdisk对磁盘分区。</p><h3 id=gpt>GPT</h3><p>GPT磁盘是指使用GUID分区表的磁盘，GUID磁盘分区表（GUID Partition Table，缩写：GPT）其含义为“全局唯一标识磁盘分区表”，是一个实体硬盘的分区表的结构布局的标准</p><p>特点：</p><ul><li>GPT对磁盘的大小没有限制</li><li>最多可以创建128个分区</li><li>注意：MBR与GPT之间互相转换会导致数据丢失</li><li>磁盘容量检查</li></ul><p>备注：在linux操作系统中可用gdisk对磁盘分区。</p><h2 id=分区文件系统>分区、文件系统</h2><ul><li><p><a href=https://www.cnblogs.com/sammyliu/p/4521315.html>分区和文件系统</a></p></li><li><p><a href=http://xiaqunfeng.cc/2017/07/06/XFS-vs-EXT4/>XFS vs EXT4</a></p></li></ul><h1 id=lvm>LVM</h1><p>LVM 是 Logical Volume Manager 的缩写，中文一般翻译为 &ldquo;逻辑卷管理&rdquo;，它是 Linux 下对磁盘分区进行管理的一种机制。LVM 是建立在磁盘分区和文件系统之间的一个逻辑层，系统管理员可以利用 LVM 在不重新对磁盘分区的情况下动态的调整分区的大小。如果系统新增了一块硬盘，通过 LVM 就可以将新增的硬盘空间直接扩展到原来的磁盘分区上。</p><p>LVM 的优点如下：</p><ul><li>文件系统可以跨多个磁盘，因此大小不再受物理磁盘的限制。</li><li>可以在系统运行状态下动态地扩展文件系统大小。</li><li>可以以镜像的方式冗余重要数据到多个物理磁盘上。</li><li>可以很方便地导出整个卷组，并导入到另外一台机器上。</li></ul><p>LVM 也有一些缺点：</p><ul><li>在从卷组中移除一个磁盘的时候必须使用 reducevg 命令(这个命令要求root权限，并且不允许在快照卷组中使用)。</li><li>当卷组中的一个磁盘损坏时，整个卷组都会受影响。</li><li>因为增加了一个逻辑层，存储的性能会受影响。</li></ul><h2 id=lvm基本概念>LVM基本概念</h2><ul><li><p>物理存储设备(Physical Media)：指系统的存储设备文件，比如 /dev/sda、/dev/sdb 等。</p></li><li><p>物理卷(PV)：把常规的块设备（硬盘，分区等可以读写数据的设备）通过pvcreate命令对其进行初始化，就成了物理卷</p></li><li><p>卷组(VG):把多个物理卷的容量组成一个逻辑整体，可以从里面灵活分配容量</p></li><li><p>逻辑卷(LV):从卷组中划分部分空间成为一个可以读写数据的逻辑单元。需要对其格式化然后挂载使用</p></li><li><p>PE(Physical Extent)：PV(物理卷)中可以分配的最小存储单元称为 PE，PE 的大小是可以指定的。</p></li><li><p>LE(Logical Extent)：LV(逻辑卷)中可以分配的最小存储单元称为 LE，在同一个卷组中，LE 的大小和 PE 的大小是一样的，并且一一对应。</p></li></ul><p>可以这么理解，LVM 是把硬盘的分区分成了更小的单位(PE)，再用这些单元拼成更大的看上去像分区的东西(PV)，进而用 PV 拼成看上去像硬盘的东西(VG)，最后在这个新的硬盘上创建分区(LV)。文件系统则建立在 LV 之上，这样就在物理硬盘和文件系统中间添加了一层抽象(LVM)。</p><h2 id=lvm命令>LVM命令</h2><p>磁盘分区 - pvcreate添加标记为物理卷 - vgcreate创建卷组 - lvcreate创建逻辑卷 - 格式化lv - 挂载lv</p><h2 id=新增逻辑卷>新增逻辑卷</h2><p>新增一块sdb，设为名为VG的卷组，全部空间创建名为Data的lv，挂载到/data</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ fdisk /dev/sdb <span style=color:#75715e>#（如果磁盘大于2T，使用GPT类型，用 gdisk /dev/sdb分区），分区</span>
 </span></span><span style=display:flex><span>&gt;&gt; n
 </span></span><span style=display:flex><span>&gt;&gt; p
 </span></span><span style=display:flex><span>&gt;&gt; ...8e <span style=color:#f92672>(</span>lvm<span style=color:#f92672>)</span>
@@ -228,42 +42,15 @@ in
 </span></span><span style=display:flex><span>$ resize2fs/xfs_growfs &lt;DEVICE&gt;
 </span></span><span style=display:flex><span>  <span style=color:#75715e># ext2/ext3/ext4文件系统的调整命令是resize2fs（增大和减小都支持）</span>
 </span></span><span style=display:flex><span>  <span style=color:#75715e># xfs文件系统的调整命令是xfs_growfs（只支持增大）</span>
-</span></span></code></pre></div><h4 id=引用>引用:</h4><ul>
-<li><a href=https://blog.51cto.com/bad5/2903258>Linux磁盘介绍及LVM磁盘管理</a></li><li><a href=https://www.cnblogs.com/kevingrace/p/5845634.html>LVM基础详细说明及动态扩容lvm逻辑卷的操作记录</a></li><li><a href=https://www.cnblogs.com/kevingrace/p/5825963.html>Linux下对LVM逻辑卷分区大小调整【针对xfs和ext4文件系统】</a></li></ul><br>
-<center> ·End· </center>
-</div><div class=post-copyright>
-<p class=copyright-item>
-<span>Author:</span>
-<span>Hiroshi.tao </span>
-</p><p class=copyright-item>
-<span>Link:</span>
-<a href=https://blog.saintic.com/note/disk.html>https://blog.saintic.com/note/disk.html</span>
-</p><p class="copyright-item lincese">
-本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p></div><div class=post-tags>
-<section>
-<i class="saintic-icon saintic-icon-tag"></i>Tag(s):
-<a href=/tags/lvm.html rel=tag class=post-tags-link>#LVM</a>
-</section><section>
-<a href=javascript:window.history.back();>back</a></span> ·
-<span><a href=https://blog.saintic.com>home</a></span>
-</section></div><div class=post-nav>
-<a href=https://blog.saintic.com/note/xlwings.html class=next rel=next title=xlwings操作Excel>xlwings操作Excel&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div><div class=post-comment>
-<div id=utteranc-container>
-<script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div></div></article></div></main><footer class=footer>
-<div class=copyright>
-&copy;
+</span></span></code></pre></div><h4 id=引用>引用:</h4><ul><li><a href=https://blog.51cto.com/bad5/2903258>Linux磁盘介绍及LVM磁盘管理</a></li><li><a href=https://www.cnblogs.com/kevingrace/p/5845634.html>LVM基础详细说明及动态扩容lvm逻辑卷的操作记录</a></li><li><a href=https://www.cnblogs.com/kevingrace/p/5825963.html>Linux下对LVM逻辑卷分区大小调整【针对xfs和ext4文件系统】</a></li></ul><br><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
+<a href=https://blog.saintic.com/note/disk.html>https://blog.saintic.com/note/disk.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/lvm.html rel=tag class=post-tags-link>#LVM</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/note/xlwings.html class=next rel=next title=xlwings操作Excel>xlwings操作Excel&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
-<span class=with-love>
-<i class="saintic-icon saintic-icon-love"></i>
-</span>
-<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
-<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
-<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div></footer><script defer src=/js/vendor_main.min.js></script>
+<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
+<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span></div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
-<script>pangu.spacingPage()</script>
-<script defer src=https://blog.saintic.com/js/my.js></script>
-</div></body></html>
+<script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>

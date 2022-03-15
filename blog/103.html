@@ -1,41 +1,6 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="chrome=1">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta name=author content="Hiroshi.tao">
-<meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档">
-<meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd">
-<link rel=prev href=https://blog.saintic.com/blog/102.html>
-<link rel=next href=https://blog.saintic.com/blog/98.html>
-<link rel=canonical href=https://blog.saintic.com/blog/103.html>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
-<link rel=manifest href=/site.webmanifest>
-<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=theme-color content="#ffffff">
-<title>
-RTBAsia真人概率值查询接口 | 一念博客
-</title><meta name=title content="RTBAsia真人概率值查询接口 | 一念博客">
-<link rel=stylesheet href=/css/main.min.css>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"RTBAsia真人概率值查询接口","headline":"RTBAsia真人概率值查询接口","description":"RTBAsia真人概率值说明： 知识背景：互联网用户分为三个最大的“人群”：男，女，机器人；机器人会模仿人类的形态浏览网页、观赏视频、点击广告","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-11-01 00:00:00 \u002b0000 UTC","dateModified":"2016-11-01 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/103.html","wordCount":"692","keywords":["python","一念博客"]}</script>
-</head><body>
-<div class=wrapper>
-<nav class=navbar>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class="navbar-header header-back2home-logo">
-<span class=logo_mark>>$</span>
-<a href=https://blog.saintic.com>
-<span class=logo_text>cd /home/</span>
-<span class=logo_cursor></span>
-</a>
-</div><div class=navbar-right>
-<span class=menu>
-<a class=menu-item href=/blog.html title>Blog</a>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档"><meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd"><link rel=prev href=https://blog.saintic.com/blog/102.html><link rel=next href=https://blog.saintic.com/blog/98.html><link rel=canonical href=https://blog.saintic.com/blog/103.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>RTBAsia真人概率值查询接口 | 一念博客</title><meta name=title content="RTBAsia真人概率值查询接口 | 一念博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"RTBAsia真人概率值查询接口","headline":"RTBAsia真人概率值查询接口","description":"RTBAsia真人概率值说明： 知识背景：互联网用户分为三个最大的“人群”：男，女，机器人；机器人会模仿人类的形态浏览网页、观赏视频、点击广告","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2016","datePublished":"2016-11-01 00:00:00 \u002b0000 UTC","dateModified":"2016-11-01 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/103.html","wordCount":"692","keywords":["python","一念博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Blog</a>
 <a class=menu-item href=/note.html title>Note</a>
 <a class=menu-item href=/categories.html title>Categories</a>
 <a class=menu-item href=/tags.html title>Tags</a>
@@ -44,54 +9,12 @@ RTBAsia真人概率值查询接口 | 一念博客
 <a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
 <a class=menu-item href=/about.html title=About>About</a>
 <span class=divide></span>
-<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a>
-</span>
-</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none>
-<progress class=content_progress max=0 value=0></progress>
-<div class=container>
-<div class=navbar>
-<div class="navbar-header header-logo">
-<a href=https://blog.saintic.com>一念博客</a>
-</div><div class=navbar-right>
-<div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle>
-<span></span><span></span><span></span>
-</div></div></div><div class=menu id=mobile-menu>
-<nav class=mb-md>
-<a class=menu-item href=/blog.html title>
-<h3>Blog</h3><div class=menu-active></div></a>
-<a class=menu-item href=/note.html title>
-<h3>Note</h3><div class=menu-active></div></a>
-<a class=menu-item href=/categories.html title>
-<h3>Categories</h3><div class=menu-active></div></a>
-<a class=menu-item href=/tags.html title>
-<h3>Tags</h3><div class=menu-active></div></a>
-<a class=menu-item href=/link.html title>
-<h3>Links</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>
-<h3>Baidu</h3><div class=menu-active></div></a>
-<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>
-<h3>Google</h3><div class=menu-active></div></a>
-<a class=menu-item href=/about.html title=About>
-<h3>About</h3><div class=menu-active></div></a>
-</nav></div></div></nav><main class=main>
-<div class=container>
-<article class=post-warp itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">RTBAsia真人概率值查询接口</h1><div class=post-meta>
-Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
-<span class=post-time>
-on <time datetime=2016-11-01 itemprop=datePublished>November 1, 2016</time>
-</span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>一念博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/note.html title><h3>Note</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Baidu</h3><div class=menu-active></div></a><a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title><h3>Google</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">RTBAsia真人概率值查询接口</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>on <time datetime=2016-11-01 itemprop=datePublished>November 1, 2016</time></span>
 in
 <i class="saintic-icon saintic-icon-folder"></i>
-<span class=post-category>
-<a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html> 开发 </a>
-</span>
-<span class=post-word-count>692 words</span>
-</div></header><div class=post-content>
-<p><strong>RTBAsia真人概率值说明：</strong></p><ul>
-<li>知识背景：互联网用户分为三个最大的“人群”：男，女，机器人；机器人会模仿人类的形态浏览网页、观赏视频、点击广告、撰写评论、投票点赞。机器人通常居住在“数据中心”。</li><li>当IP场景为“数据中心”时，此IP发出的网页浏览行为大多数情况下属于NHT（Non Human Traffic，非人类的访问），可能是各种功能的机器人：搜索爬虫、内容采集器、舆情监控、网站性能监控、压力测试器、自动发帖机、安全检测软件等等，你懂的&mldr;</li><li>“真人概率”的数值在50%以上，可以被认定为此IP的网页访问量基本由人类主动行为产生，分值愈高越真实。低于50%则有较高可能性是此IP的行为是机器人主导。</li></ul><p>RTBAsia官方网址：<a href=https://www.rtbasia.com/>https://www.rtbasia.com/</a></p><p>RTBAsia测试网址：<a href=https://ip.rtbasia.com/>https://ip.rtbasia.com/</a></p><p><strong>接口说明：</strong></p><ul>
-<li>操作接口是RTBAsia开放在百度APIStore的免费API，apikey缓存你在百度APIStore自己的key，要求安装requests库，命令是pip install requests。</li><li>使用方法是，携带一个file参数，读取file内容，每一行一个IP。</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># -*- coding: utf-8 -*-</span>
+<span class=post-category><a href=https://blog.saintic.com/categories/%E5%BC%80%E5%8F%91.html>开发</a></span>
+<span class=post-word-count>692 words</span></div></header><div class=post-content><p><strong>RTBAsia真人概率值说明：</strong></p><ul><li>知识背景：互联网用户分为三个最大的“人群”：男，女，机器人；机器人会模仿人类的形态浏览网页、观赏视频、点击广告、撰写评论、投票点赞。机器人通常居住在“数据中心”。</li><li>当IP场景为“数据中心”时，此IP发出的网页浏览行为大多数情况下属于NHT（Non Human Traffic，非人类的访问），可能是各种功能的机器人：搜索爬虫、内容采集器、舆情监控、网站性能监控、压力测试器、自动发帖机、安全检测软件等等，你懂的&mldr;</li><li>“真人概率”的数值在50%以上，可以被认定为此IP的网页访问量基本由人类主动行为产生，分值愈高越真实。低于50%则有较高可能性是此IP的行为是机器人主导。</li></ul><p>RTBAsia官方网址：<a href=https://www.rtbasia.com/>https://www.rtbasia.com/</a></p><p>RTBAsia测试网址：<a href=https://ip.rtbasia.com/>https://ip.rtbasia.com/</a></p><p><strong>接口说明：</strong></p><ul><li>操作接口是RTBAsia开放在百度APIStore的免费API，apikey缓存你在百度APIStore自己的key，要求安装requests库，命令是pip install requests。</li><li>使用方法是，携带一个file参数，读取file内容，每一行一个IP。</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># -*- coding: utf-8 -*-</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#f92672>import</span> requests
 </span></span><span style=display:flex><span>
@@ -120,42 +43,16 @@ in
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> ip <span style=color:#f92672>in</span> ips:
 </span></span><span style=display:flex><span>        print GetValue(ip<span style=color:#f92672>.</span>strip())
 </span></span><span style=display:flex><span>    print <span style=color:#e6db74>&#34;真人概率值低语50%的有以下IP:</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, V
-</span></span></code></pre></div><p>此脚本存放在GITHUB中，链接是：<a href=https://github.com/staugur/scripts/blob/master/services/RTBAsiaAPI.py>https://github.com/staugur/scripts/blob/master/services/RTBAsiaAPI.py</a></p><br>
-<center> ·End· </center>
-</div><div class=post-copyright>
-<p class=copyright-item>
-<span>Author:</span>
-<span>Hiroshi.tao </span>
-</p><p class=copyright-item>
-<span>Link:</span>
-<a href=https://blog.saintic.com/blog/103.html>https://blog.saintic.com/blog/103.html</span>
-</p><p class="copyright-item lincese">
-本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可
-</p></div><div class=post-tags>
-<section>
-<i class="saintic-icon saintic-icon-tag"></i>Tag(s):
-<a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
-</section><section>
-<a href=javascript:window.history.back();>back</a></span> ·
-<span><a href=https://blog.saintic.com>home</a></span>
-</section></div><div class=post-nav>
-<a href=https://blog.saintic.com/blog/102.html class=prev rel=prev title=vsftpd服务与虚拟用户创建脚本><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;vsftpd服务与虚拟用户创建脚本</a>
-<a href=https://blog.saintic.com/blog/98.html class=next rel=next title=OpenVPN>OpenVPN&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a>
-</div><div class=post-comment>
-<div id=utteranc-container>
-<script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div></div></article></div></main><footer class=footer>
-<div class=copyright>
-&copy;
+</span></span></code></pre></div><p>此脚本存放在GITHUB中，链接是：<a href=https://github.com/staugur/scripts/blob/master/services/RTBAsiaAPI.py>https://github.com/staugur/scripts/blob/master/services/RTBAsiaAPI.py</a></p><br><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
+<a href=https://blog.saintic.com/blog/103.html>https://blog.saintic.com/blog/103.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/python.html rel=tag class=post-tags-link>#python</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/102.html class=prev rel=prev title=vsftpd服务与虚拟用户创建脚本><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;vsftpd服务与虚拟用户创建脚本</a>
+<a href=https://blog.saintic.com/blog/98.html class=next rel=next title=OpenVPN>OpenVPN&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
 <span itemprop=copyrightYear>2017 - 2022</span>
-<span class=with-love>
-<i class="saintic-icon saintic-icon-love"></i>
-</span>
-<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> | </span>
-<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1 </a> |
-<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
-</div></footer><script defer src=/js/vendor_main.min.js></script>
+<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
+<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span></div></footer><script defer src=/js/vendor_main.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
-<script>pangu.spacingPage()</script>
-<script defer src=https://blog.saintic.com/js/my.js></script>
-</div></body></html>
+<script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>
