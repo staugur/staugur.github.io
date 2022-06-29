@@ -6,9 +6,7 @@ showComments: false
 
 # 友链
 
-[WangMao's Blog](https://blog.wangmao.me/) |
 [OOIII](https://ooiii.com/) |
-[木法传](https://www.mofazhuan.com/) |
 [薛定喵君](http://xuedingmiao.com/)
 
 # 我的其他站点
