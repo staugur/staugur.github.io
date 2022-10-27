@@ -1,0 +1,89 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档"><meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd"><link rel=prev href=https://blog.saintic.com/blog/313.html><link rel=canonical href=https://blog.saintic.com/blog/314.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>二进制部署 dockerhub registry mirrors镜像服务 | 一念博客</title><meta name=title content="二进制部署 dockerhub registry mirrors镜像服务 | 一念博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"二进制部署 dockerhub registry mirrors镜像服务","headline":"二进制部署 dockerhub registry mirrors镜像服务","description":"前言 此篇不是搭建镜像私有仓的记录，而是提供 Docker Hub 的镜像缓存，方便快速拉取镜像（不支持push）。 关于registry mirror原理或以doc","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"2022","datePublished":"2022-10-24 19:30:01 \u002b0800 \u002b0800","dateModified":"2022-10-24 19:30:01 \u002b0800 \u002b0800","url":"https:\/\/blog.saintic.com\/blog\/314.html","wordCount":"612","keywords":["registry","docker","一念博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Blog</a>
+<a class=menu-item href=/note.html title>Note</a>
+<a class=menu-item href=/categories.html title>Categories</a>
+<a class=menu-item href=/tags.html title>Tags</a>
+<a class=menu-item href=/link.html title>Links</a>
+<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Baidu</a>
+<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
+<a class=menu-item href=/about.html title=About>About</a>
+<span class=divide></span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>一念博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/note.html title><h3>Note</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Baidu</h3><div class=menu-active></div></a><a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title><h3>Google</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><div class=toc><div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e5%89%8d%e8%a8%80>前言</a></li></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e9%83%a8%e7%bd%b2>部署</a></li></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#1%e4%b8%8b%e8%bd%bd>1.下载</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#2%e9%85%8d%e7%bd%ae>2.配置</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#3%e5%90%af%e5%8a%a8%e6%9c%8d%e5%8a%a1>3.启动服务</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#4nginx%e4%bb%a3%e7%90%86%e5%8f%af%e9%80%89>4.Nginx代理[可选]</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e4%bd%bf%e7%94%a8>使用</a></li></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e4%bd%bf%e7%94%a8-upstart-%e7%9a%84%e7%b3%bb%e7%bb%9f>使用 upstart 的系统</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e4%bd%bf%e7%94%a8-systemd-%e7%9a%84%e7%b3%bb%e7%bb%9f>使用 systemd 的系统</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e6%a3%80%e6%9f%a5-docker-hub-%e6%98%af%e5%90%a6%e7%94%9f%e6%95%88>检查 Docker Hub 是否生效</a></li></ul></ul></ul></ul><ul class=nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#%e5%bc%95%e7%94%a8>引用</a></li></ul></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">二进制部署 dockerhub registry mirrors镜像服务</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>on <time datetime=2022-10-24 itemprop=datePublished>October 24, 2022</time></span>
+in
+<i class="saintic-icon saintic-icon-folder"></i>
+<span class=post-category><a href=https://blog.saintic.com/categories/docker.html>docker</a></span>
+<span class=post-word-count>612 words</span></div></header><div class=post-content><h3 id=前言>前言</h3><p>此篇不是搭建镜像私有仓的记录，而是提供 <a href=https://hub.docker.com>Docker Hub</a> 的镜像缓存，方便快速拉取镜像（不支持push）。</p><p>关于registry mirror原理或以docker部署此镜像服务，请参考<a href=http://niyanchun.com/deploy-registry-mirror.html>引用文章</a>。</p><p>本文仅记录了以systemd方式部署，系统是：中标麒麟V6，X86（= CentOS 7）。</p><h3 id=部署>部署</h3><h4 id=1下载>1.下载</h4><p>请转至 <a href=https://github.com/distribution/distribution/releases>docker distribution</a> 选择一个版本下载打包好的压缩文件，
+比如<code>registry_2.8.1_linux_amd64.tar.gz</code></p><p>上传到服务器解压，将 <code>registry</code> 移动到 /sbin 下：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>tar zxf registry_2.8.1_linux_amd64.tar.gz registry
+</span></span><span style=display:flex><span>mv registry /sbin
+</span></span></code></pre></div><h4 id=2配置>2.配置</h4><p>建立systemd管理文件，编写registry配置文件（下述供参考，请根据实际修改）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cat &gt; /lib/systemd/system/registry.service <span style=color:#e6db74>&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Unit]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Description=DockerHub Registry Mirrors
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Documentation=https://hub.docker.com
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>After=network.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Service]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>User=nobody
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecStart=/sbin/registry serve /data/registry/config.yml
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Restart=on-failure
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RestartSec=5s
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LimitNOFILE=65536
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Install]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>WantedBy=multi-user.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>mkdir -p /data/registry <span style=color:#f92672>&amp;&amp;</span> chown -R nobody.nobody /data/registry
+</span></span><span style=display:flex><span>cat &gt; /data/registry/config.yml <span style=color:#e6db74>&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>version: 0.1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>log:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  fields:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    service: registry
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>storage:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  cache:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    blobdescriptor: inmemory
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  filesystem:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    rootdirectory: /data/registry
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>http:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  addr: 127.0.0.1:5000
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  headers:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    X-Content-Type-Options: [nosniff]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>health:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  storagedriver:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    enabled: true
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    interval: 10s
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    threshold: 3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>proxy:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    remoteurl: https://registry-1.docker.io
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><h4 id=3启动服务>3.启动服务</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>systemctl daemon-reload
+</span></span><span style=display:flex><span>systemctl start registry
+</span></span><span style=display:flex><span>systemctl enable registry
+</span></span></code></pre></div><p>如无意外，应该可以看到端口监听和进程。</p><h4 id=4nginx代理可选>4.Nginx代理[可选]</h4><p>镜像服务监听 5000 端口，可以用nginx代理下，直接用域名或80端口标准化访问：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=display:flex><span><span style=color:#66d9ef>location</span> <span style=color:#e6db74>/v2/</span> {
+</span></span><span style=display:flex><span>    <span style=color:#f92672>proxy_pass</span> <span style=color:#e6db74>http://127.0.0.1:5000</span>;
+</span></span><span style=display:flex><span>    <span style=color:#f92672>proxy_set_header</span>  <span style=color:#e6db74>Host</span>      $http_host;   <span style=color:#75715e># required for docker client&#39;s sake
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_set_header</span>  <span style=color:#e6db74>X-Real-IP</span> $remote_addr; <span style=color:#75715e># pass on real client&#39;s IP
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_set_header</span>  <span style=color:#e6db74>X-Forwarded-For</span>   $proxy_add_x_forwarded_for;
+</span></span><span style=display:flex><span>    <span style=color:#f92672>proxy_set_header</span>  <span style=color:#e6db74>X-Forwarded-Proto</span> $scheme;
+</span></span><span style=display:flex><span>    <span style=color:#f92672>proxy_read_timeout</span> <span style=color:#ae81ff>900</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=使用>使用</h3><p>假设镜像地址是: <code>http://docker-mirror.saintic.com</code></p><h4 id=使用-upstart-的系统>使用 upstart 的系统</h4><p>如Ubuntu 14.04、Debian 7 Wheezy、CentOS 6，在 DOCKER_OPTS 中配置Hub地址：</p><p><code>DOCKER_OPTS="--registry-mirror=http://docker-mirror.saintic.com"</code></p><h4 id=使用-systemd-的系统>使用 systemd 的系统</h4><p>如Ubuntu 16.04+、Debian 8+、CentOS 7， 在配置文件 /etc/docker/daemon.json 中加入：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;registry-mirrors&#34;</span>: [<span style=color:#e6db74>&#34;http://docker-mirror.saintic.com&#34;</span>]
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=检查-docker-hub-是否生效>检查 Docker Hub 是否生效</h4><p>在命令行执行 docker info ，如果从结果中看到了如下内容，说明配置成功。</p><pre tabindex=0><code>Registry Mirrors:
+    http://docker-mirror.saintic.com
+</code></pre><h3 id=引用>引用</h3><ul><li><a href=http://niyanchun.com/deploy-registry-mirror.html>搭建registry mirror</a></li></ul></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
+<a href=https://blog.saintic.com/blog/314.html>https://blog.saintic.com/blog/314.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/registry.html rel=tag class=post-tags-link>#registry</a>
+<a href=/tags/docker.html rel=tag class=post-tags-link>#docker</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/313.html class=prev rel=prev title="CentOS/Ubuntu 源码编译安装升级 OpenSSH v8.9"><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;CentOS/Ubuntu 源码编译安装升级 OpenSSH v8.9</a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
+<span itemprop=copyrightYear>2017 - 2022</span>
+<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
+<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
+<span>| <a href=https://www.foreverblog.cn/go.html target=_blank title=穿梭虫洞-随机访问十年之约友链博客>虫洞</span></div></footer><script defer src=/js/vendor_main.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
+<script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>
