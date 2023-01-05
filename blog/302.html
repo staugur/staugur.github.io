@@ -55,8 +55,8 @@ in
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><h2 id=使用golang调用powershell触发windows10桌面消息通知>使用golang调用powershell触发Windows10桌面消息通知</h2><p>找到一个Win10桌面通知的脚本不容易，得用powershell调起，以下内容保存为xxx.ps1，执行它
 通过 <code>powershell xxx.ps1 &lt;Title> &lt;Sub-Title></code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>param</span>(
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>[String]</span> $Title,
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>[String]</span> $SubTitle
+</span></span><span style=display:flex><span>    [<span style=color:#66d9ef>String</span>] $Title,
+</span></span><span style=display:flex><span>    [<span style=color:#66d9ef>String</span>] $SubTitle
 </span></span><span style=display:flex><span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>[Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] | Out-Null
@@ -79,7 +79,7 @@ in
 </span></span><span style=display:flex><span>$xml = New-Object Windows.Data.Xml.Dom.XmlDocument
 </span></span><span style=display:flex><span>$xml.LoadXml($template)
 </span></span><span style=display:flex><span>$toast = New-Object Windows.UI.Notifications.ToastNotification $xml
-</span></span><span style=display:flex><span><span style=color:#66d9ef>[Windows.UI.Notifications.ToastNotificationManager]</span>::CreateToastNotifier($APP_ID).Show($toast)
+</span></span><span style=display:flex><span>[<span style=color:#66d9ef>Windows.UI.Notifications.ToastNotificationManager</span>]::CreateToastNotifier($APP_ID).Show($toast)
 </span></span></code></pre></div><p>在go程序中想调用它，我一时没想到别的方法，暂时思路是把内容保存为临时文件，再用 os/exec 调用，
 如下示例（没有错误处理）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
 </span></span><span style=display:flex><span>
@@ -173,7 +173,7 @@ $ go build -ldflags &#34;-X rtfd/cmd.commitID=xxx -X rtfd/cmd.built=xxx&#34;
 <a href=/tags/go.html rel=tag class=post-tags-link>#go</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
 <span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/301.html class=prev rel=prev title=Vuepress使用utterances评论系统><i class="saintic-icon saintic-icon-angle-left"></i>&nbsp;Vuepress使用utterances评论系统</a>
 <a href=https://blog.saintic.com/blog/303.html class=next rel=next title=K站随机二次元动漫壁纸接口>K站随机二次元动漫壁纸接口&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
-<span itemprop=copyrightYear>2017 - 2022</span>
+<span itemprop=copyrightYear>2017 - 2023</span>
 <span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
 <span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
 <a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
