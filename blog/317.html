@@ -1,0 +1,240 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="Hiroshi.tao"><meta name=description content="一念博客，陶先森の博客，IT博客，技术记录与分享，开源项目与文档"><meta name=keywords content="SaintIC,Hiroshi.tao,Blog,博客,Linux,DevOps,sys,python,go,js,vue,flask,picbed,sapic,Flask-PluginKit,rtfd"><link rel=next href=https://blog.saintic.com/blog/94.html><link rel=canonical href=https://blog.saintic.com/blog/317.html><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>使用 paramiko 连接 SFTP server 简单封装的类，支持自动重连 | 一念博客</title><meta name=title content="使用 paramiko 连接 SFTP server 简单封装的类，支持自动重连 | 一念博客"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.saintic.com"},"articleSection":"blog","name":"使用 paramiko 连接 SFTP server 简单封装的类，支持自动重连","headline":"使用 paramiko 连接 SFTP server 简单封装的类，支持自动重连","description":"Python 使用 paramiko 实现 SSH\/SFTP 功能，使用者多、活跃度高，不二之选，封装了 paramiko 连接 SFTP 的方式，支持验证服务器公钥、自动重连。","inLanguage":"zh-cn","author":"Hiroshi.tao","creator":"Hiroshi.tao","publisher":"Hiroshi.tao","accountablePerson":"Hiroshi.tao","copyrightHolder":"Hiroshi.tao","copyrightYear":"0001","datePublished":"0001-01-01 00:00:00 \u002b0000 UTC","dateModified":"0001-01-01 00:00:00 \u002b0000 UTC","url":"https:\/\/blog.saintic.com\/blog\/317.html","wordCount":"810","keywords":["python","ssh","paramiko","一念博客"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>>$</span>
+<a href=https://blog.saintic.com><span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/blog.html title>Blog</a>
+<a class=menu-item href=/note.html title>Note</a>
+<a class=menu-item href=/categories.html title>Categories</a>
+<a class=menu-item href=/tags.html title>Tags</a>
+<a class=menu-item href=/link.html title>Links</a>
+<a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title>Baidu</a>
+<a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title>Google</a>
+<a class=menu-item href=/about.html title=About>About</a>
+<span class=divide></span>
+<a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://blog.saintic.com>一念博客</a></div><div class=navbar-right><div><a href=javascript:void(0); class=theme-switch><i class="saintic-icon saintic-icon-dark-mode"></i></a></div><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/blog.html title><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/note.html title><h3>Note</h3><div class=menu-active></div></a><a class=menu-item href=/categories.html title><h3>Categories</h3><div class=menu-active></div></a><a class=menu-item href=/tags.html title><h3>Tags</h3><div class=menu-active></div></a><a class=menu-item href=/link.html title><h3>Links</h3><div class=menu-active></div></a><a class=menu-item href="https://www.baidu.com/s?wd=site:blog.saintic.com+" title><h3>Baidu</h3><div class=menu-active></div></a><a class=menu-item href="https://www.google.com/search?q=site:blog.saintic.com+" title><h3>Google</h3><div class=menu-active></div></a><a class=menu-item href=/about.html title=About><h3>About</h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><div class=toc><div class=page-header><strong>- 目录 -</strong></div><div id=page-scrollspy class=toc-nav><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#1-%e8%af%b4%e6%98%8e>1. 说明</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#2-%e4%be%9d%e8%b5%96>2. 依赖</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#3%e4%bb%a3%e7%a0%81>3.代码</a></li></ul></ul><ul class=nav><ul class=nav><li class=nav-item><a class="nav-link text-left" href=#4-%e4%bd%bf%e7%94%a8>4. 使用</a></li></ul></ul></div></div><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">使用 paramiko 连接 SFTP server 简单封装的类，支持自动重连</h1><div class=post-meta>Written by <a itemprop=name href=https://blog.saintic.com rel=author>Hiroshi.tao</a> with ♥
+<span class=post-time>on <time datetime=0001-01-01 itemprop=datePublished>January 1, 0001</time></span>
+in
+<i class="saintic-icon saintic-icon-folder"></i>
+<span class=post-category><a href=https://blog.saintic.com/categories/%E5%BA%94%E7%94%A8.html>应用</a>
+<a href=https://blog.saintic.com/categories/python.html>python</a></span>
+<span class=post-word-count>810 words</span></div></header><div class=post-content><h2 id=1-说明>1. 说明</h2><p>Paramiko 实现 SFTP 连接一般有两种方式：</p><ol><li><p>先建立 SSH 连接通道，在此通道上打开 SFTP 连接通道。</p></li><li><p>直接建立 SFTP 连接通道。</p></li></ol><p>借鉴了 torndb 自动重连机制，封装一个 SFTP Client Class，实现了自动连接、可验证服务器公钥，封装了 ls 命令，除此外，以 &ldquo;代理&rdquo; 方式支持如下 SFTP commands (paramiko doc):</p><pre><code>&quot;chdir, getcwd, mkdir, rmdir, open, get, getfo, put, putfo, listdir, listdir_attr, listdir_iter, remove, normalize, posix_rename, rename, stat&quot;
+</code></pre><h2 id=2-依赖>2. 依赖</h2><ul><li>python 3.6+</li><li>paramiko 3.0.0+</li></ul><h2 id=3代码>3.代码</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># coding: utf8</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># python 3.6+</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># pip install paramiko</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> paramiko <span style=color:#f92672>import</span> Transport, PKey, SFTPError
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> time <span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> base64 <span style=color:#f92672>import</span> b64decode
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> typing <span style=color:#f92672>import</span> Optional, List
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SFTP</span>(object):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;SFTP Client: AutoConnect(server), Verify(hostkey), Execute(command).&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    _ALLOWED_FUNCS <span style=color:#f92672>=</span> (
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;chdir&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;getcwd&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;mkdir&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;rmdir&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;open&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;get&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;getfo&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;put&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;putfo&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;listdir&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;listdir_attr&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;listdir_iter&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;remove&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;normalize&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;posix_rename&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;rename&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;stat&#34;</span>,
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        host: str,
+</span></span><span style=display:flex><span>        port: int,
+</span></span><span style=display:flex><span>        username: str,
+</span></span><span style=display:flex><span>        password: str,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>*</span>,
+</span></span><span style=display:flex><span>        max_idle_time: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>600</span>,
+</span></span><span style=display:flex><span>        server_public_key: Optional[str] <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>    ):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Initiate SFTP client.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param str host: SFTP server IP address or FQDN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param int port: SFTP server port
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param str username: the username for logging into the SFTP server
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param str password: the password of the user logging into the SFTP server
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param int max_idle_time: maximum idle connection waiting time(second)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param str server_public_key: the public key of the SFTP server, if provided, it will verify legality.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_opts <span style=color:#f92672>=</span> dict(
+</span></span><span style=display:flex><span>            host<span style=color:#f92672>=</span>host,
+</span></span><span style=display:flex><span>            port<span style=color:#f92672>=</span>port,
+</span></span><span style=display:flex><span>            user<span style=color:#f92672>=</span>username,
+</span></span><span style=display:flex><span>            pwd<span style=color:#f92672>=</span>password,
+</span></span><span style=display:flex><span>            hkey<span style=color:#f92672>=</span>server_public_key,
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_transport <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_sftp <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_max_idle_time <span style=color:#f92672>=</span> float(max_idle_time)
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_last_use_time <span style=color:#f92672>=</span> time()
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>reconnect()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>reconnect</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> isinstance(self<span style=color:#f92672>.</span>_transport, Transport):
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>_transport<span style=color:#f92672>.</span>is_active():
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_transport <span style=color:#f92672>=</span> Transport((self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#34;host&#34;</span>], self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#34;port&#34;</span>]))
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_transport<span style=color:#f92672>.</span>connect(
+</span></span><span style=display:flex><span>            hostkey<span style=color:#f92672>=</span>self<span style=color:#f92672>.</span>_key_to_obj(self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#34;hkey&#34;</span>]),
+</span></span><span style=display:flex><span>            username<span style=color:#f92672>=</span>self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#34;user&#34;</span>],
+</span></span><span style=display:flex><span>            password<span style=color:#f92672>=</span>self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#34;pwd&#34;</span>],
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_sftp <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>_transport<span style=color:#f92672>.</span>open_sftp_client()
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_last_use_time <span style=color:#f92672>=</span> time()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>close</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Close sftp connect and transport&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>_sftp:
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>_sftp<span style=color:#f92672>.</span>close()
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>_transport:
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>_transport<span style=color:#f92672>.</span>close()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>is_active</span>(self) <span style=color:#f92672>-&gt;</span> bool:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Return true if this session is active (open).&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>_transport<span style=color:#f92672>.</span>is_active()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_ensure_connected</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Referring to the MySQL idle waiting mechanism,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        dropzone can customize the maximum idle waiting time and
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        automatically reconnect based on the operation interval time.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (self<span style=color:#f92672>.</span>is_active() <span style=color:#f92672>is</span> <span style=color:#66d9ef>False</span>) <span style=color:#f92672>or</span> (
+</span></span><span style=display:flex><span>            time() <span style=color:#f92672>-</span> self<span style=color:#f92672>.</span>_last_use_time <span style=color:#f92672>&gt;</span> self<span style=color:#f92672>.</span>_max_idle_time
+</span></span><span style=display:flex><span>        ):
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>reconnect()
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_last_use_time <span style=color:#f92672>=</span> time()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_key_to_obj</span>(self, pubkey: Optional[str]) <span style=color:#f92672>-&gt;</span> Optional[PKey]:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Load and verify host key.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param str pubkey: server public key, eg: [KeyType] &lt;PubKey&gt; [Comment]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :raises paramiko.pkey.UnknownKeyType: if bad key type
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :raises paramiko.ssh_exception.SSHException: if bad key content
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> pubkey:
+</span></span><span style=display:flex><span>            pk <span style=color:#f92672>=</span> pubkey<span style=color:#f92672>.</span>strip()<span style=color:#f92672>.</span>split()
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> len(pk) <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
+</span></span><span style=display:flex><span>                keytype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ssh-rsa&#34;</span>
+</span></span><span style=display:flex><span>                encrypted <span style=color:#f92672>=</span> pk[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                keytype <span style=color:#f92672>=</span> pk[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>                encrypted <span style=color:#f92672>=</span> pk[<span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> PKey<span style=color:#f92672>.</span>from_type_string(keytype, b64decode(encrypted))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>ls</span>(self, path: str, <span style=color:#f92672>*</span>, long: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>) <span style=color:#f92672>-&gt;</span> List[str]:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Implement the sftp ls command.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param str path: the SFTP path to be queried
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        :param bool long: longname format, same as: ls -la
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_ensure_connected()
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> long <span style=color:#f92672>is</span> <span style=color:#66d9ef>True</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> [obj<span style=color:#f92672>.</span>longname <span style=color:#66d9ef>for</span> obj <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>_sftp<span style=color:#f92672>.</span>listdir_iter(path)]
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>_sftp<span style=color:#f92672>.</span>listdir(path)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@property</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>host_key</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>_transport<span style=color:#f92672>.</span>host_key
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_unsupported_func</span>(self, <span style=color:#f92672>*</span>args, <span style=color:#f92672>**</span>kw):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> SFTPError(<span style=color:#e6db74>&#34;Unsupported sftp command&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __getattr__(self, func):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> func <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>_ALLOWED_FUNCS:
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>_ensure_connected()
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> getattr(self<span style=color:#f92672>.</span>_sftp, func, self<span style=color:#f92672>.</span>_unsupported_func)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>AttributeError</span>(<span style=color:#e6db74>&#34;Unsupport&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __str__(self):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;&lt;SFTP(</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#39;user&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>@</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#39;host&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>:</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>_opts[<span style=color:#e6db74>&#39;port&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>{</span><span style=color:#e6db74>&#39;Active&#39;</span> <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>is_active() <span style=color:#66d9ef>else</span> <span style=color:#e6db74>&#39;Inactive&#39;</span><span style=color:#e6db74>}</span><span style=color:#e6db74>) at </span><span style=color:#e6db74>{</span>hex(id(self))<span style=color:#e6db74>}</span><span style=color:#e6db74>&gt;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    __repr__ <span style=color:#f92672>=</span> __str__
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># examples</span>
+</span></span><span style=display:flex><span>    pubkey <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ssh-rsa XYZ&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    sftp <span style=color:#f92672>=</span> SFTP(<span style=color:#e6db74>&#34;1.2.3.4&#34;</span>, <span style=color:#ae81ff>22</span>, <span style=color:#e6db74>&#34;test&#34;</span>, <span style=color:#e6db74>&#34;test&#34;</span>, server_public_key<span style=color:#f92672>=</span>pubkey)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 1. 查看文件或目录</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>ls(<span style=color:#e6db74>&#34;/&#34;</span>)
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>ls(<span style=color:#e6db74>&#34;/&#34;</span>, long<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>listdir(<span style=color:#e6db74>&#34;/&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 2. 创建目录</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>mkdir(<span style=color:#e6db74>&#34;/demo&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 3. 改变目录</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>chdir(<span style=color:#e6db74>&#34;/demo&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 4. 查看当前目录</span>
+</span></span><span style=display:flex><span>    print(sftp<span style=color:#f92672>.</span>getcwd())  <span style=color:#75715e># /demo</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>chdir(<span style=color:#e6db74>&#34;/&#34;</span>)
+</span></span><span style=display:flex><span>    print(sftp<span style=color:#f92672>.</span>getcwd())  <span style=color:#75715e># /</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    如果不调用 sftp.chdir(path) 的时候, 那么打印 sftp.getcwd() 时结果为 None
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 5. 删除空目录（非空目录需要先删除其中的文件和子目录）</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>rmdir(<span style=color:#e6db74>&#34;/demo&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 6. 删除文件</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>remove(<span style=color:#e6db74>&#34;/remote/path/to/an-existing-file&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 7. 重命名文件或目录</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>rename(<span style=color:#e6db74>&#34;/an-existing-file&#34;</span>, <span style=color:#e6db74>&#34;/newfilename&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 8. 查看文件或目录状态</span>
+</span></span><span style=display:flex><span>    print(sftp<span style=color:#f92672>.</span>stat(<span style=color:#e6db74>&#34;/&#34;</span>))
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    drwxr-xr-x   1 0        0            4096 28 Nov 16:35 ?
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    不使用 print 时，为 SFTPAttributes 对象。
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 9. 下载文件</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;/remote/path/to/an-existing-file&#34;</span>, <span style=color:#e6db74>&#34;/local/path/to/filename&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 10. 上传文件</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>put(<span style=color:#e6db74>&#34;/local/path/to/an-existing-file&#34;</span>, <span style=color:#e6db74>&#34;/remote/path/&lt;filename&gt;&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 最后关闭 sftp 和 transport</span>
+</span></span><span style=display:flex><span>    sftp<span style=color:#f92672>.</span>close()
+</span></span></code></pre></div><h2 id=4-使用>4. 使用</h2><p>上述代码已经有参考示例</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> sftp <span style=color:#f92672>import</span> SFTP
+</span></span><span style=display:flex><span>host <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&lt;new dropzone fqdn&gt;</span>
+</span></span><span style=display:flex><span>port <span style=color:#f92672>=</span> <span style=color:#ae81ff>22</span>
+</span></span><span style=display:flex><span>user <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&lt;account&gt;&#34;</span>
+</span></span><span style=display:flex><span>passwd <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&lt;your account password&gt;&#34;</span>
+</span></span><span style=display:flex><span>pubkey <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ssh-rsa &lt;server public key&gt;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sftp <span style=color:#f92672>=</span> SFTP(host, port, user, passwd, server_public_key<span style=color:#f92672>=</span>pubkey)
+</span></span><span style=display:flex><span><span style=color:#75715e># usage with help(sftp) / dir(sftp)</span>
+</span></span></code></pre></div><br><center>·End·</center></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>Hiroshi.tao</span></p><p class=copyright-item><span>Link:</span>
+<a href=https://blog.saintic.com/blog/317.html>https://blog.saintic.com/blog/317.html</span></p><p class="copyright-item lincese">本文采用 <a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可</p></div><div class=post-tags><section><i class="saintic-icon saintic-icon-tag"></i>Tag(s):
+<a href=/tags/python.html rel=tag class=post-tags-link>#python</a>
+<a href=/tags/ssh.html rel=tag class=post-tags-link>#ssh</a>
+<a href=/tags/paramiko.html rel=tag class=post-tags-link>#paramiko</a></section><section><a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://blog.saintic.com>home</a></span></section></div><div class=post-nav><a href=https://blog.saintic.com/blog/94.html class=next rel=next title=统计Nginx访问日志中的IP>统计Nginx访问日志中的IP&nbsp;<i class="saintic-icon saintic-icon-angle-right"></i></a></div><div class=post-comment><div id=utteranc-container><script src=https://utteranc.es/client.js repo=staugur/staugur.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div></article></div></main><footer class=footer><div class=copyright>&copy;
+<span itemprop=copyrightYear>2017 - 2023</span>
+<span class=with-love><i class="saintic-icon saintic-icon-love"></i></span>
+<span class=author itemprop=copyrightHolder><a href=https://blog.saintic.com>Hiroshi.tao</a> |</span>
+<a href=https://beian.miit.gov.cn/ target=_blank rel="external nofollow">京ICP备14058611号-1</a> |
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/SaintIC/Mogege target=_blank rel="external nofollow">Mogege</a></span>
+<span>| <a href=https://www.foreverblog.cn/go.html target=_blank title=穿梭虫洞-随机访问十年之约友链博客>虫洞</span></div></footer><script defer src=/js/vendor_main.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
+<script>pangu.spacingPage()</script><script defer src=https://blog.saintic.com/js/my.js></script></div></body></html>
