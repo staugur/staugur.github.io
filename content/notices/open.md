@@ -8,6 +8,16 @@ showComments: true
 
 [https://open.saintic.com](https://open.saintic.com)
 
+### 2025-02-06
+
+解耦下线 IP 查询接口，改为 `https://ip.saintic.com`，
+可调用接口如下：
+
+- `/rest`: 仅查询访问者IP
+- `/addr`: 查询访问者IP及信息，可用查询参数 ip 改为查询其他值
+- `/rest`: addr 接口 json 版本。
+
+
 ### 2021-12-15
 
 > update @ 2021-12-22
