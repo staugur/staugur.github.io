@@ -8,9 +8,13 @@ showComments: true
 
 [https://open.saintic.com](https://open.saintic.com)
 
+### 2025-06-01
+
+> open.saintic.com 相关服务将逐步迁移到 hub.saintic.com
+
 ### 2025-02-06
 
-解耦下线 IP 查询接口，改为 `https://ip.saintic.com`，
+解耦下线 IP 查询接口，改为 `https://hub.saintic.com/openservice/ip/`，
 可调用接口如下：
 
 - `/rest`: 仅查询访问者IP
