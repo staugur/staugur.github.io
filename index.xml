@@ -6,18 +6,18 @@
 &lt;a href="https://docs.saintic.com">我的程序文档&lt;/a> |
 &lt;a href="https://sapicd.com">图床&lt;/a>&lt;/p>
 &lt;h1 id="本站公共服务及-api">本站公共服务及 API&amp;hellip;&lt;/h1>
-&lt;h2 id="isso-评论系统开放服务-sup-stylecolorred-sup">Isso 评论系统开放服务 &lt;sup style="color:red" >●&lt;/sup>&lt;/h2>
-&lt;p>地址：&lt;a href="https://open.saintic.com/openservice/isso">openservice/isso&lt;/a>&lt;/p>
-&lt;p>提供一款 Python 编写的评论系统 Isso 的在线托管服务&lt;/p>
+&lt;h2 id="弹幕库服务-sup-stylecolorred-sup">弹幕库服务 &lt;sup style="color:red" >●&lt;/sup>&lt;/h2>
+&lt;p>地址：&lt;a href="https://hub.saintic.com/danmu">danmu&lt;/a>&lt;/p>
+&lt;p>为播放器提供弹幕库，支持创建弹幕 Token、搜索与导入弹幕库，兼容弹弹play 规范&lt;/p>
 &lt;h2 id="短网址服务-sup-stylecolor39b54a-betasup">短网址服务 &lt;sup style="color:#39b54a" >beta&lt;/sup>&lt;/h2>
-&lt;p>地址：&lt;a href="https://open.saintic.com/openservice/shorturl/">openservice/shorturl&lt;/a>&lt;/p>
+&lt;p>地址：&lt;a href="https://hub.saintic.com/shorturl">shorturl&lt;/a>&lt;/p>
 &lt;p>简单的网址缩短与还原服务&lt;/p>
-&lt;h2 id="搜索引擎收录查询">搜索引擎收录查询&lt;/h2>
-&lt;p>地址：&lt;a href="https://open.saintic.com/onlinetool/searchEngineQuery">opentool/searchEngine&lt;/a>&lt;/p>
-&lt;p>百度、必应等搜索引擎 URL 收录情况在线查询&lt;/p>
-&lt;h2 id="openapi">OpenAPI&lt;/h2>
-&lt;p>地址：&lt;a href="https://open.saintic.com/openapi">openapi&lt;/a>&lt;/p>
-&lt;p>几个对外开放的 API 接口，如 bing 今日美图，百度、bing收录查询等&lt;/p>
+&lt;h2 id="古诗词名句接口-sup-stylecolorred-sup">古诗词名句接口 &lt;sup style="color:red" >●&lt;/sup>&lt;/h2>
+&lt;p>地址：&lt;a href="https://hub.saintic.com/openservice/sentence/">sentence&lt;/a>&lt;/p>
+&lt;p>随机一句古诗文，支持 JSON / TXT / SVG 输出，可按作者、主题、分类筛选&lt;/p>
+&lt;h2 id="crontab-计算-sup-stylecolorred-sup">Crontab 计算 &lt;sup style="color:red" >●&lt;/sup>&lt;/h2>
+&lt;p>地址：&lt;a href="https://hub.saintic.com/openservice/crontab">crontab&lt;/a>&lt;/p>
+&lt;p>输入 Cron 表达式，推算接下来或之前的执行时间点，支持正向与反向查询&lt;/p>
 &lt;br>
 &lt;center> ·End· &lt;/center></description></item><item><title>Posts</title><link>https://blog.saintic.com/post.html</link><pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate><guid>https://blog.saintic.com/post.html</guid><description/></item><item><title>About</title><link>https://blog.saintic.com/about.html</link><pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate><guid>https://blog.saintic.com/about.html</guid><description>&lt;style>
 @import url('https://fonts.googleapis.com/css?family=Katibeh&amp;display=swap');
