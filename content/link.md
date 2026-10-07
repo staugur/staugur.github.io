@@ -17,29 +17,29 @@ showComments: false
 
 # 本站公共服务及 API...
 
-## Isso 评论系统开放服务 <sup style="color:red" >●</sup>
+## 弹幕库服务 <sup style="color:red" >●</sup>
 
-地址：[openservice/isso](https://open.saintic.com/openservice/isso)
+地址：[danmu](https://hub.saintic.com/danmu)
 
-提供一款 Python 编写的评论系统 Isso 的在线托管服务
+为播放器提供弹幕库，支持创建弹幕 Token、搜索与导入弹幕库，兼容弹弹play 规范
 
 ## 短网址服务 <sup style="color:#39b54a" >beta</sup>
 
-地址：[openservice/shorturl](https://open.saintic.com/openservice/shorturl/)
+地址：[shorturl](https://hub.saintic.com/shorturl)
 
 简单的网址缩短与还原服务
 
-## 搜索引擎收录查询
+## 古诗词名句接口 <sup style="color:red" >●</sup>
 
-地址：[opentool/searchEngine](https://open.saintic.com/onlinetool/searchEngineQuery)
+地址：[sentence](https://hub.saintic.com/openservice/sentence/)
 
-百度、必应等搜索引擎 URL 收录情况在线查询
+随机一句古诗文，支持 JSON / TXT / SVG 输出，可按作者、主题、分类筛选
 
-## OpenAPI
+## Crontab 计算 <sup style="color:red" >●</sup>
 
-地址：[openapi](https://open.saintic.com/openapi)
+地址：[crontab](https://hub.saintic.com/openservice/crontab)
 
-几个对外开放的 API 接口，如 bing 今日美图，百度、bing收录查询等
+输入 Cron 表达式，推算接下来或之前的执行时间点，支持正向与反向查询
 
 <br>
 
